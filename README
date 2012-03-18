@@ -1,10 +1,7 @@
 Web Template
-
 -----------
-It's a template for starting a web project based on HTML5 Boilerplate and grid 1140.
 
-The structure
--------------
+It's a template for starting a web project based on HTML5 Boilerplate and grid 1140.
 
 There are four CSS files:
 - grid-960.css and grid-1140.css : responsive grid with maximum width of 960 pixels and 1140 pixels respectively
