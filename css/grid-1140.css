@@ -86,12 +86,15 @@ img {
 @media only screen and (max-width: 1023px) {
 
 	body {
-	font-size: 0.8em;
-	line-height: 1.5em;
+		font-size: 0.8em;
+		line-height: 1.5em;
 	}
-
-
-	
+	.ie7 .row .onecol {
+		width:6.389%;
+	}
+	.ie7 .row .threecol {
+		width:23.389%;
+	}
 }
 
 
@@ -122,6 +125,8 @@ img {
 	margin-right: 0px;
 	padding-left: 20px;
 	padding-right: 20px;
+
+	box-shadow: 2px 2px 2px #ccc;
 	}
 
 }
