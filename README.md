@@ -2,6 +2,25 @@
 
 Template para dar o 'pontapé inicial' em um projeto web com base no HTML5 Boilerplate.
 
+## Estrutura
+
+1. index
+	1. CSS
+		1. normalize
+		2. main
+		3. grids
+	2. JS
+		1. LIBS
+			1. jQuery
+			2. Modernizr
+		2. setup.js
+	3. IN
+		1. estilos
+		2. meta
+		3. scripts
+		4. header
+		5. footer
+
 ## CSS
 
 ### normalize.css
@@ -10,7 +29,7 @@ Contém a base do arquivo original acrescido de algumas alterações a fim de ma
 
 ### main.css
 
-Folha de estilos '[pronta pra ser usada]'(http://img9.imageshack.us/img9/9097/coronell.jpg).
+Folha de estilos '[pronta pra ser usada](http://img9.imageshack.us/img9/9097/coronell.jpg)'.
 
 ## JS
 
@@ -25,3 +44,7 @@ Versão minificada linkada no início da página.
 ### Respond
 
 Versão minificada linkada no início da página (polyfill para min/max-width CSS3 Media Queries para IE6-8 ).
+
+### Google Analytics
+
+Código padrão localizado no arquivo `/in/scripts.php`
