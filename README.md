@@ -61,7 +61,7 @@ Links das folhas de estilo e dos scripts Modernizr e Respond.
 
 ### `meta.php`
 
-Arquivo que contém as chamadas das Meta Tags, do Favicon e imagens de ícones.
+Arquivo que contém as chamadas das Meta Tags e do Favicon.
 
 ### `scripts.php`
 
