@@ -69,3 +69,5 @@ Contém a chamada da biblioteca jQuery, do arquivo `scripts.js` e do código do 
 
 ### `header.php` e `footer.php`
 
+Sugestão para arquivos referentes ao cabeçalho e rodapé do projeto.
+
