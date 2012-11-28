@@ -28,40 +28,40 @@
       <div class="container">
         <div class="row">
           <div class="onecol">
-            <p>One</p>
+            <p>1</p>
           </div>
           <div class="onecol">
-            <p>One</p>
+            <p>1</p>
           </div>
           <div class="onecol">
-            <p>One</p>
+            <p>1</p>
           </div>
           <div class="onecol">
-            <p>One</p>
+            <p>1</p>
           </div>
           <div class="onecol">
-            <p>One</p>
+            <p>1</p>
           </div>
           <div class="onecol">
-            <p>One</p>
+            <p>1</p>
           </div>
           <div class="onecol">
-            <p>One</p>
+            <p>1</p>
           </div>
           <div class="onecol">
-            <p>One</p>
+            <p>1</p>
           </div>
           <div class="onecol">
-            <p>One</p>
+            <p>1</p>
           </div>
           <div class="onecol">
-            <p>One</p>
+            <p>1</p>
           </div>
           <div class="onecol">
-            <p>One</p>
+            <p>1</p>
           </div>
           <div class="onecol last">
-            <p>One</p>
+            <p>1</p>
           </div>
         </div>
       </div>
@@ -70,22 +70,22 @@
       <div class="container">
         <div class="row">
           <div class="twocol">
-            <p>Two columns</p>
+            <p>2</p>
           </div>
           <div class="twocol">
-            <p>Two columns</p>
+            <p>2</p>
           </div>
           <div class="twocol">
-            <p>Two columns</p>
+            <p>2</p>
           </div>
           <div class="twocol">
-            <p>Two columns</p>
+            <p>2</p>
           </div>
           <div class="twocol">
-            <p>Two columns</p>
+            <p>2</p>
           </div>
           <div class="twocol last">
-            <p>Two columns</p>
+            <p>2</p>
           </div>
         </div>
       </div>
@@ -93,16 +93,16 @@
       <div class="container">
         <div class="row">
           <div class="threecol">
-            <p>Three columns</p>
+            <p>3</p>
           </div>
           <div class="threecol">
-            <p>Three columns</p>
+            <p>3</p>
           </div>
           <div class="threecol">
-            <p>Three columns</p>
+            <p>3</p>
           </div>
           <div class="threecol last">
-            <p>Three columns</p>
+            <p>3</p>
           </div>
         </div>
       </div>
@@ -110,13 +110,13 @@
       <div class="container">
         <div class="row">
           <div class="fourcol">
-            <p>Four columns</p>
+            <p>4</p>
           </div>
           <div class="fourcol">
-            <p>Four columns</p>
+            <p>4</p>
           </div>
           <div class="fourcol last">
-            <p>Four columns</p>
+            <p>4</p>
           </div>
         </div>
       </div>
@@ -124,10 +124,10 @@
       <div class="container">
         <div class="row">
           <div class="onecol">
-            <p>One</p>
+            <p>1</p>
           </div>
           <div class="elevencol last">
-            <p>Eleven columns</p>
+            <p>11</p>
           </div>
         </div>
       </div>
@@ -135,10 +135,10 @@
       <div class="container">
         <div class="row">
           <div class="twocol">
-            <p>Two columns</p>
+            <p>2</p>
           </div>
           <div class="tencol last">
-            <p>Ten columns</p>
+            <p>10</p>
           </div>
         </div>
       </div>
@@ -146,10 +146,10 @@
       <div class="container">
         <div class="row">
           <div class="threecol">
-            <p>Three columns</p>
+            <p>3</p>
           </div>
           <div class="ninecol last">
-            <p>Nine columns</p>
+            <p>9</p>
           </div>
         </div>
       </div>
@@ -157,10 +157,10 @@
       <div class="container">
         <div class="row">
           <div class="fourcol">
-            <p>Four columns</p>
+            <p>4</p>
           </div>
           <div class="eightcol last">
-            <p>Eight columns</p>
+            <p>8</p>
           </div>
         </div>
       </div>
@@ -168,10 +168,10 @@
       <div class="container">
         <div class="row">
           <div class="fivecol">
-            <p>Five columns</p>
+            <p>5</p>
           </div>
           <div class="sevencol last">
-            <p>Seven columns</p>
+            <p>7</p>
           </div>
         </div>
       </div>
@@ -179,10 +179,10 @@
       <div class="container">
         <div class="row">
           <div class="sixcol">
-            <p>Six columns</p>
+            <p>6</p>
           </div>
           <div class="sixcol last">
-            <p>Six columns</p>
+            <p>6</p>
           </div>
         </div>
       </div>
@@ -190,10 +190,10 @@
       <div class="container">
         <div class="row">
           <div class="sevencol">
-            <p>Seven columns</p>
+            <p>7</p>
           </div>
           <div class="fivecol last">
-            <p>Five columns</p>
+            <p>5</p>
           </div>
         </div>
       </div>
@@ -201,10 +201,10 @@
       <div class="container">
         <div class="row">
           <div class="eightcol">
-            <p>Eight columns</p>
+            <p>8</p>
           </div>
           <div class="fourcol last">
-            <p>Four columns</p>
+            <p>4</p>
           </div>
         </div>
       </div>
@@ -212,10 +212,10 @@
       <div class="container">
         <div class="row">
           <div class="ninecol">
-            <p>Nine columns</p>
+            <p>9</p>
           </div>
           <div class="threecol last">
-            <p>Three columns</p>
+            <p>3</p>
           </div>
         </div>
       </div>
@@ -223,10 +223,10 @@
       <div class="container">
         <div class="row">
           <div class="tencol">
-            <p>Ten columns</p>
+            <p>10</p>
           </div>
           <div class="twocol last">
-            <p>Two columns</p>
+            <p>2</p>
           </div>
         </div>
       </div>
@@ -234,10 +234,10 @@
       <div class="container">
         <div class="row">
           <div class="elevencol">
-            <p>Eleven columns</p>
+            <p>11</p>
           </div>
           <div class="onecol last">
-            <p>One</p>
+            <p>1</p>
           </div>
         </div>
       </div>
@@ -245,13 +245,13 @@
       <div class="container">
         <div class="row">
           <div class="threecol">
-            <p>Three columns</p>
+            <p>3</p>
           </div>
           <div class="sixcol">
-            <p>Six columns</p>
+            <p>6</p>
           </div>
           <div class="threecol last">
-            <p>Three columns</p>
+            <p>3</p>
           </div>
         </div>
       </div>
