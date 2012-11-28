@@ -51,19 +51,21 @@ Código padrão localizado no arquivo `/in/scripts.php`
 
 ### `scripts.js`
 
+Arquivo JS '[pronto pra ser usado](http://img855.imageshack.us/img855/2449/coronel2.jpg)'.
+
 ## IN
 
 ### `estilos.php`
 
 Links das folhas de estilo e dos scripts Modernizr e Respond.
 
-## `meta.php`
+### `meta.php`
 
-Arquivo que contém as chamadas das Meta Tags e do Favicon e imagens de ícones.
+Arquivo que contém as chamadas das Meta Tags, do Favicon e imagens de ícones.
 
-## `scripts.php`
+### `scripts.php`
 
 Contém a chamada da biblioteca jQuery, do arquivo `scripts.js` e do código do Google Analytics.
 
-## `header.php` e `footer.php`
+### `header.php` e `footer.php`
 
