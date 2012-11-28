@@ -4,22 +4,22 @@ Template para dar o 'pontapé inicial' em um projeto web com base no HTML5 Boile
 
 ## Estrutura
 
-1. index
-	1. CSS
-		1. normalize
-		2. main
-		3. grids
-	2. JS
-		1. LIBS
-			1. jQuery
-			2. Modernizr
-		2. setup.js
-	3. IN
-		1. estilos
-		2. meta
-		3. scripts
-		4. header
-		5. footer
+* index
+	* CSS
+		* `normalize.css`
+		* `main.css`
+		* grids
+	* JS
+		* LIBS
+			* jQuery
+			* Modernizr
+		* `scripts.js`
+	* IN
+		* `estilos.php`
+		* `meta.php`
+		* `scripts.php`
+		* `header.php`
+		* `footer.php`
 
 ## CSS
 
@@ -48,3 +48,22 @@ Versão minificada linkada no início da página (polyfill para min/max-width CS
 ### Google Analytics
 
 Código padrão localizado no arquivo `/in/scripts.php`
+
+### `scripts.js`
+
+## IN
+
+### `estilos.php`
+
+Links das folhas de estilo e dos scripts Modernizr e Respond.
+
+## `meta.php`
+
+Arquivo que contém as chamadas das Meta Tags e do Favicon e imagens de ícones.
+
+## `scripts.php`
+
+Contém a chamada da biblioteca jQuery, do arquivo `scripts.js` e do código do Google Analytics.
+
+## `header.php` e `footer.php`
+
