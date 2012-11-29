@@ -12,7 +12,20 @@
 	max-width: 940px;
 	min-width: 755px;
 	margin: 0 auto;
-	overflow: hidden;
+}
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.ie7 .row {
+   	zoom: 1;
 }
 
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
