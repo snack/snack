@@ -1,6 +1,6 @@
 # Web Template
 
-Template para dar o 'pontapé inicial' em um projeto web com base no HTML5 Boilerplate.
+Template para dar o 'pontapé inicial' em um projeto web com base no HTML5 Boilerplate e em grids responsivos.
 
 ## Estrutura
 
