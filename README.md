@@ -37,6 +37,11 @@ Folha de estilos '[pronta pra ser usada](http://img9.imageshack.us/img9/9097/cor
 	* `grid-960.css`  (Grid Responsivo | Medida: Porcentagem | Largura máxima: 960 pixels)
 	* `grid-1140.css` (Grid Responsivo | Medida: Porcentagem | Largura máxima: 1140 pixels)
 
+## HTML Grid
+
+Para criar um layout de duas colunas por exemplo, crie uma `.row` e adicione dentro dela o número de colunas conforme o grid (12 ou 16 colunas) com a classe `.Xcol`. Dentro de cada `.row` o número máximo de colunas deve ser o número de colunas do grid.
+Por fim, adicione a classe `.last` no último elemento.
+
 ## JS
 
 ### jQuery 1.8.3
