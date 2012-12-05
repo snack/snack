@@ -31,6 +31,12 @@ Contém a base do arquivo original acrescido de algumas alterações a fim de ma
 
 Folha de estilos '[pronta pra ser usada](http://img9.imageshack.us/img9/9097/coronell.jpg)'.
 
+### grids
+* 12 colunas
+	* `grid-960-fixo.css` (Grid Fixo | Medida: Pixels | Largura máxima: 960 pixels)
+	* `grid-960.css`  (Grid Responsivo | Medida: Porcentagem | Largura máxima: 960 pixels)
+	* `grid-1140.css` (Grid Responsivo | Medida: Porcentagem | Largura máxima: 1140 pixels)
+
 ## JS
 
 ### jQuery 1.8.3
