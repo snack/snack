@@ -5,6 +5,7 @@
 .container {
 	padding-left: 20px;
 	padding-right: 20px;
+	background: gray;
 }
 
 .row {
@@ -12,6 +13,7 @@
 	max-width: 940px;
 	min-width: 755px;
 	margin: 0 auto;
+	background: #cccccc;
 }
 
 .row:before,
@@ -28,72 +30,145 @@
    	zoom: 1;
 }
 
-.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
-	/*margin-right: 3.8%;*/
+.onecol, 
+.twocol,
+.threecol,
+.fourcol,
+.fivecol,
+.sixcol,
+.sevencol,
+.eightcol,
+.ninecol,
+.tencol,
+.elevencol {
 	margin-right:20px;
 	float: left;
 	min-height: 1px;
 }
 
 .row .onecol {
-	/*width: 4.85%;*/
 	width:60px;
 }
 
 .row .twocol {
-	/*width: 13.45%;*/
 	width:140px;
 }
 
 .row .threecol {
-	/*width: 22.05%;*/
 	width:220px;
 }
 
 .row .fourcol {
-	/*width: 30.75%;*/
 	width:300px;
 }
 
 .row .fivecol {
-	/*width: 39.45%;*/
 	width:380px;
 }
 
 .row .sixcol {
-	/*width: 48%;*/
 	width:460px;
 }
 
 .row .sevencol {
-	/*width: 56.75%;*/
 	width:540px;
 }
 
 .row .eightcol {
-	/*width: 65.4%;*/
 	width:620px;
 }
 
 .row .ninecol {
-	/*width: 74.05%;*/
 	width:700px;
 }
 
 .row .tencol {
-	/*width: 82.7%;*/
 	width:780px;
 }
 
 .row .elevencol {
-	/*width: 91.35%;*/
 	width:860px;
 }
 
 .row .twelvecol {
-/*width: 100%;*/
 	width:940px;
 	float: left;
+}
+
+.onecol, 
+.twocol,
+.threecol,
+.fourcol,
+.fivecol,
+.sixcol,
+.sevencol,
+.eightcol,
+.ninecol,
+.tencol,
+.elevencol,
+.twelvecol {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+/*
+ * Offset
+ * Largura + Margin
+ */
+
+.offset-one {
+	margin-left: 80px;
+}
+
+.offset-two {
+	margin-left: 160px;
+}
+
+.offset-three {
+	margin-left: 240px;
+}
+
+.offset-four {
+	margin-left: 320px;
+}
+
+.offset-five {
+	margin-left: 400px;
+}
+
+.offset-six {
+	margin-left: 480px;
+}
+
+.offset-seven {
+	margin-left: 560px;
+}
+
+.offset-eight {
+	margin-left: 640px;
+}
+
+.offset-nine {
+	margin-left: 720px;
+}
+
+.offset-ten {
+	margin-left: 800px;
+}
+
+.offset-eleven {
+	margin-left: 880px;
+}
+
+/*
+ * Centralizando DIVs
+ */
+
+.centered {
+	float: none;
+	margin: 0 auto;
 }
 
 .last {
