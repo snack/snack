@@ -51,7 +51,7 @@ Aqui também o número máximo de colunas deve ser o número de colunas do grid 
 </div>
 ```
 
-No exemplo temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas e fechando o `.row`.
+> No exemplo temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas e fechando o `.row`.
 
 ### Centralizando
 
