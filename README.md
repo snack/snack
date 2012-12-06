@@ -62,14 +62,9 @@ Folha de estilos '[pronta pra ser usada](http://img9.imageshack.us/img9/9097/cor
 	</tr>
 </table>
 
-* 12 colunas
-	* `grid-960-fixo.css` ( *Grid*: Fixo | *Medida*: Pixels | *Largura*: 960 pixels)
-	* `grid-960.css`  ( *Grid*: Responsivo | *Medida*: Porcentagem | *Largura*: 960 pixels)
-	* `grid-1140.css` ( *Grid*: Responsivo | *Medida*: Porcentagem | *Largura*: 1140 pixels)
-
 ## HTML Grid
 
-Para criar um layout de duas colunas por exemplo, crie uma `.row` e adicione dentro dela o número de colunas conforme o grid (12 ou 16 colunas) com a classe `.Xcol`. Dentro de cada `.row` o número máximo de colunas deve ser o número de colunas do grid.
+Para criar um layout de duas colunas por exemplo, crie uma `.row` e adicione dentro dela o número de colunas conforme o grid (12 ou 16 colunas) com a classe `.*col`. Dentro de cada `.row` o número máximo de colunas deve ser o número de colunas do grid.
 Por fim, adicione a classe `.last` no último elemento.
 
 ```html
@@ -78,6 +73,22 @@ Por fim, adicione a classe `.last` no último elemento.
 	<div class="eightcol last">8 colunas | último elemento</div>
 </div>
 ```
+No exemplo, temos `.fourcol` (*4 colunas*) e `.eightcol` (*8 colunas*), totalizando 12 colunas e completando a `.row`.
+
+### Deslocamento
+
+Mova as colunas para a direita usando a classe `.offset-*`, onde o * é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-four` desloca o elemento aplicado em 4 colunas.
+
+Aqui também o máximo número de colunas deve ser o número de colunas do grid (contando os deslocamentos).
+
+```html
+<div class="row">
+	<div class="fourcol">4 colunas</div>
+	<div class="six offset-two last">4 colunas | 4 colunas descolamento | último elemento</div>
+</div>
+```
+
+No exemplo temos um `.fourcol` (*4 colunas*) e um `.sixcol` (*6 colunas*) com `.offset-two` (*2 colunas*), totalizando 12 colunas e fechando o `.row`.
 
 ## JS
 
