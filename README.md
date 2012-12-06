@@ -61,7 +61,7 @@ Folha de estilos '[pronta pra ser usada](http://img9.imageshack.us/img9/9097/cor
 		<td>1140 pixels</td>
 	</tr>
 	<tr>
-		<td>```html grid-1140.css ```</td>
+		<td> ```html grid-1140.css ``` </td>
 		<td>Responsivo</td>
 		<td>Pixels</td>
 		<td>1140 pixels</td>
