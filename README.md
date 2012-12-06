@@ -46,8 +46,8 @@ Por fim, adicione a classe `.last` no último elemento.
 
 ```html
 <div class="row">
-	<div class"fourcol">4 colunas</div>
-	<div class="eightcol last">8 colunas / último elemento</div>
+	<div class="fourcol">4 colunas</div>
+	<div class="eightcol last">8 colunas | último elemento</div>
 </div>
 ```
 
