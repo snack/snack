@@ -43,7 +43,7 @@ Folha de estilos '[pronta pra ser usada](http://img9.imageshack.us/img9/9097/cor
 		<th>Largura</th>
 	</tr>
 	<tr>
-		<th>`grid-960-fixo.css`</th>
+		<th> `grid-960-fixo.css` </th>
 		<td>Fixo</td>
 		<td>Pixels</td>
 		<td>960 pixels</td>
