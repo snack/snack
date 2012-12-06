@@ -47,7 +47,7 @@ Aqui também o número máximo de colunas deve ser o número de colunas do grid 
 ```html
 <div class="row">
 	<div class="fourcol">4 colunas</div>
-	<div class="six offset-two last">4 colunas | 4 colunas descolamento | último elemento</div>
+	<div class="sixcol offset-two last">4 colunas | 4 colunas descolamento | último elemento</div>
 </div>
 ```
 
