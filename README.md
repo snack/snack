@@ -64,6 +64,8 @@ Folha de estilos '[pronta pra ser usada](http://img9.imageshack.us/img9/9097/cor
 
 ## HTML Grid
 
+### Marcação Padrão
+
 Para criar um layout de duas colunas por exemplo, crie uma `.row` e adicione dentro dela o número de colunas conforme o grid (12 ou 16 colunas) com a classe `.*col`. Dentro de cada `.row` o número máximo de colunas deve ser o número de colunas do grid.
 Por fim, adicione a classe `.last` no último elemento.
 
@@ -73,7 +75,7 @@ Por fim, adicione a classe `.last` no último elemento.
 	<div class="eightcol last">8 colunas | último elemento</div>
 </div>
 ```
-No exemplo, temos `.fourcol` (*4 colunas*) e `.eightcol` (*8 colunas*), totalizando 12 colunas e completando a `.row`.
+No exemplo, temos `.fourcol` ( *4 colunas* ) e `.eightcol` ( *8 colunas* ), totalizando 12 colunas e completando a `.row`.
 
 ### Deslocamento
 
@@ -88,7 +90,7 @@ Aqui também o máximo número de colunas deve ser o número de colunas do grid 
 </div>
 ```
 
-No exemplo temos um `.fourcol` (*4 colunas*) e um `.sixcol` (*6 colunas*) com `.offset-two` (*2 colunas*), totalizando 12 colunas e fechando o `.row`.
+No exemplo temos um `.fourcol` ( *4 colunas* ) e um `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas e fechando o `.row`.
 
 ## JS
 
