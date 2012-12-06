@@ -101,19 +101,19 @@ Folha de estilos '[pronta pra ser usada](http://img9.imageshack.us/img9/9097/cor
 		<th>Largura</th>
 	</tr>
 	<tr>
-		<td><code>grid-960-fixo.css</code></td>
+		<td><code>grid-12-960-fixo.css</code></td>
 		<td>Fixo</td>
 		<td>Pixels</td>
 		<td>960 pixels</td>
 	</tr>
 	<tr>
-		<td><code>grid-960.css</code></td>
+		<td><code>grid-12-960.css</code></td>
 		<td>Responsivo</td>
 		<td>Pixels</td>
 		<td>960 pixels</td>
 	</tr>
 	<tr>
-		<td><code>grid-1140.css</code></td>
+		<td><code>grid-12-1140.css</code></td>
 		<td>Responsivo</td>
 		<td>Pixels</td>
 		<td>1140 pixels</td>

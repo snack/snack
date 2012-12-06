@@ -5,7 +5,6 @@
 .container {
 	padding-left: 10px;
 	padding-right: 10px;
-	background: gray;
 }
 
 .row {
@@ -13,7 +12,6 @@
 	max-width: 1140px;
 	min-width: 745px;
 	margin: 0 auto;
-	background: #cccccc;
 }
 
 .row .row {
@@ -49,7 +47,6 @@
 	margin-right: 2.10526315789474%; /* 24px / 1140px */ 
 	float: left;
 	min-height: 1px;
-	background: red;
 }
 
 .row .onecol {
