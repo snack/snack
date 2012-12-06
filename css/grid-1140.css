@@ -16,6 +16,11 @@
 	background: #cccccc;
 }
 
+.row .row {
+	max-width: 100%;
+	min-width: 100%;
+}
+
 .row:before,
 .row:after {
     content: " ";

@@ -92,6 +92,16 @@ Aqui também o máximo número de colunas deve ser o número de colunas do grid 
 
 No exemplo temos um `.fourcol` ( *4 colunas* ) e um `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas e fechando o `.row`.
 
+###Centralizando
+
+Centralize o elemento, independente da quantidade de colunas, aplicando a classe `.centered`. 
+
+```html
+<div class="row">
+	<div class="fivecol centered">5 colunas (Centralizado)</div>
+</div>
+```
+
 ## JS
 
 ### jQuery 1.8.3
