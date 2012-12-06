@@ -34,6 +34,22 @@ Contém a base do arquivo original acrescido de algumas alterações a fim de ma
 Folha de estilos '[pronta pra ser usada](http://img9.imageshack.us/img9/9097/coronell.jpg)'.
 
 ### grids
+
+<table>
+	<tr>
+		<th></th>
+		<th>Grid</th>
+		<th>Medida</th>
+		<th>Largura</th>
+	</tr>
+	<tr>
+		<th>`grid-960-fixo.css`</th>
+		<td>Fixo</td>
+		<td>Pixels</td>
+		<td>960 pixels</td>
+	</tr>
+</table>
+
 * 12 colunas
 	* `grid-960-fixo.css` ( *Grid*: Fixo | *Medida*: Pixels | *Largura*: 960 pixels)
 	* `grid-960.css`  ( *Grid*: Responsivo | *Medida*: Porcentagem | *Largura*: 960 pixels)
