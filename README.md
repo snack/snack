@@ -43,25 +43,19 @@ Folha de estilos '[pronta pra ser usada](http://img9.imageshack.us/img9/9097/cor
 		<th>Largura</th>
 	</tr>
 	<tr>
-		<td>`grid-960-fixo.css`</td>
+		<td><pre>grid-960-fixo.css</pre></td>
 		<td>Fixo</td>
 		<td>Pixels</td>
 		<td>960 pixels</td>
 	</tr>
 	<tr>
-		<td>*grid-960.css*</td>
+		<td><pre>grid-960.css</pre></td>
 		<td>Responsivo</td>
 		<td>Pixels</td>
 		<td>960 pixels</td>
 	</tr>
 	<tr>
 		<td><pre>grid-1140.css</pre></td>
-		<td>Responsivo</td>
-		<td>Pixels</td>
-		<td>1140 pixels</td>
-	</tr>
-	<tr>
-		<td><code>grid-1140.css</code></td>
 		<td>Responsivo</td>
 		<td>Pixels</td>
 		<td>1140 pixels</td>
