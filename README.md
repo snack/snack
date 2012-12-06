@@ -36,13 +36,13 @@ Por fim, adicione a classe `.last` no último elemento.
 	<div class="eightcol last">8 colunas | último elemento</div>
 </div>
 ```
-No exemplo, temos `.fourcol` ( *4 colunas* ) e `.eightcol` ( *8 colunas* ), totalizando 12 colunas e completando a `.row`.
+No exemplo temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.eightcol` ( *8 colunas* ), totalizando 12 colunas e completando a `.row`.
 
 ### Deslocamento
 
 Mova as colunas para a direita usando a classe `.offset-*`, onde o * é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-four` desloca o elemento aplicado em 4 colunas.
 
-Aqui também o máximo número de colunas deve ser o número de colunas do grid (contando os deslocamentos).
+Aqui também o número máximo de colunas deve ser o número de colunas do grid (contando os deslocamentos).
 
 ```html
 <div class="row">
@@ -51,9 +51,9 @@ Aqui também o máximo número de colunas deve ser o número de colunas do grid 
 </div>
 ```
 
-No exemplo temos um `.fourcol` ( *4 colunas* ) e um `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas e fechando o `.row`.
+No exemplo temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas e fechando o `.row`.
 
-###Centralizando
+### Centralizando
 
 Centralize o elemento, independente da quantidade de colunas, aplicando a classe `.centered`. 
 
@@ -63,11 +63,28 @@ Centralize o elemento, independente da quantidade de colunas, aplicando a classe
 </div>
 ```
 
+### Linha Filha
+
+Caso precise adicionar uma linha filha é só manter a marcação padrão: criar uma `.row` e adicionar dentro dela o número de colunas com a classe `.*col`, respeitando o número máximo de colunas do grid. 
+
+```html
+<div class="row">
+	<div class="fourcol">4 colunas
+		<!-- linha filha -->
+		<div class="row">
+			<div class="eightcol">8 colunas</div>
+			<div class="fourcol">4 colunas | Último elemento</div>
+		</div><!-- ##fim linha filha -->
+	</div>
+	<div class="eightcol last">8 colunas | último elemento</div>
+</div>
+```
+
 ## CSS
 
 ### `normalize.css`
 
-Contém a base do arquivo original acrescido de algumas alterações a fim de manter um único arquivo de folha de estilos com a função de normalizar/padronizar os elementos. Esse arquivo também contém as classes auxiliares do HTML5 Boilerplate ([caso não conheça](https://github.com/h5bp/html5-boilerplate/blob/master/doc/css.md#common-helpers)). Já minificado, por questão de perfomance (arquivo original contém documentação inline).
+Contém a base do arquivo original acrescido de algumas alterações a fim de manter um único arquivo de folha de estilos com a função de normalizar/padronizar os elementos. Esse arquivo também contém as classes auxiliares do HTML5 Boilerplate ([caso não conheça](https://github.com/h5bp/html5-boilerplate/blob/master/doc/css.md#common-helpers)). Por questão de perfomance já está minificado (arquivo original contém documentação inline).
 
 ### `main.css`
 
