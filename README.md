@@ -36,7 +36,7 @@ Por fim, adicione a classe `.last` no último elemento.
 	<div class="eightcol last">8 colunas | último elemento</div>
 </div>
 ```
-No exemplo temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.eightcol` ( *8 colunas* ), totalizando 12 colunas e completando a `.row`.
+> No exemplo temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.eightcol` ( *8 colunas* ), totalizando 12 colunas e completando a `.row`.
 
 ### Deslocamento
 
@@ -79,6 +79,7 @@ Caso precise adicionar uma linha filha é só manter a marcação padrão: criar
 	<div class="eightcol last">8 colunas | último elemento</div>
 </div>
 ```
+> No exemplo temos uma classe `.fourcol` que possui uma `.row` filha. Esta por sua vez possui uma classe `.eightcol` ( *8 colunas* ) e uma `.fourcol ( *4 colunas* ) totalizando 12 colunas.
 
 ## CSS
 
