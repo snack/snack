@@ -6,22 +6,62 @@ Template para dar o 'pontapé inicial' em um projeto web, que tem como base o HT
 
 ## Estrutura
 
-* index
+* [HTML](https://github.com/a2comunicacao/template-web#html) | index.php
 	* [CSS](https://github.com/a2comunicacao/template-web#css)
 		* `normalize.css`
 		* `main.css`
 		* grids
-	* JS
+	* [JS](https://github.com/a2comunicacao/template-web#js)
 		* LIBS
 			* jQuery
 			* Modernizr
 		* `scripts.js`
-	* IN
+	* [IN](https://github.com/a2comunicacao/template-web#in)
 		* `estilos.php`
 		* `meta.php`
 		* `scripts.php`
 		* `header.php`
 		* `footer.php`
+
+## HTML
+
+### Marcação Padrão
+
+Para criar um layout de duas colunas por exemplo, crie uma `.row` e adicione dentro dela o número de colunas conforme o grid (12 ou 16 colunas) com a classe `.*col`. Dentro de cada `.row` o número máximo de colunas deve ser o número de colunas do grid.
+Por fim, adicione a classe `.last` no último elemento.
+
+```html
+<div class="row">
+	<div class="fourcol">4 colunas</div>
+	<div class="eightcol last">8 colunas | último elemento</div>
+</div>
+```
+No exemplo, temos `.fourcol` ( *4 colunas* ) e `.eightcol` ( *8 colunas* ), totalizando 12 colunas e completando a `.row`.
+
+### Deslocamento
+
+Mova as colunas para a direita usando a classe `.offset-*`, onde o * é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-four` desloca o elemento aplicado em 4 colunas.
+
+Aqui também o máximo número de colunas deve ser o número de colunas do grid (contando os deslocamentos).
+
+```html
+<div class="row">
+	<div class="fourcol">4 colunas</div>
+	<div class="six offset-two last">4 colunas | 4 colunas descolamento | último elemento</div>
+</div>
+```
+
+No exemplo temos um `.fourcol` ( *4 colunas* ) e um `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas e fechando o `.row`.
+
+###Centralizando
+
+Centralize o elemento, independente da quantidade de colunas, aplicando a classe `.centered`. 
+
+```html
+<div class="row">
+	<div class="fivecol centered">5 colunas (Centralizado)</div>
+</div>
+```
 
 ## CSS
 
@@ -101,44 +141,4 @@ Contém a chamada da biblioteca jQuery, do arquivo `scripts.js` e do código do 
 ### `header.php` e `footer.php`
 
 Sugestão para arquivos referentes ao cabeçalho e rodapé do projeto.
-
-## HTML Grid
-
-### Marcação Padrão
-
-Para criar um layout de duas colunas por exemplo, crie uma `.row` e adicione dentro dela o número de colunas conforme o grid (12 ou 16 colunas) com a classe `.*col`. Dentro de cada `.row` o número máximo de colunas deve ser o número de colunas do grid.
-Por fim, adicione a classe `.last` no último elemento.
-
-```html
-<div class="row">
-	<div class="fourcol">4 colunas</div>
-	<div class="eightcol last">8 colunas | último elemento</div>
-</div>
-```
-No exemplo, temos `.fourcol` ( *4 colunas* ) e `.eightcol` ( *8 colunas* ), totalizando 12 colunas e completando a `.row`.
-
-### Deslocamento
-
-Mova as colunas para a direita usando a classe `.offset-*`, onde o * é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-four` desloca o elemento aplicado em 4 colunas.
-
-Aqui também o máximo número de colunas deve ser o número de colunas do grid (contando os deslocamentos).
-
-```html
-<div class="row">
-	<div class="fourcol">4 colunas</div>
-	<div class="six offset-two last">4 colunas | 4 colunas descolamento | último elemento</div>
-</div>
-```
-
-No exemplo temos um `.fourcol` ( *4 colunas* ) e um `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas e fechando o `.row`.
-
-###Centralizando
-
-Centralize o elemento, independente da quantidade de colunas, aplicando a classe `.centered`. 
-
-```html
-<div class="row">
-	<div class="fivecol centered">5 colunas (Centralizado)</div>
-</div>
-```
 
