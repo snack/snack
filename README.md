@@ -1,6 +1,8 @@
 # Web Template
 
-Template para dar o 'pontapé inicial' em um projeto web, que tem como base o HTML5 Boilerplate e grids responsivos e fixos.
+Template para auxiliar no 'pontapé inicial' em um projeto web, que tem como base o HTML5 Boilerplate e grids responsivos e fixos.
+
+https://github.com/a2comunicacao/template-web/wiki/Layout-do-Grid
 
 ****
 
