@@ -170,7 +170,7 @@
 }
 
 .last {
-	margin-right: 0px;
+	margin-right: 0;
 }
 
 img, object, embed {
@@ -235,9 +235,7 @@ img {
 		margin: 0.5cm;
 	}
 
-	p,
-	h2,
-	h3 {
+	p {
 		orphans: 3;
 		widows: 3;
 	}
@@ -245,5 +243,7 @@ img {
 	h2,
 	h3 {
 		page-break-after: avoid;
+		orphans: 3;
+		widows: 3;
 	}
 }
