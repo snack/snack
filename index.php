@@ -796,5 +796,6 @@
 		</div>
 		<!-- -->
 	</div>
+	<?php include('/in/scripts.php');?>
 </body>
 </html>
