@@ -1,22 +1,22 @@
-# Web Template
+# Grid A2
 
-Template para auxiliar no 'pontapé inicial' em um projeto web. Utiliza como base o HTML5 Boilerplate e tem opções de grids responsivos e fixos. Para saber mais sobre o projeto [clique aqui](https://github.com/a2comunicacao/template-web/wiki). 
+Template para auxiliar no 'pontapé inicial' em um projeto web. Utiliza como base o HTML5 Boilerplate e tem opções de grids responsivos e fixos. Para saber mais sobre o projeto [clique aqui](https://github.com/a2comunicacao/Grid-A2/wiki). 
 
 ****
 
 ## Estrutura
 
-* [HTML](https://github.com/a2comunicacao/template-web#html) | index.php
-	* [CSS](https://github.com/a2comunicacao/template-web#css)
+* [HTML](https://github.com/a2comunicacao/Grid-A2#html) | index.php
+	* [CSS](https://github.com/a2comunicacao/Grid-A2#css)
 		* `normalize.css`
 		* `main.css`
 		* grids
-	* [JS](https://github.com/a2comunicacao/template-web#js)
+	* [JS](https://github.com/a2comunicacao/Grid-A2#js)
 		* LIBS
 			* jQuery
 			* Modernizr
 		* `scripts.js`
-	* [IN](https://github.com/a2comunicacao/template-web#in)
+	* [IN](https://github.com/a2comunicacao/Grid-A2#in)
 		* `estilos.php`
 		* `meta.php`
 		* `scripts.php`
