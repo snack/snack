@@ -14,17 +14,18 @@ Padrões para o desenvolvimento de um HTML e CSS flexível, durável e sustentá
   * [Sintaxe](#sintaxe-do-html)
   * [Doctype HTML5](#doctype-html5)
   * [Ordem dos atributos](#ordem-dos-atributos)
+  * [Comentário em HTML](#comentrios-explicativos)
 * [CSS](#css)
   * [Sintaxe do CSS](#sintaxe-do-css)
-  * [Ordem de declaração](#ordem-de-declaracao)
-  * [Excessões de formatação](#excessoes-de-formatacao)
+  * [Ordem de declaração](#ordem-de-declarao)
+  * [Excessões de formatação](#excesses-de-formatao)
     * [Propriedades com prefixo](#propriedades-com-prefixo)
-    * [Regras com declarações únicas](#regras-com-declaracoes-unicas)
+    * [Regras com declarações únicas](#regras-com-decalaraes-nicas)
   * [Legibilidade](#legibilidade)
-    * [Comentários](#comentarios)
+    * [Comentários](#comentrios)
     * [Classes](#classes)
     * [Seletores](#seletores)
-  * [Organização](#organizacao)
+  * [Organização](#organizao)
 
 
 
@@ -113,6 +114,11 @@ Com isso a marcação ficaria mais ou menos assim::
 
 
 
+### Comentários explicativos
+
+Sempre que possível, para uma melhor leitura do código, insira comentários entre o HTML que possam auxiliar na compreensão geral do fluxo.
+
+
 ----------
 
 
@@ -135,7 +141,7 @@ Com isso a marcação ficaria mais ou menos assim::
 * Indique os atributos de valores no seletores, e.g., <code>input[type="text"]</code>
 * Evite especificar unidade para valores zero, e.g., <code>margin: 0;</code> ao invés de <code>margin: 0px;</code>
 
-**Exemplo incorrecto:**
+**Exemplo incorreto:**
 
 ````css
 .seletor, .seletor-secundario, .seletor[type=text] {
