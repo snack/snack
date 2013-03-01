@@ -37,7 +37,7 @@ Padrões para o desenvolvimento de um HTML e CSS flexível, durável e sustentá
 
 > Todo código em qualquer base de código deve parecer como se uma única pessoa o digitou, não importando quantas pessoas contribuiram.
 
-Isso significa sempre respeitar rigorosamente estas diretrizes.
+Isso significa sempre respeitar rigorosamente estas diretrizes. 
 
 
 
@@ -117,6 +117,14 @@ Com isso a marcação ficaria mais ou menos assim::
 ### Comentários explicativos
 
 Sempre que possível, para uma melhor leitura do código, insira comentários entre o HTML que possam auxiliar na compreensão geral do fluxo.
+
+````html
+<!-- header -->
+<header class="header"></header>
+	<!-- menu principal -->
+	<nav class="nav-bar">
+	.....
+````
 
 
 ----------

@@ -1,6 +1,8 @@
 # Grid A2
 
-Template para auxiliar no 'pontapé inicial' em um projeto web. Utiliza como base o HTML5 Boilerplate e tem opções de grids responsivos e fixos. Para saber mais sobre o projeto [clique aqui](https://github.com/a2comunicacao/Grid-A2/wiki). 
+Template para auxiliar no 'pontapé inicial' em um projeto web. Utiliza como base o HTML5 Boilerplate e tem opções de grids responsivos e fixos. Para saber mais sobre o projeto [clique aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
+
+Padrões são sempre bons. Por isso, seguimos um padrão de código. [Veja o guia](https://github.com/a2comunicacao/Grid-A2/blob/master/code-guide.md).
 
 ****
 
