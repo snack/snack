@@ -120,7 +120,7 @@ Sempre que possível, para uma melhor leitura do código, insira comentários en
 
 ````html
 <!-- header -->
-<header class="header"></header>
+<header class="header">
 	<!-- menu principal -->
 	<nav class="nav-bar">
 	.....
