@@ -36,7 +36,7 @@ Padrões para o desenvolvimento de um HTML e CSS flexível, durável e sustentá
 
 > Todo código em qualquer base de código deve parecer como se uma única pessoa o digitou, não importando quantas pessoas contribuiram.
 
-Isso significa sempre respeitar rigorosamente estas diretrizes. 
+Isso significa sempre respeitar rigorosamente estas diretrizes.
 
 
 
