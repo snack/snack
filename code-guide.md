@@ -23,7 +23,7 @@ Padrões para o desenvolvimento de um HTML e CSS flexível, durável e sustentá
     * [Regras com declarações únicas](#regras-com-decalaraes-nicas)
   * [Legibilidade](#legibilidade)
     * [Comentários](#comentrios)
-      *[Adotando um padrão](#adotando-um-padro)
+      * [Adotando um padrão](#adotando-um-padro)
     * [Classes](#classes)
     * [Seletores](#seletores)
   * [Organização](#organizao)
