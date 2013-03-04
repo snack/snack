@@ -244,7 +244,7 @@ No casos em que várias regras apresentarem apenas uma declaração cada, consid
   width: 16px;
   height: 15px;
   background-image: url(../img/sprite.png);
-}2:24  sexta-feira, março 01, 2013
+}
 .icon           { background-position: 0 0; }
 .icon-home      { background-position: 0 -20px; }
 .icon-account   { background-position: 0 -40px; }
@@ -257,31 +257,71 @@ Código é escrito e mantido por pessoas. Garanta que seu código seja descritiv
 
 #### Comentários
 
-Bons comentários de código transmitem contexto ou propósito e não devem apenas reiterar um compenente ou nome da classe.
-
+Um código bem comentado além de auxiliar na organização, facilita o entendimento mesmo depois de um bom tempo sem abrir o arquivo.
 **Exemplo ruim:**
 
+
+##### Adotando um padrão
+
+Baseado no [Idiomatic CSS](https://github.com/necolas/idiomatic-css).
+
 ````css
-/* Modal header */
-.modal-header {
-  ...
+/* ==========================================================================
+   Bloco de comentário de seção
+   ========================================================================== */
+
+/* Bloco de comentário de sub-seção
+   ========================================================================== */
+
+/*
+ * Bloco de comentário de grupo
+ * Ideal para explicações em múltiplas linhas e documentação.
+ */
+
+/* Comentário básico */
+````
+
+###### Exemplo
+
+
+````css
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+/*
+ * Header do site.
+ * Agrupa o logo, caixa de busca, menu principal, menu para dispositivos mobile 
+ * escondido via CSS e lista das redes sociais.
+ */
+
+.header {
+   width: 100%;
+   height: 200px;
+   display: block;
+}
+
+/* Menu de navegação
+   ========================================================================== */
+
+.navbar {
+   width: 100%;
+   ....
+}
+
+.navbar-mobile {
+   /* Esconde menu mobile para resoluções maiores */
+   display: none;
 }
 ````
 
-**Exemplo bom:**
-
-````css
-/* Elemento que envolve .modal-title e .modal-close */
-.modal-header {
-  ...
-}
-````
 
 #### Classes
 
 * Manter classes em caixa baixa e usar traços (não usar underline ou camelCase)
 * Mantenha as classes o mais curto e sucinta possíveis
 * Use nomes significativos e que sejam de fácil entendimento
+* Utilize as classes em inglês (excessões podem acontecer claro)
 
 
 **Exemplo ruim:**
@@ -326,3 +366,8 @@ form { ... }
 * Organize seções de código por componente
 * Desenvolva uma consistente hierarquia de comentários
 * Se estiver usando vários arquivos CSS, discriminá-los por componente
+
+
+### Referências
+
+Criamos isso do nada? Claro que não. Pegamos um pouco de vários [projetos](https://github.com/a2comunicacao/Grid-A2/wiki/Refer%C3%AAncias) legais, misturamos com alguns ingredientes da casa e fizemos o nosso bolo.
