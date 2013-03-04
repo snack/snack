@@ -23,6 +23,7 @@ Padrões para o desenvolvimento de um HTML e CSS flexível, durável e sustentá
     * [Regras com declarações únicas](#regras-com-decalaraes-nicas)
   * [Legibilidade](#legibilidade)
     * [Comentários](#comentrios)
+      *[Adotando um padrão](#adotando-um-padro)
     * [Classes](#classes)
     * [Seletores](#seletores)
   * [Organização](#organizao)
@@ -258,7 +259,6 @@ Código é escrito e mantido por pessoas. Garanta que seu código seja descritiv
 #### Comentários
 
 Um código bem comentado além de auxiliar na organização, facilita o entendimento mesmo depois de um bom tempo sem abrir o arquivo.
-**Exemplo ruim:**
 
 
 ##### Adotando um padrão
