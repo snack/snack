@@ -27,6 +27,7 @@ Padrões para o desenvolvimento de um HTML e CSS flexível, durável e sustentá
     * [Classes](#classes)
     * [Seletores](#seletores)
   * [Organização](#organizao)
+  * [Referências](#referncias)
 
 
 
@@ -364,8 +365,7 @@ form { ... }
 ### Organização
 
 * Organize seções de código por componente
-* Desenvolva uma consistente hierarquia de comentários
-* Se estiver usando vários arquivos CSS, discriminá-los por componente
+* Sempre que possível comente seu código
 
 
 ### Referências
