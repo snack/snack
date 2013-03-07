@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="css/normalize.min.css">
 <link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/grid-12-1140.css">
+<link rel="stylesheet" href="css/grid-12-1170.css">
 
 <!-- modernizr -->
 <script src="js/libs/modernizr-2.6.2.min.js"></script>
