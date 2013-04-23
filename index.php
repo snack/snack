@@ -8,8 +8,8 @@
   <meta charset="utf-8">
 
   <title>Título da Página | Projeto</title>
-  <?php include('/in/meta.php');?>
-  <?php include('/in/estilos.php');?>
+  <?php include('in/meta.php');?>
+  <?php include('in/estilos.php');?>
 	<style type="text/css">
 
 	.container p {
@@ -796,6 +796,6 @@
 		</div>
 		<!-- -->
 	</div>
-	<?php include('/in/scripts.php');?>
+	<?php include('in/scripts.php');?>
 </body>
 </html>
