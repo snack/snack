@@ -54,7 +54,7 @@ Isso significa sempre respeitar rigorosamente estas diretrizes.
 
 * Use tabs com três espaços
 * Elementos inseridos dentro de outros elementos sempre devem ser indentados uma vez (3 espaços)
-* Para nomes de classe, IDs ou quaisquer outros atributos, sempre use aspas dupla, nunca aspas simples
+* Para nomes de classe, IDs ou quaisquer outros atributs, sempre use aspas dupla, nuca aspas simples
 * Não inclua uma barra invertida de fechamento em elementos de fechamento automático
 
 **Exemplo incorreto:**

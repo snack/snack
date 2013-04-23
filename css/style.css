@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+body {
+  line-height: 1.4;
+  background-color: red;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Resolução inicial --> Mobile's first
+   ========================================================================== */
+@media only screen {
+   body {
+      background-color: blue;
+  }
+}
+/* ==========================================================================
+   Resoluções acima de 768px --> font-size(16px) * 48em = 768
+   ========================================================================== */
+@media only screen and (min-width: 48em) {
+   body {
+      background-color: green;
+   }
+}
+
+@media only screen and (min-width: 80em) {
+   body{
+      background-color: red;
+   }
+}
+  
+}
+/* ==========================================================================
+   Impressao
+   ========================================================================== */
+/*@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+    orphans: 3;
+    widows: 3;
+  }
+}
+*/

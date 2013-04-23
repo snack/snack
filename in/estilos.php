@@ -1,8 +1,9 @@
-<link rel="stylesheet" href="css/normalize.min.css">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/grid-12-1170.css">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/grid.css">
 
-<!-- modernizr -->
+<!-- Modernizr -->
 <script src="js/libs/modernizr-2.6.2.min.js"></script>
-<!-- respond -->
+
+<!-- Respond -->
 <script src="js/libs/respond.min.js"></script>

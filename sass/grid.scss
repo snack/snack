@@ -1,0 +1,191 @@
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+*,
+*:before,
+*:after {
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+}
+
+html,
+body {
+   font-size: 16px;
+}
+
+.container {
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+.row {
+   width: 100%;
+   margin: 0 auto;
+   max-width: 62.5em;
+}
+
+.row:before,
+.row:after {
+   content: " ";
+   display: table;
+}
+
+.row:after {
+   clear: both;
+}
+
+
+/* Correções para IE7
+   ========================================================================== */
+
+.ie7 *,
+.ie7 *:before,
+.ie7 *:after {
+   behavior: url(/css/boxsizing.htc);
+}
+
+.ie7 .row {
+   zoom: 1;
+}
+
+/* Larguras grid
+   ========================================================================== */
+
+.onecol, 
+.twocol,
+.threecol,
+.fourcol,
+.fivecol,
+.sixcol,
+.sevencol,
+.eightcol,
+.ninecol,
+.tencol,
+.elevencol,
+.twelvecol {
+   position: relative;
+   padding-left: 10px;
+   padding-right: 10px;
+   float: left;
+}
+
+.onecol { width: 8.33333%; }
+.twocol { width: 16.66667%; }
+.threecol { width: 25%; }
+.fourcol { width: 33.33333%; }
+.fivecol { width: 41.66667%; }
+.sixcol { width: 50%; }
+.sevencol { width: 58.33333%; }
+.eightcol { width: 66.66667%; }
+.ninecol { width: 75%; }
+.tencol { width: 83.33333%; }
+.elevencol { width: 91.66667%; }
+.twelvecol { width: 100%; }
+
+/* Offsets
+   ========================================================================== */
+
+.offset-one {
+   position: relative;
+   margin-left: 8.33333%;
+}
+
+.offset-two {
+   position: relative;
+   margin-left: 16.66667%;
+}
+
+.offset-three {
+   position: relative;
+   margin-left: 25%;
+ }
+
+ .offset-four {
+   position: relative;
+   margin-left: 33.33333%;
+}
+
+.offset-five {
+   position: relative;
+   margin-left: 41.66667%;
+}
+
+.offset-six {
+   position: relative;
+   margin-left: 50%;
+}
+
+.offset-seven {
+   position: relative;
+   margin-left: 58.33333%;
+}
+
+.offset-eight {
+   position: relative;
+   margin-left: 66.66667%;
+}
+
+.offset-nine{
+   position: relative;
+   margin-left: 75%;
+}
+
+.offset-ten {
+   position: relative;
+   margin-left: 83.33333%;
+}
+
+/* Centralizando
+   ========================================================================== */
+ 
+ .centered {
+   float: none;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+
+/* Classes Auxiliares
+   ========================================================================== */
+
+.left {
+   float: left;
+}
+
+.right {
+   float: right;
+}
+
+.text-left {
+   text-align: left;
+}
+
+.text-right {
+   text-align: right;
+}
+
+.text-center {
+   text-align: center;
+}
+
+.text-justify {
+   text-align: justify;
+}
+
+.hide {
+   display: none;
+}
+
+/* Resolução inicial --> Mobile's first
+   ========================================================================== */
+
+@media only screen {
+}
+
+/* Resoluções acima de 768px --> font-size(16px) * 48em = 768
+   ========================================================================== */
+
+@media only screen and (min-width: 48em) {
+}
