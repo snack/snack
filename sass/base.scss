@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Mixins e variaveis
+   ========================================================================== */
+
+   @mixin transition($property, $duration, $function) {
+      -webkit-transition: $property $duration $function;
+         -moz-transition: $property $duration $function;
+           -o-transition: $property $duration $function;
+          -ms-transition: $property $duration $function;
+              transition: $property $duration $function;
+   }
+
+   @mixin scale($value) {
+      -webkit-transform: scale($value);
+         -moz-transform: scale($value);
+          -ms-transform: scale($value);
+           -o-transform: scale($value);
+              transform: scale($value);
+   }
+
+   @mixin opacity($value, $IEvalue) {
+      opacity: $value;
+      filter: alpha(opacity=$IEvalue);
+      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity="$IEvalue")";
+   }
+
+   @mixin box-sizing() {
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+              box-sizing: border-box;
+   }
+
+   @mixin border-radius($radius) {
+      -webkit-border-radius: $radius;
+         -moz-border-radius: $radius;
+              border-radius: $radius;
+   }
+
+   @mixin box-shadow($hLength, $vLength, $blur, $spread, $color) {
+      -webkit-box-shadow: $hLength $vLength $blur $spread $color;
+              box-shadow: $hLength $vLength $blur $spread $color;
+   }
+
+   @mixin clearfix() {
+      .ie7 & { zoom:1 }
+
+      &:before,
+      &:after {
+          content:"";
+          display:table;
+      }
+      &:after {
+          clear:both;
+      }
+   }
+
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+   ::-moz-selection {
+      background: #666;
+      text-shadow: none;
+      color: #fff;
+   }
+
+   ::selection {
+      background: #666;
+      text-shadow: none;
+      color: #fff;
+   }
+
+/* ==========================================================================
+   Classes Auxiliares
+   ========================================================================== */
+
+   .trans { @include transition(opacity, 0.25s, ease); }
+   .trans:hover { @include opacity(0.8, 80); }
+
+   .pull-left { float: left; }
+   .pull-right { float: right; }
+
+   .text-left { text-align: left; }
+   .text-right { text-align: right; }
+   .text-center { text-align: center; }
+   .text-justify { text-align: justify; }
+
+   .hide { display: none; }
+   .block { display: block; }
