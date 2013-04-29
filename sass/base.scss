@@ -1,7 +1,6 @@
 /* ==========================================================================
    Mixins e variaveis
    ========================================================================== */
-
    @mixin transition($property, $duration, $function) {
       -webkit-transition: $property $duration $function;
          -moz-transition: $property $duration $function;
@@ -59,14 +58,8 @@
 /* ==========================================================================
    Base
    ========================================================================== */
-
+   ::selection,
    ::-moz-selection {
-      background: #666;
-      text-shadow: none;
-      color: #fff;
-   }
-
-   ::selection {
       background: #666;
       text-shadow: none;
       color: #fff;
@@ -75,7 +68,6 @@
 /* ==========================================================================
    Classes Auxiliares
    ========================================================================== */
-
    .trans { @include transition(opacity, 0.25s, ease); }
    .trans:hover { @include opacity(0.8, 80); }
 

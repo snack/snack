@@ -26,7 +26,7 @@ Names (& URL):
   
 Standards: HTML5, CSS3
   
-Components: Modernizr, jQuery
+Components: Modernizr, jQuery, Respond (If Internet Explorer 7 and 8)
   
 Software:
 
