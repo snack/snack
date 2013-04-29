@@ -94,11 +94,13 @@ O arquivo `sass/main.scss` importa todos os arquivos *SASS* e exporta em um úni
 
 ### Os arquivos
 
-* `base.scss` Declaração das *variáveis* e *mixins* utlizados no projeto e de classes auxiliares.
-* `font-awesome.scss` Fonte em formato de ícones. 
+* `base.scss`
+   * Declaração das *variáveis* e *mixins* utlizados no projeto e de classes auxiliares.
+* `font-awesome.scss`
+Fonte em formato de ícones. 
 
-* `grid.scss` Define todas as propriedades relacionadas ao grid.
-
+* `grid.scss`
+Define todas as propriedades relacionadas ao grid.
 * `grid-functions.scss` Contém as funções que fazem o cálculo do grid ( *não é necessário editar esse arquivo* )
 
 * `icons.scss` Arquivo específico para as declarações de *sprite* do projeto
