@@ -68,8 +68,8 @@
 /* ==========================================================================
    Classes Auxiliares
    ========================================================================== */
-   .trans { @include transition(opacity, 0.25s, ease); }
-   .trans:hover { @include opacity(0.8, 80); }
+   .hover { @include transition(opacity, 0.25s, ease); }
+   .hover:hover { @include opacity(0.8, 80); }
 
    .pull-left { float: left; }
    .pull-right { float: right; }
