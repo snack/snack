@@ -96,26 +96,36 @@ O arquivo `sass/main.scss` importa todos os arquivos *SASS* e exporta em um úni
 
 * `base.scss`
    * Declaração das *variáveis* e *mixins* utlizados no projeto e de classes auxiliares.
+   * 
 * `font-awesome.scss`
-Fonte em formato de ícones. 
+   * Fonte em formato de ícones. 
 
 * `grid.scss`
-Define todas as propriedades relacionadas ao grid.
-* `grid-functions.scss` Contém as funções que fazem o cálculo do grid ( *não é necessário editar esse arquivo* )
+   * Define todas as propriedades relacionadas ao grid.
 
-* `icons.scss` Arquivo específico para as declarações de *sprite* do projeto
+* `grid-functions.scss`
+   * Contém as funções que fazem o cálculo do grid ( *não é necessário editar esse arquivo* )
 
-* `layout.scss` Contém as declarações de *CSS* referentes ao layout do projeto, como cores, posição, etc.
+* `icons.scss`
+   * Arquivo específico para as declarações de *sprite* do projeto
 
-* `main.scss` Arquivo que reúne todos os arquivos *SASS*.
+* `layout.scss`
+   * Contém as declarações de *CSS* referentes ao layout do projeto, como cores, posição, etc.
 
-* `navigation.scss` Contém as declarações referentes aos componentes de navegação, como *header*, *footer* e *menu*.
+* `main.scss`
+   * Arquivo que reúne todos os arquivos *SASS*.
 
-* `normalize.scss` Arquivo que *reseta* algumas propriedades CSS, com o objetivo de se manter um padrão *crossbrowser*; 
+* `navigation.scss`
+   * Contém as declarações referentes aos componentes de navegação, como *header*, *footer* e *menu*.
 
-* `print.scss` Arquivo específico para impressão.
+* `normalize.scss`
+   * Arquivo que *reseta* algumas propriedades CSS, com o objetivo de se manter um padrão *crossbrowser*; 
 
-* `typography.scss` Contém as declarações referentes à tipografia, links, listas e tabelas.
+* `print.scss`
+   * Arquivo específico para impressão.
+
+* `typography.scss`
+   * Contém as declarações referentes à tipografia, links, listas e tabelas.
 
 ## CSS
 
