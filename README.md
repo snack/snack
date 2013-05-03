@@ -34,7 +34,7 @@ Dentro da pasta *SASS* existe um arquivo chamado `grid.scss`. É nele que inseri
 
 Primeiro inserimos as configurações das colunas: *número*, *largura* e *espaço entre elas*.
 
-```css
+```scss
 /* Calculo grid
    ========================================================================== */
    /* Número de colunas */
@@ -50,7 +50,12 @@ Depois setamos a *largura máxima* do grid.
 ```css
 /* Largura máximo do Grid */
 .row { max-width: 960px; }
+
 ```
+
+E.. pronto! O grid é calculado seguindo os valores inseridos.
+
+#### Classes do Grid
 
 
 ### Marcação Padrão
