@@ -55,9 +55,6 @@ Depois setamos a *largura máxima* do grid.
 
 E.. pronto! O grid é calculado seguindo os valores inseridos.
 
-#### Classes do Grid
-
-
 ### Marcação Padrão
 
 Para criar um layout de duas colunas por exemplo, crie uma `.row` e adicione dentro dela o número de colunas conforme o grid com a classe `.*col`. Dentro de cada `.row` o número máximo de colunas deve ser o número de colunas do grid.
@@ -112,6 +109,51 @@ Caso precise adicionar uma linha filha é só manter a marcação padrão: criar
 </div>
 ```
 > No exemplo temos uma classe `.fourcol` que possui uma `.row` filha. Esta por sua vez possui uma classe `.eightcol` ( *8 colunas* ) e uma `.fourcol ( *4 colunas* ) totalizando 12 colunas.
+
+### Grid semântico
+
+Podemos utilizar as classes acima, ou podemos utilizar algumas *features* que o *SASS* nos oferece em conjunto com as funções que calculam o grid, para tentarmos deixar o código mais semântico.
+
+Se formos olhar o arquivo `grid.scss` que contém as declarações do grid, podemos observar dois *includes*: *column* e *push*.
+
+```scss
+/* Larguras grid
+   ========================================================================== */
+   .onecol { @include column(1); }
+   .twocol { @include column(2); }
+   .threecol { @include column(3); }
+
+...
+
+* Offsets
+  ========================================================================== */
+  .offset-one { @include push(1); }
+  .offset-two { @include push(2); }
+  .offset-three { @include push(3); }
+```
+
+O que cada um faz é o seguinte:
+* **column(x)**: renderiza o elemento com a largura de *x colunas* e com as propriedades específicas da coluna.
+* **push(x)**:  renderiza o elemento com um espaçamento esquerdo de *x colunas*.
+
+Com isso, uma marcação que antes era assim:
+
+```html
+<div class="sixcol">
+	<div class="about"></div>
+</div>
+<div class="sixcol">
+	<div class="box"></div>
+</div>
+```
+
+... pode ficar assim:
+
+```html
+<div class="about"></div>
+<div class="box"></div>
+```
+
 
 ## SASS
 
