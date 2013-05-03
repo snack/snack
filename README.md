@@ -125,7 +125,7 @@ Se formos olhar o arquivo `grid.scss` que contém as declarações do grid, pode
 
 ...
 
-* Offsets
+/* Offsets
   ========================================================================== */
   .offset-one { @include push(1); }
   .offset-two { @include push(2); }
@@ -152,6 +152,11 @@ Com isso, uma marcação que antes era assim:
 ```html
 <div class="about"></div>
 <div class="box"></div>
+```
+
+```scss
+.about,
+.box { @include column(6); }
 ```
 
 
