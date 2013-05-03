@@ -28,6 +28,31 @@ Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
 
 ## HTML
 
+### O grid
+
+Dentro da pasta *SASS* existe um arquivo chamado `grid.scss`. É nele que inserimos as configurações do grid.
+
+Primeiro inserimos as configurações das colunas: *número*, *largura* e *espaço entre elas*.
+
+```html
+/* Calculo grid
+   ========================================================================== */
+   /* Número de colunas */
+   $columns: 12;
+   /* Largura das colunas */
+   $column-width: 60;
+   /* Largura dos espaços entre as colunas */
+   $gutter-width: 20;
+```
+
+Depois setamos a *largura máxima* do grid.
+
+```html
+/* Largura máximo do Grid */
+.row { max-width: 960px; }
+```
+
+
 ### Marcação Padrão
 
 Para criar um layout de duas colunas por exemplo, crie uma `.row` e adicione dentro dela o número de colunas conforme o grid com a classe `.*col`. Dentro de cada `.row` o número máximo de colunas deve ser o número de colunas do grid.
