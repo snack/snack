@@ -14,7 +14,7 @@
 
 <!-- Verif Mobile -->
 <?php
-   require_once 'in/Mobile_Detect.php';
+   require_once 'in/mobile_detect.php';
    $detect = new Mobile_Detect();
 
    $isMobile = $detect->isMobile();
