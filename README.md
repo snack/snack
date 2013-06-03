@@ -9,18 +9,23 @@ Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
 
 ## Estrutura
 
-* [HTML](https://github.com/a2comunicacao/Grid-A2#html)
+* [HTML](#html)
 	* [O grid](#o-grid)
 	* [A idéia](#a-idia)
-* [SASS](https://github.com/a2comunicacao/Grid-A2#sass)
-* [CSS](https://github.com/a2comunicacao/Grid-A2#css)
-* [JS](https://github.com/a2comunicacao/Grid-A2#js)
+	* [Marcação Padrão](#marcao-padro)
+	* [Deslocamento](#deslocamento)
+	* [Centralizando](#centralizando)
+	* [Linha filha](#linha-filha)
+	* [Grid semântico](#grid-semntico)
+* [SASS](#sass)
+* [CSS](#css)
+* [JS](#js)
 	* LIBS
 		* jQuery
 		* Modernizr
 		* Respond
 	* `scripts.js`
-* [IN](https://github.com/a2comunicacao/Grid-A2#in)
+* [IN](#in)
 	* `estilos.php`
 	* `meta.php`
 	* `scripts.php`
@@ -94,7 +99,7 @@ Centralize o elemento, independente da quantidade de colunas, aplicando a classe
 </div>
 ```
 
-### Linha Filha
+### Linha filha
 
 Caso precisemos adicionar uma linha filha, é só mantermos a marcação padrão e respeitar o número de colunas do grid.
 
@@ -114,7 +119,7 @@ Caso precisemos adicionar uma linha filha, é só mantermos a marcação padrão
 
 ### Grid semântico
 
-Podemos utilizar as classes acima, ou podemos utilizar algumas *features* que o *SASS* nos oferece em conjunto com as funções que calculam o grid, para deixarmos o código mais semântico.
+É possível deixarmos nosso código mais semântico, com a utilização de algumas *features* que o *SASS* nos oferece em conjunto com as funções que calculam o grid.
 
 Se formos olhar o arquivo `grid.scss` que contém as declarações do grid, podemos observar quatro *includes*: 
 
@@ -172,7 +177,7 @@ Com isso, uma marcação que antes era assim:
 }
 ```
 
-> A diferença entre o exemplo anterior e esse é que no exemplo anterior adicionamos uma classe `.column` aos elementos que desejamos que se comportem como uma coluna e, nesse último exemplo, adicionamos o `@include column();` diretamente na classe do elemento que desejamos que se comporte como uma coluna.
+> A diferença entre o exemplo anterior e esse é que no anterior adicionamos uma classe `.column` aos elementos que desejamos que se comportem como uma coluna e, nesse último, adicionamos o `@include column();` diretamente na classe do elemento que desejamos que se comporte como uma coluna.
 
 
 ## SASS
