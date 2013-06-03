@@ -10,7 +10,7 @@ Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
 ## Estrutura
 
 * [HTML](https://github.com/a2comunicacao/Grid-A2#html) | index.php
-	*[O grid](https://github.com/a2comunicacao/Grid-A2#o-grid) 
+	* [O grid](https://github.com/a2comunicacao/Grid-A2#o-grid) 
 * [SASS](https://github.com/a2comunicacao/Grid-A2#sass)
 * [CSS](https://github.com/a2comunicacao/Grid-A2#css)
 * [JS](https://github.com/a2comunicacao/Grid-A2#js)
