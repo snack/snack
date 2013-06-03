@@ -1,9 +1,18 @@
 # Grid A2
 
-Template para auxiliar no **pontapé inicial** em um projeto web. Juntamos [alguns dos projetos](https://github.com/a2comunicacao/Grid-A2/wiki/Refer%C3%AAncias) que mais utilizávamos como referência e adaptamos para um modelo de desenvolvimento da A2.
+Template (*ou Boilerplate?*)para auxiliar no **pontapé inicial** em um projeto web. Juntamos [alguns dos projetos](https://github.com/a2comunicacao/Grid-A2/wiki/Refer%C3%AAncias) que mais utilizávamos como referência e adaptamos para um modelo de desenvolvimento da A2.
 Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
 
 **Padrões são sempre bons**. Auxiliam no entendimento do código, principalmente numa fase posterior de manutenção. Por isso, seguimos um padrão de código. [Veja o guia](https://github.com/a2comunicacao/Grid-A2/blob/master/code-guide.md).
+
+**E o suporte?** Foi testado em diversos navegadores, mas recomendamos seguir a lista abaixo:
+- IE8+
+- Firefox 2+
+- Chrome 4+
+- Safari 3.1+
+- Opera 9.5 * (Apresenta um bug na renderização de larguras em porcentagem, arredondando os valores para baixo. Nas versões futuras deve ser corrigido.)
+
+
 
 ****
 

@@ -20,6 +20,7 @@
    /* Última coluna sem margem direita */
    @mixin last() {
       margin-right: 0;
+      float: right;
    }
 
    /* Descolamento de colunas */
