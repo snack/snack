@@ -10,21 +10,22 @@ Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
 ## Estrutura
 
 * [HTML](https://github.com/a2comunicacao/Grid-A2#html) | index.php
-    * [SASS](https://github.com/a2comunicacao/Grid-A2#sass)
-	* [CSS](https://github.com/a2comunicacao/Grid-A2#css)
-	* [JS](https://github.com/a2comunicacao/Grid-A2#js)
-		* LIBS
-			* jQuery
-			* Modernizr
-			* Respond
-		* `scripts.js`
-	* [IN](https://github.com/a2comunicacao/Grid-A2#in)
-		* `estilos.php`
-		* `meta.php`
-		* `scripts.php`
-		* `mobile_detect.php`
-		* `header.php`
-		* `footer.php`
+	*[O grid](https://github.com/a2comunicacao/Grid-A2#o-grid) 
+* [SASS](https://github.com/a2comunicacao/Grid-A2#sass)
+* [CSS](https://github.com/a2comunicacao/Grid-A2#css)
+* [JS](https://github.com/a2comunicacao/Grid-A2#js)
+	* LIBS
+		* jQuery
+		* Modernizr
+		* Respond
+	* `scripts.js`
+* [IN](https://github.com/a2comunicacao/Grid-A2#in)
+	* `estilos.php`
+	* `meta.php`
+	* `scripts.php`
+	* `mobile_detect.php`
+	* `header.php`
+	* `footer.php`
 
 ## HTML
 
@@ -32,51 +33,51 @@ Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
 
 Dentro da pasta *SASS* existe um arquivo chamado `grid.scss`. É nele que inserimos as configurações do grid.
 
-Primeiro inserimos as configurações das colunas: *número*, *largura* e *espaço entre elas*.
-
 ```scss
-/* Calculo grid
+/* ==========================================================================
+   Cálculo grid
    ========================================================================== */
-   /* Número de colunas */
-   $columns: 12;
-   /* Largura das colunas */
-   $column-width: 60;
-   /* Largura dos espaços entre as colunas */
-   $gutter-width: 20;
+   $totalColumns   : 12;
+   $columnWidth    : 60px;
+   $gutterWidth    : 20px;
+   $gridWidth      : 940px;
 ```
 
-Depois setamos a *largura máxima* do grid.
-
-```css
-/* Largura máximo do Grid */
-.row { max-width: 960px; }
-
-```
+- *$totalColumns*: número de colunas do grid;
+- *$columnWidth*: largura de cada coluna;
+- *$gutterWidth*: margem entre cada coluna;
+- *$gridWidth*: largura máxima do grid;
 
 E.. pronto! O grid é calculado seguindo os valores inseridos.
 
+### A Idéia
+
+Entendendo a marcação: 
+
+- cada *linha* deve possuir **x** colunas, onde **x** é o número definido  em `$totalColumns`;
+- a última coluna de cada linha precisa ter a sua *margem direita zerada*;
+- o número máximo de colunas em cada *linha* deve ser igual ao valor definido em $totalColumns`;
+
 ### Marcação Padrão
 
-Para criar um layout de duas colunas por exemplo, crie uma `.row` e adicione dentro dela o número de colunas conforme o grid com a classe `.*col`. Dentro de cada `.row` o número máximo de colunas deve ser o número de colunas do grid.
+Para criar um layout de duas colunas por exemplo, precisamos criar uma `.row` e adicionar dentro dela o número de colunas conforme definido na variável `$totalColumns`. Cada coluna deve ter a classe `.xcol`, onde x é o número de colunas referente à largura.
 
 ```html
 <div class="row">
 	<div class="fourcol">4 colunas</div>
-	<div class="eightcol">8 colunas</div>
+	<div class="eightcol last">8 colunas</div>
 </div>
 ```
 > No exemplo temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.eightcol` ( *8 colunas* ), totalizando 12 colunas e completando a `.row`.
 
 ### Deslocamento
 
-Mova as colunas para a direita usando a classe `.offset-*`, onde o *** é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-four` desloca o elemento aplicado em 4 colunas.
-
-Aqui também o número máximo de colunas deve ser o número de colunas do grid (contando os deslocamentos).
+Mova as colunas para a direita usando a classe `.offset-x`, onde o *x* é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-four` desloca o elemento aplicado em 4 colunas.
 
 ```html
 <div class="row">
 	<div class="fourcol">4 colunas</div>
-	<div class="sixcol offset-two">6 colunas | 2 colunas descolamento</div>
+	<div class="sixcol offset-two last">6 colunas | 2 colunas descolamento</div>
 </div>
 ```
 
@@ -94,7 +95,7 @@ Centralize o elemento, independente da quantidade de colunas, aplicando a classe
 
 ### Linha Filha
 
-Caso precise adicionar uma linha filha é só manter a marcação padrão: criar uma `.row` e adicionar dentro dela o número de colunas com a classe `.*col`, respeitando o número máximo de colunas do grid. 
+Caso precisemos adicionar uma linha filha, é só mantermos a marcação padrão e respeitar o número de colunas do grid.
 
 ```html
 <div class="row">
@@ -102,47 +103,32 @@ Caso precise adicionar uma linha filha é só manter a marcação padrão: criar
 		<!-- linha filha -->
 		<div class="row">
 			<div class="eightcol">8 colunas</div>
-			<div class="fourcol">4 colunas</div>
+			<div class="fourcol last">4 colunas</div>
 		</div><!-- ##fim linha filha -->
 	</div>
-	<div class="eightcol">8 coluna</div>
+	<div class="eightcol last">8 coluna</div>
 </div>
 ```
 > No exemplo temos uma classe `.fourcol` que possui uma `.row` filha. Esta por sua vez possui uma classe `.eightcol` ( *8 colunas* ) e uma `.fourcol ( *4 colunas* ) totalizando 12 colunas.
 
 ### Grid semântico
 
-Podemos utilizar as classes acima, ou podemos utilizar algumas *features* que o *SASS* nos oferece em conjunto com as funções que calculam o grid, para tentarmos deixar o código mais semântico.
+Podemos utilizar as classes acima, ou podemos utilizar algumas *features* que o *SASS* nos oferece em conjunto com as funções que calculam o grid, para deixarmos o código mais semântico.
 
-Se formos olhar o arquivo `grid.scss` que contém as declarações do grid, podemos observar dois *includes*: *column* e *push*.
+Se formos olhar o arquivo `grid.scss` que contém as declarações do grid, podemos observar quatro *includes*: 
 
-```scss
-/* Larguras grid
-   ========================================================================== */
-   .onecol { @include column(1); }
-   .twocol { @include column(2); }
-   .threecol { @include column(3); }
-
-...
-
-/* Offsets
-  ========================================================================== */
-  .offset-one { @include push(1); }
-  .offset-two { @include push(2); }
-  .offset-three { @include push(3); }
-```
-
-O que cada um faz é o seguinte:
-* **column(x)**: renderiza o elemento com a largura de *x colunas* e com as propriedades específicas da coluna.
-* **push(x)**:  renderiza o elemento com um espaçamento esquerdo de *x colunas*.
+- *column()*: define o elemento como uma coluna, aplicando as propriedades específicas;
+- *width(n)*: define a largura do elemento com **n** colunas;
+- *last()*: se relaciona ao último elemento (coluna) de cada linha do grid, zerando a margem direita do mesmo;
+- *push(n)*: define o deslocamento esquerdo do elemento com **n** colunas.
 
 Com isso, uma marcação que antes era assim:
 
 ```html
-<div class="sixcol">
+<div class="fourcol">
 	<div class="about"></div>
 </div>
-<div class="sixcol">
+<div class="eightcol last">
 	<div class="box"></div>
 </div>
 ```
@@ -150,14 +136,42 @@ Com isso, uma marcação que antes era assim:
 ... pode ficar assim:
 
 ```html
+<div class="about column"></div>
+<div class="box column"></div>
+```
+
+```scss
+.about {
+	@include width(4);
+}
+
+.about {
+	@include width(8);
+	@include last();
+}
+```
+
+.. podemos mudar um pouco mais e ficaria assim:
+
+```html
 <div class="about"></div>
 <div class="box"></div>
 ```
 
 ```scss
-.about,
-.box { @include column(6); }
+.about {
+	@include width(4);
+	@include column();
+}
+
+.about {
+	@include width(8);
+	@include column();
+	@include last();
+}
 ```
+
+> A diferença entre o exemplo anterior e esse é que no exemplo anterior adicionamos uma classe `.column` aos elementos que desejamos que se comportem como uma coluna e, nesse último exemplo, adicionamos o `@include column();` diretamente na classe do elemento que desejamos que se comporte como uma coluna.
 
 
 ## SASS

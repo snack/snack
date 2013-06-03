@@ -1,48 +1,23 @@
 /* ==========================================================================
+   Cálculo grid
+   ========================================================================== */
+   $totalColumns   : 12;
+   $columnWidth    : 60px;
+   $gutterWidth    : 20px;
+   $gridWidth      : 940px;
+   
+   /* Funções de cálculo do grid */
+   @import 'grid-functions';
+
+
+/* ==========================================================================
    Grid
    ========================================================================== */
    body {
       width: 100%;
       @include clearfix();
    }
-
-   /* Calculo grid
-      ========================================================================== */
-      /* Número de colunas */
-      $columns: 12;
-      /* Largura das colunas */
-      $column-width: 60;
-      /* Largura dos espaços entre as colunas */
-      $gutter-width: 20;
-
-      /*
-       * Grid fluido / fixo
-       *    Fluido: $total-width: 100%;
-       *    Fixo:   $total-width: gridsystem-width($columns); 
-       */
-      $total-width: 100%;
-
-   /* Geral
-      ========================================================================== */
-      *,
-      *:before,
-      *:after {
-         -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-                 box-sizing: border-box;
-      }
-
-      /* Correções para IE7
-      ========================================================================== */
-      .ie7 *,
-      .ie7 *:before,
-      .ie7 *:after { behavior: url(/css/boxsizing.htc); }
-
-      img, 
-      object,
-      embed { max-width: 100%; }
-
-      img { height: auto; }
+      
 
    @media only screen {
       .container {
@@ -65,23 +40,24 @@
 
    @media only screen and (min-width: 768px) {
 
-      /* Largura máximo do Grid */
-      .row { max-width: 960px; }
+      /* Largura máxima do Grid */
+      .row { max-width: $gridWidth; }
+      .column { @include column(); }
 
       /* Larguras grid
          ========================================================================== */
-         .onecol { @include column(1); }
-         .twocol { @include column(2); }
-         .threecol { @include column(3); }
-         .fourcol { @include column(4); }
-         .fivecol { @include column(5); }
-         .sixcol { @include column(6); }
-         .sevencol { @include column(7); }
-         .eightcol { @include column(8); }
-         .ninecol { @include column(9); }
-         .tencol { @include column(10); }
-         .elevencol { @include column(11); }
-         .twelvecol { @include column(12); }
+         .onecol { @include width(1); @include column(); }
+         .twocol { @include width(2); @include column(); }
+         .threecol { @include width(3); @include column(); }
+         .fourcol { @include width(4); @include column(); }
+         .fivecol { @include width(5); @include column(); }
+         .sixcol { @include width(6); @include column(); }
+         .sevencol { @include width(7); @include column(); }
+         .eightcol { @include width(8); @include column(); }
+         .ninecol { @include width(9); @include column(); }
+         .tencol { @include width(10); @include column(); }
+         .elevencol { @include width(11); @include column(); }
+         .twelvecol { @include width(12); @include column(); }
 
       /* Offsets
          ========================================================================== */
@@ -106,4 +82,6 @@
             margin-left: auto;
             margin-right: auto;
          }
+
+      .last { @include last(); }
    }

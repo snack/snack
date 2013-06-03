@@ -19,4 +19,7 @@
 
    $isMobile = $detect->isMobile();
    $isTablet = $detect->isTablet();
+
+   $notMobile = ! $isMobile || $isTablet;
+   $onlyMobile = $isMobile && ! $isTablet;
 ?>
