@@ -9,8 +9,9 @@ Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
 
 ## Estrutura
 
-* [HTML](https://github.com/a2comunicacao/Grid-A2#html) | index.php
-	* [O grid](https://github.com/a2comunicacao/Grid-A2#o-grid) 
+* [HTML](https://github.com/a2comunicacao/Grid-A2#html)
+	* [O grid](#o-grid)
+	* [A idéia](#a-idia)
 * [SASS](https://github.com/a2comunicacao/Grid-A2#sass)
 * [CSS](https://github.com/a2comunicacao/Grid-A2#css)
 * [JS](https://github.com/a2comunicacao/Grid-A2#js)
