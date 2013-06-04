@@ -1,6 +1,6 @@
 # Grid A2
 
-Template (*ou Boilerplate?*)para auxiliar no **pontapé inicial** em um projeto web. Juntamos [alguns dos projetos](https://github.com/a2comunicacao/Grid-A2/wiki/Refer%C3%AAncias) que mais utilizávamos como referência e adaptamos para um modelo de desenvolvimento da A2.
+Template ( *ou Boilerplate?* )para auxiliar no **pontapé inicial** em um projeto web. Juntamos [alguns dos projetos](https://github.com/a2comunicacao/Grid-A2/wiki/Refer%C3%AAncias) que mais utilizávamos como referência e adaptamos para um modelo de desenvolvimento da A2.
 Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
 
 **Padrões são sempre bons**. Auxiliam no entendimento do código, principalmente numa fase posterior de manutenção. Por isso, seguimos um padrão de código. [Veja o guia](https://github.com/a2comunicacao/Grid-A2/blob/master/code-guide.md).
@@ -66,11 +66,11 @@ Entendendo a marcação:
 
 - cada *linha* deve possuir **x** colunas, onde **x** é o número definido  em `$totalColumns`;
 - a última coluna de cada linha precisa ter a sua *margem direita zerada*;
-- o número máximo de colunas em cada *linha* deve ser igual ao valor definido em $totalColumns`;
+- o número máximo de colunas em cada *linha* deve ser igual ao valor definido em `$totalColumns`;
 
 ### Marcação Padrão
 
-Para criar um layout de duas colunas por exemplo, precisamos criar uma `.row` e adicionar dentro dela o número de colunas conforme definido na variável `$totalColumns`. Cada coluna deve ter a classe `.xcol`, onde x é o número de colunas referente à largura.
+Para criar um layout de duas colunas por exemplo, precisamos criar uma `.row` e adicionar dentro dela o número de colunas conforme definido na variável `$totalColumns`. Cada coluna deve ter a classe `.xcol`, onde **x** é o número de colunas referente à largura do elemento.
 
 ```html
 <div class="row">
@@ -78,11 +78,11 @@ Para criar um layout de duas colunas por exemplo, precisamos criar uma `.row` e 
 	<div class="eightcol last">8 colunas</div>
 </div>
 ```
-> No exemplo temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.eightcol` ( *8 colunas* ), totalizando 12 colunas e completando a `.row`.
+> No exemplo, temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.eightcol` ( *8 colunas* ), totalizando 12 colunas e completando a `.row`.
 
 ### Deslocamento
 
-Mova as colunas para a direita usando a classe `.offset-x`, onde o *x* é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-four` desloca o elemento aplicado em 4 colunas.
+Mova as colunas para a direita usando a classe `.offset-x`, onde o **x** é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-four` desloca o elemento aplicado em 4 colunas.
 
 ```html
 <div class="row">
@@ -91,7 +91,7 @@ Mova as colunas para a direita usando a classe `.offset-x`, onde o *x* é o valo
 </div>
 ```
 
-> No exemplo temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas e fechando o `.row`.
+> No exemplo, temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas e fechando o `.row`.
 
 ### Centralizando
 
@@ -119,7 +119,7 @@ Caso precisemos adicionar uma linha filha, é só mantermos a marcação padrão
 	<div class="eightcol last">8 coluna</div>
 </div>
 ```
-> No exemplo temos uma classe `.fourcol` que possui uma `.row` filha. Esta por sua vez possui uma classe `.eightcol` ( *8 colunas* ) e uma `.fourcol ( *4 colunas* ) totalizando 12 colunas.
+> No exemplo, temos uma classe `.fourcol` que possui uma `.row` filha. Esta por sua vez possui uma classe `.eightcol` ( *8 colunas* ) e uma `.fourcol ( *4 colunas* ) totalizando 12 colunas.
 
 ### Grid semântico
 
