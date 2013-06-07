@@ -41,7 +41,7 @@
    @media only screen and (min-width: 768px) {
 
       /* Largura máxima do Grid */
-      .row { max-width: $gridWidth; background-color: lightBlue; }
+      .row { max-width: $gridWidth; }
       .column { @include column(); }
 
       /* Larguras grid
