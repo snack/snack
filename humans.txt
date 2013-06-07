@@ -1,37 +1,46 @@
-/* the humans responsible & colophon */
 
-/* humanstxt.org */
-
-
-
+                            
 /* TEAM */
 
-<your title>: <your name>
-  
-Site:
-  
-Twitter:
-  
-Location:
+                            
+Your title: Your name.
 
+                            
+Site: email, link to a contact form, etc.
 
+                            
+Twitter: your Twitter username.
 
+                            
+Location: City, Country.
+
+                         
+                 
+                        [...]
+						
+
+							
 /* THANKS */
 
-Names (& URL):
+							
+Name: name or url
 
+						
+                 
+                        [...]
+                        
 
-
+                            
 /* SITE */
-  
-Standards: HTML5, CSS3
-  
-Components: Modernizr, jQuery, Respond (If Internet Explorer 7 and 8)
-  
-Software:
 
+                            
+Last update: YYYY/MM/DD 
 
+                            
+Standards: HTML5, CSS3,..
 
+                            
+Components: Modernizr, jQuery, etc.
 
-
-[Credit for this page: http://humanstxt.org/]
+                            
+Software: Software used for the development
