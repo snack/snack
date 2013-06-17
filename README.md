@@ -1,12 +1,11 @@
-# Grid A2
+# A2boilerplate
 
-Template ( *ou Boilerplate?* )para auxiliar no **pontapé inicial** em um projeto web. Juntamos [alguns dos projetos](https://github.com/a2comunicacao/Grid-A2/wiki/Refer%C3%AAncias) que mais utilizávamos como referência e adaptamos para um modelo de desenvolvimento da A2.
+Padrão para auxiliar no **pontapé inicial** em um projeto web. Juntamos [alguns dos projetos](https://github.com/a2comunicacao/Grid-A2/wiki/Refer%C3%AAncias) que mais utilizávamos como referência e adaptamos para um modelo de desenvolvimento da A2.
 Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
 
 **Padrões são sempre bons**. Auxiliam no entendimento do código, principalmente numa fase posterior de manutenção. Por isso, seguimos um padrão de código. [Veja o guia](https://github.com/a2comunicacao/Grid-A2/blob/master/code-guide.md).
 
 **E o suporte?** Veja [aqui](https://github.com/a2comunicacao/Grid-A2/wiki#suporte).
-
 
 
 ****
@@ -51,12 +50,14 @@ Dentro da pasta *SASS* existe um arquivo chamado `grid.scss`. É nele que inseri
    $columnWidth    : 60px;
    $gutterWidth    : 20px;
    $gridWidth      : 940px;
+   $breakpoint:    : 768px;
 ```
 
 - *$totalColumns*: número de colunas do grid;
 - *$columnWidth*: largura de cada coluna;
 - *$gutterWidth*: margem entre cada coluna;
 - *$gridWidth*: largura máxima do grid;
+- *$breakpoint*: largura de breakpoint mobile.
 
 E.. pronto! O grid é calculado seguindo os valores inseridos.
 
@@ -200,11 +201,11 @@ O arquivo `sass/main.scss` importa todos os arquivos *SASS* e exporta em um úni
 * **`font-awesome.scss`**
    * Fonte em formato de ícones. 
 * **`grid.scss`**
-   * Define todas as propriedades relacionadas ao grid.
+   * Define todas as propriedades relacionadas ao grid e onde defnimos as propriedades relacionadas a largura de um elemento.
 * **`grid-functions.scss`**
-   * Contém as funções que fazem o cálculo do grid ( *não é necessário editar esse arquivo* )
+   * Contém as funções que fazem o cálculo do grid ( *não é necessário editar esse arquivo* ).
 * **`icons.scss`**
-   * Arquivo específico para as declarações de *sprite* do projeto
+   * Arquivo específico para as declarações de *sprite* do projeto.
 * **`layout.scss`**
    * Contém as declarações de *CSS* referentes ao layout do projeto, como cores, posição, etc.
 * **`main.scss`**
@@ -212,7 +213,7 @@ O arquivo `sass/main.scss` importa todos os arquivos *SASS* e exporta em um úni
 * **`navigation.scss`**
    * Contém as declarações referentes aos componentes de navegação, como *header*, *footer* e *menu*.
 * **`normalize.scss`**
-   * Arquivo que *reseta* algumas propriedades CSS, com o objetivo de se manter um padrão *crossbrowser*; 
+   * Arquivo que *reseta* algumas propriedades CSS, com o objetivo de se manter um padrão *crossbrowser*.
 * **`print.scss`**
    * Arquivo específico para impressão.
 * **`typography.scss`**
@@ -244,23 +245,23 @@ Arquivo JS '[pronto pra ser usado](http://img855.imageshack.us/img855/2449/coron
 
 ## IN
 
-### `estilos.php`
+#### `estilos.php`
 
 Links do arquivo *CSS*, dos scripts *Modernizr* e *Respond* e, da verificação mobile.
 
-### `meta.php`
+#### `meta.php`
 
 Arquivo que contém as chamadas das *Meta Tags* e do *Favicon*.
 
-### `scripts.php`
+#### `scripts.php`
 
 Contém as chamada da biblioteca jQuery, do arquivo `scripts.js` e do código do *Google Analytics*.
 
-### `mobile_detect.php`
+#### `mobile_detect.php`
 
 Verificação mobile em *PHP* (instruções de como usar em breve).
 
-### `header.php` e `footer.php`
+#### `header.php` e `footer.php`
 
 Sugestão para arquivos referentes ao cabeçalho e rodapé do projeto.
 
