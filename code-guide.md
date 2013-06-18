@@ -37,7 +37,7 @@ Padrões para o desenvolvimento de um HTML e CSS flexível, durável e sustentá
 
 ## O Principal
 
-> Todo código em qualquer base de código deve parecer como se uma única pessoa o digitou, não importando quantas pessoas contribuiram.
+> Todo código em qualquer base de código deve parecer como se uma única pessoa o digitou, não importando quantas pessoas contribuíram.
 
 Isso significa sempre respeitar rigorosamente estas diretrizes. 
 
@@ -54,7 +54,7 @@ Isso significa sempre respeitar rigorosamente estas diretrizes.
 
 * Use tabs com três espaços
 * Elementos inseridos dentro de outros elementos sempre devem ser indentados uma vez (3 espaços)
-* Para nomes de classe, IDs ou quaisquer outros atributs, sempre use aspas dupla, nuca aspas simples
+* Para nomes de classe, IDs ou quaisquer outros atributos, sempre use aspas dupla, nuca aspas simples
 * Não inclua uma barra invertida de fechamento em elementos de fechamento automático
 
 **Exemplo incorreto:**
@@ -121,9 +121,9 @@ Com isso a marcação ficaria mais ou menos assim::
 Sempre que possível, para uma melhor leitura do código, insira comentários entre o HTML que possam auxiliar na compreensão geral do fluxo.
 
 ````html
-<!-- header -->
+<!-- Header -->
 <header class="header">
-	<!-- menu principal -->
+	<!-- Menu principal -->
 	<nav class="nav-bar">
 	.....
 ````
@@ -138,7 +138,7 @@ Sempre que possível, para uma melhor leitura do código, insira comentários en
 ### Sintaxe do CSS
 
 * Use tabs com três espaços
-* Ao agrupar seletores, mantenha cada um em uma linha
+* Ao agrupar seletores, mantenha cada um em uma linha diferente
 * Inclua um espaço antes da <code>{</code>
 * Coloque a chave de fechamento dos blocos de declaração em uma nova linha
 * Inclua um espaço depois de <code>:</code> em cada propriedade
@@ -232,7 +232,7 @@ Ao usar propriedades com prefixos, indente cada propriedade de tal forma que o v
 ````
 
 
-#### Regras com decalarações únicas
+#### Regras com declarações únicas
 
 No casos em que várias regras apresentarem apenas uma declaração cada, considere remover as quebras de linha para facilitar a leitura e agilizar a edição.
 
@@ -247,6 +247,7 @@ No casos em que várias regras apresentarem apenas uma declaração cada, consid
   height: 15px;
   background-image: url(../img/sprite.png);
 }
+
 .icon           { background-position: 0 0; }
 .icon-home      { background-position: 0 -20px; }
 .icon-account   { background-position: 0 -40px; }
@@ -282,6 +283,8 @@ Baseado no [Idiomatic CSS](https://github.com/necolas/idiomatic-css).
 /* Comentário básico */
 ````
 
+Snippets com os código dos comentários para Sublime Text 2 [aqui](https://github.com/raphaelfabeni/cssCommentsSnippets).
+
 ###### Exemplo
 
 
@@ -289,31 +292,30 @@ Baseado no [Idiomatic CSS](https://github.com/necolas/idiomatic-css).
 /* ==========================================================================
    Header
    ========================================================================== */
+   /*
+    * Header do site.
+    * Agrupa o logo, caixa de busca, menu principal, menu para dispositivos mobile 
+    * escondido via CSS e lista das redes sociais.
+    */
 
-/*
- * Header do site.
- * Agrupa o logo, caixa de busca, menu principal, menu para dispositivos mobile 
- * escondido via CSS e lista das redes sociais.
- */
-
-.header {
-   width: 100%;
-   height: 200px;
-   display: block;
-}
+   .header {
+      width: 100%;
+      height: 200px;
+      display: block;
+   }
 
 /* Menu de navegação
    ========================================================================== */
 
-.navbar {
-   width: 100%;
-   ....
-}
+   .navbar {
+      width: 100%;
+      ....
+   }
 
-.navbar-mobile {
-   /* Esconde menu mobile para resoluções maiores */
-   display: none;
-}
+   .navbar-mobile {
+       /* Esconde menu mobile para resoluções maiores */
+      display: none;
+   }
 ````
 
 
@@ -322,7 +324,7 @@ Baseado no [Idiomatic CSS](https://github.com/necolas/idiomatic-css).
 * Manter classes em caixa baixa e usar traços (não usar underline ou camelCase)
 * Mantenha as classes o mais curto e sucinta possíveis
 * Use nomes significativos e que sejam de fácil entendimento
-* Utilize as classes em inglês (excessões podem acontecer claro)
+* Utilize as classes em inglês (exceções podem acontecer)
 
 
 **Exemplo ruim:**
@@ -343,7 +345,7 @@ Baseado no [Idiomatic CSS](https://github.com/necolas/idiomatic-css).
 
 #### Seletores
 
-* Use classes ao invés de tags de elementos genéricos (evita possível conflito com o A2 Sitebox)
+* Use classes ao invés de tags de elementos genéricos (**evita possível conflito com o A2sitebox**)
 * Mantenha-os curtos e limite o número de elementos em cada seletor para três
 
 **Exemplo ruim:**
@@ -365,9 +367,11 @@ form { ... }
 ### Organização
 
 * Organize seções de código por componente
-* Sempre que possível comente seu código
+* Sempre que possível **comente seu código**
 
 
 ### Referências
 
-Criamos isso do nada? Claro que não. Pegamos um pouco de vários [projetos](https://github.com/a2comunicacao/Grid-A2/wiki/Refer%C3%AAncias) legais, misturamos com alguns ingredientes da casa e fizemos o nosso bolo.
+Criamos isso do nada? Claro que não. Pegamos um pouco de vários [projetos](https://github.com/a2comunicacao/A2boilerplate/wiki/Refer%C3%AAncias) legais, misturamos com alguns ingredientes da casa e fizemos o nosso bolo.
+
+Esse guia de código tem como base o excelente [https://github.com/mdo/code-guide/](code-guide).
