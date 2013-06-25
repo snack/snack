@@ -2,6 +2,9 @@
    Mixins e variaveis
    ========================================================================== */
    $primary: blue;
+   h1 {
+    color: $primary;
+   }
 
    /* Transition */
    @mixin transition($parameters) {
