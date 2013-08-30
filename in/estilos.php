@@ -1,9 +1,6 @@
 <!-- CSS -->
 <link rel="stylesheet" href="css/main.css">
 
-<!-- Humans txt -->
-<link type="text/plain" rel="author" href="humans.txt" />
-
 <!-- Modernizr -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 

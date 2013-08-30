@@ -20,8 +20,8 @@ Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
 	* [Centralizando](#centralizando)
 	* [Linha filha](#linha-filha)
 	* [Grid semântico](#grid-semntico)
-* [SASS](#sass)
 * [CSS](#css)
+	* [SASS](#sass)
 * [JS](#js)
 	* LIBS
 		* jQuery
@@ -184,17 +184,20 @@ Com isso, uma marcação que antes era assim:
 
 > A diferença entre o exemplo anterior e esse é que no anterior adicionamos uma classe `.column` aos elementos que desejamos que se comportem como uma coluna e, nesse último, adicionamos o `@include column();` diretamente na classe do elemento que desejamos que se comporte como uma coluna.
 
+## CSS
 
-## SASS
+Pasta com o arquivo *CSS* final exportado pelo *SASS*.
+
+### SASS
 
 Essa pasta contém todos os arquivos *SASS* utilizados. A idéia é termos apenas **um arquivo CSS**, diminuindo assim o número de requisições.
 
-### O funcionamento
+#### O funcionamento
 
 O arquivo `sass/main.scss` importa todos os arquivos *SASS* e exporta em um único arquivo *CSS* minificado: `css/main.css`. Instruções [aqui](https://github.com/a2comunicacao/Grid-A2/wiki/SASS).
 
 
-### Os arquivos
+#### Os arquivos
 
 * **`base.scss`**
    * Declaração das *variáveis* e *mixins* utlizados no projeto e de classes auxiliares.
@@ -218,10 +221,6 @@ O arquivo `sass/main.scss` importa todos os arquivos *SASS* e exporta em um úni
    * Arquivo específico para impressão.
 * **`typography.scss`**
    * Contém as declarações referentes à tipografia, links, listas e tabelas.
-
-## CSS
-
-Pasta com o arquivo *CSS* final exportado pelo *SASS*.
 
 ## JS
 

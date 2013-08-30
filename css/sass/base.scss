@@ -1,7 +1,6 @@
 /* ==========================================================================
    Mixins e variaveis
    ========================================================================== */
-
    /* Transition */
    @mixin transition($parameters) {
       -webkit-transition: $parameters;
@@ -113,3 +112,25 @@
 
    .hide { display: none; }
    .block { display: block; }
+   
+   /* Esconde elemento para todos usuários exceto leitores de tela */
+   .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      border: 0;
+   }
+
+   .sr-only:active,
+   .sr-only:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+   }
