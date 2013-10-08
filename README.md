@@ -1,59 +1,98 @@
-# Grid A2
+# A2boilerplate
 
-Template para auxiliar no 'pontapé inicial' em um projeto web. Utiliza como base o HTML5 Boilerplate e tem opções de grids responsivos e fixos. Para saber mais sobre o projeto [clique aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
+Padrão para auxiliar no **pontapé inicial** em um projeto web. Juntamos [alguns dos projetos](https://github.com/a2comunicacao/Grid-A2/wiki/Refer%C3%AAncias) que mais utilizávamos como referência e adaptamos para um modelo de desenvolvimento da A2.
+Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
 
-Padrões são sempre bons. Por isso, seguimos um padrão de código. [Veja o guia](https://github.com/a2comunicacao/Grid-A2/blob/master/code-guide.md).
+**Padrões são sempre bons**. Auxiliam no entendimento do código, principalmente numa fase posterior de manutenção. Por isso, seguimos um padrão de código. [Veja o guia](https://github.com/a2comunicacao/Grid-A2/blob/master/code-guide.md).
+
+**E o suporte?** Veja [aqui](https://github.com/a2comunicacao/Grid-A2/wiki#suporte).
+
 
 ****
 
 ## Estrutura
 
-* [HTML](https://github.com/a2comunicacao/Grid-A2#html) | index.php
-	* [CSS](https://github.com/a2comunicacao/Grid-A2#css)
-		* `normalize.css`
-		* `main.css`
-		* grids
-	* [JS](https://github.com/a2comunicacao/Grid-A2#js)
-		* LIBS
-			* jQuery
-			* Modernizr
-		* `scripts.js`
-	* [IN](https://github.com/a2comunicacao/Grid-A2#in)
-		* `estilos.php`
-		* `meta.php`
-		* `scripts.php`
-		* `header.php`
-		* `footer.php`
+* [HTML](#html)
+	* [O grid](#o-grid)
+	* [A idéia](#a-idia)
+	* [Marcação Padrão](#marcao-padro)
+	* [Deslocamento](#deslocamento)
+	* [Centralizando](#centralizando)
+	* [Linha filha](#linha-filha)
+	* [Grid semântico](#grid-semntico)
+* [CSS](#css)
+	* [SASS](#sass)
+* [JS](#js)
+	* LIBS
+		* jQuery
+		* Modernizr
+		* Respond
+	* `scripts.js`
+* [IN](#in)
+	* `estilos.php`
+	* `meta.php`
+	* `scripts.php`
+	* `mobile_detect.php`
+	* `header.php`
+	* `footer.php`
 
 ## HTML
 
+### O grid
+
+Dentro da pasta *SASS* existe um arquivo chamado `grid.scss`. É nele que inserimos as configurações do grid.
+
+```scss
+/* ==========================================================================
+   Cálculo grid
+   ========================================================================== */
+   $totalColumns   : 12;
+   $columnWidth    : 60px;
+   $gutterWidth    : 20px;
+   $gridWidth      : 940px;
+   $breakpoint:    : 768px;
+```
+
+- *$totalColumns*: número de colunas do grid;
+- *$columnWidth*: largura de cada coluna;
+- *$gutterWidth*: margem entre cada coluna;
+- *$gridWidth*: largura máxima do grid;
+- *$breakpoint*: largura de breakpoint mobile.
+
+E.. pronto! O grid é calculado seguindo os valores inseridos.
+
+### A Idéia
+
+Entendendo a marcação: 
+
+- cada *linha* deve possuir **x** colunas, onde **x** é o número definido  em `$totalColumns`;
+- a última coluna de cada linha precisa ter a sua *margem direita zerada*;
+- o número máximo de colunas em cada *linha* deve ser igual ao valor definido em `$totalColumns`;
+
 ### Marcação Padrão
 
-Para criar um layout de duas colunas por exemplo, crie uma `.row` e adicione dentro dela o número de colunas conforme o grid (12 ou 16 colunas) com a classe `.*col`. Dentro de cada `.row` o número máximo de colunas deve ser o número de colunas do grid.
-Por fim, adicione a classe `.last` no último elemento.
+Para criar um layout de duas colunas por exemplo, precisamos criar uma `.row` e adicionar dentro dela o número de colunas conforme definido na variável `$totalColumns`. Cada coluna deve ter a classe `.xcol`, onde **x** é o número de colunas referente à largura do elemento.
 
 ```html
 <div class="row">
 	<div class="fourcol">4 colunas</div>
-	<div class="eightcol last">8 colunas | último elemento</div>
+	<div class="eightcol last">8 colunas</div>
 </div>
 ```
-> No exemplo temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.eightcol` ( *8 colunas* ), totalizando 12 colunas e completando a `.row`.
+> No exemplo, temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.eightcol` ( *8 colunas* ), totalizando 12 colunas e completando a `.row`.
 
 ### Deslocamento
 
-Mova as colunas para a direita usando a classe `.offset-*`, onde o * é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-four` desloca o elemento aplicado em 4 colunas.
-
-Aqui também o número máximo de colunas deve ser o número de colunas do grid (contando os deslocamentos).
+Mova as colunas para a direita usando a classe `.offset-x`, onde o **x** é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-four` desloca o elemento aplicado em 4 colunas.
 
 ```html
 <div class="row">
 	<div class="fourcol">4 colunas</div>
-	<div class="sixcol offset-two last">4 colunas | 4 colunas descolamento | último elemento</div>
+	<div class="sixcol offset-two last">6 colunas | 2 colunas descolamento</div>
 </div>
 ```
 
-> No exemplo temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas e fechando o `.row`.
+> No exemplo, temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas e fechando o `.row`.
 
 ### Centralizando
 
@@ -65,9 +104,9 @@ Centralize o elemento, independente da quantidade de colunas, aplicando a classe
 </div>
 ```
 
-### Linha Filha
+### Linha filha
 
-Caso precise adicionar uma linha filha é só manter a marcação padrão: criar uma `.row` e adicionar dentro dela o número de colunas com a classe `.*col`, respeitando o número máximo de colunas do grid. 
+Caso precisemos adicionar uma linha filha, é só mantermos a marcação padrão e respeitar o número de colunas do grid.
 
 ```html
 <div class="row">
@@ -75,76 +114,129 @@ Caso precise adicionar uma linha filha é só manter a marcação padrão: criar
 		<!-- linha filha -->
 		<div class="row">
 			<div class="eightcol">8 colunas</div>
-			<div class="fourcol">4 colunas | Último elemento</div>
+			<div class="fourcol last">4 colunas</div>
 		</div><!-- ##fim linha filha -->
 	</div>
-	<div class="eightcol last">8 colunas | último elemento</div>
+	<div class="eightcol last">8 coluna</div>
 </div>
 ```
-> No exemplo temos uma classe `.fourcol` que possui uma `.row` filha. Esta por sua vez possui uma classe `.eightcol` ( *8 colunas* ) e uma `.fourcol ( *4 colunas* ) totalizando 12 colunas.
+> No exemplo, temos uma classe `.fourcol` que possui uma `.row` filha. Esta por sua vez possui uma classe `.eightcol` ( *8 colunas* ) e uma `.fourcol ( *4 colunas* ) totalizando 12 colunas.
+
+### Grid semântico
+
+É possível deixarmos nosso código mais semântico, com a utilização de algumas *features* que o *SASS* nos oferece em conjunto com as funções que calculam o grid.
+
+Se formos olhar o arquivo `grid.scss` que contém as declarações do grid, podemos observar quatro *includes*: 
+
+- *column()*: define o elemento como uma coluna, aplicando as propriedades específicas;
+- *width(n)*: define a largura do elemento com **n** colunas;
+- *last()*: se relaciona ao último elemento (coluna) de cada linha do grid, zerando a margem direita do mesmo;
+- *push(n)*: define o deslocamento esquerdo do elemento com **n** colunas.
+
+Com isso, uma marcação que antes era assim:
+
+```html
+<div class="fourcol">
+	<div class="about"></div>
+</div>
+<div class="eightcol last">
+	<div class="box"></div>
+</div>
+```
+
+... pode ficar assim:
+
+```html
+<div class="about column"></div>
+<div class="box column"></div>
+```
+
+```scss
+.about {
+	@include width(4);
+}
+
+.about {
+	@include width(8);
+	@include last();
+}
+```
+
+.. podemos mudar um pouco mais e ficaria assim:
+
+```html
+<div class="about"></div>
+<div class="box"></div>
+```
+
+```scss
+.about {
+	@include width(4);
+	@include column();
+}
+
+.about {
+	@include width(8);
+	@include column();
+	@include last();
+}
+```
+
+> A diferença entre o exemplo anterior e esse é que no anterior adicionamos uma classe `.column` aos elementos que desejamos que se comportem como uma coluna e, nesse último, adicionamos o `@include column();` diretamente na classe do elemento que desejamos que se comporte como uma coluna.
 
 ## CSS
 
-### `normalize.css`
+Pasta com o arquivo *CSS* final exportado pelo *SASS*.
 
-Contém a base do arquivo original acrescido de algumas alterações a fim de manter um único arquivo de folha de estilos com a função de normalizar/padronizar os elementos. Esse arquivo também contém as classes auxiliares do HTML5 Boilerplate ([caso não conheça](https://github.com/h5bp/html5-boilerplate/blob/master/doc/css.md#common-helpers)). Por questão de perfomance já está minificado (arquivo original contém documentação inline).
+### SASS
 
-### `main.css`
+Essa pasta contém todos os arquivos *SASS* utilizados. A idéia é termos apenas **um arquivo CSS**, diminuindo assim o número de requisições.
 
-Folha de estilos '[pronta pra ser usada](http://img9.imageshack.us/img9/9097/coronell.jpg)'.
+#### O funcionamento
 
-### grids
+O arquivo `sass/main.scss` importa todos os arquivos *SASS* e exporta em um único arquivo *CSS* minificado: `css/main.css`. Instruções [aqui](https://github.com/a2comunicacao/Grid-A2/wiki/SASS).
 
-<table>
-	<tr>
-		<th>Arquivo CSS</th>
-		<th>Grid</th>
-		<th>Medida</th>
-		<th>Largura</th>
-	</tr>
-	<tr>
-		<td><code>grid-12-940-fixo.css</code></td>
-		<td>Fixo</td>
-		<td>Pixels</td>
-		<td>940 pixels</td>
-	</tr>
-	<tr>
-		<td><code>grid-12-940.css</code></td>
-		<td>Responsivo</td>
-		<td>Pixels</td>
-		<td>940 pixels</td>
-	</tr>
-	<tr>
-		<td><code>grid-12-1140.css</code></td>
-		<td>Responsivo</td>
-		<td>Pixels</td>
-		<td>1140 pixels</td>
-	</tr>
-<tr>
-		<td><code>grid-12-1170.css</code></td>
-		<td>Responsivo</td>
-		<td>Pixels</td>
-		<td>1170 pixels</td>
-	</tr>
-</table>
+
+#### Os arquivos
+
+* **`base.scss`**
+   * Declaração das *variáveis* e *mixins* utlizados no projeto e de classes auxiliares.
+* **`font-awesome.scss`**
+   * Fonte em formato de ícones. 
+* **`grid.scss`**
+   * Define todas as propriedades relacionadas ao grid e onde defnimos as propriedades relacionadas a largura de um elemento.
+* **`grid-functions.scss`**
+   * Contém as funções que fazem o cálculo do grid ( *não é necessário editar esse arquivo* ).
+* **`icons.scss`**
+   * Arquivo específico para as declarações de *sprite* do projeto.
+* **`layout.scss`**
+   * Contém as declarações de *CSS* referentes ao layout do projeto, como cores, posição, etc.
+* **`main.scss`**
+   * Arquivo que reúne todos os arquivos *SASS*.
+* **`navigation.scss`**
+   * Contém as declarações referentes aos componentes de navegação, como *header*, *footer* e *menu*.
+* **`normalize.scss`**
+   * Arquivo que *reseta* algumas propriedades CSS, com o objetivo de se manter um padrão *crossbrowser*.
+* **`print.scss`**
+   * Arquivo específico para impressão.
+* **`typography.scss`**
+   * Contém as declarações referentes à tipografia, links, listas e tabelas.
 
 ## JS
 
-### jQuery 1.8.3
+### Libs
 
-Versão minificada linkada no fim da página.
+#### jQuery
 
-### Modernizr 2.6.2
+Biblioteca JS linkada no fim da página.
 
-Versão minificada linkada no início da página.
+#### Modernizr
 
-### Respond
+Biblioteca que auxilia na detecção de algumas propriedades *HTML5* e *CSS3*.
 
-Versão minificada linkada no início da página (polyfill para min/max-width CSS3 Media Queries para IE6-8 ).
+#### Respond
 
-### Google Analytics
-
-Código padrão localizado no arquivo `/in/scripts.php`
+Versão minificada linkada no início da página (*polyfill* para min/max-width do CSS3 Media Queries para IE6-8 ).
 
 ### `scripts.js`
 
@@ -152,19 +244,27 @@ Arquivo JS '[pronto pra ser usado](http://img855.imageshack.us/img855/2449/coron
 
 ## IN
 
-### `estilos.php`
+#### `estilos.php`
 
-Links das folhas de estilo e dos scripts Modernizr e Respond.
+Links do arquivo *CSS*, dos scripts *Modernizr* e *Respond* e, da verificação mobile.
 
-### `meta.php`
+#### `meta.php`
 
-Arquivo que contém as chamadas das Meta Tags e do Favicon.
+Arquivo que contém as chamadas das *Meta Tags* e do *Favicon*.
 
-### `scripts.php`
+#### `scripts.php`
 
-Contém a chamada da biblioteca jQuery, do arquivo `scripts.js` e do código do Google Analytics.
+Contém as chamada da biblioteca jQuery, do arquivo `scripts.js` e do código do *Google Analytics*.
 
-### `header.php` e `footer.php`
+#### `mobile_detect.php`
+
+Verificação mobile em *PHP* (instruções de como usar em breve).
+
+#### `header.php` e `footer.php`
 
 Sugestão para arquivos referentes ao cabeçalho e rodapé do projeto.
+
+
+
+
 

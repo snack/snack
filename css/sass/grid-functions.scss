@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Cálculo grid
+   ========================================================================== */
+   /* Função para cálculo de porcentagem */
+   @function col($n) {
+      @return percentage( (( $n * ($columnWidth + $gutterWidth) - $gutterWidth) ) / $gridWidth );
+   }
+
+   /*  Mixin de largura das colunas */
+   @mixin width($n) {
+      width: col($n);
+   }
+
+   /* Propriedades padrões de classes */
+   @mixin column() {
+      float: left;
+      margin-right: percentage( $gutterWidth / $gridWidth );
+   }
+
+   /* Última coluna sem margem direita */
+   @mixin last() {
+      margin-right: 0;
+      float: right;
+   }
+
+   /* Descolamento de colunas */
+   @mixin push($n) {
+      margin-left: percentage( (($n * $columnWidth) + ($n * $gutterWidth))  / $gridWidth );
+   }

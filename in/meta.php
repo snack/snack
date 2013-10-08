@@ -1,7 +1,7 @@
 <meta name="description" content="">
 <meta name="keywords" content=""> 
-<meta name="author" content="">
-<meta name="viewport" content="width=device-width">
+<meta name="author" content="A2 Comunicação">
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 
 <link rel="icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
