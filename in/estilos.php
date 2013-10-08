@@ -1,6 +1,11 @@
 <!-- CSS -->
 <link rel="stylesheet" href="css/main.css">
 
+<!-- Font Awesome IE7 -->
+<!--[if IE 7]>
+   <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+<![endif]-->
+
 <!-- Modernizr -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
