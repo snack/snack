@@ -1,0 +1,242 @@
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+img, 
+object,
+embed {
+   max-width: 100%;
+}
+
+img {
+   height: auto;
+} 
+
+.container {
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+.row {
+   width: 100%;
+   max-width: 1140px;
+   min-width: 745px;
+   margin: 0 auto;
+}
+
+.row .row {
+   max-width: 100%;
+   min-width: 100%;
+}
+
+.row:before,
+.row:after {
+   content: " ";
+   display: table;
+}
+
+.row:after {
+   clear: both;
+}
+
+.ie7 .row {
+   zoom: 1;
+}
+
+.onecol,
+.twocol,
+.threecol,
+.fourcol,
+.fivecol,
+.sixcol,
+.sevencol,
+.eightcol,
+.ninecol,
+.tencol,
+.elevencol {
+   margin-right: 2.10526315789474%; /* 24px / 1140px */ 
+   float: left;
+   min-height: 1px;
+}
+
+.last {
+   margin-right: 0;
+   float: right;
+}
+
+/* Larguras grid
+========================================================================== */
+
+.row .onecol { width: 6.40350877192982%;     /* 73px / 1140px */ }
+.row .twocol { width: 14.91228070175439%;    /* 170px / 1140px */ }
+.row .threecol { width: 23.42105263157895%;  /* 267px / 1140px */ }
+.row .fourcol { width: 31.92982456140351%;   /* 364px / 1140px */ }
+.row .fivecol { width: 40.43859649122807%;   /* 461px / 1140px */ }
+.row .sixcol { width: 48.94736842105263%;    /* 558px / 1140px */ }
+.row .sevencol { width: 57.45624035087719%;  /* 655px / 1140px */ }
+.row .eightcol { width: 65.96491228070175%;  /* 752px / 1140px */ }
+.row .ninecol { width: 74.47368421052632%;   /* 849px / 1140px */ }
+.row .tencol { width: 82.98305614035088%;    /* 946px / 1140px */ }
+.row .elevencol { width: 91.49122807017544%; /* 1043px / 1140px */ }
+.row .twelvecol {
+   width: 100%;                              /* 1140px / 1140px */
+   float: left;
+}
+
+.onecol, 
+.twocol,
+.threecol,
+.fourcol,
+.fivecol,
+.sixcol,
+.sevencol,
+.eightcol,
+.ninecol,
+.tencol,
+.elevencol,
+.twelvecol {
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+       -ms-box-sizing: border-box;
+           box-sizing: border-box;
+}
+
+ /* Offset | largura + margem
+   ========================================================================== */
+
+.offset-one { margin-left: 8.50877192982456%;     /* 97px / 1140px */ }
+.offset-two { margin-left: 17.01754385964912%;    /* 194px / 1140px */ }
+.offset-three { margin-left: 25.52631578947368%;  /* 291px / 1140px */ }
+.offset-four { margin-left: 34.03508771929825%;   /* 388px / 1140px */ }
+.offset-five { margin-left: 42.54385964912281%;   /* 485px / 1140px */ }
+.offset-six { margin-left: 51.05263157894737%;    /* 582px / 1140px */ }
+.offset-seven { margin-left: 59.56140350877193%;  /* 679px / 1140px */ }
+.offset-eight { margin-left: 68.07017543859649%;  /* 776px / 1140px */ }
+.offset-nine { margin-left: 76.57894736842105%;   /* 873px / 1140px */ }
+.offset-ten { margin-left: 85.08771929824561%;    /* 970px / 1140px */ }
+.offset-eleven { margin-left: 93.59649122807018%; /* 1067px / 1140px */ }
+
+/* Centralizando divs
+   ========================================================================== */
+
+.centered {
+   float: none;
+   margin: 0 auto;
+}
+
+/* ==========================================================================
+   Tablets
+   ========================================================================== */
+
+@media only screen and (max-width: 1023px) {
+
+   body {
+      font-size: 0.8em;
+      line-height: 1.5em;
+   }
+
+   .ie7 .row .onecol { width: 6.389%; }
+   .ie7 .row .threecol { width: 23.389%; }
+}
+
+
+/* ==========================================================================
+   Mobile
+   ========================================================================== */
+
+@media handheld, only screen and (max-width: 767px) {
+
+   body {
+      font-size: 16px;
+      -webkit-text-size-adjust: none;
+      -ms-text-size-adjust:none;
+   }
+   
+   .row, 
+   body, 
+   .container {
+      width: 100%;
+      min-width: 0;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+   }
+   
+   .row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+      width: auto;
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+   }
+
+}
+
+/* ==========================================================================
+   Impressao
+   ========================================================================== */
+
+@media print {
+   * {
+      background: transparent !important;
+      color: #000 !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+   }
+
+   a,
+   a:visited {
+      text-decoration: underline;
+   }
+
+   a[href]:after {
+      content: " (" attr(href) ")";
+   }
+
+   abbr[title]:after {
+      content: " (" attr(title) ")";
+   }
+
+   .ir a:after,
+   a[href^="javascript:"]:after,
+   a[href^="#"]:after {
+      content: "";
+   }
+
+   pre,
+   blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+   }
+
+   thead {
+      display: table-header-group; /* h5bp.com/t */
+   }
+
+   tr,
+   img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page {
+      margin: 0.5cm;
+   }
+
+   p {
+      orphans: 3;
+      widows: 3;
+   }
+
+   h2,
+   h3 {
+      page-break-after: avoid;
+      orphans: 3;
+      widows: 3;
+   }
+}
