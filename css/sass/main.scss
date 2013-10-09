@@ -1,9 +1,22 @@
-@import "normalize";
-@import "base";
-@import "typography";
-@import "font-awesome";
-@import "grid";
-@import "navigation";
-@import "icons";
-@import "layout";
-@import "print";
+/*  Atmoms
+    ========================================================================== */
+    @import "atoms/normalize";
+    @import "atoms/base";
+    @import "atoms/grid";
+    @import "atoms/font-awesome";
+    @import "atoms/typography";
+    @import "atoms/buttons";
+    @import "atoms/inputs";
+    @import "atoms/lists";
+    @import "atoms/tables";
+
+/*  Molecules
+    ========================================================================== */
+    @import "molecules/forms";
+    @import "molecules/navigation";
+    @import "molecules/icons";
+
+/*  Organisms
+    ========================================================================== */
+    @import "organisms/layout";
+    @import "organisms/print";
