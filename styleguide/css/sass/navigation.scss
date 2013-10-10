@@ -1,0 +1,81 @@
+/*  ==========================================================================
+    Navigation
+    ========================================================================== */
+
+    /*  Menu lateral
+        ========================================================================== */
+        .styleguide-navbar {
+            background: $color2;
+            bottom: 0;
+            left: 0;            
+            position: fixed;
+            top: 0;
+            width: 200px;
+            z-index: 1000;
+            border-right: 4px solid $color1;
+        }
+
+        .styleguide-heading {
+            padding: 20px 10px 10px 15px;
+            color: #fff; 
+            display: block;
+            border-bottom: 1px solid #333;
+            font-size: 22px;
+            line-height: 24px;
+            text-decoration: none;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 400;
+        }
+
+        .styleguide-heading:hover {
+            text-decoration: none;
+            color: $color4;
+        }
+
+        .styleguide-heading > span {
+            font-weight: 200;
+        }
+
+        .styleguide-menu {
+            padding: 0;
+            margin: 0;
+            display: block;
+        }
+
+        .styleguide-menu  > li {
+            padding: 0;
+            margin: 0;
+            display: block;
+            font-size: 16px;
+            line-height: 18px;
+            color: #f5f5f5;
+            border-bottom: 1px solid #333;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .styleguide-menu  > li > a {
+            padding: 15px 0 15px 15px;
+            margin: 0;
+            display: block;
+            font-size: 16px;
+            line-height: 18px;
+            color: $color4;
+            font-weight: 200;
+            text-shadow: 0 1px 2px #000;
+            text-decoration: none;
+            @include transition(all .25s ease);
+        }
+
+        .styleguide-menu  > li.active > a,
+        .styleguide-menu  > li > a:hover {
+            background-color: $color1;
+            text-decoration: none;
+        }
+
+    /*  Footer
+        ========================================================================== */
+        .styleguide-footer {
+            padding-top: 15px;
+            margin: 20px auto 0;
+            border-top: solid 1px $color4;
+        }

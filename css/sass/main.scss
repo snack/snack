@@ -1,7 +1,12 @@
-/*  Atmoms
+/*  Start
     ========================================================================== */
     @import "atoms/normalize";
-    @import "atoms/base";
+    @import "atoms/mixins";
+    @import "atoms/variables";
+    @import "atoms/base";    
+
+/*  Atmoms
+    ========================================================================== */    
     @import "atoms/grid";
     @import "atoms/font-awesome";
     @import "atoms/typography";
