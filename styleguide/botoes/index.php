@@ -5,11 +5,11 @@
 <head>
     <meta charset="utf-8">
     <title>Botões | Styleguide - Nome do Projeto</title>
-    <?php include('in/head.html'); ?>
+    <?php include('../in/head.html'); ?>
 </head>
 <body>
     <!-- Menu lateral -->
-    <?php include('in/menu.html'); ?>
+    <?php include('../in/menu.html'); ?>
 
     <!-- Page content -->
     <div class="styleguide-hold">
@@ -17,17 +17,17 @@
             <h1 class="styleguide-title styleguide-title-page">Botões</h1>
             <!-- Module -->
             <section class="styleguide-module">
-                <?php include('modules/buttons/default.html'); ?>
+                <?php include('modules/default.html'); ?>
             </section>
 
             <!-- Module -->
             <section class="styleguide-module">
-                <?php include('modules/buttons/default.html'); ?>
+                <?php include('modules/default.html'); ?>
             </section>
         </article>
 
         <!-- Footer -->
-        <?php include('in/footer.html'); ?>
+        <?php include('../in/footer.html'); ?>
     </div>
 </body>
 </html>
