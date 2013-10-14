@@ -14,15 +14,8 @@
     <!-- Page content -->
     <div class="styleguide-hold">
         <article class="styleguide-main">
-            <h1 class="styleguide-title styleguide-title-page">{{ container.module }}</h1>
-            <!-- Module -->
-            <section class="styleguide-module">
-                {% for item in iterator %}
-                    {% if item.isHtmlFile %}
-                        {{ item.getFileContent|raw }}
-                    {% endif %}
-                {% endfor %}
-            </section>
+            {% block content %}
+            {% endblock %}
         </article>
 
         <!-- Footer -->

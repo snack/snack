@@ -11,4 +11,4 @@ $iterator = new BoilerplateDirectoryIterator($module_path);
 //Put module name in the container initialized on bootstrap.php
 $container['module'] = "Nome do Módulo";
 
-echo $twig->render('layout.html.twig', array('iterator' => $iterator, 'container' => $container));
+echo $twig->render('modules.html.twig', array('iterator' => $iterator, 'container' => $container));

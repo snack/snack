@@ -10,4 +10,6 @@ $twig = new Twig_Environment($loader);
 
 //Project Configuration
 $container = new A2boilerplate\Container\Pimple();
-$container['project'] = "Nome do Projeto";
+$container['project'] = 'Nome do Projeto';
+$container['cms'] = 'WordPress/A2siteBox';
+$container['browsers'] = 'Firefox, Chrome, IE8+';

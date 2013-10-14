@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1 class="styleguide-title styleguide-title-page">{{ container.module }}</h1>
+    <!-- Module -->
+    <section class="styleguide-module">
+        {% for item in iterator %}
+            {% if item.isHtmlFile %}
+                {{ item.getFileContent|raw }}
+            {% endif %}
+        {% endfor %}
+    </section>
+{% endblock %}
