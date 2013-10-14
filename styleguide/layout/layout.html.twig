@@ -1,0 +1,32 @@
+<!doctype html>
+<!--[if IE 7]>    <html class="no-js ie7" lang="pt-br">     <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="pt-br">     <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="pt-br">     <![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>{{ container.module }} | Styleguide - {{ container.project }}</title>
+    {% include 'head.html.twig' %}
+</head>
+<body>
+    <!-- Menu lateral -->
+    {% include 'menu.html.twig' %}
+
+    <!-- Page content -->
+    <div class="styleguide-hold">
+        <article class="styleguide-main">
+            <h1 class="styleguide-title styleguide-title-page">{{ container.module }}</h1>
+            <!-- Module -->
+            <section class="styleguide-module">
+                {% for item in iterator %}
+                    {% if item.isHtmlFile %}
+                        {{ item.getFileContent|raw }}
+                    {% endif %}
+                {% endfor %}
+            </section>
+        </article>
+
+        <!-- Footer -->
+        {% include 'footer.html.twig' %}
+    </div>
+</body>
+</html>
