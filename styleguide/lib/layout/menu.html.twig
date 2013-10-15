@@ -1,10 +1,17 @@
 <nav class="styleguide-navbar">
-    <a class="styleguide-heading" href="#">Guia de Estilos <span class="block">{{ container.project }}</span></a>
+    <a class="styleguide-heading" href="{{ container.styleguide_url }}">Guia de Estilos <span class="block">{{ container.project }}</span></a>
     <ul class="styleguide-menu">
-        <li><a href="{{ container.styleguide_url }}/">Sobre</a></li>
-        <li><a href="{{ container.styleguide_url }}/botoes/">Botões</a></li>
-        <li><a href="{{ container.styleguide_url }}/">Cores</a></li>
-        <li><a href="{{ container.styleguide_url }}/">Grid</a></li>
-        <li><a href="{{ container.styleguide_url }}/">Layouts</a></li>
+        <li class="styleguide-menu-buttons">
+            <a href="{{ container.styleguide_url }}/botoes/">Botões</a>
+        </li>
+        <li class="styleguide-menu-colors">
+            <a href="{{ container.styleguide_url }}/cores">Cores</a>
+        </li>
+        <li class="styleguide-menu-grid">
+            <a href="{{ container.styleguide_url }}/grid">Grid</a>
+        </li>
+        <li class="styleguide-menu-layouts">
+            <a href="{{ container.styleguide_url }}/layouts">Layouts</a>
+        </li>
     </ul>
 </nav>

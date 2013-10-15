@@ -7,7 +7,7 @@
     $color3: #999;      //mediumGray
     $color4: #eee;      //lightGray
     
-    @import "../../../css/sass/atoms/mixins";
+    @import "../../../../css/sass/base/mixins";
     @import "typography";
     @import "navigation";
     @import "layout";

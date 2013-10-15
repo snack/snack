@@ -19,7 +19,7 @@ module.exports = function(grunt) {
                     noCache: true
                 },
                 files : {
-                    'styleguide/css/main.css' : 'styleguide/css/sass/main.scss'               
+                    'styleguide/assets/css/main.css' : 'styleguide/assets/css/sass/main.scss'               
                 }
             },
         },
@@ -55,13 +55,13 @@ module.exports = function(grunt) {
                   'css/main.css',
                   'in/*.php',
                   'js/scripts.min.js',
-                  'styleguide/*',
-                  'styleguide/modules/*/*',
-                  'styleguide/css/main.css'
+                  'styleguide/*/*/*',
+                  'styleguide/assets/css/main.css'
                ]
             },
             sass: {
                 files: [
+                    'css/sass/base/*.scss',
                     'css/sass/atoms/*.scss',
                     'css/sass/molecules/*.scss',
                     'css/sass/organisms/*.scss'
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
             },
             sassDemo: {
               files: [
-                    'styleguide/css/sass/*.scss'
+                    'styleguide/assets/css/sass/*.scss'
                 ],
                 tasks: ['sass:demoStyleguide']  
             },
@@ -86,7 +86,7 @@ module.exports = function(grunt) {
     // Plugins do Grunts
     
     grunt.loadNpmTasks( 'grunt-contrib-sass' );
-    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks( 'grunt-contrib-jshint' );
     grunt.loadNpmTasks( 'grunt-contrib-uglify' );
     grunt.loadNpmTasks( 'grunt-contrib-watch' );
 

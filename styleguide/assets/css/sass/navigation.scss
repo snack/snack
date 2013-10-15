@@ -67,7 +67,12 @@
         }
 
         .styleguide-menu  > li.active > a,
-        .styleguide-menu  > li > a:hover {
+        .styleguide-menu  > li > a:hover,
+        /* Active pages */
+        .styleguide-buttons .styleguide-menu-buttons > a,
+        .styleguide-colors .styleguide-menu-colors > a,
+        .styleguide-grid .styleguide-menu-grid > a,
+        .styleguide-layouts .styleguide-menu-layouts > a {
             background-color: $color1;
             text-decoration: none;
         }

@@ -9,7 +9,7 @@ $module_path = __DIR__ . '/modules';
 $iterator = new BoilerplateDirectoryIterator($module_path);
 
 //Put module name in the container initialized on bootstrap.php
-$container['module'] = "Nome do Módulo";
-$container['body_class'] = "styleguide-buttons";
+$container['module'] = "Layouts";
+$container['body_class'] = "styleguide-layouts";
 
 echo $twig->render('modules.html.twig', array('iterator' => $iterator, 'container' => $container));

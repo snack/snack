@@ -46,6 +46,82 @@
             position: relative;
         }
 
+        /*  Colors
+            ========================================================================== */            
+            .styleguide-colors .styleguide-main { text-align: center; }
+            .styleguide-colors .styleguide-module {
+                width: 20%;
+                display: inline-block;
+                padding-left: 5px;
+                padding-right: 5px;
+                height: 190px;
+            }
+
+            .styleguide-color-preview {
+                width: 100%;
+                border: solid 1px #ddd;
+                height: 150px;
+                margin-bottom: 5px;
+            }
+
+            .styleguide-color-hex {
+                text-align: center;
+                color: #666;
+                font-size: 18px;
+                font-family: 'Source Sans Pro';
+                font-style: normal;
+            }
+
+        /*  Layouts
+            ========================================================================== */
+            .styleguide-layouts .styleguide-main { text-align: center; }
+            .styleguide-layouts .styleguide-module {
+                position: relative;
+                display: inline-block;
+                width: 33%;
+                height: 350px;
+                overflow: hidden;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .styleguide-layout > a {
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 30px;
+                font-size: 40px;
+                line-height: 320px;
+                background-color: #fff;
+                @include opacity(0, 0);
+                @include transition(all .25s ease);
+            }
+
+            .styleguide-layout > a:hover {
+                @include opacity(0.5, 50);
+                text-decoration: none;
+            }
+
+            .styleguide-layout figcaption {
+                text-align: center;
+                color: #666;
+                font-size: 18px;
+                font-family: 'Source Sans Pro';
+                font-style: normal;
+                padding-bottom: 10px;
+            }
+
+        /*  Grid
+            ========================================================================== */
+            .styleguide-grid-info {
+                text-align: center;
+                background-color: #eee;
+                padding: 10px 0;
+                color: #999;
+            }
+
         /*  Code
             ========================================================================== */
             pre {
