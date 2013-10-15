@@ -1,0 +1,39 @@
+<!doctype html>
+<!--[if IE 7]>    <html class="no-js ie7" lang="pt-br">     <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="pt-br">     <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="pt-br">     <![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>{{ container.module }} | Styleguide - {{ container.project }}</title>
+    {% include 'head.html.twig' %}
+
+    {% block css %}
+        <!-- CSS styleguide -->
+        <link rel="stylesheet" href="../../css/main.css">
+        <!-- CSS demo -->
+        <link rel="stylesheet" href="../assets/css/main.css">
+
+        <!-- Modernizr -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    {% endblock %}
+</head>
+<body>
+    <!-- Menu lateral -->
+    {% include 'menu.html.twig' %}
+
+    <!-- Page content -->
+    <div class="styleguide-hold">
+        <article class="styleguide-main">
+            {% block content %}
+            {% endblock %}
+        </article>
+
+        <!-- Footer -->
+        {% include 'footer.html.twig' %}
+    </div>
+    {% block js %}
+        <!-- Scripts -->
+        <script src="../assets/js/rainbow-custom.min.js"></script>
+    {% endblock %}
+</body>
+</html>

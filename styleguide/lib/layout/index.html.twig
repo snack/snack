@@ -1,0 +1,24 @@
+{% extends 'layout.html.twig' %}
+
+{% block css %}
+<!-- CSS styleguide -->
+<link rel="stylesheet" href="../../css/main.css">
+<!-- CSS demo -->
+<link rel="stylesheet" href="assets/css/main.css">
+{% endblock %}
+
+{% block content %}
+    <h1 class="styleguide-title">Guia de estilos <span>{{ container.project }}</span></h1>
+
+    <dl class="styleguide-info">
+        <dt><i class="icon-desktop"></i>Projeto</dt>
+        <dd>{{ container.project }}</dd>
+        <dt><i class="icon-gears"></i>CMS</dt>
+        <dd>{{ container.cms }}</dd>
+        <dt><i class="icon-info"></i>Suporte</dt>
+        <dd>{{ container.browsers }}</dd>
+    </dl>   
+{% endblock %}
+
+{% block js %}
+{% endblock %}
