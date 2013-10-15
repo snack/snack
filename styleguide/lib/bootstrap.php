@@ -14,3 +14,5 @@ $container['project'] = 'Nome do Projeto';
 $container['cms'] = 'WordPress/A2siteBox';
 $container['browsers'] = 'Firefox, Chrome, IE8+';
 $container['styleguide_url'] = '/styleguide';
+$container['meta_description'] = 'Descrição da meta tag description.';
+$container['meta_keywords'] = 'Tags da meta taga keywords.';
