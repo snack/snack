@@ -1,7 +1,6 @@
 # A2boilerplate
 
-Padrão para auxiliar no **pontapé inicial** em um projeto web. Juntamos [alguns dos projetos](https://github.com/a2comunicacao/Grid-A2/wiki/Refer%C3%AAncias) que mais utilizávamos como referência e adaptamos para um modelo de desenvolvimento da A2.
-Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
+Padrão para auxiliar no **pontapé inicial** em um projeto web. Juntamos [alguns dos projetos](https://github.com/a2comunicacao/Grid-A2/wiki/Refer%C3%AAncias) que mais utilizávamos como referência e adaptamos para um modelo de desenvolvimento da A2 com um Guia de Estilo incluso. Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
 
 **Padrões são sempre bons**. Auxiliam no entendimento do código, principalmente numa fase posterior de manutenção. Por isso, seguimos um padrão de código. [Veja o guia](https://github.com/a2comunicacao/A2idiomatic).
 
@@ -35,6 +34,7 @@ Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
 	* `mobile_detect.php`
 	* `header.php`
 	* `footer.php`
+* [STYLEGUIDE](#styleguide)
 
 ## HTML
 
