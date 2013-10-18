@@ -1,15 +1,8 @@
 /*  ==========================================================================
     Grid calc
     ========================================================================== */
-       $totalColumns   : 12;
-       $columnWidth    : 60px;
-       $gutterWidth    : 20px;
-       $gridWidth      : 940px;
-       $breakpoint     : 768px;
-       
-       /* Funções de cálculo do grid */
-       @import 'grid-functions';
-
+    /* Funções de cálculo do grid */
+    @import 'grid-functions';
 
 /*  ==========================================================================
     Grid

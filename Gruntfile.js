@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 
         // JShint
         jshint: {
-            files: ['js/scripts.js'],
+            files: ['js/scripts.js', 'styleguide/assets/js/scripts.js'],
                 options: {
                     globals: {
                         jQuery: true,
@@ -38,9 +38,14 @@ module.exports = function(grunt) {
 
         // Uglify
         uglify: {
-            my_target: {
+            dev: {
                 files: {
-                    'js/scripts.min.js': ['js/scripts.js']
+                    'js/scripts.min.js': ['js/scripts.js']                    
+                }
+            },
+            demoStyleguide: {
+                files: {
+                    'styleguide/assets/js/scripts.min.js': ['styleguide/assets/js/scripts.js']
                 }
             }
         },
@@ -75,7 +80,7 @@ module.exports = function(grunt) {
                 tasks: ['sass:demoStyleguide']  
             },
             js: {
-                files: ['js/scripts.js'],
+                files: ['js/scripts.js', 'styleguide/assets/js/scripts.js'],
                 tasks: ['jshint', 'uglify']
             }
         }
