@@ -1,4 +1,4 @@
-[Início](../../) » [Documentação](index.md) » HTML
+[Início](../../../) » [Documentação](index.md) » HTML
 
 # HTML
 
@@ -12,17 +12,20 @@
 
 ## O grid
 
-Dentro da pasta *SASS* existe um arquivo chamado `variables.scss`. É nele que inserimos as configurações do grid.
+Nos arquivos *SASS* existe um arquivo chamado `variables.scss`. É nele que inserimos as configurações do grid.
 
 ```scss
-/* ==========================================================================
-   Cálculo grid
-   ========================================================================== */
-   $totalColumns   : 12;
-   $columnWidth    : 60px;
-   $gutterWidth    : 20px;
-   $gridWidth      : 940px;
-   $breakpoint:    : 768px;
+/*  ==========================================================================
+    Variables
+    ========================================================================== */
+
+    /*  Grid
+        ========================================================================== */
+        $totalColumns   : 12;
+        $columnWidth    : 60px;
+        $gutterWidth    : 20px;
+        $gridWidth      : 940px;
+        $breakpoint     : 768px;
 ```
 
 - *$totalColumns*: número de colunas do grid;
@@ -35,7 +38,7 @@ E.. pronto! O grid é calculado seguindo os valores inseridos.
 
 ## A Idéia
 
-Entendendo a marcação: 
+Entendendo a marcação:
 
 - cada *linha* deve possuir **x** colunas, onde **x** é o número definido  em `$totalColumns`;
 - a última coluna de cada linha precisa ter a sua *margem direita zerada*;
@@ -68,7 +71,7 @@ Mova as colunas para a direita usando a classe `.offset-x`, onde o **x** é o va
 
 ## Centralizando
 
-Centralize o elemento, independente da quantidade de colunas, aplicando a classe `.centered`. 
+Centralize o elemento, independente da quantidade de colunas, aplicando a classe `.centered`.
 
 ```html
 <div class="row">
@@ -98,7 +101,7 @@ Caso precisemos adicionar uma linha filha, é só mantermos a marcação padrão
 
 É possível deixarmos nosso código mais semântico, com a utilização de algumas *features* que o *SASS* nos oferece em conjunto com as funções que calculam o grid.
 
-Se formos olhar o arquivo `grid.scss` que contém as declarações do grid, podemos observar quatro *includes*: 
+Se formos olhar o arquivo `grid.scss` que contém as declarações do grid, podemos observar quatro *includes*:
 
 - *column()*: define o elemento como uma coluna, aplicando as propriedades específicas;
 - *width(n)*: define a largura do elemento com **n** colunas;
