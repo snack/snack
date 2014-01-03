@@ -37,7 +37,6 @@ Para começar a inserir módulos numa categoria, entre na pasta `modules` de cad
 </div>
 
 <pre class="styleguide-code"><code data-language="html"></code></pre>
-
 ```
 
 Para essa primeira versão, toda a adição de categorias e módulos ainda é manual. E, apesar de ter atendido bem aos requisitos, já temos melhorias na fila de produção.
