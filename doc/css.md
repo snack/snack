@@ -3,8 +3,9 @@
 # CSS
 
 * [SASS](#sass)
-* [Design Atômico](#design-atmico)
-* [Arquivos](#arquivos)
+* [Design Atômico](#design-at%C3%B4mico)
+    * [Os arquivos](#os-arquivos)
+* [Como funciona](#como-funciona)
 
 ## SASS
 
@@ -37,7 +38,7 @@ Aplicando o conceito de [Design Atômico](http://bradfrostweb.com/blog/post/atom
     * layout
     * print
 
-## O funcionamento
+## Como funciona
 
 Nunca mexeu com pré-processadores de CSS? Não existe muito segredo. Ele te possibilita a criação de variáveis e funções evitando você de ter que digitar o mesmo código de cor ou o snippet de _gradient-color_ com todos aqueles prefixos várias vezes.
 
