@@ -7,7 +7,7 @@
         .styleguide-navbar {
             background: $color2;
             bottom: 0;
-            left: 0;            
+            left: 0;
             position: fixed;
             top: 0;
             width: 200px;
@@ -17,7 +17,7 @@
 
         .styleguide-heading {
             padding: 20px 10px 10px 15px;
-            color: #fff; 
+            color: #fff;
             display: block;
             border-bottom: 1px solid #333;
             font-size: 22px;
@@ -67,12 +67,7 @@
         }
 
         .styleguide-menu  > li.active > a,
-        .styleguide-menu  > li > a:hover,
-        /* Active pages */
-        .styleguide-buttons .styleguide-menu-buttons > a,
-        .styleguide-colors .styleguide-menu-colors > a,
-        .styleguide-grid .styleguide-menu-grid > a,
-        .styleguide-layouts .styleguide-menu-layouts > a {
+        .styleguide-menu  > li > a:hover {
             background-color: $color1;
             text-decoration: none;
         }

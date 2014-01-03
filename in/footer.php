@@ -1,3 +1,3 @@
-<footer class="footer">
+<footer class="footer container" role="contentinfo">
 
 </footer>

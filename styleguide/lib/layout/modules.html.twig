@@ -2,12 +2,12 @@
 
 {% block content %}
     <h1 class="styleguide-title styleguide-title-page">{{ container.module }}</h1>
-    <!-- Module -->    
-    {% for item in iterator %}            
+    <!-- Module -->
+    {% for item in iterator %}
         {% if item.isHtmlFile %}
             <section class="styleguide-module">
                 {{ item.getFileContent|raw }}
             </section>
         {% endif %}
-    {% endfor %}    
+    {% endfor %}
 {% endblock %}

@@ -7,7 +7,7 @@
 <![endif]-->
 
 <!-- Modernizr -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<script src="js/libs/modernizr.js"></script>
 
 <!-- Respond -->
 <!--[if lt IE 9]>

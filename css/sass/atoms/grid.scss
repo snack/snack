@@ -8,23 +8,22 @@
     Grid
     ========================================================================== */
     body {
-      width: 100%;
-      @include clearfix();
+        width: 100%;
+        @include clearfix();
     }
-      
+
 
     @media only screen {
-      .container {
-         padding-left: 10px;
-         padding-right: 10px;
-      }
+        .container {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
 
-      .row {
-         width: 100%;
-         @include clearfix();
-         margin: 0 auto;
-      }
-
+        .row {
+            width: 100%;
+            @include clearfix();
+            margin: 0 auto;
+        }
     }
 
     /*

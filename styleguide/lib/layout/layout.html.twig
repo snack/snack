@@ -4,7 +4,13 @@
 <!--[if IE 9]>    <html class="no-js ie9" lang="pt-br">     <![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>{{ container.module }} | Styleguide - {{ container.project }}</title>
+    <title>
+    {% if container.module %}
+        {{ container.module }} | Guia de Estilos - {{ container.project }}
+    {% else %}
+        Guia de Estilos - {{ container.project }}
+    {% endif %}
+    </title>
     {% include 'head.html.twig' %}
 
     {% block css %}

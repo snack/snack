@@ -13,7 +13,7 @@
         color: #fff;
     }
 
-    img, 
+    img,
     object,
     embed,
     iframe { max-width: 100%; }
@@ -60,3 +60,12 @@
         position: static;
         width: auto;
     }
+
+    /*  Go content
+        ========================================================================== */
+        .go-content {
+            padding: 2px 0;
+            font-size: 14px;
+            text-align: center;
+            display: block;
+        }

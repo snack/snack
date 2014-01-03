@@ -5,28 +5,28 @@ module.exports = function(grunt) {
         // SASS
         sass : {
             dev : {
-                options : { 
+                options : {
                     style : 'compressed',
                     noCache: true
                 },
                 files : {
-                    'css/main.css' : 'css/sass/main.scss'               
+                    'css/main.css' : 'css/sass/main.scss'
                 }
             },
             demoStyleguide : {
-                options : { 
+                options : {
                     style : 'compressed',
                     noCache: true
                 },
                 files : {
-                    'styleguide/assets/css/main.css' : 'styleguide/assets/css/sass/main.scss'               
+                    'styleguide/assets/css/main.css' : 'styleguide/assets/css/sass/main.scss'
                 }
             },
         },
 
         // JShint
         jshint: {
-            files: ['js/scripts.js', 'styleguide/assets/js/scripts.js'],
+            files: ['js/assets/scripts.js', 'styleguide/assets/js/scripts.js'],
                 options: {
                     globals: {
                         jQuery: true,
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
         uglify: {
             dev: {
                 files: {
-                    'js/scripts.min.js': ['js/scripts.js']                    
+                    'js/scripts.min.js': ['js/assets/scripts.js']
                 }
             },
             demoStyleguide: {
@@ -77,19 +77,19 @@ module.exports = function(grunt) {
               files: [
                     'styleguide/assets/css/sass/*.scss'
                 ],
-                tasks: ['sass:demoStyleguide']  
+                tasks: ['sass:demoStyleguide']
             },
             js: {
-                files: ['js/scripts.js', 'styleguide/assets/js/scripts.js'],
+                files: ['js/assets/scripts.js', 'styleguide/assets/js/scripts.js'],
                 tasks: ['jshint', 'uglify']
             }
         }
-    };  
+    };
 
     grunt.initConfig(gruntConfig);
 
     // Plugins do Grunts
-    
+
     grunt.loadNpmTasks( 'grunt-contrib-sass' );
     grunt.loadNpmTasks( 'grunt-contrib-jshint' );
     grunt.loadNpmTasks( 'grunt-contrib-uglify' );
