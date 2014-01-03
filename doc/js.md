@@ -1,14 +1,20 @@
+[Início](../../../) » [Documentação](index.md) » JS
+
 # JS
 
 ## Libs
 
+Bibliotecas padrões utilizados no projeto. Localizadas em: `js/libs/`.
+
 ### jQuery
 
-Biblioteca JS linkada no fim da página.
+Linkada no fim da página, dentro do arquivo `in/scripts.php`.
 
 ### Modernizr
 
-Biblioteca que auxilia na detecção de algumas propriedades *HTML5* e *CSS3*.
+O projeto utiliza uma versão customizada e já minificada da biblioteca. É linkada no `head` da página dentro do arquivo `in/estilos.php`.
+
+Para detecção de uma propriedade ou atributo específico que não esteja nessa versão da biblioteca, você pode [fazer o download de uma versão customizada](http://modernizr.com/download/) no site do Modernizr.
 
 ### Respond
 
@@ -16,4 +22,4 @@ Versão minificada linkada no início da página (*polyfill* para min/max-width 
 
 ## `scripts.js`
 
-Arquivo JS '[pronto pra ser usado](http://img855.imageshack.us/img855/2449/coronel2.jpg)'.
+Arquivo JS '[pronto pra ser usado](http://img855.imageshack.us/img855/2449/coronel2.jpg)'. Localizado em `js/assets/scripts.js`.

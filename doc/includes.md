@@ -1,21 +1,30 @@
+[Início](../../../) » [Documentação](index.md) » Includes
+
 # IN
 
-### `estilos.php`
+## `estilos.php`
 
-Links do arquivo *CSS*, dos scripts *Modernizr* e *Respond* e, da verificação mobile.
+Arquivo com as chamadas:
+* do arquivo *CSS*,
+* do arquivo específico para *IE7* do Font Awesome,
+* dos scripts *Modernizr* e *Respond*
+*  e, da verificação mobile.
 
-### `meta.php`
+## `meta.php`
 
-Arquivo que contém as chamadas das *Meta Tags* e do *Favicon*.
+Arquivo com os links das *meta tags* e favicon.
 
-### `scripts.php`
+## `scripts.php`
 
-Contém as chamada da biblioteca jQuery, do arquivo `scripts.js` e do código do *Google Analytics*.
+Contém as chamadas
+* da biblioteca jQuery,
+* do arquivo `scripts.js`
+* e do código do *Google Analytics*.
 
-### `mobile_detect.php`
+## `mobile_detect.php`
 
 Verificação mobile em *PHP*.
 
-### `header.php` e `footer.php`
+## `header.php` e `footer.php`
 
 Sugestão para arquivos referentes ao cabeçalho e rodapé do projeto.

@@ -30,7 +30,7 @@ Aplicando o conceito de [Design Atômico](http://bradfrostweb.com/blog/post/atom
     * inputs
     * lists
     * tables
-* Moléculas (_molecules)
+* Moléculas (_molecules_)
     * forms
     * navigation | Declaração de propriedades de estilos dos menus de navegação, cabeçalho e rodapé
     * icons | Declaração de _sprites_
