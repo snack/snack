@@ -22,4 +22,4 @@ Versão minificada linkada no início da página (*polyfill* para min/max-width 
 
 ## `scripts.js`
 
-Arquivo JS '[pronto pra ser usado](http://img855.imageshack.us/img855/2449/coronel2.jpg)'. Localizado em `js/assets/scripts.js`.
+Arquivo JS [pronto pra ser usado](http://img855.imageshack.us/img855/2449/coronel2.jpg). Localizado em `js/assets/scripts.js`.

@@ -10,6 +10,6 @@ $iterator = new BoilerplateDirectoryIterator($module_path);
 
 //Put module name in the container initialized on bootstrap.php
 $container['module'] = "Grid";
-$container['body_class'] = "styleguide-grid";
+$container['body_class'] = "grid";
 
 echo $twig->render('modules.html.twig', array('iterator' => $iterator, 'container' => $container));
