@@ -29,7 +29,7 @@ Para instalar o Bower, `npm install -g bower` ou [veja a documentação no site]
 
 - Procurar novos componentes ex: `bower search jquery`
 - Verificar as versões do componente ex: `bower info jquery`
-- Adicionar nova depnedência ex: `bower install jquery` ou `jquery#1.9.1`
+- Adicionar nova dependência ex: `bower install jquery` ou `jquery#1.9.1`
 - Remover componente ex: `bower uninstall jquery`
 
 
