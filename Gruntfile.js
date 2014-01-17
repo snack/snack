@@ -40,7 +40,12 @@ module.exports = function(grunt) {
         uglify: {
             dev: {
                 files: {
-                    'js/scripts.min.js': ['js/assets/scripts.js']
+                    'js/scripts.min.js':
+                    [
+                    'js/libs/jquery/jquery.js',
+                    'js/assets/scripts.js',
+                    'js/assets/analytics.js'
+                    ]
                 }
             },
             demoStyleguide: {

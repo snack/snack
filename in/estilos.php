@@ -7,11 +7,11 @@
 <![endif]-->
 
 <!-- Modernizr -->
-<script src="js/libs/modernizr.js"></script>
+<script src="js/libs/modernizr/modernizr.js"></script>
 
 <!-- Respond -->
 <!--[if lt IE 9]>
-<script src="js/libs/respond.min.js"></script>
+<script src="js/libs/respond/dest/respond.src.js"></script>
 <![endif]-->
 
 <!-- Verif Mobile -->
