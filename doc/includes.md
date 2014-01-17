@@ -14,12 +14,6 @@ Arquivo com as chamadas:
 
 Arquivo com os links das *meta tags* e favicon.
 
-## `scripts.php`
-
-Contém as chamadas
-* da biblioteca jQuery,
-* do arquivo `scripts.js`
-* e do código do *Google Analytics*.
 
 ## `mobile_detect.php`
 

@@ -44,13 +44,15 @@
 │   ├── scripts.min.js
 │   ├── LIBS
 │   │   ├── jQuery
-│   │   └── Modernizr
+│   │   ├── Modernizr
+│	│	└── Respond
+│   │
 │   └── ASSETS
-│       └── scripts.js
+│       ├── scripts.js
+│		└── analytics.js
 │
 ├── IN
 │   ├── estilos.php
-│   ├── scripts.php
 │   ├── meta.php
 │   ├── header.php
 │   ├── footer.php

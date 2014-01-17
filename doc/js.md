@@ -14,11 +14,11 @@ Linkada no fim da página, dentro do arquivo `in/scripts.php`.
 
 O projeto utiliza uma versão customizada e já minificada da biblioteca. É linkada no `head` da página dentro do arquivo `in/estilos.php`.
 
-Para detecção de uma propriedade ou atributo específico que não esteja nessa versão da biblioteca, você pode [fazer o download de uma versão customizada](http://modernizr.com/download/) no site do Modernizr.
+Para detecção de uma propriedade ou atributo específico que não esteja nessa versão da biblioteca, você pode atualizar a versão usando o gerenciador de dependências Bower Ex:  `bower install modernizr#2.7.1 --save`
 
 ### Respond
 
-Versão minificada linkada no início da página (*polyfill* para min/max-width do CSS3 Media Queries para IE6-8 ).
+Versão minificada linkada no início da página (*polyfill* para min/max-width do CSS3 Media Queries para IE6-8 ), você pode atualizar a versão usando o gerenciador de dependências Bower Ex:  `bower install respond#1.4.2 --save`
 
 ## `scripts.js`
 

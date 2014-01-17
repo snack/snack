@@ -20,3 +20,16 @@ As tarefas padrões utilizadas são:
 - Validação dos arquivos JS pelo [JSHint](http://www.jshint.com/)
 - Minificação dos arquivos JS
 - *Watch* de alguns para *livereload* da página (utilizada em conjunto com a ferramenta [LiveReload](http://livereload.com/))
+
+## Bower
+
+O projeto utiliza-se do Bower para gerenciamento de dependências. Ex:(jQuery, Modernizr, Respond, ...). Inicialmente é necessário primeiro que você tenha o Node junto com o NPM instalado na sua máquina. Caso contrário, basta acessar o [nodejs.org](http://nodejs.org), fazer download e instalar.
+
+Para instalar o Bower, `npm install -g bower` ou [veja a documentação no site](http://bower.io/ "veja a documentação no site").
+
+- Procurar novos componentes ex: `bower search jquery`
+- Verificar as versões do componente ex: `bower info jquery`
+- Adicionar nova depnedência ex: `bower install jquery` ou `jquery#1.9.1`
+- Remover componente ex: `bower uninstall jquery`
+
+
