@@ -88,6 +88,31 @@ module.exports = function(grunt) {
                 files: ['js/assets/scripts.js', 'styleguide/assets/js/scripts.js'],
                 tasks: ['jshint', 'uglify']
             }
+        },
+        browser_sync: {
+            files: {
+                src :
+                [
+                '*.php',
+                '*.html',
+                'css/main.css',
+                'in/*.php',
+                'js/scripts.min.js',
+                'styleguide/*/*/*',
+                'styleguide/assets/css/main.css'
+                ]
+            },
+            options: {
+                proxy: {
+                    host: "local.a2boilerplate"
+                },
+                ghostMode: {
+                    clicks: true,
+                    scroll: true,
+                    links: true,
+                    forms: true
+                }
+            }
         }
     };
 
@@ -99,8 +124,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks( 'grunt-contrib-jshint' );
     grunt.loadNpmTasks( 'grunt-contrib-uglify' );
     grunt.loadNpmTasks( 'grunt-contrib-watch' );
+    grunt.loadNpmTasks( 'grunt-browser-sync' );
 
-    grunt.registerTask('default', ['sass', 'jshint', 'uglify'] );
+    grunt.registerTask('default', ['watch', 'sass', 'jshint', 'uglify'] );
 
     grunt.registerTask( 'w', [ 'watch' ] );
 };
