@@ -25,8 +25,6 @@
 
     <main role="main">
 
-        <p>laee</p>
-
         <!-- <div class="container">
             <div class="row">
                 <div class="box"><p>6</p></div>

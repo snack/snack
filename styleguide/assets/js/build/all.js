@@ -9607,7 +9607,7 @@ jQuery(document).ready(function($) {
     $.each(boxCode, function(index, val) {
         var currentCode = $(val).html(),
             destCode = $(this).next('pre').find('code');
-        destCode.prepend(currentCode);
+        destCode.append(currentCode);
     });
 
     menuActive();

@@ -2,12 +2,8 @@
     Demo styleguide
     ========================================================================== */
 
-    $color1: #1972d1;   //blue
-    $color2: #262626;   //darkGray
-    $color3: #999;      //mediumGray
-    $color4: #eee;      //lightGray
-    
     @import "../../../../css/sass/base/mixins";
+    @import "variables";
     @import "typography";
     @import "navigation";
     @import "layout";

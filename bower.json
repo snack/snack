@@ -4,10 +4,7 @@
   "homepage": "www.nomedoprojeto.com.br",
   "ignore": [
     "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "node_modules"
   ],
   "dependencies": {
     "jquery": "~1.9.1",
