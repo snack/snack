@@ -21,18 +21,16 @@ Nos arquivos *SASS* existe um arquivo chamado `variables.scss`. É nele que inse
 
     /*  Grid
         ========================================================================== */
+        $gridWidth      : 960px;
         $totalColumns   : 12;
-        $columnWidth    : 60px;
-        $gutterWidth    : 20px;
-        $gridWidth      : 940px;
+        $spaceColumns   : 10px;
         $breakpoint     : 768px;
 ```
 
-- *$totalColumns*: número de colunas do grid;
-- *$columnWidth*: largura de cada coluna;
-- *$gutterWidth*: margem entre cada coluna;
 - *$gridWidth*: largura máxima do grid;
-- *$breakpoint*: largura de breakpoint mobile.
+- *$totalColumns*: número de colunas do grid;
+- *$spaceColumns*: espaço entre as colunas;
+- *$breakpoint*: breakpoint básico.
 
 E.. pronto! O grid é calculado seguindo os valores inseridos.
 
@@ -41,7 +39,6 @@ E.. pronto! O grid é calculado seguindo os valores inseridos.
 Entendendo a marcação:
 
 - cada *linha* deve possuir **x** colunas, onde **x** é o número definido  em `$totalColumns`;
-- a última coluna de cada linha precisa ter a sua *margem direita zerada*;
 - o número máximo de colunas em cada *linha* deve ser igual ao valor definido em `$totalColumns`;
 
 ### Marcação Padrão
@@ -54,11 +51,11 @@ Para criar um layout de duas colunas por exemplo, precisamos criar uma `.row` e 
     <div class="eightcol last">8 colunas</div>
 </div>
 ```
-> No exemplo, temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.eightcol` ( *8 colunas* ), totalizando 12 colunas e completando a `.row`.
+> No exemplo, temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.eightcol` ( *8 colunas* ), totalizando 12 colunas.
 
 ## Deslocamento
 
-Mova as colunas para a direita usando a classe `.offset-x`, onde o **x** é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-four` desloca o elemento aplicado em 4 colunas.
+Mova as colunas para a direita usando a classe `.offset-x`, onde o **x** é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-four` desloca um elemento em 4 colunas.
 
 ```html
 <div class="row">
@@ -67,7 +64,7 @@ Mova as colunas para a direita usando a classe `.offset-x`, onde o **x** é o va
 </div>
 ```
 
-> No exemplo, temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas e fechando o `.row`.
+> No exemplo, temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas.
 
 ## Centralizando
 
@@ -81,7 +78,7 @@ Centralize o elemento, independente da quantidade de colunas, aplicando a classe
 
 ## Linha filha
 
-Caso precisemos adicionar uma linha filha, é só mantermos a marcação padrão e respeitar o número de colunas do grid.
+Caso precise adicionar uma linha filha, é só manter a marcação padrão e respeitar o número de colunas do grid.
 
 ```html
 <div class="row">
@@ -157,4 +154,4 @@ Com isso, uma marcação que antes era assim:
 }
 ```
 
-> A diferença entre o exemplo anterior e esse é que no anterior adicionamos uma classe `.column` aos elementos que desejamos que se comportem como uma coluna e, nesse último, adicionamos o `@include column();` diretamente na classe do elemento que desejamos que se comporte como uma coluna.
+> A diferença entre o exemplo anterior e esse é que em um adicionamos uma classe `.column` aos elementos que desejamos que se comportem como uma coluna e, nesse último, adicionamos o `@include column();` diretamente na classe do elemento..

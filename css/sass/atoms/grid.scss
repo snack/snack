@@ -1,7 +1,7 @@
 /*  ==========================================================================
     Grid calc
     ========================================================================== */
-    /* Funções de cálculo do grid */
+    /* Grid calc */
     @import 'grid-functions';
 
 /*  ==========================================================================
@@ -27,30 +27,52 @@
     }
 
     /*
-     * CSS adaptado para dispositivos com resoluções maiores que 767px
-     *    Tablets e desktops
+     * CSS for devices with resolution higher than breakpoint
      */
 
     @media only screen and (min-width: $breakpoint) {
 
-        /* Largura máxima do Grid */
-        .row { max-width: $gridWidth; }
-        .column { @include column(); }
+        .box,
+        .about {
+            @include width(6);
+            @include column();
+        }
 
-        /*  Larguras grid
+        .about { @include last(); }
+
+        /*  Grid width
             ========================================================================== */
-            .onecol { @include width(1); @include column(); }
-            .twocol { @include width(2); @include column(); }
-            .threecol { @include width(3); @include column(); }
-            .fourcol { @include width(4); @include column(); }
-            .fivecol { @include width(5); @include column(); }
-            .sixcol { @include width(6); @include column(); }
-            .sevencol { @include width(7); @include column(); }
-            .eightcol { @include width(8); @include column(); }
-            .ninecol { @include width(9); @include column(); }
-            .tencol { @include width(10); @include column(); }
-            .elevencol { @include width(11); @include column(); }
-            .twelvecol { @include width(12); @include column(); }
+            .row { max-width: $gridWidth; }
+            .column { @include column(); }
+
+        /*  Columns width
+            ========================================================================== */
+            .onecol { @include width(1); }
+            .twocol { @include width(2); }
+            .threecol { @include width(3); }
+            .fourcol { @include width(4); }
+            .fivecol { @include width(5); }
+            .sixcol { @include width(6); }
+            .sevencol { @include width(7); }
+            .eightcol { @include width(8); }
+            .ninecol { @include width(9); }
+            .tencol { @include width(10); }
+            .elevencol { @include width(11); }
+            .twelvecol { @include width(12); }
+
+            .column,
+            .onecol,
+            .twocol,
+            .threecol,
+            .fourcol,
+            .fivecol,
+            .sixcol,
+            .sevencol,
+            .eightcol,
+            .ninecol,
+            .tencol,
+            .elevencol,
+            .twelvecol { @include column(); }
 
         /*  Offsets
             ========================================================================== */
@@ -67,7 +89,7 @@
             .offset-eleven { @include push(11); }
             .offset-twelve { @include push(12); }
 
-        /*  Centralizando
+        /*  Center
             ========================================================================== */
             .centered {
                 display: block;
@@ -76,5 +98,7 @@
                 margin-right: auto;
             }
 
+        /*  Last item
+            ========================================================================== */
             .last { @include last(); }
    }

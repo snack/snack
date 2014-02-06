@@ -14,5 +14,4 @@ jQuery(document).ready(function($) {
     });
 
     menuActive();
-
 });

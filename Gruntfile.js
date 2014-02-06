@@ -1,32 +1,79 @@
 module.exports = function(grunt) {
+
     var gruntConfig = {
         pkg: grunt.file.readJSON('package.json'),
 
-        // SASS
-        sass : {
-            dev : {
-                options : {
-                    style : 'compressed',
-                    noCache: true
-                },
-                files : {
-                    'css/main.css' : 'css/sass/main.scss'
-                }
-            },
-            demoStyleguide : {
-                options : {
-                    style : 'compressed',
-                    noCache: true
-                },
-                files : {
-                    'styleguide/assets/css/main.css' : 'styleguide/assets/css/sass/main.scss'
-                }
-            },
+        globalConfig: {
+            files: [
+                '*.php',
+                '*.html',
+                'in/*.php',
+                'styleguide/**',
+                'styleguide/**/**',
+                'styleguide/**/**/'
+            ],
+            dest_css_dev: 'css/main.css',
+            dest_css_styleguide: 'styleguide/assets/css/main.css',
         },
 
-        // JShint
+
+        // -- Concat config ----------------------------------------------------------
+        concat: {
+
+            // Project files
+            dev: {
+                src: [
+                    'js/libs/jquery/jquery.js', // jQuery Lib
+                    'js/assets/scripts.js', // Project scripts
+                    'js/assets/analytics.js' // GA track
+                ],
+                dest: 'js/build/all.js',
+            },
+
+            // Styleguide files
+            styleguide: {
+                src: [
+                    'js/libs/jquery/jquery.js', // jQuery Lib
+                    'styleguide/assets/js/scripts.js', // Styleguide scripts
+                    'styleguide/assets/js/rainbow-custom.min.js' // Pretty code
+                ],
+                dest: 'styleguide/assets/js/build/all.js',
+            }
+
+        },
+
+        // -- Uglify config ----------------------------------------------------------
+        uglify: {
+
+            // Project files
+            dev: {
+                src: 'js/build/all.js',
+                dest: 'js/build/all.min.js'
+            },
+
+            // Styleguide files
+            styleguide: {
+                src: 'styleguide/assets/js/build/all.js',
+                dest: 'styleguide/assets/js/build/all.min.js'
+            }
+
+        },
+
+        // -- JShint config ----------------------------------------------------------
         jshint: {
-            files: ['js/assets/scripts.js', 'styleguide/assets/js/scripts.js'],
+
+            // Project files
+            dev: ['js/assets/scripts.js'],
+                options: {
+                    globals: {
+                        jQuery: true,
+                        console: true,
+                        module: true
+                }
+            },
+
+            // Styleguide files
+            styleguide: ['styleguide/assets/js/scripts.js'],
                 options: {
                     globals: {
                         jQuery: true,
@@ -34,75 +81,94 @@ module.exports = function(grunt) {
                         module: true
                 }
             }
+
         },
 
-        // Uglify
-        uglify: {
-            dev: {
-                files: {
-                    'js/scripts.min.js':
-                    [
-                    'js/libs/jquery/jquery.js',
-                    'js/assets/scripts.js',
-                    'js/assets/analytics.js'
-                    ]
+        // -- SASS config ------------------------------------------------------------
+        sass : {
+
+            // Project files
+            dev : {
+                options : {
+                    style : 'compressed',
+                    noCache: true
+                },
+                files : {
+                    '<%= globalConfig.dest_css_dev %>' : 'css/sass/main.scss'
                 }
             },
-            demoStyleguide: {
-                files: {
-                    'styleguide/assets/js/scripts.min.js': ['styleguide/assets/js/scripts.js']
+
+            // Styleguide files
+            styleguide : {
+                options : {
+                    style : 'compressed',
+                    noCache: true
+                },
+                files : {
+                    '<%= globalConfig.dest_css_styleguide %>' : 'styleguide/assets/css/sass/main.scss'
                 }
-            }
+            },
+
         },
 
-        // Watch
+        // -- Watch config -----------------------------------------------------------
         watch: {
+
             livereload: {
                 options: { livereload: true },
                 files: [
-                  '*.php',
-                  '*.html',
-                  'css/main.css',
-                  'in/*.php',
-                  'js/scripts.min.js',
-                  'styleguide/*/*/*',
-                  'styleguide/assets/css/main.css'
-               ]
+                    '<%= globalConfig.files %>',
+                    '<%= globalConfig.dest_css_dev %>',
+                    '<%= globalConfig.dest_css_styleguide %>'
+                ]
             },
-            sass: {
-                files: [
-                    'css/sass/base/*.scss',
-                    'css/sass/atoms/*.scss',
-                    'css/sass/molecules/*.scss',
-                    'css/sass/organisms/*.scss'
-                ],
+
+            // Project files
+            scripts_dev: {
+                files: ['<%= concat.dev.src %>'],
+                tasks: ['jshint:dev', 'concat:dev', 'uglify:dev'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                },
+            },
+
+            css_dev: {
+                files: ['css/sass/*.scss', 'css/sass/**/*.scss'],
                 tasks: ['sass:dev']
             },
-            sassDemo: {
-              files: [
-                    'styleguide/assets/css/sass/*.scss'
-                ],
-                tasks: ['sass:demoStyleguide']
+
+            // Styleguide files
+            scripts_styleguide: {
+                files: ['<%= concat.styleguide.src %>'],
+                tasks: ['jshint:styleguide', 'concat:styleguide', 'uglify:styleguide'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
             },
-            js: {
-                files: ['js/assets/scripts.js', 'styleguide/assets/js/scripts.js'],
-                tasks: ['jshint', 'uglify']
-            }
+
+            css_styleguide: {
+                files: [
+                    'styleguide/assets/css/sass/*.scss',
+                    'styleguide/assets/css/sass/**/*.scss'
+                ],
+                tasks: ['sass:styleguide']
+            },
+
         },
+
+        // Browser sync
         browser_sync: {
             files: {
-                src :
-                [
-                '*.php',
-                '*.html',
-                'css/main.css',
-                'in/*.php',
-                'js/scripts.min.js',
-                'styleguide/*/*/*',
-                'styleguide/assets/css/main.css'
+                src : [
+                    '<%= globalConfig.files %>',
+                    '<%= globalConfig.dest_css_dev %>',
+                    '<%= globalConfig.dest_css_styleguide %>'
                 ]
             },
             options: {
+                watchTask: true,
                 proxy: {
                     host: "local.a2boilerplate"
                 },
@@ -114,19 +180,20 @@ module.exports = function(grunt) {
                 }
             }
         }
+
     };
 
     grunt.initConfig(gruntConfig);
 
-    // Plugins do Grunts
+    // Grunt plugins
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-browser-sync');
 
-    grunt.loadNpmTasks( 'grunt-contrib-sass' );
-    grunt.loadNpmTasks( 'grunt-contrib-jshint' );
-    grunt.loadNpmTasks( 'grunt-contrib-uglify' );
-    grunt.loadNpmTasks( 'grunt-contrib-watch' );
-    grunt.loadNpmTasks( 'grunt-browser-sync' );
-
-    grunt.registerTask('default', ['watch', 'sass', 'jshint', 'uglify'] );
+    grunt.registerTask('default', ['browser_sync', 'watch', 'concat', 'uglify', 'jshint', 'sass'] );
 
     grunt.registerTask( 'w', [ 'watch' ] );
 };

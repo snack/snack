@@ -18,10 +18,10 @@
         <link rel="stylesheet" href="../../css/main.css">
         <!-- CSS demo -->
         <link rel="stylesheet" href="../assets/css/main.css">
-
-        <!-- Modernizr -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
     {% endblock %}
+
+    <!-- Modernizr -->
+    <script src="../../js/libs/respond/dest/respond.min.js"></script>
 </head>
 <body class="styleguide-{{ container.body_class }}">
     <!-- Menu lateral -->
@@ -39,9 +39,7 @@
     </div>
     {% block js %}
         <!-- Scripts -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="../assets/js/scripts.min.js"></script>
-        <script src="../assets/js/rainbow-custom.min.js"></script>
+        <script src="../assets/js/build/all.min.js"></script>
     {% endblock %}
 </body>
 </html>

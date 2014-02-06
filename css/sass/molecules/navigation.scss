@@ -1,9 +1,9 @@
 /*  ==========================================================================
     Navigation
     ========================================================================== */
-   
+
     @media only screen {
-      
+
         /*  Header
             ========================================================================== */
 
@@ -16,12 +16,11 @@
     }
 
     /*
-     * CSS adaptado para dispositivos com resoluções maiores que 767px
-     *    Tablets e desktops
+     * CSS for devices with resolution bigger than breakpoint
      */
 
     @media only screen and (min-width: $breakpoint) {
-      
+
         /*  Header
             ========================================================================== */
 

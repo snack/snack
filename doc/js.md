@@ -8,7 +8,7 @@ Bibliotecas padrões utilizados no projeto. Localizadas em: `js/libs/`.
 
 ### jQuery
 
-Linkada no fim da página, dentro do arquivo `in/scripts.php`.
+Adicionada via _Bower_.
 
 ### Modernizr
 
@@ -20,6 +20,18 @@ Para detecção de uma propriedade ou atributo específico que não esteja nessa
 
 Versão minificada linkada no início da página (*polyfill* para min/max-width do CSS3 Media Queries para IE6-8 ), você pode atualizar a versão usando o gerenciador de dependências Bower Ex:  `bower install respond#1.4.2 --save`
 
-## `scripts.js`
+## Assets
+
+### `analytics.js`
+
+Código de rastreamento do _Google Analytics_.
+
+### `scripts.js`
 
 Arquivo JS [pronto pra ser usado](http://img855.imageshack.us/img855/2449/coronel2.jpg). Localizado em `js/assets/scripts.js`.
+
+## `scripts.min.js`
+
+Arquivo gerado pela concatenação/minificação da lib _jQuery_ e dos arquivos `assets/scripts.js` e `assets/analytics.js`.
+
+

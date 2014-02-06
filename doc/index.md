@@ -37,8 +37,7 @@
 │   │   └── ORGANISMS
 │   │        ├── layout.scss
 │   │        └── print.scss
-│   ├── main.css
-│   └── font-awesome-ie7.min.css
+│   └── main.css
 │
 ├── JS
 │   ├── scripts.min.js

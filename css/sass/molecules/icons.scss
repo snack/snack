@@ -11,9 +11,9 @@
         vertical-align: text-top;
     }
 
-    /*  Telas retina (CSS aplicado a dispositivos com tela de alta resolução)
+    /*  HD devices
         ========================================================================== */
 
-        @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) { 
+        @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
             [class^="ico-"], [class*=" ico-"] { background-size: 0 0; }
         }

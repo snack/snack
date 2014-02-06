@@ -5,21 +5,19 @@
 <link rel="stylesheet" href="../../css/main.css">
 <!-- CSS demo -->
 <link rel="stylesheet" href="assets/css/main.css">
-<!-- Modernizr -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 {% endblock %}
 
 {% block content %}
     <h1 class="styleguide-title">Guia de estilos <span>{{ container.project }}</span></h1>
 
     <dl class="styleguide-info">
-        <dt><i class="icon-desktop"></i>Projeto</dt>
+        <dt><i class="fa fa-desktop"></i>Projeto</dt>
         <dd>{{ container.project }}</dd>
-        <dt><i class="icon-gears"></i>CMS</dt>
+        <dt><i class="fa fa-gears"></i>CMS</dt>
         <dd>{{ container.cms }}</dd>
-        <dt><i class="icon-info"></i>Suporte</dt>
+        <dt><i class="fa fa-info"></i>Suporte</dt>
         <dd>{{ container.browsers }}</dd>
-    </dl>   
+    </dl>
 {% endblock %}
 
 {% block js %}

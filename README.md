@@ -8,11 +8,11 @@ Padrão para auxiliar no **pontapé inicial** em um projeto web. A idéia foi ju
 
 ## Documentação
 
-Meio confuso? Muita coisa? Dê uma olhada na [documentação](doc/index.md). A documentação fica dentro de uma pasta `doc` na raiz do projeto, o que a possibilita a sua leitura mesmo offline.
+Meio confuso? Muita coisa? Dê uma olhada na [documentação](doc/index.md). Fica dentro de uma pasta `doc` na raiz do projeto, o que possibilita a sua leitura mesmo offline.
 
 ## Suporte
 
-Foi testado em diversos navegadores, mas como queremos que a web não para no tempo, recomendamos você seguir a lista abaixo:
+Foi testado em diversos navegadores, mas como queremos que a web não pare no tempo, recomendamos você seguir a lista abaixo:
 - IE8+
 - Firefox 2+
 - Chrome 4+
