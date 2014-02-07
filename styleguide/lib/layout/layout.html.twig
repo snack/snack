@@ -15,13 +15,13 @@
 
     {% block css %}
         <!-- CSS styleguide -->
-        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../build/css/main.min.css">
         <!-- CSS demo -->
-        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="../lib/build/css/main.min.css">
     {% endblock %}
 
     <!-- Modernizr -->
-    <script src="../../js/libs/respond/dest/respond.min.js"></script>
+    <script src="../../components/respond/dest/respond.min.js"></script>
 </head>
 <body class="styleguide-{{ container.body_class }}">
     <!-- Menu lateral -->
@@ -39,7 +39,7 @@
     </div>
     {% block js %}
         <!-- Scripts -->
-        <script src="../assets/js/build/all.min.js"></script>
+        <script src="../lib/build/js/all.min.js"></script>
     {% endblock %}
 </body>
 </html>

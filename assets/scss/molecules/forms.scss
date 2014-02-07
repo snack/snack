@@ -1,0 +1,19 @@
+/*  ==========================================================================
+    Forms
+    ========================================================================== */
+
+    .form fieldset {
+        border: none;
+        padding: 15px;
+        background-color: $formBg;
+        border: solid 1px $formBorder;
+    }
+
+    /*  Required tip
+        ========================================================================== */
+        .fields-required {
+            color: $requiredColor;
+            display: block;
+            font-size: $requiredSize;
+            text-align: right;
+        }

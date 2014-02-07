@@ -5,8 +5,8 @@
 <head>
     <meta charset="utf-8">
     <title>Título da Página | Projeto</title>
-    <?php include($_SERVER['DOCUMENT_ROOT'].'/in/meta.php');?>
-    <?php include($_SERVER['DOCUMENT_ROOT'].'/in/estilos.php');?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/in/meta.php');?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/in/estilos.php');?>
     <style>
     p {
         background-color: blue;
@@ -21,7 +21,7 @@
 </head>
 <body>
     <!-- Header -->
-    <?php include($_SERVER['DOCUMENT_ROOT'].'/in/header.php');?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/in/header.php');?>
 
     <main role="main">
 
@@ -144,10 +144,10 @@
     </main>
 
     <!-- Footer -->
-    <?php include($_SERVER['DOCUMENT_ROOT'].'/in/footer.php');?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/assets/in/footer.php');?>
 
     <!-- Scripts -->
-    <script src="js/build/all.min.js"></script>
+    <script src="build/js/all.min.js"></script>
 
 </body>
 </html>

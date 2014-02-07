@@ -7,13 +7,26 @@ module.exports = function(grunt) {
             files: [
                 '*.php',
                 '*.html',
-                'in/*.php',
+                'assets/in/*.php',
                 'styleguide/**',
                 'styleguide/**/**',
                 'styleguide/**/**/'
             ],
-            dest_css_dev: 'css/main.css',
-            dest_css_styleguide: 'styleguide/assets/css/main.css',
+            // Path dev .css and .scss files
+            dev_scss: 'assets/scss',
+            dev_css: 'build/css',
+
+            // Path styleguide .css and .scss files
+            styleguide_scss: 'styleguide/lib/assets/scss',
+            styleguide_css: 'styleguide/lib/build/css',
+
+            // Path dev .js files
+            dev_js: 'assets/js',
+            dev_build_js: 'build/js',
+
+            // Path styleguide .js files
+            styleguide_js: 'styleguide/lib/assets/js',
+            styleguide_build_js: 'styleguide/lib/build/js'
         },
 
 
@@ -23,21 +36,21 @@ module.exports = function(grunt) {
             // Project files
             dev: {
                 src: [
-                    'js/libs/jquery/jquery.js', // jQuery Lib
-                    'js/assets/scripts.js', // Project scripts
-                    'js/assets/analytics.js' // GA track
+                    'components/jquery/jquery.js', // jQuery Lib
+                    '<%= globalConfig.dev_js %>/scripts.js', // Project scripts
+                    'assets/js/libs/analytics.js' // GA track
                 ],
-                dest: 'js/build/all.js',
+                dest: '<%= globalConfig.dev_build_js %>/all.js',
             },
 
             // Styleguide files
             styleguide: {
                 src: [
-                    'js/libs/jquery/jquery.js', // jQuery Lib
-                    'styleguide/assets/js/scripts.js', // Styleguide scripts
-                    'styleguide/assets/js/rainbow-custom.min.js' // Pretty code
+                    'components/jquery/jquery.js', // jQuery Lib
+                    '<%= globalConfig.styleguide_js %>/scripts.js', // Styleguide scripts
+                    '<%= globalConfig.styleguide_js %>/rainbow-custom.min.js' // Pretty code
                 ],
-                dest: 'styleguide/assets/js/build/all.js',
+                dest: '<%= globalConfig.styleguide_build_js %>/all.js',
             }
 
         },
@@ -47,14 +60,14 @@ module.exports = function(grunt) {
 
             // Project files
             dev: {
-                src: 'js/build/all.js',
-                dest: 'js/build/all.min.js'
+                src: '<%= globalConfig.dev_build_js %>/all.js',
+                dest: '<%= globalConfig.dev_build_js %>/all.min.js'
             },
 
             // Styleguide files
             styleguide: {
-                src: 'styleguide/assets/js/build/all.js',
-                dest: 'styleguide/assets/js/build/all.min.js'
+                src: '<%= globalConfig.styleguide_build_js %>/all.js',
+                dest: '<%= globalConfig.styleguide_build_js %>/all.min.js'
             }
 
         },
@@ -62,8 +75,8 @@ module.exports = function(grunt) {
         // -- JShint config ----------------------------------------------------------
         jshint: {
 
-            // Project files
-            dev: ['js/assets/scripts.js'],
+            //Project files
+            dev: ['<%= globalConfig.dev_js %>/scripts.js'],
                 options: {
                     globals: {
                         jQuery: true,
@@ -72,15 +85,15 @@ module.exports = function(grunt) {
                 }
             },
 
-            // Styleguide files
-            styleguide: ['styleguide/assets/js/scripts.js'],
-                options: {
-                    globals: {
-                        jQuery: true,
-                        console: true,
-                        module: true
-                }
+        // Styleguide files
+        styleguide: ['<%= globalConfig.styleguide_js %>/scripts.js'],
+            options: {
+                globals: {
+                    jQuery: true,
+                    console: true,
+                    module: true
             }
+        }
 
         },
 
@@ -94,7 +107,7 @@ module.exports = function(grunt) {
                     noCache: true
                 },
                 files : {
-                    '<%= globalConfig.dest_css_dev %>' : 'css/sass/main.scss'
+                    '<%= globalConfig.dev_css %>/main.min.css' : '<%= globalConfig.dev_scss %>/main.scss'
                 }
             },
 
@@ -105,7 +118,7 @@ module.exports = function(grunt) {
                     noCache: true
                 },
                 files : {
-                    '<%= globalConfig.dest_css_styleguide %>' : 'styleguide/assets/css/sass/main.scss'
+                    '<%= globalConfig.styleguide_css %>/main.min.css' : '<%= globalConfig.styleguide_scss %>/main.scss'
                 }
             },
 
@@ -118,8 +131,7 @@ module.exports = function(grunt) {
                 options: { livereload: true },
                 files: [
                     '<%= globalConfig.files %>',
-                    '<%= globalConfig.dest_css_dev %>',
-                    '<%= globalConfig.dest_css_styleguide %>'
+                    '<%= globalConfig.dev_css %>/*.css'
                 ]
             },
 
@@ -134,7 +146,10 @@ module.exports = function(grunt) {
             },
 
             css_dev: {
-                files: ['css/sass/*.scss', 'css/sass/**/*.scss'],
+                files: [
+                    '<%= globalConfig.dev_scss %>/*.scss',
+                    '<%= globalConfig.dev_scss %>/**/*.scss'
+                ],
                 tasks: ['sass:dev']
             },
 
@@ -150,8 +165,7 @@ module.exports = function(grunt) {
 
             css_styleguide: {
                 files: [
-                    'styleguide/assets/css/sass/*.scss',
-                    'styleguide/assets/css/sass/**/*.scss'
+                    '<%= globalConfig.styleguide_scss %>/*.scss'
                 ],
                 tasks: ['sass:styleguide']
             },
