@@ -1,3 +1,65 @@
 /*  ==========================================================================
     Buttons
     ========================================================================== */
+
+    /*  Default
+        ========================================================================== */
+        .btn {
+            display: inline-block;
+            margin-bottom: 0;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            font-size: $btn-font-size;
+            padding: 6px 12px;
+            @include transition(background 0.25s ease);
+        }
+
+        .btn:hover,
+        .btn:focus { text-decoration: none; }
+
+    /*  Colors
+        ========================================================================== */
+
+        /*  Default
+            ========================================================================== */
+            .btn {
+                background-color: $btn-bg;
+                color: $btn-color;
+            }
+
+            .btn:hover,
+            .btn:focus { background-color: $btn-hover-bg; }
+
+        /*  Primary
+            ========================================================================== */
+            .btn-primary {
+                background-color: $btn-primary-bg;
+                color: $btn-primary-color;
+            }
+
+            .btn-primary:hover,
+            .btn-primary:focus { background-color: $btn-primary-hover-bg; }
+
+        /*  Success
+            ========================================================================== */
+            .btn-success {
+                background-color: $btn-success-bg;
+                color: $btn-success-color;
+            }
+
+            .btn-success:hover,
+            .btn-success:focus { background-color: $btn-success-hover-bg; }
+
+        /*  Danger
+            ========================================================================== */
+            .btn-danger {
+                background-color: $btn-danger-bg;
+                color: $btn-danger-color;
+            }
+
+            .btn-danger:hover,
+            .btn-danger:focus { background-color: $btn-danger-hover-bg; }

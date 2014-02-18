@@ -2,18 +2,34 @@
     Forms
     ========================================================================== */
 
-    .form fieldset {
-        border: none;
-        padding: 15px;
-        background-color: $formBg;
-        border: solid 1px $formBorder;
-    }
+    /*  Default
+        ========================================================================== */
+        .form fieldset {
+            border: none;
+            padding: 15px;
+            background-color: $form-bg;
+            border: solid 1px $form-border-color;
+        }
+
+        .form-label {
+            display: block;
+        }
 
     /*  Required tip
         ========================================================================== */
         .fields-required {
-            color: $requiredColor;
+            color: $required-tip-color;
             display: block;
-            font-size: $requiredSize;
+            font-size: $required-tip-font-size;
             text-align: right;
+        }
+
+        .required {
+            font-weight: bold;
+            color: $required-color;
+        }
+
+        .form-field {
+            color: $required-color;
+            font-size: $required-font-size;
         }

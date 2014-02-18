@@ -7,28 +7,84 @@ module.exports = function(grunt) {
             files: [
                 '*.php',
                 '*.html',
-                'assets/in/*.php',
+                'build/in/*.php',
                 'styleguide/**',
                 'styleguide/**/**',
                 'styleguide/**/**/'
             ],
-            // Path dev .css and .scss files
+
+            // Projects assets and build paths for .css and .scss files
             dev_scss: 'assets/scss',
             dev_css: 'build/css',
 
-            // Path styleguide .css and .scss files
+            // Styleguide assets and build paths for .css and .scss files
             styleguide_scss: 'styleguide/lib/assets/scss',
             styleguide_css: 'styleguide/lib/build/css',
 
-            // Path dev .js files
+            // Projects assets and build paths for .js files
             dev_js: 'assets/js',
             dev_build_js: 'build/js',
 
-            // Path styleguide .js files
+            // Styleguide assets and build paths for .js files
             styleguide_js: 'styleguide/lib/assets/js',
-            styleguide_build_js: 'styleguide/lib/build/js'
+            styleguide_build_js: 'styleguide/lib/build/js',
+
+            // Projects assets and build paths for img files
+            img_dev: 'assets/img',
+            img_build: 'build/img'
         },
 
+
+        // -- Image min --------------------------------------------------------------
+        imagemin: {
+            png: {
+                options: {
+                    optimizationLevel: 7
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= globalConfig.img_dev %>',
+                    src: ['*.png'],
+                    dest: '<%= globalConfig.img_build %>',
+                    ext: '.png'
+                }]
+            },
+            jpg: {
+                options: {
+                    progressive: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= globalConfig.img_dev %>',
+                    src: ['*.jpg'],
+                    dest: '<%= globalConfig.img_build %>',
+                    ext: '.jpg'
+                }]
+            }
+        },
+
+        // -- SVG 2 PNG --------------------------------------------------------------
+        svg2png: {
+            all: {
+                files: [{
+                    src: ['<%= globalConfig.img_dev %>/*.svg'],
+                    dest: '<%= globalConfig.img_build %>'
+                }]
+            }
+        },
+
+        // -- CopySVG config ------------------------------------------------------------
+        copy: {
+            main: {
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    src: ['<%= globalConfig.img_dev %>/*.svg'],
+                    dest: '<%= globalConfig.img_build %>',
+                    filter: 'isFile'
+                }]
+            }
+        },
 
         // -- Concat config ----------------------------------------------------------
         concat: {
@@ -124,6 +180,29 @@ module.exports = function(grunt) {
 
         },
 
+        // -- Browser sync config ----------------------------------------------------
+        browser_sync: {
+            files: {
+                src : [
+                    '<%= globalConfig.files %>',
+                    '<%= globalConfig.files.dev_css %>/*.css',
+                    '<%= globalConfig.dest_css_styleguide %>/*.css'
+                ]
+            },
+            options: {
+                watchTask: true,
+                proxy: {
+                    host: "local.a2boilerplate"
+                },
+                ghostMode: {
+                    clicks: true,
+                    scroll: true,
+                    links: true,
+                    forms: true
+                }
+            }
+        }
+
         // -- Watch config -----------------------------------------------------------
         watch: {
 
@@ -133,6 +212,27 @@ module.exports = function(grunt) {
                     '<%= globalConfig.files %>',
                     '<%= globalConfig.dev_css %>/*.css'
                 ]
+            },
+
+            images: {
+                files: [
+                    '<%= globalConfig.img_dev %>/*.png',
+                    '<%= globalConfig.img_dev %>/*.jpg'
+                ],
+                tasks: ['imagemin'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
+            },
+
+            svg: {
+                files: ['<%= globalConfig.img_dev %>/*.svg'],
+                tasks: ['svg2png', 'copy'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
             },
 
             // Project files
@@ -170,29 +270,6 @@ module.exports = function(grunt) {
                 tasks: ['sass:styleguide']
             },
 
-        },
-
-        // Browser sync
-        browser_sync: {
-            files: {
-                src : [
-                    '<%= globalConfig.files %>',
-                    '<%= globalConfig.dest_css_dev %>',
-                    '<%= globalConfig.dest_css_styleguide %>'
-                ]
-            },
-            options: {
-                watchTask: true,
-                proxy: {
-                    host: "local.a2boilerplate"
-                },
-                ghostMode: {
-                    clicks: true,
-                    scroll: true,
-                    links: true,
-                    forms: true
-                }
-            }
         }
 
     };
@@ -204,10 +281,26 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-svg2png');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
 
-    grunt.registerTask('default', ['browser_sync', 'watch', 'concat', 'uglify', 'jshint', 'sass'] );
+    grunt.registerTask('default', ['browser_sync', 'watch', 'concat', 'uglify', 'jshint', 'sass', 'imagemin', 'svg2png', 'copy'] );
 
+    // Watch task
     grunt.registerTask( 'w', [ 'watch' ] );
+
+    // CSS task
+    grunt.registerTask( 'css', [ 'sass' ] );
+
+    // JS task
+    grunt.registerTask( 'js', [ 'concat', 'uglify', 'jshint' ] );
+
+    // Compress images task
+    grunt.registerTask( 'images', [ 'imagemin', 'svg2png', 'copy' ] );
+
+    // Browser sync task
+    grunt.registerTask( 'sync', [ 'browser_sync', 'watch' ] );
 };

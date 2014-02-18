@@ -2,7 +2,8 @@
     Variables
     ========================================================================== */
 
-    /*  Grid
+    /*  ==========================================================================
+        Grid
         ========================================================================== */
         $totalColumns   : 12;
         $columnWidth    : 60px;
@@ -10,24 +11,68 @@
         $gridWidth      : 940px;
         $breakpoint     : 768px;
 
-    /*  Colors
+    /*  ==========================================================================
+        Colors
         ========================================================================== */
+        $default-color: #eee;
+        $primary-color: #1972D1;
+        $secondary-color: #5CB85C;
+        $terciary-color: #D9534F;
 
-        /*  Forms
+    /*  ==========================================================================
+        Forms
+        ========================================================================== */
+        $form-bg: #f7f7f7;
+        $form-border-color: #ddd;
+
+        /*  Inputs
+            ========================================================================== */
+            $input-border-color: #ccc;
+            $input-color: #aaa;
+
+            /*  Placeholder
+                ========================================================================== */
+                $placeholder-font-size: 14px;
+                $placeholder-color: #ccc;
+
+            /*  Required tip
+                ========================================================================== */
+                $required-tip-color: #999;
+                $required-tip-font-size: 12px;
+
+            /*  Required field
+                ========================================================================== */
+                $required-color: #666;
+                $required-font-size: 12px;
+
+    /*  ==========================================================================
+        Buttons
+        ========================================================================== */
+        $btn-font-size: 14px;
+
+        /*  Colors
             ========================================================================== */
 
-            /*  Inputs
+            /*  Default
                 ========================================================================== */
-                $inputBorder: #ccc;
-                $inputPlaceholder: #ccc;
-                $inputText: #aaa;
+                $btn-bg: $default-color;
+                $btn-color: #666;
+                $btn-hover-bg: darken($btn-bg, 5%);
 
-            /*  Forms
+            /*  Primary
                 ========================================================================== */
-                $formBg: #f7f7f7;
-                $formBorder: #ddd;
+                $btn-primary-bg: $primary-color;
+                $btn-primary-color: #fff;
+                $btn-primary-hover-bg: darken($btn-primary-bg, 5%);
 
-                /*  Required fields
-                    ========================================================================== */
-                    $requiredColor: #999;
-                    $requiredSize: 12px;
+            /*  Success
+                ========================================================================== */
+                $btn-success-bg: $secondary-color;
+                $btn-success-color: #fff;
+                $btn-success-hover-bg: darken($btn-success-bg, 5%);
+
+            /*  Danger
+                ========================================================================== */
+                $btn-danger-bg: $terciary-color;
+                $btn-danger-color: #fff;
+                $btn-danger-hover-bg: darken($btn-danger-bg, 5%);

@@ -50,7 +50,7 @@
 
     /*  Box shadow
         ========================================================================== */
-        @mixin box-shadow($parameters) { 
+        @mixin box-shadow($parameters) {
             -webkit-box-shadow: $parameters;
                     box-shadow: $parameters;
         }
@@ -88,4 +88,19 @@
                  -o-transform: $parameters;
                 -ms-transform: $parameters;
                     transform: $parameters;
+        }
+
+    /*  Vertical gradient
+        ========================================================================== */
+        @mixin vertical-gradient($startColor, $endColor) {
+            background-color: $startColor;
+            background-image: -moz-linear-gradient(top,  $startColor 0%, $endColor 100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$startColor), color-stop(100%,$endColor));
+            background-image: -webkit-linear-gradient(top,  $startColor 0%,$endColor 100%);
+            background-image: -o-linear-gradient(top,  $startColor 0%,$endColor 100%);
+            background-image: -ms-linear-gradient(top,  $startColor 0%,$endColor 100%);
+            background-image: linear-gradient(to bottom,  $startColor 0%,$endColor 100%);
+            filter: unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr='") + ie-hex-str($startColor) + unquote("', endColorstr='") + ie-hex-str($endColor) + unquote("',GradientType=0)");
+
+            background-repeat: repeat-x;
         }

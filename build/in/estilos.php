@@ -11,7 +11,7 @@
 
 <!-- Verif Mobile -->
 <?php
-   require_once 'assets/in/mobile_detect.php';
+   require_once 'build/in/mobile_detect.php';
    $detect = new Mobile_Detect();
 
    $isMobile = $detect->isMobile();

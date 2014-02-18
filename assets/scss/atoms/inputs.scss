@@ -21,9 +21,9 @@
         .textarea {
             width: 100%;
             padding: 5px 10px;
-            border: solid 1px $inputBorder;
-            color: $inputText;
-            margin-bottom: 5px;
+            border: solid 1px $input-border-color;
+            color: $input-color;
+            margin-bottom: 15px;
             @include transition(all .25s ease);
         }
 
@@ -42,7 +42,7 @@
         .select:focus,
         textarea:focus,
         .textarea:focus {
-            border-color: darken($inputBorder, 25%);
+            border-color: darken($input-border-color, 25%);
             background-color: #f5f5f5;
         }
 
@@ -56,7 +56,7 @@
         .checkbox {
             padding-left: 15px;
             display: block;
-            color: $inputText;
+            color: $input-color;
         }
 
         .radio input[type="radio"],
@@ -76,28 +76,32 @@
         ========================================================================== */
         input::-webkit-input-placeholder,
         textarea::-webkit-input-placeholder {
-           color: $inputPlaceholder;
+           color: $placeholder-color;
            font-style: italic;
            opacity: 1;
+           font-size: $placeholder-font-size;
         }
 
         input:-moz-placeholder,
         textarea:-moz-placeholder {
-           color: $inputPlaceholder;
+           color: $placeholder-color;
            font-style: italic;
            opacity: 1;
+           font-size: $placeholder-color;
         }
 
         input::-moz-placeholder,
         textarea::-moz-placeholder {
-           color: $inputPlaceholder;
+           color: $placeholder-color;
            font-style: italic;
            opacity: 1;
+           font-size: $placeholder-font-size;
         }
 
         input:-ms-input-placeholder,
         textarea:-ms-input-placeholder {
-           color: $inputPlaceholder;
+           color: $placeholder-color;
            font-style: italic;
            opacity: 1;
+           font-size: $placeholder-font-size;
         }
