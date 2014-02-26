@@ -34,7 +34,6 @@ module.exports = function(grunt) {
             img_build: 'build/img'
         },
 
-
         // -- Image min --------------------------------------------------------------
         imagemin: {
             png: {
@@ -120,6 +119,16 @@ module.exports = function(grunt) {
                 dest: '<%= globalConfig.dev_build_js %>/all.min.js'
             },
 
+            modernizr: {
+                src: 'components/modernizr/modernizr.js',
+                dest: '<%= globalConfig.dev_build_js %>/modernizr.min.js'
+            },
+
+            respond: {
+                src: 'components/respond/dest/respond.min.js',
+                dest: '<%= globalConfig.dev_build_js %>/respond.min.js'
+            },
+
             // Styleguide files
             styleguide: {
                 src: '<%= globalConfig.styleguide_build_js %>/all.js',
@@ -141,15 +150,15 @@ module.exports = function(grunt) {
                 }
             },
 
-        // Styleguide files
-        styleguide: ['<%= globalConfig.styleguide_js %>/scripts.js'],
-            options: {
-                globals: {
-                    jQuery: true,
-                    console: true,
-                    module: true
+            // Styleguide files
+            styleguide: ['<%= globalConfig.styleguide_js %>/scripts.js'],
+                options: {
+                    globals: {
+                        jQuery: true,
+                        console: true,
+                        module: true
+                }
             }
-        }
 
         },
 
@@ -159,7 +168,7 @@ module.exports = function(grunt) {
             // Project files
             dev : {
                 options : {
-                    style : 'compressed',
+                    style : 'expanded',
                     noCache: true
                 },
                 files : {
@@ -201,7 +210,7 @@ module.exports = function(grunt) {
                     forms: true
                 }
             }
-        }
+        },
 
         // -- Watch config -----------------------------------------------------------
         watch: {
@@ -303,4 +312,7 @@ module.exports = function(grunt) {
 
     // Browser sync task
     grunt.registerTask( 'sync', [ 'browser_sync', 'watch' ] );
+
+    // Start taks
+    grunt.registerTask( 'init', [ 'uglify:modernizr', 'uglify:respond' ] );
 };

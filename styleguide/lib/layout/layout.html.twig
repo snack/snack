@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <title>
     {% if container.module %}
-        {{ container.module }} | Guia de Estilos - {{ container.project }}
+        {{ container.module }} | Guia de Estilo - {{ container.project }}
     {% else %}
-        Guia de Estilos - {{ container.project }}
+        Guia de Estilo - {{ container.project }}
     {% endif %}
     </title>
     {% include 'head.html.twig' %}
@@ -21,14 +21,14 @@
     {% endblock %}
 
     <!-- Modernizr -->
-    <script src="../../components/modernizr/modernizr.js"></script>
+    <script src="../../build/js/modernizr.min.js"></script>
 
     <!-- Respond -->
     <!--[if lt IE 9]>
-    <script src="../../components/respond/dest/respond.min.js"></script>
+    <script src="../../build/js/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="styleguide-{{ container.body_class }}">
+<body class="styleguide-body styleguide-{{ container.body_class }}">
     <!-- Menu lateral -->
     {% include 'menu.html.twig' %}
 
@@ -44,7 +44,7 @@
     </div>
     {% block js %}
         <!-- Scripts -->
-        <script src="../lib/build/js/all.min.js"></script>
+        <script src="../lib/build/js/all.js"></script>
     {% endblock %}
 </body>
 </html>

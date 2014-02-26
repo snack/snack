@@ -1,5 +1,5 @@
 function menuActive() {
-    var bodyClass = $('body').attr('class').slice(11);
+    var bodyClass = $('body').attr('class').slice(27);
     $('#styleguide-menu').children('.styleguide-menu-' + bodyClass).addClass('active');
 }
 

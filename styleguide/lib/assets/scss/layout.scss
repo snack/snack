@@ -1,6 +1,11 @@
 /*  ==========================================================================
     Layout
     ========================================================================== */
+     .styleguide-body {
+        background: #fff;
+        background-image: none;
+    }
+
     .styleguide-hold {
         position: relative;
         padding-left: 215px;
@@ -39,7 +44,7 @@
 
     /*  Modules
         ========================================================================== */
-        .styleguide-demo{
+        .styleguide-demo {
             background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAAXNSR0IArs4c6QAAAAZQTFRF+vr6////+o8bnQAAABBJREFUCB1jYPjPgBXhEAYAfr8P8bm+jEoAAAAASUVORK5CYII=") repeat scroll 0 0 transparent;
             overflow: hidden;
             padding: 20px;
@@ -91,7 +96,7 @@
                 width: 100%;
                 height: 100%;
                 left: 0;
-                top: 30px;
+                top: 48px;
                 font-size: 40px;
                 line-height: 320px;
                 background-color: #fff;
