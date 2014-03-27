@@ -14,72 +14,83 @@ module.exports = function(grunt) {
             ],
 
             // Projects assets and build paths for .css and .scss files
-            dev_scss: 'assets/scss',
-            dev_css: 'build/css',
+            dev_css: 'assets/scss',
+            build_css: 'build/css',
 
             // Styleguide assets and build paths for .css and .scss files
-            styleguide_scss: 'styleguide/lib/assets/scss',
-            styleguide_css: 'styleguide/lib/build/css',
+            dev_style_css: 'styleguide/lib/assets/scss',
+            build_style_css: 'styleguide/lib/build/css',
 
             // Projects assets and build paths for .js files
             dev_js: 'assets/js',
-            dev_build_js: 'build/js',
+            build_js: 'build/js',
 
             // Styleguide assets and build paths for .js files
-            styleguide_js: 'styleguide/lib/assets/js',
-            styleguide_build_js: 'styleguide/lib/build/js',
+            dev_style_js: 'styleguide/lib/assets/js',
+            build_style_js: 'styleguide/lib/build/js',
 
             // Projects assets and build paths for img files
-            img_dev: 'assets/img',
-            img_build: 'build/img'
+            dev_img: 'assets/img',
+            build_img: 'build/img'
         },
 
         // -- Image min --------------------------------------------------------------
         imagemin: {
-            png: {
-                options: {
-                    optimizationLevel: 7
-                },
+            dynamic: {
                 files: [{
                     expand: true,
-                    cwd: '<%= globalConfig.img_dev %>',
-                    src: ['*.png'],
-                    dest: '<%= globalConfig.img_build %>',
-                    ext: '.png'
+                    cwd: '<%= globalConfig.dev_img %>',
+                    src:['*.{jpg,gif}'],
+                    dest: '<%= globalConfig.build_img %>',
+                }],
+                options: {
+                    cache: false
+                }
+            }
+        },
+
+        // -- SVG min -------------------------------------------------------------------
+        svgmin: {
+            options: {
+                plugins: [{
+                    removeViewBox: false
+                }, {
+                    removeUselessStrokeAndFill: false
+                }, {
+                    convertPathData: { 
+                        straightCurves: false
+                    }
                 }]
             },
-            jpg: {
-                options: {
-                    progressive: true
-                },
+            dist: {
                 files: [{
                     expand: true,
-                    cwd: '<%= globalConfig.img_dev %>',
-                    src: ['*.jpg'],
-                    dest: '<%= globalConfig.img_build %>',
-                    ext: '.jpg'
+                    cwd: '<%= globalConfig.dev_img %>',
+                    src: ['*.svg'],
+                    dest: '<%= globalConfig.build_img %>',
+                    ext: '.svg'
                 }]
             }
         },
 
-        // -- SVG 2 PNG --------------------------------------------------------------
+        // -- SVG 2 PNG ----------------------------------------------------------------
         svg2png: {
             all: {
                 files: [{
-                    src: ['<%= globalConfig.img_dev %>/*.svg'],
-                    dest: '<%= globalConfig.img_build %>'
+                    src: ['<%= globalConfig.dev_img %>/*.svg'],
+                    dest: '<%= globalConfig.build_img %>'
                 }]
             }
         },
 
-        // -- CopySVG config ------------------------------------------------------------
+        // -- Copy img config -----------------------------------------------------------
         copy: {
             main: {
                 files: [{
                     expand: true,
                     flatten: true,
-                    src: ['<%= globalConfig.img_dev %>/*.svg'],
-                    dest: '<%= globalConfig.img_build %>',
+                    src: ['<%= globalConfig.dev_img %>/*.png'],
+                    dest: '<%= globalConfig.build_img %>',
                     filter: 'isFile'
                 }]
             }
@@ -92,20 +103,19 @@ module.exports = function(grunt) {
             dev: {
                 src: [
                     'components/jquery/jquery.js', // jQuery Lib
-                    '<%= globalConfig.dev_js %>/scripts.js', // Project scripts
-                    'assets/js/libs/analytics.js' // GA track
+                    '<%= globalConfig.dev_js %>/scripts.js' // Project scripts
                 ],
-                dest: '<%= globalConfig.dev_build_js %>/all.js',
+                dest: '<%= globalConfig.build_js %>/all.js',
             },
 
             // Styleguide files
             styleguide: {
                 src: [
                     'components/jquery/jquery.js', // jQuery Lib
-                    '<%= globalConfig.styleguide_js %>/scripts.js', // Styleguide scripts
-                    '<%= globalConfig.styleguide_js %>/rainbow-custom.min.js' // Pretty code
+                    '<%= globalConfig.dev_style_js %>/scripts.js', // Styleguide scripts
+                    '<%= globalConfig.dev_style_js %>/rainbow-custom.min.js' // Pretty code
                 ],
-                dest: '<%= globalConfig.styleguide_build_js %>/all.js',
+                dest: '<%= globalConfig.build_style_js %>/all.js',
             }
 
         },
@@ -113,26 +123,27 @@ module.exports = function(grunt) {
         // -- Uglify config ----------------------------------------------------------
         uglify: {
 
-            // Project files
-            dev: {
-                src: '<%= globalConfig.dev_build_js %>/all.js',
-                dest: '<%= globalConfig.dev_build_js %>/all.min.js'
-            },
-
+            // Start files
             modernizr: {
                 src: 'components/modernizr/modernizr.js',
-                dest: '<%= globalConfig.dev_build_js %>/modernizr.min.js'
+                dest: '<%= globalConfig.build_js %>/libs/modernizr.min.js'
             },
 
             respond: {
                 src: 'components/respond/dest/respond.min.js',
-                dest: '<%= globalConfig.dev_build_js %>/respond.min.js'
+                dest: '<%= globalConfig.build_js %>/libs/respond.min.js'
+            },
+
+            // Project files
+            dev: {
+                src: '<%= globalConfig.build_js %>/all.js',
+                dest: '<%= globalConfig.build_js %>/all.min.js'
             },
 
             // Styleguide files
             styleguide: {
-                src: '<%= globalConfig.styleguide_build_js %>/all.js',
-                dest: '<%= globalConfig.styleguide_build_js %>/all.min.js'
+                src: '<%= globalConfig.build_style_js %>/all.js',
+                dest: '<%= globalConfig.build_style_js %>/all.min.js'
             }
 
         },
@@ -151,7 +162,7 @@ module.exports = function(grunt) {
             },
 
             // Styleguide files
-            styleguide: ['<%= globalConfig.styleguide_js %>/scripts.js'],
+            styleguide: ['<%= globalConfig.dev_style_js %>/scripts.js'],
                 options: {
                     globals: {
                         jQuery: true,
@@ -172,7 +183,7 @@ module.exports = function(grunt) {
                     noCache: true
                 },
                 files : {
-                    '<%= globalConfig.dev_css %>/main.min.css' : '<%= globalConfig.dev_scss %>/main.scss'
+                    '<%= globalConfig.build_css %>/main.min.css' : '<%= globalConfig.dev_css %>/main.scss'
                 }
             },
 
@@ -183,7 +194,7 @@ module.exports = function(grunt) {
                     noCache: true
                 },
                 files : {
-                    '<%= globalConfig.styleguide_css %>/main.min.css' : '<%= globalConfig.styleguide_scss %>/main.scss'
+                    '<%= globalConfig.build_style_css %>/main.min.css' : '<%= globalConfig.dev_style_css %>/main.scss'
                 }
             },
 
@@ -194,8 +205,7 @@ module.exports = function(grunt) {
             files: {
                 src : [
                     '<%= globalConfig.files %>',
-                    '<%= globalConfig.files.dev_css %>/*.css',
-                    '<%= globalConfig.dest_css_styleguide %>/*.css'
+                    '<%= globalConfig.files.build_css %>/*.css'
                 ]
             },
             options: {
@@ -215,18 +225,20 @@ module.exports = function(grunt) {
         // -- Watch config -----------------------------------------------------------
         watch: {
 
+            // -- Livereload config --------------------------------------------------
             livereload: {
                 options: { livereload: true },
                 files: [
                     '<%= globalConfig.files %>',
-                    '<%= globalConfig.dev_css %>/*.css'
+                    '<%= globalConfig.build_css %>/*.css'
                 ]
             },
 
+            // -- Images config -------------------------------------------------------
             images: {
                 files: [
-                    '<%= globalConfig.img_dev %>/*.png',
-                    '<%= globalConfig.img_dev %>/*.jpg'
+                    '<%= globalConfig.dev_img %>/*.gif',
+                    '<%= globalConfig.dev_img %>/*.jpg'
                 ],
                 tasks: ['imagemin'],
                 options: {
@@ -235,16 +247,28 @@ module.exports = function(grunt) {
                 }
             },
 
-            svg: {
-                files: ['<%= globalConfig.img_dev %>/*.svg'],
-                tasks: ['svg2png', 'copy'],
+            copy: {
+                files: [
+                    '<%= globalConfig.dev_img %>/*.png'
+                ],
+                tasks: ['copy'],
                 options: {
                     spawn: false,
                     livereload: true
                 }
             },
 
-            // Project files
+            // -- SVG config ----------------------------------------------------------
+            svg: {
+                files: ['<%= globalConfig.dev_img %>/*.svg'],
+                tasks: ['svgmin', 'svg2png'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
+            },
+
+            // -- Project files config (CSS and JS) ------------------------------------
             scripts_dev: {
                 files: ['<%= concat.dev.src %>'],
                 tasks: ['jshint:dev', 'concat:dev', 'uglify:dev'],
@@ -256,13 +280,13 @@ module.exports = function(grunt) {
 
             css_dev: {
                 files: [
-                    '<%= globalConfig.dev_scss %>/*.scss',
-                    '<%= globalConfig.dev_scss %>/**/*.scss'
+                    '<%= globalConfig.dev_css %>/*.scss',
+                    '<%= globalConfig.dev_css %>/**/*.scss'
                 ],
                 tasks: ['sass:dev']
             },
 
-            // Styleguide files
+            // -- Styleguide files config (CSS and JS) ------------------------------------
             scripts_styleguide: {
                 files: ['<%= concat.styleguide.src %>'],
                 tasks: ['jshint:styleguide', 'concat:styleguide', 'uglify:styleguide'],
@@ -274,7 +298,7 @@ module.exports = function(grunt) {
 
             css_styleguide: {
                 files: [
-                    '<%= globalConfig.styleguide_scss %>/*.scss'
+                    '<%= globalConfig.dev_style_css %>/*.scss'
                 ],
                 tasks: ['sass:styleguide']
             },
@@ -291,15 +315,19 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-svgmin');
     grunt.loadNpmTasks('grunt-svg2png');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
 
-    grunt.registerTask('default', ['browser_sync', 'watch', 'concat', 'uglify', 'jshint', 'sass', 'imagemin', 'svg2png', 'copy'] );
+    grunt.registerTask('default', ['browser_sync', 'watch', 'concat', 'uglify', 'jshint', 'sass', 'imagemin', 'svgmin', 'svg2png', 'copy'] );
 
     // Watch task
     grunt.registerTask( 'w', [ 'watch' ] );
+
+    // Start
+    grunt.registerTask( 'init', [ 'uglify:modernizr', 'uglify:respond' ] );
 
     // CSS task
     grunt.registerTask( 'css', [ 'sass' ] );
@@ -308,7 +336,7 @@ module.exports = function(grunt) {
     grunt.registerTask( 'js', [ 'concat', 'uglify', 'jshint' ] );
 
     // Compress images task
-    grunt.registerTask( 'images', [ 'imagemin', 'svg2png', 'copy' ] );
+    grunt.registerTask( 'images', [ 'svgmin', 'svg2png', 'copy', 'imagemin' ] );
 
     // Browser sync task
     grunt.registerTask( 'sync', [ 'browser_sync', 'watch' ] );
