@@ -21,8 +21,8 @@
         .textarea {
             width: 100%;
             padding: 5px 10px;
-            border: solid 1px $input-border-color;
-            color: $input-color;
+            border: solid 1px $color-border-input;
+            color: $color-input;
             margin-bottom: 15px;
             @include transition(all .25s ease);
         }
@@ -42,7 +42,7 @@
         .select:focus,
         textarea:focus,
         .textarea:focus {
-            border-color: darken($input-border-color, 25%);
+            border-color: darken($color-border-input, 25%);
             background-color: #f5f5f5;
         }
 
@@ -56,7 +56,7 @@
         .checkbox {
             padding-left: 15px;
             display: block;
-            color: $input-color;
+            color: $color-input;
         }
 
         .radio input[type="radio"],
@@ -76,7 +76,7 @@
         ========================================================================== */
         input::-webkit-input-placeholder,
         textarea::-webkit-input-placeholder {
-           color: $placeholder-color;
+           color: $color-placeholder;
            font-style: italic;
            opacity: 1;
            font-size: $placeholder-font-size;
@@ -84,15 +84,15 @@
 
         input:-moz-placeholder,
         textarea:-moz-placeholder {
-           color: $placeholder-color;
+           color: $color-placeholder;
            font-style: italic;
            opacity: 1;
-           font-size: $placeholder-color;
+           font-size: $color-placeholder;
         }
 
         input::-moz-placeholder,
         textarea::-moz-placeholder {
-           color: $placeholder-color;
+           color: $color-placeholder;
            font-style: italic;
            opacity: 1;
            font-size: $placeholder-font-size;
@@ -100,7 +100,7 @@
 
         input:-ms-input-placeholder,
         textarea:-ms-input-placeholder {
-           color: $placeholder-color;
+           color: $color-placeholder;
            font-style: italic;
            opacity: 1;
            font-size: $placeholder-font-size;

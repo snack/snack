@@ -7,8 +7,8 @@
         .form fieldset {
             border: none;
             padding: 15px;
-            background-color: $form-bg;
-            border: solid 1px $form-border-color;
+            background-color: $color-bg-form;
+            border: solid 1px $color-border-form;
         }
 
         .form-label {
@@ -18,7 +18,7 @@
     /*  Required tip
         ========================================================================== */
         .fields-required {
-            color: $required-tip-color;
+            color: $color-required-tip;
             display: block;
             font-size: $required-tip-font-size;
             text-align: right;
@@ -26,10 +26,10 @@
 
         .required {
             font-weight: bold;
-            color: $required-color;
+            color: $color-required;
         }
 
         .form-field {
-            color: $required-color;
+            color: $color-required;
             font-size: $required-font-size;
         }

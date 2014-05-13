@@ -14,35 +14,37 @@
     /*  ==========================================================================
         Colors
         ========================================================================== */
-        $default-color: #eee;
-        $primary-color: #1972D1;
-        $secondary-color: #5CB85C;
-        $terciary-color: #D9534F;
+        $color-default:     #eee;
+        $color-primary:     #1972D1;
+        $color-secondary:   #5CB85C;
+        $color-terciary:    #D9534F;
+
+
 
     /*  ==========================================================================
         Forms
         ========================================================================== */
-        $form-bg: #f7f7f7;
-        $form-border-color: #ddd;
+        $color-bg-form: #f7f7f7;
+        $color-border-form: #ddd;
 
         /*  Inputs
             ========================================================================== */
-            $input-border-color: #ccc;
-            $input-color: #aaa;
+            $color-border-input: #ccc;
+            $color-input: #aaa;
 
             /*  Placeholder
                 ========================================================================== */
                 $placeholder-font-size: 14px;
-                $placeholder-color: #ccc;
+                $color-placeholder: #ccc;
 
             /*  Required tip
                 ========================================================================== */
-                $required-tip-color: #999;
+                $color-required-tip: #999;
                 $required-tip-font-size: 12px;
 
             /*  Required field
                 ========================================================================== */
-                $required-color: #666;
+                $color-required: #666;
                 $required-font-size: 12px;
 
     /*  ==========================================================================
@@ -55,24 +57,24 @@
 
             /*  Default
                 ========================================================================== */
-                $btn-bg: $default-color;
+                $btn-bg: $color-default;
                 $btn-color: #666;
                 $btn-hover-bg: darken($btn-bg, 5%);
 
             /*  Primary
                 ========================================================================== */
-                $btn-primary-bg: $primary-color;
+                $btn-primary-bg: $color-primary;
                 $btn-primary-color: #fff;
                 $btn-primary-hover-bg: darken($btn-primary-bg, 5%);
 
             /*  Success
                 ========================================================================== */
-                $btn-success-bg: $secondary-color;
+                $btn-success-bg: $color-secondary;
                 $btn-success-color: #fff;
                 $btn-success-hover-bg: darken($btn-success-bg, 5%);
 
             /*  Danger
                 ========================================================================== */
-                $btn-danger-bg: $terciary-color;
+                $btn-danger-bg: $color-terciary;
                 $btn-danger-color: #fff;
                 $btn-danger-hover-bg: darken($btn-danger-bg, 5%);
