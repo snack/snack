@@ -13,13 +13,6 @@
     <?php include($_SERVER['DOCUMENT_ROOT'].'/build/in/header.php');?>
 
     <main role="main">
-        
-        <img src="build/img/svg.svg" alt="">
-        <img src="build/img/svg.png" alt="">
-        <img src="build/img/gif.gif" alt="">
-        <img src="build/img/png.png" alt="">
-        <img src="build/img/airport.jpg" alt="">
-        teste
 
     </main>
 
