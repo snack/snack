@@ -5,26 +5,19 @@
 <head>
     <meta charset="utf-8">
     <title>Título da Página | Projeto</title>
-    <?php include($_SERVER['DOCUMENT_ROOT'].'/build/in/meta.php');?>
-    <?php include($_SERVER['DOCUMENT_ROOT'].'/build/in/estilos.php');?>
+    <?php include __DIR__ . '/build/in/meta.php'; ?>
+    <?php include __DIR__ . '/build/in/estilos.php'; ?>
 </head>
 <body>
     <!-- Header -->
-    <?php include($_SERVER['DOCUMENT_ROOT'].'/build/in/header.php');?>
+    <?php include __DIR__ . '/build/in/header.php'; ?>
 
     <main role="main">
-        
-        <img src="build/img/svg.svg" alt="">
-        <img src="build/img/svg.png" alt="">
-        <img src="build/img/gif.gif" alt="">
-        <img src="build/img/png.png" alt="">
-        <img src="build/img/airport.jpg" alt="">
-        teste
 
     </main>
 
     <!-- Footer -->
-    <?php include($_SERVER['DOCUMENT_ROOT'].'/build/in/footer.php');?>
+    <?php include __DIR__ . '/build/in/footer.php' ;?>
 
     <!-- Scripts -->
     <script src="build/js/all.min.js"></script>
