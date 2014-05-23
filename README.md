@@ -4,7 +4,7 @@ Padrão para auxiliar no **pontapé inicial** em um projeto web. A idéia foi ju
 
 ## Padrões
 
-**Padrões são sempre bons**. Auxiliam no entendimento do código, principalmente numa fase posterior de manutenção. Por isso, seguimos um padrão de código. [Veja o guia](https://github.com/a2comunicacao/A2idiomatic).
+**Padrões são sempre bons**. Auxiliam no entendimento do código, principalmente numa fase posterior de manutenção. Por isso, seguimos um padrão de código. [Veja o guia](https://github.com/a2comunicacao/metodologia/blob/master/projeto-web/desenvolvimento/a2idiomatic.md#a2idiomatic).
 
 ## Documentação
 
