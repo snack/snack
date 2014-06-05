@@ -13,7 +13,6 @@
     <?php include __DIR__ . '/build/in/header.php'; ?>
 
     <main role="main">
-
     </main>
 
     <!-- Footer -->

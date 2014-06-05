@@ -631,6 +631,12 @@ body:after {
     max-width: 940px;
   }
 
+  .row.full {
+    max-width: 980px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .column {
     float: left;
     margin-right: 2.12766%;

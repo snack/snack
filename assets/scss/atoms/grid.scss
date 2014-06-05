@@ -42,7 +42,16 @@
 
         /*  Grid width
             ========================================================================== */
-            .row { max-width: $gridWidth; }
+            .row {
+                max-width: $gridWidth;
+            }
+
+            .row.full {
+                max-width: $gridFull;
+                padding-left: $breath;
+                padding-right: $breath;
+            }
+
             .column { @include column(); }
 
         /*  Columns width

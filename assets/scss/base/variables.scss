@@ -9,6 +9,8 @@
         $columnWidth    : 60px;
         $gutterWidth    : 20px;
         $gridWidth      : 940px;
+        $breath         : 20px;
+        $gridFull       : $gridWidth + $breath + $breath;
         $breakpoint     : 768px;
 
     /*  ==========================================================================

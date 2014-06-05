@@ -201,7 +201,7 @@ module.exports = function(grunt) {
         },
 
         // -- Browser sync config ----------------------------------------------------
-        browser_sync: {
+        browserSync: {
             files: {
                 src : [
                     '<%= globalConfig.files %>',
@@ -211,7 +211,7 @@ module.exports = function(grunt) {
             options: {
                 watchTask: true,
                 proxy: {
-                    host: "local.a2boilerplate"
+                    host: "192.168.0.34"
                 },
                 ghostMode: {
                     clicks: true,
@@ -321,7 +321,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
 
-    grunt.registerTask('default', ['browser_sync', 'watch', 'concat', 'uglify', 'jshint', 'sass', 'imagemin', 'svgmin', 'svg2png', 'copy'] );
+    grunt.registerTask('default', ['browserSync', 'watch', 'concat', 'uglify', 'jshint', 'sass', 'imagemin', 'svgmin', 'svg2png', 'copy'] );
 
     // Watch task
     grunt.registerTask( 'w', [ 'watch' ] );
@@ -339,7 +339,7 @@ module.exports = function(grunt) {
     grunt.registerTask( 'images', [ 'svgmin', 'svg2png', 'copy', 'imagemin' ] );
 
     // Browser sync task
-    grunt.registerTask( 'sync', [ 'browser_sync', 'watch' ] );
+    grunt.registerTask( 'sync', [ 'browserSync', 'watch' ] );
 
     // Start taks
     grunt.registerTask( 'init', [ 'uglify:modernizr', 'uglify:respond' ] );
