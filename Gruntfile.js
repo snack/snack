@@ -179,7 +179,7 @@ module.exports = function(grunt) {
             // Project files
             dev : {
                 options : {
-                    style : 'expanded',
+                    style : 'compressed',
                     noCache: true
                 },
                 files : {
@@ -269,6 +269,16 @@ module.exports = function(grunt) {
             },
 
             // -- Project files config (CSS and JS) ------------------------------------
+            // Run all JS tasks when the Gruntfile is modified
+            scripts_general: {
+                files: ['Gruntfile.js'],
+                tasks: ['jshint', 'concat', 'uglify'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                },
+            },
+
             scripts_dev: {
                 files: ['<%= concat.dev.src %>'],
                 tasks: ['jshint:dev', 'concat:dev', 'uglify:dev'],

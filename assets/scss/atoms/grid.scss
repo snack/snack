@@ -32,14 +32,6 @@
 
     @media only screen and (min-width: $breakpoint) {
 
-        .box,
-        .about {
-            @include width(6);
-            @include column();
-        }
-
-        .about { @include last(); }
-
         /*  Grid width
             ========================================================================== */
             .row {

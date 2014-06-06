@@ -38,6 +38,7 @@
 
     .hide { display: none; }
     .block { display: block; }
+    .space { margin-bottom: $space; }
 
     /* Esconde elemento para todos usuários exceto leitores de tela */
     .sr-only {
