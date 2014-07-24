@@ -76,32 +76,32 @@
         ========================================================================== */
         input::-webkit-input-placeholder,
         textarea::-webkit-input-placeholder {
-           color: $color-placeholder;
-           font-style: italic;
-           opacity: 1;
-           font-size: $placeholder-font-size;
+            color: $color-placeholder;
+            font-style: italic;
+            opacity: 1;
+            font-size: $placeholder-font-size;
         }
 
         input:-moz-placeholder,
         textarea:-moz-placeholder {
-           color: $color-placeholder;
-           font-style: italic;
-           opacity: 1;
-           font-size: $color-placeholder;
+            color: $color-placeholder;
+            font-style: italic;
+            opacity: 1;
+            font-size: $placeholder-font-size;
         }
 
         input::-moz-placeholder,
         textarea::-moz-placeholder {
-           color: $color-placeholder;
-           font-style: italic;
-           opacity: 1;
-           font-size: $placeholder-font-size;
+            color: $color-placeholder;
+            font-style: italic;
+            opacity: 1;
+            font-size: $placeholder-font-size;
         }
 
         input:-ms-input-placeholder,
         textarea:-ms-input-placeholder {
-           color: $color-placeholder;
-           font-style: italic;
-           opacity: 1;
-           font-size: $placeholder-font-size;
+            color: $color-placeholder;
+            font-style: italic;
+            opacity: 1;
+            font-size: $placeholder-font-size;
         }

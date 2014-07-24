@@ -102,7 +102,6 @@ module.exports = function(grunt) {
             // Project files
             dev: {
                 src: [
-                    'components/jquery/jquery.js', // jQuery Lib
                     '<%= globalConfig.dev_js %>/scripts.js' // Project scripts
                 ],
                 dest: '<%= globalConfig.build_js %>/all.js',
@@ -127,6 +126,11 @@ module.exports = function(grunt) {
             modernizr: {
                 src: 'components/modernizr/modernizr.js',
                 dest: '<%= globalConfig.build_js %>/libs/modernizr.min.js'
+            },
+
+            jquery: {
+                src: 'components/jquery/jquery.min.js',
+                dest: '<%= globalConfig.build_js %>/libs/jquery.min.js'
             },
 
             respond: {
@@ -269,6 +273,7 @@ module.exports = function(grunt) {
             },
 
             // -- Project files config (CSS and JS) ------------------------------------
+
             // Run all JS tasks when the Gruntfile is modified
             scripts_general: {
                 files: ['Gruntfile.js'],
@@ -337,7 +342,7 @@ module.exports = function(grunt) {
     grunt.registerTask( 'w', [ 'watch' ] );
 
     // Start
-    grunt.registerTask( 'init', [ 'uglify:modernizr', 'uglify:respond' ] );
+    grunt.registerTask( 'init', [ 'uglify:modernizr', 'uglify:respond', 'uglify:jquery' ] );
 
     // CSS task
     grunt.registerTask( 'css', [ 'sass' ] );
@@ -350,7 +355,4 @@ module.exports = function(grunt) {
 
     // Browser sync task
     grunt.registerTask( 'sync', [ 'browserSync', 'watch' ] );
-
-    // Start taks
-    grunt.registerTask( 'init', [ 'uglify:modernizr', 'uglify:respond' ] );
 };

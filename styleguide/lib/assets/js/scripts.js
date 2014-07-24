@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
     $.each(boxCode, function(index, val) {
         var currentCode = $(val).html(),
             destCode = $(this).next('pre').find('code');
-        destCode.append(currentCode);
+        destCode.append(currentCode).prepend('<!-- HTML -->');
     });
 
     menuActive();

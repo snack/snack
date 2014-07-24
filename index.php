@@ -19,6 +19,8 @@
     <?php include __DIR__ . '/build/in/footer.php' ;?>
 
     <!-- Scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="build/js/libs/jquery.min.js"><\/script>')</script>
     <script src="build/js/all.min.js"></script>
 </body>
 </html>
