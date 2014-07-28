@@ -1,0 +1,6 @@
+"layout 1":
+  name:      "Homepage"
+  imgSrc: "prints/homepage.jpg"
+"layout 2":
+  name:      "O que fazemos"
+  imgSrc: "prints/o-que-fazemos.png"
