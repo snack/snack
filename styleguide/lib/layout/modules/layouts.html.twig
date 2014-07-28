@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1 class="styleguide-title styleguide-title-page">{{ container.module }}</h1>
+    <!-- Module -->
+    {% for layout in layouts %}
+        <section class="styleguide-module">
+            <figure class="styleguide-layout">
+                <figcaption>{{ layout.name }}</figcaption>
+                <a href="{{ layout.imgSrc }}"><i class="fa fa-search"></i></a>
+                <img src="{{ layout.imgSrc }}" alt="Homepage">
+            </figure>
+        </section>
+    {% endfor %}
+{% endblock %}
