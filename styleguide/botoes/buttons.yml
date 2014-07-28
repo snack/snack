@@ -1,0 +1,21 @@
+"button 1":
+  title: Default
+  subtitle: Botão padrão básico do projeto. Aplicado nas tags <code>a</code>, <code>button</code> e <code>input</code> 
+  snipetHtml: |
+    <div class='styleguide-demo'>
+    <a href='#' class='btn'>a link</a>
+    <button class='btn'>button</button>
+    <input class='btn' type='submit' value='submit'>
+    <input class='btn' type='button' value='button'>
+    </div>
+
+"button 2":
+  title: Cores
+  subtitle: Variações de cores do botão.
+  snipetHtml: |
+    <div class='styleguide-demo'>
+    <a href='#' class='btn'>default</a>
+    <a href='#' class='btn btn-primary'>primary</a>
+    <a href='#' class='btn btn-success'>success</a>
+    <a href='#' class='btn btn-danger'>danger</a>
+    </div>
