@@ -8,15 +8,15 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="styleguide-title">Guia de Estilo <span>{{ container.project }}</span></h1>
+    <h1 class="styleguide-title">Guia de Estilo <span>{{ container.project.name }}</span></h1>
 
     <dl class="styleguide-info">
         <dt><i class="fa fa-desktop"></i>Projeto</dt>
-        <dd>{{ container.project }}</dd>
+        <dd>{{ container.project.name }}</dd>
         <dt><i class="fa fa-gears"></i>CMS</dt>
-        <dd>{{ container.cms }}</dd>
+        <dd>{{ container.project.cms }}</dd>
         <dt><i class="fa fa-info"></i>Suporte</dt>
-        <dd>{{ container.browsers }}</dd>
+        <dd>{{ container.project.browsers }}</dd>
     </dl>
 {% endblock %}
 

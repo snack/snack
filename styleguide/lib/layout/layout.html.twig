@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <title>
     {% if container.module %}
-        {{ container.module }} | Guia de Estilo - {{ container.project }}
+        {{ container.module }} | Guia de Estilo - {{ container.project.name }}
     {% else %}
-        Guia de Estilo - {{ container.project }}
+        Guia de Estilo - {{ container.project.name }}
     {% endif %}
     </title>
     {% include 'head.html.twig' %}
