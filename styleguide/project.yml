@@ -1,0 +1,30 @@
+# Configuration
+name: "Nome do Projeto"
+cms: "A2siteBox/WordPress"
+browsers: "Firefox, Chrome, IE8+"
+styleguide_url: "/styleguide"
+meta_description: "Descrição da meta tag description."
+meta_keywords: "Tags da meta tag keywords."
+
+# Menu
+menu:
+  item1:
+    label: "Botões"
+    link: "/botoes/"
+    class: "styleguide-menu-buttons"
+  item2:
+    label: "Formulários"
+    link: "/formularios/"
+    class: "styleguide-menu-forms"
+  item3:
+    label: "Cores"
+    link: "/cores/"
+    class: "styleguide-menu-colors"
+  item4:
+    label: "Grid"
+    link: "/grid/"
+    class: "styleguide-menu-grid"
+  item5:
+    label: "Layouts"
+    link: "/layouts/"
+    class: "styleguide-menu-layouts"
