@@ -1,9 +1,9 @@
 "button 1":
   title: Default
   subtitle: Botão padrão básico do projeto. Aplicado nas tags <code>a</code>, <code>button</code> e <code>input</code>. 
-  sourceCode: modules/button-default.html.twig 
+  sourceCode: button-default.html.twig 
 
 "button 2":
   title: Cores
   subtitle: Variações de cores do botão.
-  sourceCode: modules/button-colors.html.twig  
+  sourceCode: button-colors.html.twig  

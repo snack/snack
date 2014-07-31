@@ -6,7 +6,7 @@
 <h2 class="styleguide-title-module">{{ button.title }}</h2>
 <p>{{ button.subtitle }}</p>
 <!-- code -->
-{% include 'modules/buttons/' ~ button.sourceCode %}
+{% include button.sourceCode %}
 <pre class="styleguide-code"><code data-language="html"></code></pre>
 {% endfor %}
 {% endblock %}

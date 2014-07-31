@@ -4,6 +4,8 @@ require_once __DIR__ . '/../lib/bootstrap.php';
 
 use Symfony\Component\Yaml\Parser as YamlParser;
 
+$loader->addPath('modules');
+
 //YAML Parser
 $yaml = new YamlParser();
 
