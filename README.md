@@ -2,6 +2,16 @@
 
 Padrão para auxiliar no **pontapé inicial** em um projeto web. A idéia foi juntar [alguns dos projetos](https://github.com/a2comunicacao/Grid-A2/wiki/Refer%C3%AAncias) que mais utilizávamos como referência e adaptarmos para um modelo de desenvolvimento da A2 com um Guia de Estilo incluso. Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
 
+## Requisitos
+
+* PHP 5.4+
+
+## Instalação
+
+Esse styleguide utiliza algumas bibliotecas PHP que são gerenciadas utilizando o [Composer](https://getcomposer.org/), para instalar basta clonar o projeto e rodar o comando seguinte na raiz do projeto:
+
+`php composer.phar install`
+
 ## Padrões
 
 **Padrões são sempre bons**. Auxiliam no entendimento do código, principalmente numa fase posterior de manutenção. Por isso, seguimos um padrão de código. [Veja o guia](https://github.com/a2comunicacao/metodologia/blob/master/projeto-web/desenvolvimento/a2idiomatic.md#a2idiomatic).
