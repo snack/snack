@@ -2,14 +2,16 @@
 
 require_once __DIR__ . '/../lib/bootstrap.php';
 
-use A2boilerplate\Iterator\BoilerplateDirectoryIterator;
+use Symfony\Component\Yaml\Parser as YamlParser;
 
-//Module Path to Iterate
-$module_path = __DIR__ . '/modules';
-$iterator = new BoilerplateDirectoryIterator($module_path);
+$loader->addPath('modules');
+
+//YAML Parser
+$yaml = new YamlParser();
 
 //Put module name in the container initialized on bootstrap.php
 $container['module'] = "Formulários";
 $container['body_class'] = "forms";
+$forms = $yaml->parse(file_get_contents(__DIR__.'/forms.yml'));
 
-echo $twig->render('modules.html.twig', array('iterator' => $iterator, 'container' => $container));
+echo $twig->render('/modules/forms.html.twig', array('forms' => $forms, 'container' => $container));
