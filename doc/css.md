@@ -8,13 +8,30 @@
 * [Mobile first](#mobile-first)
 * [Design Atômico](#design-at%C3%B4mico)
     * [Os arquivos](#os-arquivos)
-* [Como funciona](#como-funciona)
 
 ## SASS
 
 O projeto utiliza [SASS](http://sass-lang.com/) que é um pré-processador de CSS. Você precisa tê-lo instalado no seu computador para poder rodá-lo (depende também do _Ruby_). Saiba como instalar na [documentação do SASS](http://sass-lang.com/install).
 
 Todos os arquivos ficam localizados em `assets/scss`
+
+## Mobile first
+
+Todas os arquivos de estilo tem por padrão o conceito de _mobile first_.
+
+```scss
+@media only screen {
+}
+
+/*
+ * CSS for devices with resolution bigger than breakpoint
+*/
+
+@media only screen and (min-width: $breakpoint) {
+}
+```
+
+A variável breakpoint é definida no arquivo `variables.scss`. Claro que o conceito de _Mobile first_ **não se resume só a isso**; coisas essenciais como conteúdo por exemplo, são primordiais nessa questão.
 
 ## Design Atômico
 
@@ -53,7 +70,7 @@ Se você já ouviu falar de pré-processadores, provavelmente conhece sobre vari
 Declaramos alguns mixins padrões para utilização. Ficam declarados em: `assets/scss/mixins.scss`. Um exemplo abaixo:
 
 ```scss
-*   Transition
+/*  Transition
     ========================================================================== */
     @mixin transition($parameters...) {
         -webkit-transition: $parameters;

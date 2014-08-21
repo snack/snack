@@ -118,4 +118,4 @@ Por padrão temos algumas tarefas registradas:
 
 Essas são apenas as tarefas básicas e padrões. Fique a vontade para criar as suas tarefas e customizar da melhor maneira que lhe atender.
 
-:point_right: Próximo: [HTML](html.md)
+:point_right: Próximo: [CSS](css.md)
