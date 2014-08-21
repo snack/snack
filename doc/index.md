@@ -1,6 +1,8 @@
+# ![A2boilerplate](https://cloud.githubusercontent.com/assets/1345662/4001760/56faa480-2966-11e4-8311-a878a8b423a4.png)
+
 [Início](../../../) » Documentação
 
-# A2boilerplate | Documentação
+# Documentação
 
 ## Passo a passo
 
