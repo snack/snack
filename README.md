@@ -40,11 +40,16 @@ O styleguide utiliza algumas bibliotecas PHP que são gerenciadas utilizando o [
 
 ## Documentação
 
-Meio confuso? Muita coisa? Dá uma olhada na [documentação](doc/index.md) completa. Fica dentro da pasta `doc` na raiz do projeto.
+Meio confuso? :confounded: Muita coisa? Dá uma olhada na [documentação](doc/index.md) completa. Fica dentro da pasta `doc` na raiz do projeto.
+
+## Atualização
+
+**Esse é um projeto em constante atualização.** Pode ser que algo apresentado aqui não se adeque ao seu _workflow_. Fique a vontade para abrir uma [_issue_](https://github.com/a2comunicacao/A2boilerplate/issues) e vamos discuti-la. :metal:
 
 ## Suporte
 
 Foi testado em diversos navegadores, mas como queremos que a web não pare no tempo, recomendamos você seguir a lista abaixo:
+
 - IE8+
 - Firefox 2+
 - Chrome 4+
