@@ -4,13 +4,14 @@ Padrão para auxiliar no **pontapé inicial** em um projeto web. A idéia foi ju
 
 ## Requisitos
 
+* NodeJS
 * Grunt
 * Bower
 * PHP 5.4+
 
 ## Instalação
 
-## Começando
+### Começando
 
 Existem algumas opções disponíveis:
 

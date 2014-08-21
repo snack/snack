@@ -9,18 +9,6 @@
 	<script src="build/js/libs/respond.min.js"></script>
 <![endif]-->
 
-<!-- Verif Mobile -->
-<?php
-   require_once 'build/in/mobile_detect.php';
-   $detect = new Mobile_Detect();
-
-   $isMobile = $detect->isMobile();
-   $isTablet = $detect->isTablet();
-
-   $notMobile = ! $isMobile || $isTablet;
-   $onlyMobile = $isMobile && ! $isTablet
-;?>
-
 <script>
 (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
 function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
