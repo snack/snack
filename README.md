@@ -1,6 +1,6 @@
 # ![A2boilerplate](https://cloud.githubusercontent.com/assets/1345662/4001760/56faa480-2966-11e4-8311-a878a8b423a4.png)
 
-Padrão para auxiliar no **pontapé inicial** em um projeto web. A idéia foi juntar [alguns dos projetos](https://github.com/a2comunicacao/Grid-A2/wiki/Refer%C3%AAncias) que mais utilizávamos como referência e adaptarmos para um modelo de desenvolvimento da A2 com um Guia de Estilo incluso. Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
+Biblioteca para auxiliar no **pontapé inicial** em um projeto web. A idéia foi juntar [alguns dos projetos](https://github.com/a2comunicacao/Grid-A2/wiki/Refer%C3%AAncias) que mais utilizávamos como referência e adaptarmos para um modelo de desenvolvimento da A2 com um Guia de Estilo incluso. Entenda a idéia [aqui](https://github.com/a2comunicacao/Grid-A2/wiki).
 
 ## Requisitos
 
@@ -34,7 +34,7 @@ Para rodas as tarefas de inicialização do projeto:
 
 ## Styleguide
 
-O styleguide utiliza algumas bibliotecas PHP que são gerenciadas utilizando o [Composer](https://getcomposer.org/). Para rode o seguinte comando na raiz do projeto:
+O styleguide utiliza algumas bibliotecas PHP que são gerenciadas utilizando o [Composer](https://getcomposer.org/). Para instalar as dependências rode o seguinte comando na raiz do projeto:
 
 `php composer.phar install`
 
