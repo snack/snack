@@ -6,8 +6,8 @@
 
 Novo por aqui? Recomendamos dar uma lida seguindo os passos abaixos para entender o projeto.
 
-* [Estrutura básica](#estrutura-basica)
-* [Entendendo a organização](#entendendo-a-organizacao)
+* [Estrutura básica](#e#estrutura-b%C3%A1sica)
+* [Entendendo a organização](#entendendo-a-organiza%C3%A7%C3%A3o)
 * [Grunt e Bower](#grunt-e-bower)
 * [HTML](html.md)
 * [CSS](css.md)
@@ -18,9 +18,9 @@ Novo por aqui? Recomendamos dar uma lida seguindo os passos abaixos para entende
 
 ## Estrutura básica
 
-Para melhor visualização da estrutura como um todo, podemos resumir que o projeto é dividido em 2 partes: _Boilerplate_ e _Styleguide_.
+Para melhor visualização da estrutura como um todo, podemos resumir que o projeto é dividido em 2 partes: **Boilerplate** e **Styleguide**.
 
-O _Boilerplate_ está relacionado à sua aplicação em si. É aonde você vai criar suas páginas, estilos e scripts. Já o _Styleguide_ está relacionado ao Guia de Estilo da sua aplicação. É aonde você vai definir os padrões dos seus componentes visuais (fica dentro da pasta _Styleguide_).
+O **Boilerplate** está relacionado à sua aplicação em si. É aonde você vai criar suas páginas, estilos e scripts. Já o **Styleguide** está relacionado ao Guia de Estilo da sua aplicação. É aonde você vai definir os padrões dos seus componentes visuais (fica dentro da pasta _styleguide_).
 
 ```
 ├── ASSETS (_arquivos de desenvolvimento_)
@@ -70,6 +70,8 @@ Essa pasta contém todos os arquivos originados das taks do _Grunt_.
 * _IMG_ ==> Contém as imagens otimizadas através do _Grunt_.
 * _IN_ ==> Pasta com os arquivos _include_ do projeto.
 
+---
+
 ### Grunt e Bower
 
 O A2boilerplate utiliza [Grunt](http://gruntjs.com/) para automatizar algumas tarefas e o [Bower](http://bower.io/) para gerenciar dependências. Para rodá-los você precisa ter o [NodeJS](http://nodejs.org/) instalado na máquina.
@@ -86,7 +88,9 @@ Caso você queira colocar uma nova dependência no seu projeto é possível faze
 
 Com a _lib_ encontrada digite: `bower install nomedalib --save-dev`.
 
+```
 **IMPORTANTE** ==> Lembre-se de passar o parâmetro `--save-dev` para deixar aquela _lib_ como dependência do projeto. Assim, quando outra pessoa for utilizá-lo, ela será instalada automaticamente no comando `bower install`.
+```
 
 ###### E se eu não achar?
 
@@ -111,3 +115,5 @@ Por padrão temos algumas tarefas registradas:
 `grunt live` ==> É a tarefa de _watch_. Basicamente fica de olho nos arquivos que são passados na configuração, realiza as tarefas automaticamente de acordo com o arquivo que for alterado e atualiza o navegador. Funciona em conjunto com as [extensões do LiveReload](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions).
 
 Essas são apenas as tarefas básicas e padrões. Fique a vontade para criar as suas tarefas e customizar da melhor maneira que lhe atender.
+
+:point_right: Próximo: [HTML](html.md)
