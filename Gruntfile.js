@@ -195,19 +195,6 @@ module.exports = function( grunt ) {
                     '<%= config.style_build %>js/scripts.min.js'
                 ],
             },
-        },
-
-        // SYNC _______________________________________________________________________
-        browserSync: {
-            dev: {
-                bsFiles: {
-                    src : '<%= config.build %>css/main.min.css'
-                },
-                options: {
-                    watchTask: true,
-                    proxy: "local.a2boilerplate"
-                }
-            }
         }
 
     });
@@ -219,7 +206,6 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-svgmin');
     grunt.loadNpmTasks('grunt-svg2png');
-    grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     // Grunt tasks
@@ -239,8 +225,5 @@ module.exports = function( grunt ) {
 
     // Watch
     grunt.registerTask( 'live', [ 'watch' ] );
-
-    // Sync
-    grunt.registerTask('sync', ["browserSync", "watch"]);
 
 };
