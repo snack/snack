@@ -1,4 +1,4 @@
-# ![A2boilerplate](https://cloud.githubusercontent.com/assets/1345662/4001760/56faa480-2966-11e4-8311-a878a8b423a4.png)
+![A2boilerplate](https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png)
 
 [Início](../../../) » Documentação
 
