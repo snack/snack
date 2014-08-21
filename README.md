@@ -40,7 +40,7 @@ O styleguide utiliza algumas bibliotecas PHP que são gerenciadas utilizando o [
 
 ## Documentação
 
-Meio confuso? :confounded: Muita coisa? Dá uma olhada na [documentação](doc/index.md) completa. Fica dentro da pasta `doc` na raiz do projeto.
+Muita coisa? :confounded: Dá uma olhada na [documentação](doc/index.md) completa. Fica dentro da pasta `doc` na raiz do projeto.
 
 ## Atualização
 
