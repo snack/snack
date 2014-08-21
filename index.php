@@ -13,7 +13,6 @@
     <?php include __DIR__ . '/build/in/header.php'; ?>
 
     <main role="main">
-        <img src="build/img/teste.jpg" alt="">
     </main>
 
     <!-- Footer -->

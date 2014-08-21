@@ -4,21 +4,42 @@ Padrão para auxiliar no **pontapé inicial** em um projeto web. A idéia foi ju
 
 ## Requisitos
 
+* Grunt
+* Bower
 * PHP 5.4+
 
 ## Instalação
 
-Esse styleguide utiliza algumas bibliotecas PHP que são gerenciadas utilizando o [Composer](https://getcomposer.org/), para instalar basta clonar o projeto e rodar o comando seguinte na raiz do projeto:
+## Começando
+
+Existem algumas opções disponíveis:
+
+* Faça o [download do zip](https://github.com/a2comunicacao/A2boilerplate/archive/master.zip) ou do [último release](https://github.com/a2comunicacao/A2boilerplate/releases)
+* Clone o projeto `git clone https://github.com/a2comunicacao/A2boilerplate.git`
+
+### Boilerplate
+
+Para instalar todos módulos que irão executar as _tasks_:
+
+`npm install`
+
+Para instalar todas as dependências: 
+
+`bower install`
+
+Para rodas as tarefas de inicialização do projeto:
+
+`grunt init`
+
+## Styleguide
+
+O styleguide utiliza algumas bibliotecas PHP que são gerenciadas utilizando o [Composer](https://getcomposer.org/). Para rode o seguinte comando na raiz do projeto:
 
 `php composer.phar install`
 
-## Padrões
-
-**Padrões são sempre bons**. Auxiliam no entendimento do código, principalmente numa fase posterior de manutenção. Por isso, seguimos um padrão de código. [Veja o guia](https://github.com/a2comunicacao/metodologia/blob/master/projeto-web/desenvolvimento/a2idiomatic.md#a2idiomatic).
-
 ## Documentação
 
-Meio confuso? Muita coisa? Dê uma olhada na [documentação](doc/index.md). Fica dentro de uma pasta `doc` na raiz do projeto, o que possibilita a sua leitura mesmo offline.
+Meio confuso? Muita coisa? Dá uma olhada na [documentação](doc/index.md) completa. Fica dentro da pasta `doc` na raiz do projeto.
 
 ## Suporte
 

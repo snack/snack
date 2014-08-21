@@ -187,6 +187,8 @@ module.exports = function( grunt ) {
                 options: { livereload: true },
                 files: [
                     // Project files
+                    '*.php',
+                    '<%= config.build %>in/*.php',
                     '<%= config.build %>css/main.min.css',
                     '<%= config.build %>js/scripts.min.js',
                     '<%= config.build %>img/*.{png,jpg,gif,svg}',
