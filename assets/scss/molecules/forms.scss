@@ -2,34 +2,47 @@
     Forms
     ========================================================================== */
 
-    /*  Default
-        ========================================================================== */
-        .form fieldset {
-            border: none;
-            padding: 15px;
-            background-color: $color-bg-form;
-            border: solid 1px $color-border-form;
-        }
+    @media only screen {
 
-        .form-label {
-            display: block;
-        }
+        /*  Default
+            ========================================================================== */
+            .form fieldset {
+                border: none;
+                padding: 15px;
+                background-color: $color-bg-form;
+                border: solid 1px $color-border-form;
+            }
 
-    /*  Required tip
-        ========================================================================== */
-        .fields-required {
-            color: $color-required-tip;
-            display: block;
-            font-size: $required-tip-font-size;
-            text-align: right;
-        }
+            .form-label {
+                display: block;
+            }
 
-        .required {
-            font-weight: bold;
-            color: $color-required;
-        }
+        /*  Required tip
+            ========================================================================== */
+            .fields-required {
+                color: $color-required-tip;
+                display: block;
+                font-size: $required-tip-font-size;
+                text-align: right;
+            }
 
-        .form-field {
-            color: $color-required;
-            font-size: $required-font-size;
-        }
+            .required {
+                font-weight: bold;
+                color: $color-required;
+            }
+
+            .form-field {
+                color: $color-required;
+                font-size: $required-font-size;
+            }
+            
+    }
+
+
+    /*
+     * CSS for devices with resolution bigger than breakpoint
+     */
+
+    @media only screen and (min-width: $breakpoint) {
+
+    }

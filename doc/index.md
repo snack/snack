@@ -1,6 +1,6 @@
 ![A2boilerplate](https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png)
 
-[Início](../../../) » Documentação
+[:house:](../../../) » Documentação
 
 # Documentação
 
@@ -34,6 +34,7 @@ O **Boilerplate** está relacionado à sua aplicação em si. É aonde você vai
 │   ├── CSS
 │   ├── JS
 │   ├── IMG
+│   ├── FONTS
 │   └── IN
 │
 ├── STYLEGUIDE (_tudo relacionado ao Guia de Estilo da aplicação_)
@@ -70,6 +71,7 @@ Essa pasta contém todos os arquivos originados das taks do _Grunt_.
 * _JS_ ==> Contém arquivo(s) _javascript_ concatenados e minificados.
     - _LIBS_ ==> Contém as bibliotecas minificadas utilizadas por padrão no projeto (_Modernizr, jQuery_ e _Respond_).
 * _IMG_ ==> Contém as imagens otimizadas através do _Grunt_.
+* _FONTS_ ==> Fontes utilizadas no projeto.
 * _IN_ ==> Pasta com os arquivos _include_ do projeto.
 
 ---
@@ -90,9 +92,7 @@ Caso você queira colocar uma nova dependência no seu projeto é possível faze
 
 Com a _lib_ encontrada digite: `bower install nomedalib --save-dev`.
 
-```
-**IMPORTANTE** ==> Lembre-se de passar o parâmetro `--save-dev` para deixar aquela _lib_ como dependência do projeto. Assim, quando outra pessoa for utilizá-lo, ela será instalada automaticamente no comando `bower install`.
-```
+:exclamation: **IMPORTANTE** ==> Lembre-se de passar o parâmetro `--save-dev` para deixar aquela _lib_ como dependência do projeto. Assim, quando outra pessoa for utilizá-lo, ela será instalada automaticamente no comando `bower install`.
 
 ###### E se eu não achar?
 

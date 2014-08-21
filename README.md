@@ -6,6 +6,7 @@ Biblioteca para auxiliar no **pontapé inicial** em um projeto web. A idéia foi
 
 * NodeJS
 * Grunt
+* Ruby/SASS
 * Bower
 * PHP 5.4+
 

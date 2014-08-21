@@ -1,8 +1,19 @@
 /*  ==========================================================================
     Lists
     ========================================================================== */
-    ul,
-    dl {
-       color: #666;
-       font-size: 14px;
+
+    @media only screen {
+        ul,
+        dl {
+            color: #666;
+            font-size: 14px;
+        }
+    }
+    
+    /*
+     * CSS for devices with resolution bigger than breakpoint
+     */
+
+    @media only screen and (min-width: $breakpoint) {
+
     }
