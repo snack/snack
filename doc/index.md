@@ -1,4 +1,4 @@
-# `A2boilerplate`
+# ![A2boilerplate](https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png)
 
 [:house:](../../../) » Documentação
 
@@ -36,7 +36,7 @@ O **Boilerplate** está relacionado à sua aplicação em si. É aonde você vai
 │   └── IN
 │
 ├── STYLEGUIDE (tudo relacionado ao Guia de Estilo da aplicação)
-│   ├── `project.yml`
+│   ├── project.yml
 │   ├── LIB
 │   └── MODULOS (botoes, cores, formularios, layouts...)
 │
@@ -47,9 +47,9 @@ O **Boilerplate** está relacionado à sua aplicação em si. É aonde você vai
 
 ## Entendendo a organização
 
-### As pastas _ASSETS_ e _BUILD_
+### As pastas `ASSETS` e `BUILD`
 
-O projeto (tanto o Boilerplate como Styleguide) utiliza algumas _tasks_ do _Grunt_ que resumidamente pega todo o conteúdo da pasta _ASSETS_ e concatena/minifica/otimiza e joga para a pasta _BUILD_.
+O projeto (tanto o **Boilerplate** como **Styleguide**) utiliza algumas _tasks_ do _Grunt_, que resumidamente pega todo o conteúdo da pasta _ASSETS_ e concatena/minifica/otimiza e joga para a pasta _BUILD_.
 
 Em tese, quando você for dar o deploy da sua aplicação, você pode fazer o upload apenas da pasta _BUILD_ com todos arquivos otimizados.
 

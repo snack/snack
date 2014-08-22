@@ -8,16 +8,19 @@
 * [Mobile first](#mobile-first)
 * [Design Atômico](#design-at%C3%B4mico)
     * [Os arquivos](#os-arquivos)
+* [Mixin e variáveis](#mixins-e-vari%C3%A1veis)
+    * [Mixins](#mixins)
+    * [Variáveis](#vari%C3%A1veis)
 
 ## SASS
 
 O projeto utiliza [SASS](http://sass-lang.com/) que é um pré-processador de CSS. Você precisa tê-lo instalado no seu computador para poder rodá-lo (depende também do _Ruby_). Saiba como instalar na [documentação do SASS](http://sass-lang.com/install).
 
-Todos os arquivos ficam localizados em `assets/scss`
+Todos os arquivos ficam localizados em `assets/scss`.
 
 ## Mobile first
 
-Todas os arquivos de estilo tem por padrão o conceito de _mobile first_.
+Aplicamos o conceito de _mobile first_ nos arquivos de estilo.
 
 ```scss
 @media only screen {
@@ -35,16 +38,16 @@ A variável breakpoint é definida no arquivo `variables.scss`. Claro que o conc
 
 ## Design Atômico
 
-Aplicamos o conceito de [Design Atômico](http://bradfrostweb.com/blog/post/atomic-web-design/) com alguns toques da casa. Dividimos as camadas de estilo entre _Átomos_ _Moléculas_ e _Organismos_; adicionamos a camada _Base_ com as configurações que achamos ser a base de estilo do projeto.
+Outro conceito aplicado foi o [Design Atômico](http://bradfrostweb.com/blog/post/atomic-web-design/) com alguns adaptações que achamos legais. Dividimos as camadas de estilo entre _Átomos_ _Moléculas_ e _Organismos_; adicionamos a camada _Base_ com as configurações que achamos ser a base de estilo do projeto.
 
 ### Os arquivos
 
-* Base
+* **Base**
     * normalize | Normaliza diferenças de renderizações entre os navegadores ([Link](http://necolas.github.com/normalize.css/) do projeto)
     * variables | Declaração das variáveis (grid, cores e demais que poderão ser utilizadas)
     * mixins | Declaração de mixins padrões e, onde deverão ser colocados novos mixins
     * base | Declaração de propriedades básicas de estilo e classes auxiliares
-* Átomos (_atoms_)
+* **Átomos** (_atoms_)
     * grid
     * grid-functions | Funções para cálculo do grid
     * font-awesome
@@ -53,11 +56,11 @@ Aplicamos o conceito de [Design Atômico](http://bradfrostweb.com/blog/post/atom
     * inputs
     * lists
     * tables
-* Moléculas (_molecules_)
+* **Moléculas** (_molecules_)
     * forms
     * navigation | Declarações relacionadas a elementos de navegação (cabeçalho, rodapé, menus, ...)
     * icons | Declaração de _sprites_
-* Organismos (_organisms_)
+* **Organismos** (_organisms_)
     * layout
     * print
 
@@ -67,7 +70,7 @@ Se você já ouviu falar de pré-processadores, provavelmente conhece sobre vari
 
 ### Mixins
 
-Declaramos alguns mixins padrões para utilização. Ficam declarados em: `assets/scss/mixins.scss`. Um exemplo abaixo:
+Declaramos alguns mixins padrões para utilização. Ficam declarados em: _`assets/scss/mixins.scss`_. Um exemplo abaixo:
 
 ```scss
 /*  Transition
