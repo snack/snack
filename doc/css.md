@@ -11,6 +11,7 @@
 * [Mixin e variáveis](#mixins-e-vari%C3%A1veis)
     * [Mixins](#mixins)
     * [Variáveis](#vari%C3%A1veis)
+        - [Grid](#grid)
 
 ## SASS
 
@@ -86,7 +87,7 @@ Declaramos alguns mixins padrões para utilização. Ficam declarados em: _`asse
 
 ### Variáveis
 
-Ficam declaradas em `assets/scss/base/variables.scss`. Basicamente definimos duas categorias de variáveis: uma relacionada ao **grid** e outra relacionada às **cores**.
+Ficam declaradas em _`assets/scss/base/variables.scss`_. Basicamente definimos duas categorias de variáveis: uma relacionada ao **grid** e outra relacionada às **cores**.
 
 ```scss
 /*  ==========================================================================
@@ -98,4 +99,4 @@ Ficam declaradas em `assets/scss/base/variables.scss`. Basicamente definimos dua
     $color-terciary:    #D9534F;
 ```
 
-#### O grid
+#### Grid
