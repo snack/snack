@@ -2,17 +2,15 @@
 
 [:house:](../../../) » Documentação
 
-# Documentação
+## Documentação
 
-## Passo a passo
-
-Novo por aqui? Recomendamos dar uma lida seguindo os passos abaixos para entender o projeto.
+Novo por aqui? Recomendamos dar uma lida seguindo os passos abaixos.
 
 * [Estrutura básica](#estrutura-b%C3%A1sica)
 * [Entendendo a organização](#entendendo-a-organiza%C3%A7%C3%A3o)
 * [Grunt e Bower](#grunt-e-bower)
-* [HTML](html.md)
 * [CSS](css.md)
+* [HTML](html.md)
 * [JS](js.md)
 * [Includes](includes.md)
 * [Guia de Estilo](styleguide.md)
