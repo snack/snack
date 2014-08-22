@@ -16,13 +16,13 @@
 
 O projeto utiliza [SASS](http://sass-lang.com/) que é um pré-processador de CSS. Você precisa tê-lo instalado no seu computador para poder rodá-lo (depende também do _Ruby_). Saiba como instalar na [documentação do SASS](http://sass-lang.com/install).
 
-Todos os arquivos ficam localizados em `assets/scss`.
+Todos os arquivos ficam localizados em _`assets/scss`_.
 
 ## Mobile first
 
 Aplicamos o conceito de _mobile first_ nos arquivos de estilo.
 
-```scss
+```sass
 @media only screen {
 }
 
@@ -34,7 +34,7 @@ Aplicamos o conceito de _mobile first_ nos arquivos de estilo.
 }
 ```
 
-A variável breakpoint é definida no arquivo `variables.scss`. Claro que o conceito de _Mobile first_ **não se resume só a isso**; coisas essenciais como conteúdo por exemplo, são primordiais nessa questão.
+A variável breakpoint é definida no arquivo _`variables.scss`_. Claro que o conceito de _Mobile first_ **não se resume só a isso**; coisas essenciais como conteúdo por exemplo, são primordiais nessa questão.
 
 ## Design Atômico
 
