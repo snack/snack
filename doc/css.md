@@ -130,6 +130,6 @@ As variáveis abaixo definem o grid do projeto. Por padrão, ele tem **940 pixel
 
 (12 * 60) + ( (12 - 1) * 20 ) = 940 ==> :heavy_check_mark:
 
-Essa é uma primeira idéia para o cálculo do grid. Vamos [melhorando aos poucos](../../#atualiza%C3%A7%C3%A3o).
+Essa é uma primeira idéia para o cálculo do grid. Vamos [melhorando aos poucos](../README.md#atualiza%C3%A7%C3%A3o).
 
 ![Grid](https://cloud.githubusercontent.com/assets/1345662/4016961/e25dee40-2a3a-11e4-9c3a-209b255dfe98.png)
