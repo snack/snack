@@ -5,12 +5,12 @@
     /*  ==========================================================================
         Grid
         ========================================================================== */
-        $totalColumns   : 12; // Total of columns
-        $columnWidth    : 60px; // Columns width
-        $gutterWidth    : 20px; // Space between the columns
-        $gridWidth      : 940px; // Width of the grid 
+        $total-columns   : 12; // Total of columns
+        $column-width    : 60px; // Columns width
+        $gutter-width    : 20px; // Space between the columns
+        $grid-width      : 940px; // Width of the grid 
         $breath         : 20px; // Option of lateral space for grid
-        $gridFull       : $gridWidth + $breath + $breath; // Grid width with lateral space
+        $grid-full       : $grid-width + $breath + $breath; // Grid width with lateral space
         $breakpoint     : 768px; // Breakpoint for small devices
         $space          : 25px; // Vertical space
 

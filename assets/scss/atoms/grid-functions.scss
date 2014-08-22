@@ -5,7 +5,7 @@
    /*   Width columns
         ========================================================================== */
         @function col($n) {
-            @return percentage( (( $n * ($columnWidth + $gutterWidth) - $gutterWidth) ) / $gridWidth );
+            @return percentage( (( $n * ($column-width + $gutter-width) - $gutter-width) ) / $grid-width );
         }
 
         @mixin width($n) {
@@ -16,7 +16,7 @@
         ========================================================================== */
         @mixin column() {
             float: left;
-            margin-right: percentage( $gutterWidth / $gridWidth );
+            margin-right: percentage( $gutter-width / $grid-width );
         }
 
     /*  Last item row (no-margin)
@@ -29,5 +29,5 @@
    /*   Push columns (offset)
         ========================================================================== */
         @mixin push($n) {
-            margin-left: percentage( (($n * $columnWidth) + ($n * $gutterWidth))  / $gridWidth );
+            margin-left: percentage( (($n * $column-width) + ($n * $gutter-width))  / $grid-width );
         }

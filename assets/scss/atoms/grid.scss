@@ -36,11 +36,11 @@
         /*  Grid width
             ========================================================================== */
             .row {
-                max-width: $gridWidth;
+                max-width: $grid-width;
             }
 
             .row.full {
-                max-width: $gridFull;
+                max-width: $grid-full;
                 padding-left: $breath;
                 padding-right: $breath;
             }
