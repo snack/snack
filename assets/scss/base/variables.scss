@@ -5,14 +5,14 @@
     /*  ==========================================================================
         Grid
         ========================================================================== */
-        $totalColumns   : 12;
-        $columnWidth    : 60px;
-        $gutterWidth    : 20px;
-        $gridWidth      : 940px;
-        $breath         : 20px;
-        $gridFull       : $gridWidth + $breath + $breath;
-        $breakpoint     : 768px;
-        $space          : 25px;
+        $totalColumns   : 12; // Total of columns
+        $columnWidth    : 60px; // Columns width
+        $gutterWidth    : 20px; // Space between the columns
+        $gridWidth      : 940px; // Width of the grid 
+        $breath         : 20px; // Option of lateral space for grid
+        $gridFull       : $gridWidth + $breath + $breath; // Grid width with lateral space
+        $breakpoint     : 768px; // Breakpoint for small devices
+        $space          : 25px; // Vertical space
 
     /*  ==========================================================================
         Colors
@@ -21,8 +21,6 @@
         $color-primary:     #1972D1;
         $color-secondary:   #5CB85C;
         $color-terciary:    #D9534F;
-
-
 
     /*  ==========================================================================
         Forms

@@ -22,7 +22,8 @@
         .row {
             width: 100%;
             @include clearfix();
-            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -43,6 +44,9 @@
                 padding-left: $breath;
                 padding-right: $breath;
             }
+
+            .row { background-color: red; }
+            .row.full { background-color: blue; }
 
             .column { @include column(); }
 

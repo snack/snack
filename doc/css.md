@@ -100,3 +100,34 @@ Ficam declaradas em _`assets/scss/base/variables.scss`_. Basicamente definimos d
 ```
 
 #### Grid
+
+As variáveis abaixo definem o grid do projeto. Por padrão, ele tem **940 pixels** de largura, com **12** colunas de **60 pixels** cada e **20 pixels** de espaço entre elas.
+
+```scss
+/*  ==========================================================================
+    Grid
+    ========================================================================== */
+    $totalColumns   : 12; // Total of columns
+    $columnWidth    : 60px; // Columns width
+    $gutterWidth    : 20px; // Space between the columns
+    $gridWidth      : 940px; // Width of the grid 
+    $breath         : 20px; // Option of lateral space for grid
+    $gridFull       : $gridWidth + $breath + $breath; // Grid width with lateral space
+    $breakpoint     : 768px; // Breakpoint for small devices
+    $space          : 25px; // Vertical space
+```
+
+**`$totalColumns`** ==> número total de colunas que seu grid vai ter.
+**`$columnWidth`** ==> largura em _pixels_ de cada coluna.
+**`$gutterWidth`** ==> largura em _pixels_ do espaço entre cada coluna.
+**`$gridWith`** ==> largura total do grid em _pixels_.
+**`$breath`** ==> opção de espaço lateral no grid.
+**`$gridFull`** ==> apenas adiciona os _espaços laterais_ setados na variável anterior para uma nova largura do grid.
+
+:exclamation: **Importante** ==> É obrigatório que as medidas se encaixem no grid, ou seja, tendo por base as configurações acima, teríamos o seguinte:
+
+(**`$totalColumns`** * **`$columnWidth`**) + ( (**`$totalColumns`** - 1) *  **`$gutterWidth`**) = **`$gridWith`**
+
+(12 * 60) + ( (12 - 1) * 20 ) = 940 ==> :heavy_check_mark:
+
+Essa é uma primeira idéia para o cálculo do grid. Vamos [melhorando aos poucos](../../#atualiza%C3%A7%C3%A3o).
