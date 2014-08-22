@@ -22,7 +22,7 @@ Todos os arquivos ficam localizados em _`assets/scss`_.
 
 Aplicamos o conceito de _mobile first_ nos arquivos de estilo.
 
-```sass
+```scss
 @media only screen {
 }
 
