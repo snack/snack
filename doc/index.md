@@ -23,7 +23,7 @@ Para melhor visualização da estrutura como um todo, podemos resumir que o proj
 O **Boilerplate** está relacionado à sua aplicação em si. É aonde você vai criar suas páginas, estilos e scripts. Já o **Styleguide** está relacionado ao Guia de Estilo da sua aplicação. É aonde você vai definir os padrões dos seus componentes visuais (fica dentro da pasta _styleguide_).
 
 ```
-├── ASSETS (_arquivos de desenvolvimento_)
+├── ASSETS (*arquivos de desenvolvimento*)
 │   ├── SCSS
 │   ├── JS
 │   └── IMG
