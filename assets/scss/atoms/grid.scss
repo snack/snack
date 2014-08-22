@@ -45,9 +45,6 @@
                 padding-right: $breath;
             }
 
-            .row { background-color: red; }
-            .row.full { background-color: blue; }
-
             .column { @include column(); }
 
         /*  Columns width

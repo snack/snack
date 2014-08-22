@@ -13,14 +13,6 @@
     <?php include __DIR__ . '/build/in/header.php'; ?>
 
     <main role="main">
-        <div class="container">
-            <div class="row space">
-                <p>ae</p>
-            </div>
-            <div class="row full space">
-                <p>ae</p>
-            </div>
-        </div>
     </main>
 
     <!-- Footer -->

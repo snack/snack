@@ -11,7 +11,7 @@
 * [Mixin e variáveis](#mixins-e-vari%C3%A1veis)
     * [Mixins](#mixins)
     * [Variáveis](#vari%C3%A1veis)
-        - [Grid](#grid)
+        - [Definindo o grid](#definindo-o-grid)
 
 ## SASS
 
@@ -99,7 +99,12 @@ Ficam declaradas em _`assets/scss/base/variables.scss`_. Basicamente definimos d
     $color-terciary:    #D9534F;
 ```
 
-#### Grid
+#### Definindo o grid
+
+A idéia básica do grid é que:
+
+- cada *linha* deve possuir **x** colunas, onde **x** é o número definido  em `$total-columns`;
+- o número máximo de colunas em cada *linha* deve ser igual ao valor definido em `$total-columns`;
 
 As variáveis abaixo definem o grid do projeto. Por padrão, ele tem **940 pixels** de largura, com **12** colunas de **60 pixels** cada e **20 pixels** de espaço entre elas.
 
@@ -133,3 +138,59 @@ As variáveis abaixo definem o grid do projeto. Por padrão, ele tem **940 pixel
 Essa é uma primeira idéia para o cálculo do grid. Vamos [melhorando aos poucos](../README.md#atualiza%C3%A7%C3%A3o).
 
 ![Grid](https://cloud.githubusercontent.com/assets/1345662/4016961/e25dee40-2a3a-11e4-9c3a-209b255dfe98.png)
+
+### Usando o grid
+
+#### Marcação Padrão
+
+Abaixo vamos criar um layout com duas colunas.
+
+```html
+<div class="row">
+    <div class="fourcol">4 colunas</div>
+    <div class="eightcol last">8 colunas</div>
+</div>
+```
+
+> No exemplo, temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.eightcol` ( *8 colunas* ), totalizando 12 colunas.
+
+#### Deslocamento
+
+Mova as colunas para a direita usando a classe `.offset-x`, onde o **x** é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-four` desloca um elemento em 4 colunas.
+
+```html
+<div class="row">
+    <div class="fourcol">4 colunas</div>
+    <div class="sixcol offset-two last">6 colunas | 2 colunas descolamento</div>
+</div>
+```
+
+> No exemplo, temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas.
+
+#### Centralizando
+
+Centralize o elemento, independente da quantidade de colunas, aplicando a classe `.centered`.
+
+```html
+<div class="row">
+    <div class="fivecol centered">5 colunas (centralizado)</div>
+</div>
+```
+
+#### Linha filha
+
+Caso precise adicionar uma linha filha, é só manter a marcação padrão e respeitar o número de colunas do grid.
+
+```html
+<div class="row">
+    <div class="fourcol">4 colunas
+        <!-- linha filha -->
+        <div class="row">
+            <div class="eightcol">8 colunas</div>
+            <div class="fourcol last">4 colunas</div>
+        </div><!-- ##fim linha filha -->
+    </div>
+    <div class="eightcol last">8 coluna</div>
+</div>
+```
+> No exemplo, temos uma classe `.fourcol` que possui uma `.row` filha. Esta por sua vez possui uma classe `.eightcol` ( *8 colunas* ) e uma `.fourcol ( *4 colunas* ) totalizando 12 colunas.
