@@ -12,16 +12,6 @@
                     transition: $parameters;
         }
 
-    /*  Scale
-        ========================================================================== */
-        @mixin scale($value) {
-            -webkit-transform: scale($value);
-               -moz-transform: scale($value);
-                -ms-transform: scale($value);
-                 -o-transform: scale($value);
-                    transform: scale($value);
-        }
-
     /*  Opacity w/ IE value
         ========================================================================== */
         @mixin opacity($value, $IEvalue) {
@@ -72,7 +62,7 @@
 
     /*  Animation
         ========================================================================== */
-        @mixin animation($parameters) {
+        @mixin animation($parameters...) {
             -webkit-animation: $parameters;
                -moz-animation: $parameters;
                 -ms-animation: $parameters;
@@ -90,17 +80,49 @@
                     transform: $parameters;
         }
 
-    /*  Vertical gradient
+    /*  Gradients
         ========================================================================== */
-        @mixin vertical-gradient($startColor, $endColor) {
-            background-color: $startColor;
-            background-image: -moz-linear-gradient(top,  $startColor 0%, $endColor 100%);
-            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$startColor), color-stop(100%,$endColor));
-            background-image: -webkit-linear-gradient(top,  $startColor 0%,$endColor 100%);
-            background-image: -o-linear-gradient(top,  $startColor 0%,$endColor 100%);
-            background-image: -ms-linear-gradient(top,  $startColor 0%,$endColor 100%);
-            background-image: linear-gradient(to bottom,  $startColor 0%,$endColor 100%);
-            filter: unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr='") + ie-hex-str($startColor) + unquote("', endColorstr='") + ie-hex-str($endColor) + unquote("',GradientType=0)");
 
-            background-repeat: repeat-x;
+        /*  Vertical gradient
+            ========================================================================== */
+            @mixin vertical-gradient($startColor, $endColor) {
+                background-color: $startColor;
+                background: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+                background: -webkit-linear-gradient(top, $startColor, $endColor);
+                background:    -moz-linear-gradient(top, $startColor, $endColor);
+                background:     -ms-linear-gradient(top, $startColor, $endColor);
+                background:      -o-linear-gradient(top, $startColor, $endColor);
+                background:         linear-gradient(to bottom, $startColor, $endColor);
+                filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$startColor}', EndColorStr='#{$endColor}');
+            }
+
+        /*  Horizontal Gradient
+            ========================================================================== */
+            @mixin horizontal-gradient($startColor, $endColor) {
+                background-color: $startColor;
+                background: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
+                background: -webkit-linear-gradient(left, $startColor, $endColor);
+                background:    -moz-linear-gradient(left, $startColor, $endColor);
+                background:     -ms-linear-gradient(left, $startColor, $endColor);
+                background:      -o-linear-gradient(left, $startColor, $endColor);
+                background:         linear-gradient(to right, $startColor, $endColor);
+                filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr='#{$startColor}', EndColorStr='#{$endColor}');
+            }
+
+    /*  Columns
+        ========================================================================== */
+        @mixin column($count, $gap, $line:'') {
+            -webkit-column-count: $count;
+               -moz-column-count: $count;
+                    column-count: $count;
+
+            -webkit-column-gap: $gap;
+               -moz-column-gap: $gap;
+                    column-gap: $gap;
+
+            @if $line != '' {
+            -webkit-column-rule: $line;
+               -moz-column-rule: $line;
+                    column-rule: $line;
+            }
         }
