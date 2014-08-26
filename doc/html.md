@@ -52,3 +52,5 @@ Arquivo padrão para cabeçalho do projeto.
 ### `footer.php`
 
 Arquivo padrão para rodapé do projeto.
+
+:point_right: Próximo: [JS](js.md)

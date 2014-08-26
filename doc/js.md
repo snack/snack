@@ -1,37 +1,26 @@
-[Início](../../../) » [Documentação](index.md) » JS
+![A2boilerplate][https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png]
+
+[:house:](../../../) » [Documentação](index.md) » JS
+
+* [Libs](#libs)
+* [Scripts](#scripts)
 
 # JS
 
 ## Libs
 
-Bibliotecas padrões utilizados no projeto. Localizadas em: `js/libs/`.
+São as bibliotecas padrão utilizadas no projeto. São gerenciadas pelo **Bower**, por isso, recomendamos dar uma lida nas seções de [Bower](index.md#bower) e [Grunt](index.md#grunt).
 
-### jQuery
+* jQuery
+* Modernizr
+* Respond
 
-Adicionada via _Bower_.
+## Scripts
 
-### Modernizr
+Dentro da pasta _`assets`_ fica o arquivo `scripts.js` que é por padrão o arquivo onde colocamos nossos scripts. Geralmente, colocamos ali as coisas que serão utilizadas no projeto inteiro. 
 
-O projeto utiliza uma versão customizada e já minificada da biblioteca. É linkada no `head` da página dentro do arquivo `in/estilos.php`.
+Para algo mais específico, ou se formos pensar na questão da perfomance em apenas chamarmos na página o que de fato está sendo utilizado, costumamos criar arquivos separados e tarefas customizadas no **Grunt**. Assim, carregamos apenas o que é necessário pra determinada página e entregamos em um arquivo minificado.
 
-Para detecção de uma propriedade ou atributo específico que não esteja nessa versão da biblioteca, você pode atualizar a versão usando o gerenciador de dependências Bower Ex:  `bower install modernizr#2.7.1 --save`
-
-### Respond
-
-Versão minificada linkada no início da página (*polyfill* para min/max-width do CSS3 Media Queries para IE6-8 ), você pode atualizar a versão usando o gerenciador de dependências Bower Ex:  `bower install respond#1.4.2 --save`
-
-## Assets
-
-### `analytics.js`
-
-Código de rastreamento do _Google Analytics_.
-
-### `scripts.js`
-
-Arquivo JS [pronto pra ser usado](http://img855.imageshack.us/img855/2449/coronel2.jpg). Localizado em `js/assets/scripts.js`.
-
-## `scripts.min.js`
-
-Arquivo gerado pela concatenação/minificação da lib _jQuery_ e dos arquivos `assets/scripts.js` e `assets/analytics.js`.
+:point_right: Próximo: [Styleguide](styleguide.md)
 
 
