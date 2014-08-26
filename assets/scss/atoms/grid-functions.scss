@@ -14,20 +14,20 @@
 
     /*  Column
         ========================================================================== */
-        @mixin column() {
+        %column {
             float: left;
             margin-right: percentage( $gutter-width / $grid-width );
-        }
-
-    /*  Last item row (no-margin)
-        ========================================================================== */
-        @mixin last() {
-            margin-right: 0;
-            float: right;
         }
 
    /*   Push columns (offset)
         ========================================================================== */
         @mixin push($n) {
             margin-left: percentage( (($n * $column-width) + ($n * $gutter-width))  / $grid-width );
+        }
+
+    /*  Last item row (no-margin)
+        ========================================================================== */
+        %last {
+            margin-right: 0;
+            float: right;
         }

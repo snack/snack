@@ -1,8 +1,6 @@
 /*  ==========================================================================
     Grid calc
     ========================================================================== */
-    /* Grid calc */
-    @import 'grid-functions';
 
 /*  ==========================================================================
     Grid
@@ -32,12 +30,12 @@
      */
 
     @media only screen and (min-width: $breakpoint) {
+        /* Grid calc */
+        @import "grid-functions";
 
         /*  Grid width
             ========================================================================== */
-            .row {
-                max-width: $grid-width;
-            }
+            .row { max-width: $grid-width; }
 
             .row.full {
                 max-width: $grid-full;
@@ -45,7 +43,7 @@
                 padding-right: $breath;
             }
 
-            .column { @include column(); }
+            .column { @extend %column; }
 
         /*  Columns width
             ========================================================================== */
@@ -74,7 +72,7 @@
             .ninecol,
             .tencol,
             .elevencol,
-            .twelvecol { @include column(); }
+            .twelvecol { @extend %column; }
 
         /*  Offsets
             ========================================================================== */
@@ -102,5 +100,5 @@
 
         /*  Last item
             ========================================================================== */
-            .last { @include last(); }
+            .last { @extend %last; }
    }
