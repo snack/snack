@@ -12,6 +12,12 @@
     * [Mixins](#mixins)
     * [Variáveis](#vari%C3%A1veis)
         - [Definindo o grid](#definindo-o-grid)
+* [Usando o grid](#usando-o-grid)
+    * [Marcação padrão](#marca%C3%A7%C3%A3o-padr%C3%A3o)
+    * [Deslocamento](#deslocamento)
+    * [Centralizando](#centralizando)
+    * [Linha filha](#linha-filha)
+    * [Grid semântico](#grid-semantico)
 
 ## SASS
 
@@ -139,9 +145,9 @@ Essa é uma primeira idéia para o cálculo do grid. Vamos [melhorando aos pouco
 
 ![Grid](https://cloud.githubusercontent.com/assets/1345662/4016961/e25dee40-2a3a-11e4-9c3a-209b255dfe98.png)
 
-### Usando o grid
+## Usando o grid
 
-#### Marcação Padrão
+### Marcação Padrão
 
 Abaixo vamos criar um layout com duas colunas.
 
@@ -154,7 +160,7 @@ Abaixo vamos criar um layout com duas colunas.
 
 > No exemplo, temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.eightcol` ( *8 colunas* ), totalizando 12 colunas.
 
-#### Deslocamento
+### Deslocamento
 
 Mova as colunas para a direita usando a classe `.offset-x`, onde o **x** é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-four` desloca um elemento em 4 colunas.
 
@@ -167,7 +173,7 @@ Mova as colunas para a direita usando a classe `.offset-x`, onde o **x** é o va
 
 > No exemplo, temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas.
 
-#### Centralizando
+### Centralizando
 
 Centralize o elemento, independente da quantidade de colunas, aplicando a classe `.centered`.
 
@@ -177,7 +183,7 @@ Centralize o elemento, independente da quantidade de colunas, aplicando a classe
 </div>
 ```
 
-#### Linha filha
+### Linha filha
 
 Caso precise adicionar uma linha filha, é só manter a marcação padrão e respeitar o número de colunas do grid.
 
@@ -194,3 +200,67 @@ Caso precise adicionar uma linha filha, é só manter a marcação padrão e res
 </div>
 ```
 > No exemplo, temos uma classe `.fourcol` que possui uma `.row` filha. Esta por sua vez possui uma classe `.eightcol` ( *8 colunas* ) e uma `.fourcol ( *4 colunas* ) totalizando 12 colunas.
+
+### Grid semântico
+
+É possível deixarmos nosso código mais semântico, com a utilização de algumas *features* que o *SASS* nos oferece em conjunto com as funções que calculam o grid.
+
+Se formos olhar o arquivo `grid.scss` que contém as declarações do grid, podemos observar quatro *includes*:
+
+- *column()*: define o elemento como uma coluna, aplicando as propriedades específicas;
+- *width(n)*: define a largura do elemento com **n** colunas;
+- *last()*: se relaciona ao último elemento (coluna) de cada linha do grid, zerando a margem direita do mesmo;
+- *push(n)*: define o deslocamento esquerdo do elemento com **n** colunas.
+
+Com isso, uma marcação que antes era assim:
+
+```html
+<div class="fourcol">
+    <div class="about"></div>
+</div>
+<div class="eightcol last">
+    <div class="box"></div>
+</div>
+```
+
+... pode ficar assim:
+
+```html
+<div class="about column"></div>
+<div class="box column"></div>
+```
+
+```scss
+.about {
+    @include width(4);
+}
+
+.about {
+    @include width(8);
+    @include last();
+}
+```
+
+.. podemos mudar um pouco mais e ficaria assim:
+
+```html
+<div class="about"></div>
+<div class="box"></div>
+```
+
+```scss
+.about {
+    @include width(4);
+    @include column();
+}
+
+.about {
+    @include width(8);
+    @include column();
+    @include last();
+}
+```
+
+> A diferença entre o exemplo anterior e esse é que em um adicionamos uma classe `.column` aos elementos que desejamos que se comportem como uma coluna e, nesse último, adicionamos o `@include column();` diretamente na classe do elemento..
+
+:point_right: Próximo: [HTML](html.md)
