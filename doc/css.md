@@ -41,35 +41,35 @@ Aplicamos o conceito de _mobile first_ nos arquivos de estilo.
 }
 ```
 
-A variável breakpoint é definida no arquivo _`variables.scss`_. Claro que o conceito de _Mobile first_ **não se resume só a isso**; coisas essenciais como conteúdo por exemplo, são primordiais nessa questão.
+A variável breakpoint é definida no arquivo `variables.scss`. Claro que o conceito de _Mobile first_ **não se resume só a isso**; coisas essenciais como conteúdo por exemplo, são primordiais nessa questão.
 
 ## Design Atômico
 
-Outro conceito aplicado foi o [Design Atômico](http://bradfrostweb.com/blog/post/atomic-web-design/) com alguns adaptações que achamos legais. Dividimos as camadas de estilo entre _Átomos_ _Moléculas_ e _Organismos_; adicionamos a camada _Base_ com as configurações que achamos ser a base de estilo do projeto.
+Outro conceito aplicado foi o [Design Atômico](http://bradfrostweb.com/blog/post/atomic-web-design/) com alguns adaptações que achamos legais. Dividimos as camadas de estilo entre **Átomos**, **Moléculas** e **Organismos**; adicionamos a camada **Base** com as configurações que achamos ser a base de estilo do projeto.
 
 ### Os arquivos
 
 * **Base**
-    * normalize | Normaliza diferenças de renderizações entre os navegadores ([Link](http://necolas.github.com/normalize.css/) do projeto)
-    * variables | Declaração das variáveis (grid, cores e demais que poderão ser utilizadas)
-    * mixins | Declaração de mixins padrões e, onde deverão ser colocados novos mixins
-    * base | Declaração de propriedades básicas de estilo e classes auxiliares
+    * `normalize.scss` ==> Normaliza diferenças de renderizações entre os navegadores ([Link](http://necolas.github.com/normalize.css/) do projeto)
+    * `variables.scss` ==> Declaração das variáveis (grid, cores e demais que poderão ser utilizadas)
+    * `mixins.scss` ==> Declaração de mixins padrões e, onde deverão ser colocados novos mixins
+    * `base.scss` ==> Declaração de propriedades básicas de estilo e classes auxiliares
 * **Átomos** (_atoms_)
-    * grid
-    * grid-functions | Funções para cálculo do grid
-    * font-awesome
-    * typography
-    * buttons
-    * inputs
-    * lists
-    * tables
+    * `grid.scss`
+    * `grid-functions.scss` ==> Funções para cálculo do grid
+    * `font-awesome.scss`
+    * `typography.scss`
+    * `buttons.scss`
+    * `inputs.scss`
+    * `lists.scss`
+    * `tables.scss`
 * **Moléculas** (_molecules_)
-    * forms
-    * navigation | Declarações relacionadas a elementos de navegação (cabeçalho, rodapé, menus, ...)
-    * icons | Declaração de _sprites_
+    * `forms.scss`
+    * `navigation.scss` ==> Declarações relacionadas a elementos de navegação (cabeçalho, rodapé, menus, ...)
+    * `icons.scss` ==> Declaração de _sprites_
 * **Organismos** (_organisms_)
-    * layout
-    * print
+    * `layout.scss`
+    * `print.scss`
 
 ## Mixins e variáveis
 

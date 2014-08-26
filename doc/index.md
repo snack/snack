@@ -65,12 +65,12 @@ A pasta _`assets`_ contém os arquivos de desenvolvimento. Possui 3 pastas inter
 
 Essa pasta contém todos os arquivos originados das taks do _Grunt_.
 
-* _CSS_ ==> Contém arquivo de estilo minificado.
-* _JS_ ==> Contém arquivo(s) _javascript_ concatenados e minificados.
-    - _LIBS_ ==> Contém as bibliotecas minificadas utilizadas por padrão no projeto (_Modernizr, jQuery_ e _Respond_).
-* _IMG_ ==> Contém as imagens otimizadas através do _Grunt_.
-* _FONTS_ ==> Fontes utilizadas no projeto.
-* _IN_ ==> Pasta com os arquivos _include_ do projeto.
+* _`css`_ ==> Contém arquivo de estilo minificado.
+* _`js`_ ==> Contém arquivo(s) _javascript_ concatenados e minificados.
+    - _`libs`_ ==> Contém as bibliotecas minificadas utilizadas por padrão no projeto (_Modernizr, jQuery_ e _Respond_).
+* _`img`_ ==> Contém as imagens otimizadas através do _Grunt_.
+* _`fonts`_ ==> Fontes utilizadas no projeto.
+* _`in`_ ==> Pasta com os arquivos _include_ do projeto.
 
 ---
 
