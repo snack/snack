@@ -1,4 +1,4 @@
-![A2boilerplate][https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png]
+![A2boilerplate](https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png)
 
 [:house:](../../../) » [Documentação](index.md) » HTML
 

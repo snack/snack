@@ -49,17 +49,17 @@ O **Boilerplate** está relacionado à sua aplicação em si. É aonde você vai
 
 ### As pastas `ASSETS` e `BUILD`
 
-O projeto (tanto o **Boilerplate** como **Styleguide**) utiliza algumas _tasks_ do _Grunt_, que resumidamente pega todo o conteúdo da pasta _ASSETS_ e concatena/minifica/otimiza e joga para a pasta _BUILD_.
+O projeto (tanto o **Boilerplate** como **Styleguide**) utiliza algumas _tasks_ do _Grunt_, que resumidamente pega todo o conteúdo da pasta _`assets`_ e concatena/minifica/otimiza e joga para a pasta _`build`_.
 
-Em tese, quando você for dar o deploy da sua aplicação, você pode fazer o upload apenas da pasta _BUILD_ com todos arquivos otimizados.
+Em tese, quando você for dar o deploy da sua aplicação, você pode fazer o upload apenas da pasta _`build`_ com todos arquivos otimizados.
 
 #### Assets
 
-A pasta `assets` contém os arquivos de desenvolvimento. Possui 3 pastas internas:
+A pasta _`assets`_ contém os arquivos de desenvolvimento. Possui 3 pastas internas:
 
-* _SCSS_ ==> Arquivos SASS. Essa pasta é organizada seguindo o conceito de _Design Atômico_ com alguns toques pessoais nossos.
-* _JS_ ==> Pasta com os arquivos _javascript_. Todo arquivo desenvolvido para o projeto deve ficar nessa pasta. Dentro dessa pasta tem uma pasta _LIBS_, que deve agrupar todas bibliotecas utilizadas que **não forem** geradas através do _Bower_.
-* _IMG_ ==> Pasta com as imagens do projeto, antes de serem otimizadas.
+* _`scss`_ ==> Arquivos SASS. Essa pasta é organizada seguindo o conceito de _Design Atômico_ com alguns toques pessoais nossos.
+* _`js`_ ==> Pasta com os arquivos _javascript_. Todo arquivo desenvolvido para o projeto deve ficar nessa pasta. Dentro dessa pasta tem uma pasta _LIBS_, que deve agrupar todas bibliotecas utilizadas que **não forem** geradas através do _Bower_.
+* _`img`_ ==> Pasta com as imagens do projeto, antes de serem otimizadas.
 
 #### Build
 
