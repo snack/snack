@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Cálculo grid
+   Grid functions
    ========================================================================== */
 
    /*   Width columns
@@ -31,3 +31,50 @@
             margin-right: 0;
             float: right;
         }
+
+
+/*  ==========================================================================
+    Grid calc
+    ========================================================================== */
+
+    /*  Grid width
+        ========================================================================== */
+        .row { max-width: $grid-width; }
+
+        .row.full {
+            max-width: $grid-full;
+            padding-left: $breath;
+            padding-right: $breath;
+        }
+
+        .column { @extend %column; }
+
+    /*  Columns width
+        ========================================================================== */
+        @for $i from 1 through $total-columns {
+            .col-#{$i} { 
+                @include width($i);
+                @extend %column;
+            }
+        }
+
+    /*  Offsets
+        ========================================================================== */
+        @for $i from 1 through $total-columns {
+            .offset-#{$i} { 
+                @include push($i);
+            }
+        }
+
+    /*  Center
+        ========================================================================== */
+        .centered {
+            display: block;
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    /*  Last item
+        ========================================================================== */
+        .last { @extend %last; }

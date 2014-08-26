@@ -7,14 +7,12 @@
     <title>Título da Página | Projeto</title>
     <?php include __DIR__ . '/build/in/meta.php'; ?>
     <?php include __DIR__ . '/build/in/estilos.php'; ?>
-    
 </head>
 <body>
     <!-- Header -->
     <?php include __DIR__ . '/build/in/header.php'; ?>
 
     <main role="main"></main>
-    </main>
 
     <!-- Footer -->
     <?php include __DIR__ . '/build/in/footer.php' ;?>

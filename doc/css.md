@@ -154,25 +154,25 @@ Abaixo vamos criar um layout com duas colunas.
 
 ```html
 <div class="row">
-    <div class="fourcol">4 colunas</div>
-    <div class="eightcol last">8 colunas</div>
+    <div class="col-4">4 colunas</div>
+    <div class="col-8 last">8 colunas</div>
 </div>
 ```
 
-> No exemplo, temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.eightcol` ( *8 colunas* ), totalizando 12 colunas.
+> No exemplo, temos uma classe `.col-4` ( *4 colunas* ) e uma classe `.col-8` ( *8 colunas* ), totalizando 12 colunas.
 
 ### Deslocamento
 
-Mova as colunas para a direita usando a classe `.offset-x`, onde o **x** é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-four` desloca um elemento em 4 colunas.
+Mova as colunas para a direita usando a classe `.offset-x`, onde o **x** é o valor do deslocamento (em colunas). Por exemplo, a classe `.offset-4` desloca um elemento em 4 colunas.
 
 ```html
 <div class="row">
-    <div class="fourcol">4 colunas</div>
-    <div class="sixcol offset-two last">6 colunas | 2 colunas descolamento</div>
+    <div class="col-4">4 colunas</div>
+    <div class="col-6 offset-2 last">6 colunas | 2 colunas descolamento</div>
 </div>
 ```
 
-> No exemplo, temos uma classe `.fourcol` ( *4 colunas* ) e uma classe `.sixcol` ( *6 colunas* ) com `.offset-two` ( *2 colunas* ), totalizando 12 colunas.
+> No exemplo, temos uma classe `.col-4` ( *4 colunas* ) e uma classe `.col-6` ( *6 colunas* ) com `.offset-2` ( *2 colunas* ), totalizando 12 colunas.
 
 ### Centralizando
 
@@ -180,7 +180,7 @@ Centralize o elemento, independente da quantidade de colunas, aplicando a classe
 
 ```html
 <div class="row">
-    <div class="fivecol centered">5 colunas (centralizado)</div>
+    <div class="col-5 centered">5 colunas (centralizado)</div>
 </div>
 ```
 
@@ -190,23 +190,21 @@ Caso precise adicionar uma linha filha, é só manter a marcação padrão e res
 
 ```html
 <div class="row">
-    <div class="fourcol">4 colunas
+    <div class="col-4">4 colunas
         <!-- linha filha -->
         <div class="row">
-            <div class="eightcol">8 colunas</div>
-            <div class="fourcol last">4 colunas</div>
+            <div class="col-8">8 colunas</div>
+            <div class="col-4 last">4 colunas</div>
         </div><!-- ##fim linha filha -->
     </div>
     <div class="eightcol last">8 coluna</div>
 </div>
 ```
-> No exemplo, temos uma classe `.fourcol` que possui uma `.row` filha. Esta por sua vez possui uma classe `.eightcol` ( *8 colunas* ) e uma `.fourcol ( *4 colunas* ) totalizando 12 colunas.
+> No exemplo, temos uma classe `.col-4` que possui uma `.row` filha. Esta por sua vez possui uma classe `.col-8` ( *8 colunas* ) e uma `.col-4` ( *4 colunas* ) totalizando 12 colunas.
 
 ### Grid semântico
 
 É possível deixarmos nosso código mais semântico, com a utilização de algumas *features* que o *SASS* nos oferece em conjunto com as funções que calculam o grid.
-
-Se formos olhar o arquivo `grid.scss` que contém as declarações do grid, podemos observar quatro *includes*:
 
 - *column()*: define o elemento como uma coluna, aplicando as propriedades específicas;
 - *width(n)*: define a largura do elemento com **n** colunas;
@@ -216,10 +214,10 @@ Se formos olhar o arquivo `grid.scss` que contém as declarações do grid, pode
 Com isso, uma marcação que antes era assim:
 
 ```html
-<div class="fourcol">
+<div class="col-4">
     <div class="about"></div>
 </div>
-<div class="eightcol last">
+<div class="col-8 last">
     <div class="box"></div>
 </div>
 ```
@@ -238,7 +236,7 @@ Com isso, uma marcação que antes era assim:
 
 .about {
     @include width(8);
-    @include last();
+    @extend %last;
 }
 ```
 
@@ -252,17 +250,17 @@ Com isso, uma marcação que antes era assim:
 ```scss
 .about {
     @include width(4);
-    @include column();
+    @extend %column;
 }
 
 .about {
     @include width(8);
-    @include column();
-    @include last();
+    @extend %column;
+    @extend %last;
 }
 ```
 
-> A diferença entre o exemplo anterior e esse é que em um adicionamos uma classe `.column` aos elementos que desejamos que se comportem como uma coluna e, nesse último, adicionamos o `@include column();` diretamente na classe do elemento..
+> A diferença entre o exemplo anterior e esse é que em um adicionamos uma classe `.column` aos elementos que desejamos que se comportem como uma coluna e, nesse último, adicionamos o `@extend %column;` diretamente na classe do elemento.
 
 ## Font icons
 
