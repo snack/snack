@@ -17,7 +17,7 @@
     * [Deslocamento](#deslocamento)
     * [Centralizando](#centralizando)
     * [Linha filha](#linha-filha)
-    * [Grid semântico](#grid-semantico)
+    * [Grid semântico](#grid-sem%C3%A2ntico)
 
 ## SASS
 
