@@ -18,6 +18,7 @@
     * [Centralizando](#centralizando)
     * [Linha filha](#linha-filha)
     * [Grid semântico](#grid-sem%C3%A2ntico)
+* [Font icons](#font-icons)
 
 ## SASS
 
@@ -262,5 +263,9 @@ Com isso, uma marcação que antes era assim:
 ```
 
 > A diferença entre o exemplo anterior e esse é que em um adicionamos uma classe `.column` aos elementos que desejamos que se comportem como uma coluna e, nesse último, adicionamos o `@include column();` diretamente na classe do elemento..
+
+## Font icons
+
+Por padrão utilizamos o [Font Awesome](http://fortawesome.github.io/Font-Awesome/) no projeto. Ainda fizemos do jeito antigo e inserimos manualmente as fontes e o arquivo de estilo responsáveis mas para as próximas versões a idéia é isso ser gerenciado via *Bower*.
 
 :point_right: Próximo: [HTML](html.md)
