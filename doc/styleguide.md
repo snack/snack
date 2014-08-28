@@ -2,23 +2,21 @@
 
 # Guia de Estilo
 
-Durante o desenvolvimento de diversos projetos, surgiu a necessidade da criação de um guia de Estilos. A idéia era mantê-lo dentro do projeto, podendo ele ser utilizado ou não, sem interferir em nada.
+Durante o desenvolvimento de alguns projetos, surgiu a necessidade da criação de um Guia de Estilo. A idéia era mantê-lo dentro do projeto, podendo ele ser utilizado ou não, sem interferir em nada.
 
-Com a ajuda do [Willian](https://twitter.com/willcampideli) desenvolvemos uma primeira versão utilizando [Twig](http://twig.sensiolabs.org/). O Guia, ainda está em sua primeira versão e já temos um *roadmap* de pontos a serem melhorados.
+Com a ajuda do time de *back-end* desenvolvemos uma primeira versão utilizando [Twig](http://twig.sensiolabs.org/). O Guia, ainda está em sua primeira versão e já temos um *roadmap* de pontos a serem melhorados.
 
 ## Como funciona?
 
-O Guia de Estilos fica dentro da pasta `styleguide` na raiz do projeto. Caso você não tenha interesse em utilizá-lo é só apagar a pasta.
+O Guia de Estilos fica dentro da pasta `styleguide` na raiz do projeto. Caso você não tenha interesse em utilizá-lo é só apagar a pasta e os arquivos do *composer* na raiz do projeto (`.lock`, `.phar` e `.json`).
 
-Dentro da pasta do guia, excluindo as pastas *assets* e *lib*, as demais são relacionadas à *categorias* de módulos do Guia de Estilos.
-
-Se você sabe um pouco de Twig, fique a vontade para estilizar da maneira que quiser. Dentro da pasta `assets` estão os arquivos *CSS* e *JS* e, na pasta `lib/layout` estão os templates utilizadas no Guia.
+Com exceção da pasta _`lib`_, as demais são relacionadas às *categorias* de módulos do Guia de Estilos. Trata-se de uma categorização inicial padrão mas você pode ficar a vontade para customizar a sua.
 
 ## Criando um novo módulo
 
 Por enquanto a adição de uma nova categoria é manual, já temos a intenção de [automatizar esse processo](https://github.com/a2comunicacao/A2boilerplate/issues/24).
 
-Para criar um novo módulo você pode seguir os passos abaixo, nesse exemplo iremos criar o módulo tipografia:
+Para criar um novo módulo você pode seguir os passos abaixo, nesse exemplo iremos criar o módulo **tipografia**:
 
 * Duplique a pasta `botoes` (dê preferência por duplicar essa pasta, pois as demais pastas - cores, grid e layout - por serem bem específicas, possuem estruturas diferentes)
 * Renomeie a pasta com o novo nome de categoria que desejar (vale lembrar que o que você colocar aqui é o que vai aparecer na *url*, no nosso caso fica */styleguide/tipografia*)
