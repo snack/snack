@@ -2,7 +2,7 @@
     <a class="styleguide-heading" href="{{ container.project.styleguide_url }}/">Guia de Estilo <span class="block">{{ container.project.name }}</span></a>
     <ul id="styleguide-menu" class="styleguide-menu">
         {% for item in container.project.menu %}
-        <li class="{{ item.class }}">
+        <li class="styleguide-menu-{{ item.class }}">
             <a href="{{ container.project.styleguide_url ~ item.link }}">{{ item.label }}</a>
         </li>
         {% endfor %}
