@@ -12,6 +12,6 @@ $yaml = new YamlParser();
 //Put module name in the container initialized on bootstrap.php
 $container['module'] = "Layouts";
 $container['body_class'] = "layouts";
-$layouts = $yaml->parse(file_get_contents(__DIR__.'/layouts.yml'));
+$modules_list = $yaml->parse(file_get_contents(__DIR__.'/modules_list_config.yml'));
 
-echo $twig->render('/layouts.html.twig', array('layouts' => $layouts, 'container' => $container));
+echo $twig->render('/modules_template.html.twig', array('modules_list' => $modules_list, 'container' => $container));

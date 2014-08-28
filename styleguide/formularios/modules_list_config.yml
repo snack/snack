@@ -22,7 +22,7 @@
   title: Input checkbox
   subtitle: Padrão para exibição de elementos input do tipo <strong>checkbox</strong>.
   sourceCode: 05-checkbox.html.twig
-  
+
 "form basico":
   title: Formulário básico
   subtitle: Padrão para formulários.

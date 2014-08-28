@@ -13,6 +13,6 @@ $yaml = new YamlParser();
 //Put module name in the container initialized on bootstrap.php
 $container['module'] = "Botões";
 $container['body_class'] = "buttons";
-$buttons = $yaml->parse(file_get_contents(__DIR__.'/buttons.yml'));
+$modules_list = $yaml->parse(file_get_contents(__DIR__.'/modules_list_config.yml'));
 
-echo $twig->render('/buttons.html.twig', array('buttons' => $buttons, 'container' => $container));
+echo $twig->render('/modulestemplate.html.twig', array('modules_list' => $modules_list, 'container' => $container));

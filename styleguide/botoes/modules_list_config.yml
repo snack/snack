@@ -1,6 +1,6 @@
 "button 1":
   title: Default
-  subtitle: Botão padrão básico do projeto. Aplicado nas tags <code>a</code>, <code>button</code> e <code>input</code>. 
+  subtitle: Botão padrão básico do projeto. Aplicado nas tags <code>a</code> <code>button</code> e <code>input</code>. 
   sourceCode: button-default.html.twig 
 
 "button 2":

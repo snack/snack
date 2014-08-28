@@ -3,7 +3,7 @@
 {% block content %}
     <h1 class="styleguide-title styleguide-title-page">{{ container.module }}</h1>
     <!-- Module -->
-    {% for grid in grid %}
+    {% for grid in modules_list %}
         <h2 class="styleguide-title-module">{{ grid.title }}</h2>
         <p>{{ grid.subtitle }}</p>
         {% include grid.sourceCode %}

@@ -12,6 +12,6 @@ $yaml = new YamlParser();
 //Put module name in the container initialized on bootstrap.php
 $container['module'] = "Cores";
 $container['body_class'] = "colors";
-$colors = $yaml->parse(file_get_contents(__DIR__.'/colors.yml'));
+$modules_list = $yaml->parse(file_get_contents(__DIR__.'/modules_list_config.yml'));
 
-echo $twig->render('/colors.html.twig', array('colors' => $colors, 'container' => $container));
+echo $twig->render('/modules_template.html.twig', array('modules_list' => $modules_list, 'container' => $container));

@@ -3,7 +3,7 @@
 {% block content %}
     <h1 class="styleguide-title styleguide-title-page">{{ container.module }}</h1>
     <!-- Module -->
-    {% for color in colors %}
+    {% for color in modules_list %}
         <section class="styleguide-module">
             <div class="styleguide-color">
                 <div class="styleguide-color-preview" style="background-color: {{ color }};"></div>

@@ -13,6 +13,6 @@ $yaml = new YamlParser();
 //Put module name in the container initialized on bootstrap.php
 $container['module'] = "Formulários";
 $container['body_class'] = "forms";
-$forms = $yaml->parse(file_get_contents(__DIR__.'/forms.yml'));
+$modules_list = $yaml->parse(file_get_contents(__DIR__.'/modules_list_config.yml'));
 
-echo $twig->render('/forms.html.twig', array('forms' => $forms, 'container' => $container));
+echo $twig->render('/modules_template.html.twig', array('modules_list' => $modules_list, 'container' => $container));
