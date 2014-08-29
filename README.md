@@ -8,7 +8,9 @@ Biblioteca para auxiliar no **pontapé inicial** em um projeto web. A idéia foi
 * Grunt
 * Ruby/SASS
 * Bower
-* PHP 5.4+
+* PHP 5.4+*
+
+*Para o Styleguide.
 
 ## Instalação
 
@@ -20,8 +22,6 @@ Existem algumas opções disponíveis:
 * Clone o projeto `git clone https://github.com/a2comunicacao/A2boilerplate.git`
 
 ### Boilerplate
-
-Para instalar todos módulos que irão executar as _tasks_:
 
 `npm install`
 
