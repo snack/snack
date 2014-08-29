@@ -182,6 +182,12 @@ module.exports = function( grunt ) {
                 tasks: ['sass:styleguide'],
             },
 
+            // Run Uglify task when scripts are modified
+            scripts_styleguide: {
+                files: ['<%= config.style_dev %>js/scripts.js'],
+                tasks: ['uglify:styleguide'],
+            },
+
             // Update :)
             livereload: {
                 options: { livereload: true },

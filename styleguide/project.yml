@@ -8,23 +8,23 @@ meta_keywords: "Tags da meta tag keywords."
 
 # Menu
 menu:
-  item1:
-    label: "Botões"
-    link: "/botoes/"
-    class: "buttons"
-  item2:
-    label: "Formulários"
-    link: "/formularios/"
-    class: "forms"
-  item3:
-    label: "Cores"
-    link: "/cores/"
-    class: "colors"
-  item4:
-    label: "Grid"
-    link: "/grid/"
-    class: "grid"
-  item5:
-    label: "Layouts"
-    link: "/layouts/"
-    class: "layouts"
+    item1:
+        label: "Botões"
+        link: "/botoes/"
+        class: "buttons"
+    item2:
+        label: "Formulários"
+        link: "/formularios/"
+        class: "forms"
+    item3:
+        label: "Cores"
+        link: "/cores/"
+        class: "colors"
+    item4:
+        label: "Grid"
+        link: "/grid/"
+        class: "grid"
+    item5:
+        label: "Layouts"
+        link: "/layouts/"
+        class: "layouts"

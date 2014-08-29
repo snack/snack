@@ -129,6 +129,13 @@
 
         /*  Code
             ========================================================================== */
+            .styleguide-code:before {
+                color: #999;
+                font-size: 12px;
+                display: block;
+                content: "<!-- HTML -->";
+            }
+
             pre {
                 border: 1px solid #eee;
                 word-wrap: break-word;
