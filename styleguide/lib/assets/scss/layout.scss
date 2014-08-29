@@ -100,12 +100,12 @@
                 font-size: 40px;
                 line-height: 320px;
                 background-color: #fff;
-                @include opacity(0, 0);
+                @include opacity(0);
                 @include transition(all .25s ease);
             }
 
             .styleguide-layout > a:hover {
-                @include opacity(0.5, 50);
+                @include opacity(0.5);
                 text-decoration: none;
             }
 

@@ -5,7 +5,7 @@
    $grid-width : ($total-columns * $column-width) + ( $gutter-width * ( $total-columns - 1) );
 
    // Grid width with lateral space
-   $grid-full     : $grid-width + $breath + $breath;
+   $grid-full : $grid-width + $breath + $breath;
 
    /*   Width columns
         ========================================================================== */

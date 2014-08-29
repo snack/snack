@@ -119,22 +119,18 @@ As variáveis abaixo definem o grid do projeto. Por padrão, ele tem **940 pixel
 /*  ==========================================================================
     Grid
     ========================================================================== */
-    $total-columns   : 12; // Total of columns
-    $column-width    : 60px; // Columns width
-    $gutter-width    : 20px; // Space between the columns
-    $grid-width      : 940px; // Width of the grid 
-    $breath         : 20px; // Option of lateral space for grid
-    $grid-full       : $gridWidth + $breath + $breath; // Grid width with lateral space
-    $breakpoint     : 768px; // Breakpoint for small devices
-    $space          : 25px; // Vertical space
+    $total-columns : 12;    // Total of columns
+    $column-width  : 60px;  // Columns width
+    $gutter-width  : 20px;  // Space between the columns
+    $breath        : 20px;  // Option of lateral space for grid
+    $breakpoint    : 768px; // Breakpoint for small devices
+    $space         : 25px;  // Vertical space
 ```
 
 * **`$total-columns`** ==> número total de colunas que seu grid vai ter.
 * **`$column-width`** ==> largura em _pixels_ de cada coluna.
 * **`$gutter-width`** ==> largura em _pixels_ do espaço entre cada coluna.
-* **`$grid-with`** ==> largura total do grid em _pixels_.
 * **`$breath`** ==> opção de espaço lateral no grid.
-* **`$grid-full`** ==> apenas adiciona os _espaços laterais_ setados na variável anterior para uma nova largura do grid.
 
 :exclamation: **Importante** ==> É obrigatório que as medidas se encaixem no grid, ou seja, tendo por base as configurações acima, teríamos o seguinte:
 
