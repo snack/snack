@@ -1,6 +1,6 @@
 "form inputs":
   title: Inputs
-  subtitle: Padrão para exibição de elementos <strong>input</strong> (<i>text, password, search, tel, url, date, datetime, datetime-local, month</i> e <i>week</i>. 
+  subtitle: "Padrão para exibição de elementos <strong>input</strong> (<i>text, password, search, tel, url, date, datetime, datetime-local, month</i> e <i>week</i>."
   sourceCode: 01-inputs.html.twig 
 
 "form selects":

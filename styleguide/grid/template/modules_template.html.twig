@@ -5,7 +5,7 @@
     <!-- Module -->
     {% for grid in modules_list %}
         <h2 class="styleguide-title-module">{{ grid.title }}</h2>
-        <p>{{ grid.subtitle }}</p>
+        <p>{{ grid.subtitle|raw }}</p>
         {% include grid.sourceCode %}
     {% endfor %}
 {% endblock %}

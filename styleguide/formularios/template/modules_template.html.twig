@@ -5,7 +5,7 @@
     <!-- Module -->
     {% for module in modules_list %}
     <h2 class="styleguide-title-module">{{ module.title }}</h2>
-    <p>{{ module.subtitle }}</p>
+    <p>{{ module.subtitle|raw }}</p>
     <!-- code -->
     <div class='styleguide-demo'>
         {% include module.sourceCode %}
