@@ -26,7 +26,7 @@
     Helper classes
     ========================================================================== */
     .hover { @include transition(opacity 0.25s ease); }
-    .hover:hover { @include opacity(0.8, 80); }
+    .hover:hover { @include opacity(0.8); }
 
     .pull-left { float: left; }
     .pull-right { float: right; }

@@ -14,10 +14,9 @@
 
     /*  Opacity w/ IE value
         ========================================================================== */
-        @mixin opacity($value, $IEvalue) {
+        @mixin opacity($value) {
             opacity: $value;
-            filter: alpha(opacity=$IEvalue);
-            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity="$IEvalue")";
+            filter: alpha(opacity=$value * 100);
         }
 
 
@@ -40,7 +39,7 @@
 
     /*  Box shadow
         ========================================================================== */
-        @mixin box-shadow($parameters) {
+        @mixin box-shadow($parameters...) {
             -webkit-box-shadow: $parameters;
                     box-shadow: $parameters;
         }
@@ -68,6 +67,28 @@
                 -ms-animation: $parameters;
                  -o-animation: $parameters;
                     animation: $parameters;
+        }
+
+        @mixin keyframes($name) {
+            @-webkit-keyframes $name {
+                @content; 
+            }
+
+            @-moz-keyframes $name {
+                @content;
+            }
+
+            @-ms-keyframes $name {
+                @content;
+            }
+
+            @-o-keyframes $name {
+                @content;
+            }
+
+            @keyframes $name {
+                @content;
+            } 
         }
 
     /*  Transform
