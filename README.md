@@ -5,7 +5,7 @@ Biblioteca para auxiliar no **pontapé inicial** em um projeto web. A idéia foi
 ## Requisitos
 
 * NodeJS
-* Grunt
+* Grunt ou Gulp
 * Ruby/SASS
 * Bower
 * PHP 5.4+*
@@ -23,13 +23,15 @@ Existem algumas opções disponíveis:
 
 ### Boilerplate
 
+Para instalar as bibliotecas do Grunt e Gulp:
+
 `npm install`
 
 Para instalar todas as dependências: 
 
 `bower install`
 
-Para rodas as tarefas de inicialização do projeto:
+Para rodas as tarefas de inicialização do projeto usando _Grunt_:
 
 `grunt init`
 
