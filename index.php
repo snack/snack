@@ -12,7 +12,8 @@
     <!-- Header -->
     <?php include __DIR__ . '/build/in/header.php'; ?>
 
-    <main role="main"></main>
+    <main role="main">
+    </main>
 
     <!-- Footer -->
     <?php include __DIR__ . '/build/in/footer.php' ;?>

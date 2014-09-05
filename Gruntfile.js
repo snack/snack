@@ -62,6 +62,17 @@ module.exports = function( grunt ) {
             }
         },
 
+        sprite:{
+            all: {
+                src: '<%= config.dev %>img/sprite/*.png',
+                destImg: '<%= config.build %>img/sprite/sprite.png',
+                destCSS: '<%= config.dev %>scss/molecules/icons.scss',
+                cssFormat: 'scss',
+                algorithm: 'binary-tree',
+                cssTemplate: '<%= config.dev %>scss/molecules/icons.mustache'
+            }
+        },
+
         // SASS _______________________________________________________________________
         sass: {
 
@@ -174,6 +185,11 @@ module.exports = function( grunt ) {
                 tasks: ['imagemin']
             },
 
+            sprite: {
+                files: ['<%= config.dev %>img/sprite/*.png'],
+                tasks: ['sprite']  
+            },
+
             // STYLEGUIDE TASKS
 
             // Run SASS task for .scss files
@@ -198,6 +214,7 @@ module.exports = function( grunt ) {
                     '<%= config.build %>css/main.min.css',
                     '<%= config.build %>js/scripts.min.js',
                     '<%= config.build %>img/*.{png,jpg,gif,svg}',
+                    '<%= config.build %>img/sprite/sprite.png',
                     // Styleguide files
                     '<%= config.style_build %>css/main.min.css',
                     '<%= config.style_build %>js/scripts.min.js'
@@ -215,6 +232,7 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks('grunt-svgmin');
     grunt.loadNpmTasks('grunt-svg2png');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-spritesmith');
 
     // Grunt tasks
 
@@ -223,13 +241,14 @@ module.exports = function( grunt ) {
 
     // CSS
     grunt.registerTask( 'css', [ 'sass' ] );
+    grunt.registerTask( 'css', [ 'sass' ] );
 
     // JS
     grunt.registerTask( 'js', [ 'jshint', 'uglify' ] );
 
     // Images
-    //grunt.registerTask( 'images', [ 'svgmin', 'svg2png' ] );
-    grunt.registerTask( 'images', [ 'imagemin' ] );
+    grunt.registerTask( 'images', [ 'imagemin', 'svgmin', 'svg2png' ] );
+    //grunt.registerTask( 'images', [ 'imagemin' ] );
 
     // Watch
     grunt.registerTask( 'live', [ 'watch' ] );
