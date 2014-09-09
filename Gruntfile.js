@@ -241,14 +241,12 @@ module.exports = function( grunt ) {
 
     // CSS
     grunt.registerTask( 'css', [ 'sass' ] );
-    grunt.registerTask( 'css', [ 'sass' ] );
 
     // JS
     grunt.registerTask( 'js', [ 'jshint', 'uglify' ] );
 
     // Images
-    grunt.registerTask( 'images', [ 'imagemin', 'svgmin', 'svg2png' ] );
-    //grunt.registerTask( 'images', [ 'imagemin' ] );
+    grunt.registerTask( 'images', [ 'imagemin', 'svgmin', 'svg2png', 'sprite' ] );
 
     // Watch
     grunt.registerTask( 'live', [ 'watch' ] );

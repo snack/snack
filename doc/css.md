@@ -142,6 +142,8 @@ Essa é uma primeira idéia para o cálculo do grid. Vamos [melhorando aos pouco
 
 ![Grid](https://cloud.githubusercontent.com/assets/1345662/4016961/e25dee40-2a3a-11e4-9c3a-209b255dfe98.png)
 
+:grey_exclamation: Vale ressaltar, que optamos por separar as declarações de estilo e, **todas** as informações relacionadas ao **grid**, como largura de elementos e definição de colunas (como vai ser visto no próximo tópico), devem ser inseridas no arquivo `grid.scss`.
+
 ## Usando o grid
 
 ### Marcação Padrão
