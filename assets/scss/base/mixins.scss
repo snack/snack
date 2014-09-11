@@ -91,6 +91,14 @@
             } 
         }
 
+        @mixin perspective($value) {
+            -webkit-perspective: $value;
+               -moz-perspective: $value;
+                -ms-perspective: $value;
+                 -o-perspective: $value;
+                    perspective: $value;
+        }
+
     /*  Transform
         ========================================================================== */
         @mixin transform($parameters) {
