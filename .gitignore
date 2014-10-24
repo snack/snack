@@ -4,3 +4,4 @@
 .project
 .idea
 .settings/
+/styleguide/lib/vendor
