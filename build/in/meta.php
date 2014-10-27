@@ -14,6 +14,7 @@
 <meta property="og:site_name" content="Nome do Projeto"/>
 <meta property="og:title" content="Título do Projeto - Nome do Projeto" />
 <meta property="og:type" content="website" />
+<meta property="og:description" content="" />
 <meta property="og:url" content="URL_do_site" />
 <meta property="og:image" content="URL_da_imagem" />
 
