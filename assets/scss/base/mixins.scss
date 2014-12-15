@@ -71,7 +71,7 @@
 
         @mixin keyframes($name) {
             @-webkit-keyframes #{$name} {
-                @content; 
+                @content;
             }
 
             @-moz-keyframes #{$name} {
@@ -88,15 +88,7 @@
 
             @keyframes #{$name} {
                 @content;
-            } 
-        }
-
-        @mixin perspective($value) {
-            -webkit-perspective: $value;
-               -moz-perspective: $value;
-                -ms-perspective: $value;
-                 -o-perspective: $value;
-                    perspective: $value;
+            }
         }
 
     /*  Transform
@@ -109,12 +101,20 @@
                     transform: $parameters;
         }
 
-        @mixin origin($valueX, $valueY) {
+        @mixin transform-origin($valueX, $valueY) {
             -webkit-transform-origin: $valueX $valueY;
                -moz-transform-origin: $valueX $valueY;
                  -o-transform-origin: $valueX $valueY;
                 -ms-transform-origin: $valueX $valueY;
                     transform-origin: $valueX $valueY;
+        }
+
+        @mixin perspective($value) {
+            -webkit-perspective: $value;
+               -moz-perspective: $value;
+                -ms-perspective: $value;
+                 -o-perspective: $value;
+                    perspective: $value;
         }
 
     /*  Background-size
