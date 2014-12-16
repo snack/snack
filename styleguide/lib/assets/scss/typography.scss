@@ -33,18 +33,25 @@
     ========================================================================== */
     .styleguide-title {
         font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -2px;
+        display: block;
         font-family: 'Source Sans Pro';
-        font-weight: 300;
-        text-align: center;
+        font-weight: 700;
         text-transform: uppercase;
-        color: $color1;
+        margin: 0 0 10px 0;
+        color: $color2;
+        text-align: left;
     }
 
-    .styleguide-title > span {
+    .styleguide-project {
+        font-family: 'Source Sans Pro';
         display: block;
         font-size: 28px;
-        text-transform: none;
-        color: $color2;
+        line-height: 28px;
+        font-weight: 300;
+        margin: 0;
+        color: $color4;
     }
 
     .styleguide-title-module {

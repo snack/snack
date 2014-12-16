@@ -77,3 +77,35 @@
                 $btn-danger-bg: $color-terciary;
                 $btn-danger-color: #fff;
                 $btn-danger-hover-bg: darken($btn-danger-bg, 5%);
+
+        /*  Social share
+            ========================================================================== */
+            /* Facebook */
+            $color-social-facebook: #3B5997;
+            $border-social-facebook: #2B4663;
+            $hover-social-facebook: darken($color-social-facebook, 5%);
+
+            /* Twitter */
+            $color-social-twitter: #2CA9E1;
+            $border-social-twitter: #2995BC;
+            $hover-social-twitter: darken($color-social-twitter, 5%);
+
+            /* Google Plus */
+            $color-social-google-plus: #dd4b39;
+            $border-social-google-plus: #C0392B;
+            $hover-social-google-plus: darken($color-social-google-plus, 5%);
+
+            /* Linkedin */
+            $color-social-linkedin: #0073B4;
+            $border-social-linkedin: #055472;
+            $hover-social-linkedin: darken($color-social-linkedin, 5%);
+
+            /* Pinterest */
+            $color-social-pinterest: #CD1D1F;
+            $border-social-pinterest: #8C191E;
+            $hover-social-pinterest: darken($color-social-pinterest, 5%);
+
+            /* RSS */
+            $color-social-rss: #FF6501;
+            $border-social-rss: #C74803;
+            $hover-social-rss: darken($color-social-rss, 5%);

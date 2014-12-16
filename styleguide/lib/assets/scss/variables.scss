@@ -2,9 +2,21 @@
     Variables
     ========================================================================== */
 
+    /*  ==========================================================================
+        Grid
+        ========================================================================== */
+        $total-columns : 12; // Total of columns
+        $column-width  : 70px; // Columns width
+        $gutter-width  : 20px; // Space between the columns
+        $breath        : 20px; // Option of lateral space for grid
+        $breakpoint    : 768px; // Breakpoint for small devices
+        $space         : 25px; // Vertical space
+
     /*  Colors
         ========================================================================== */
-        $color1: #0065A1;
-        $color2: #04324e;
-        $color3: #555;
+        $color1: #59ABE3;
+        $color2: #3498DB;
+        $color3: #222;
         $color4: #fff;
+
+

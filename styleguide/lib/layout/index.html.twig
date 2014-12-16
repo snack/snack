@@ -8,16 +8,11 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="styleguide-title">Guia de Estilo <span>{{ container.project.name }}</span></h1>
 
-    <dl class="styleguide-info">
-        <dt><i class="fa fa-desktop"></i>Projeto</dt>
-        <dd>{{ container.project.name }}</dd>
-        <dt><i class="fa fa-gears"></i>CMS</dt>
-        <dd>{{ container.project.cms }}</dd>
-        <dt><i class="fa fa-info"></i>Suporte</dt>
-        <dd>{{ container.project.browsers }}</dd>
-    </dl>
+    <div class="box"><i class="fa fa-desktop"></i><span class="text">{{ container.project.name }}</span></div>
+    <div class="box"><i class="fa fa-gears"></i><span class="text">{{ container.project.cms }}</span></div>
+    <div class="box"><i class="fa fa-info"></i><span class="text">{{ container.project.browsers }}</span></div>
+
 {% endblock %}
 
 {% block js %}

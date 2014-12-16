@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="../lib/build/css/main.min.css">
     {% endblock %}
 
-    <!-- Modernizr 
+    <!-- Modernizr
     <script src="../../build/js/modernizr.min.js"></script>-->
 
     <!-- Respond -->
@@ -29,19 +29,29 @@
     <![endif]-->
 </head>
 <body class="styleguide-body styleguide-{{ container.body_class }}">
-    <!-- Menu lateral -->
-    {% include 'menu.html.twig' %}
 
-    <!-- Page content -->
-    <div class="styleguide-hold">
-        <article class="styleguide-main">
+    <!-- Header -->
+    {% include 'header.html.twig' %}
+
+    <!-- Main -->
+    <main role="main" class="styleguide-main">
+        <div class="row">
+
+            <!-- Menu lateral -->
+            {% include 'menu.html.twig' %}
+
+            <!-- Content -->
+            <div class="styleguide-content">
             {% block content %}
             {% endblock %}
-        </article>
+            </div>
 
-        <!-- Footer -->
-        {% include 'footer.html.twig' %}
-    </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    {% include 'footer.html.twig' %}
+
     {% block js %}
         <!-- Scripts -->
         <script src="../../build/js/libs/jquery.min.js"></script>
