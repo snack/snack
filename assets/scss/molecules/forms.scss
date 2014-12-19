@@ -1,0 +1,48 @@
+/*  ==========================================================================
+    Forms
+    ========================================================================== */
+
+    @media only screen {
+
+        /*  Default
+            ========================================================================== */
+            .form fieldset {
+                border: none;
+                padding: 15px;
+                background-color: $color-bg-form;
+                border: solid 1px $color-border-form;
+            }
+
+            .form-label {
+                display: block;
+            }
+
+        /*  Required tip
+            ========================================================================== */
+            .fields-required {
+                color: $color-required-tip;
+                display: block;
+                font-size: $required-tip-font-size;
+                text-align: right;
+            }
+
+            .required {
+                font-weight: bold;
+                color: $color-required;
+            }
+
+            .form-field {
+                color: $color-required;
+                font-size: $required-font-size;
+            }
+            
+    }
+
+
+    /*
+     * CSS for devices with resolution bigger than breakpoint
+     */
+
+    @media only screen and (min-width: $breakpoint) {
+
+    }

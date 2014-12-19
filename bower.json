@@ -1,0 +1,14 @@
+{
+  "name": "nomedoprojeto",
+  "version": "1.0.0",
+  "homepage": "www.nomedoprojeto.com.br",
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
+  "dependencies": {
+    "jquery": "~1.9.1",
+    "modernizr": "~2.7.1",
+    "respond": "~1.4.2"
+  }
+}

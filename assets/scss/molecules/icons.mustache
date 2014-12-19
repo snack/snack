@@ -1,0 +1,30 @@
+/*  ==========================================================================
+    Icons
+    ========================================================================== */
+
+    [class^="ico-"], [class*=" ico-"] {
+        background-image: url("../img/sprite/sprite.png");
+        background-repeat: no-repeat;
+        display: inline-block;
+        line-height: 20px;
+        margin-top: 1px;
+        vertical-align: text-top;
+    }
+
+
+    {{#items}}
+
+    .ico-{{name}} {
+        width: {{px.width}};
+        height: {{px.height}};
+        background-position: {{px.offset_x}} {{px.offset_y}};
+    }
+
+    {{/items}}
+
+    /*  HD devices
+        ========================================================================== */
+
+        @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+            //[class^="ico-"], [class*=" ico-"] { background-size: 0 0; }
+        }

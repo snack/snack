@@ -1,0 +1,114 @@
+/*  ==========================================================================
+    Navigation
+    ========================================================================== */
+
+    @media only screen {
+
+        /*  Header
+            ========================================================================== */
+            .header{
+                background: $color-purple;
+                border-bottom: 2px solid $color-purple-light;
+                margin-bottom: 40px;
+            }
+
+            .about{
+                color: #fff;
+                text-align: center;
+                padding: 120px 0;
+
+                /* icon */
+                .fa{
+                    margin-right: 10px;
+                }
+
+                /* Títle */
+                .title{
+                    font-size: 72px;
+                    line-height: 72px;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    letter-spacing: -2px;
+                    margin-bottom: 50px;
+
+                    span{
+                        font-weight: 800;
+                        color: $color-purple-light;
+                    }
+                }
+
+                /* Desc */
+                .desc{
+                    font-size: 30px;
+                    line-height: 42px;
+                    font-weight: 400;
+                    margin-bottom: 60px;
+                    letter-spacing: -1px;
+                }
+
+                /* btn */
+                .btn{
+                    border:2px solid $color-purple-light;
+                    background-color: transparent;
+                    padding: 15px 60px;
+                    color: #fff;
+                    font-size: 14px;
+                    line-height: 14px;
+                    font-weight: 700;
+                    color: $color-purple-light;
+                    @include transition(all .3s ease);
+                    @include border-radius(2px);
+
+                    &:hover,
+                    &:focus{
+                        background-color: $color-purple-light;
+                        color: #fff;
+                        @include transition(all .3s ease);
+                    }
+                }
+
+                /* version */
+                .version{
+                    display: inline-block;
+                    color: #fff;
+                    font-size: 12px;
+                    line-height: 12px;
+                    width: 100%;
+
+                    a{
+                        color: #fff;
+                    }
+                }
+            }
+
+
+
+        /*  Footer
+            ========================================================================== */
+
+            .footer{
+                background-color: #f5f5f5;
+                padding: 20px 0;
+            }
+
+        /*  Menu
+            ========================================================================== */
+
+    }
+
+    /*
+     * CSS for devices with resolution bigger than breakpoint
+     */
+
+    @media only screen and (min-width: $breakpoint) {
+
+        /*  Header
+            ========================================================================== */
+
+        /*  Footer
+            ========================================================================== */
+
+        /*  Menu
+            ========================================================================== */
+
+   }

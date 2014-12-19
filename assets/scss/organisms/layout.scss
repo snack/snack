@@ -1,0 +1,147 @@
+/*  ==========================================================================
+    Layout
+    ========================================================================== */
+
+    @media only screen {
+
+        /*  Sections
+            ========================================================================== */
+            .section{
+                text-align: center;
+                margin-bottom: 20px;
+                padding: 45px 0;
+            }
+
+            .section > .title{
+                font-size: 32px;
+                line-height: 32px;
+                margin-bottom: 10px;
+                position: relative;
+                z-index: 10;
+                padding: 0 50px;
+                display: inline-block;
+                text-transform: uppercase;
+
+                &:before,
+                &:after{
+                    content: "";
+                    position: absolute;
+                    border-top: 1px solid #eee;
+                    top: 50%;
+                    height: 0;
+                }
+
+                &:before{
+                   left: -100%;
+                   width: 100%;
+                   height: 0;
+
+                }
+
+                &:after{
+                   right: -100%;
+                   width: 100%;
+
+                }
+            }
+
+            .section > .desc{
+                text-align: center;
+                color: #666;
+                font-size: 20px;
+                line-height: 20px;
+                font-weight: 300;
+                margin-bottom: 30px;
+            }
+
+    	/*  Boxes
+    	    ========================================================================== */
+    	    .box{
+    	    	text-align: center;
+                padding: 30px 40px;
+                border: 1px solid #eee;
+                position: relative;
+                overflow: hidden;
+                @include transition(all 1s ease);
+
+                > *{
+                    z-index: 2;
+                    position: relative;
+                    display: block;
+                }
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    background-color: #eee;
+                    right: 0;
+                    top: 0;
+
+                    @include transform(rotate(360deg) translateY(100%) translateX(-100%));
+                    @include transition(all .5s ease);
+                }
+
+                &:hover:before,
+                &:focus:before{
+                    @include transition(all .5s ease);
+                    @include transform(rotate(0deg) translateY(0px) translateX(0px));
+                    @include transition(all .3s ease);
+                }
+
+                &:hover a,
+                &:focus a,
+                &:hover i,
+                &:focus i{
+                    //color: #fff;
+                }
+
+    	    	/* icon */
+    	    	.fa{
+    	    		font-size: 60px;
+    	    		line-height: 60px;
+                    margin-bottom: 20px;
+    	    	}
+
+                .box-title{
+                    font-size: 18px;
+                    line-height: 18px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+
+    	    	p{
+    	    		text-align: center;
+                    font-weight: 300;
+    	    	}
+    	    }
+
+        /*  Cases
+            ========================================================================== */
+            .cases{
+                background-color: #f5f5f5;
+            }
+
+            /*  Thumbnails
+                ========================================================================== */
+                .thumbnails{
+                    font-size: 0;
+                }
+
+                .thumbnails > .thumbnail{
+                    display: inline-block;
+                    margin: 0 10px;
+                }
+    }
+
+
+    /*
+     * CSS for devices with resolution bigger than breakpoint
+     */
+
+    @media only screen and (min-width: $breakpoint) {
+
+    }
