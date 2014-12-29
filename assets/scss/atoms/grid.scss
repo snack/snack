@@ -33,8 +33,23 @@
         /* Grid calc */
         @import "grid-functions";
 
+        /* Boxes */
         .box{
             @include width(4);
             @extend %column;
         }
+
+        /* Logo footer */
+        .logo-footer{
+            @include width(1);
+            @extend %column;
+        }
+
+        .social-share{
+            @include width(3);
+            @extend %column;
+            @extend %last;
+        }
+
+
    }
