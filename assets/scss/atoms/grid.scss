@@ -46,7 +46,7 @@
         }
 
         .social-share{
-            @include width(3);
+            @include width(2);
             @extend %column;
             @extend %last;
         }
