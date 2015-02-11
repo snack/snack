@@ -1,8 +1,8 @@
 {
-  "name": "desenvolvep",
+  "name": "nomedoprojeto",
   "version": "1.0.0",
-  "title": "Desenvolve SP",
-  "homepage": "http://www.desenvolvesp.com.br",
+  "title": "Título do projeto",
+  "homepage": "URL do projeto",
   "devDependencies": {
     "bower": "^1.3.9",
     "browser-sync": "^1.3.6",
@@ -15,6 +15,17 @@
     "grunt-spritesmith": "^2.1.1",
     "grunt-svg2png": "~0.2.5",
     "grunt-svgmin": "~0.4.0",
+    "gulp": "^3.8.7",
+    "gulp-concat": "^2.3.4",
+    "gulp-connect": "^2.0.6",
+    "gulp-imagemin": "^1.0.1",
+    "gulp-jshint": "^1.8.4",
+    "gulp-livereload": "^2.1.1",
+    "gulp-raster": "^0.1.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-uglify": "^1.0.1",
+    "gulp.spritesmith": "^1.1.1",
     "imagemin-pngcrush": "^0.1.0",
     "jshint-stylish": "~0.4.0"
   }
