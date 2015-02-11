@@ -1,0 +1,280 @@
+/* v1.0 | 20080212  Reset CSS by Eric Meyer */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {   margin: 0;  padding: 0;     border: 0;  outline: 0; vertical-align: baseline; } blockquote:before, blockquote:after, q:before, q:after {    content: '';    content: none; background: transparent; font-size: 100%; }
+body { line-height: 1; } 
+ol, ul { list-style: none; } 
+blockquote, q { quotes: none; } 
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+:focus { outline: 0; }
+table {     border-collapse: collapse;  border-spacing: 0; }
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #f5f5f5;
+    font-family: Arial, Verdana, Helvetica, Sans-serif;
+    font-size: 62.5%; /* 62.5% = 10px = 1em */
+    line-height: 18px;
+}
+img {
+    border: 0;
+}
+
+#global {width: 970px;margin: 0 auto;}
+
+h2#trac a {color:#666;text-decoration:none;}
+h2#trac a:hover {text-decoration:underline;}
+
+#page {
+    text-align: left;
+    width: 920px;
+    margin: 0 auto 50px;
+    border: 5px solid #ccc; 
+    padding: 20px;
+    background: #fff;
+}
+
+/*Navmain************************************************/
+
+#nav_main {padding:10px;display:block;text-align:center; font-family:Arial;margin:0 auto 25px;width:100%;}
+#nav_main ul {padding:0;margin:0 auto;}
+#nav_main ul li {display:inline;margin:0 10px;font-size:21px;letter-spacing:-1px;}
+#nav_main ul li a {text-decoration:none;font-weight:bold;color:#fff;text-shadow: 1px 1px 1px #000;}
+#nav_main ul li a:hover {border-bottom:2px solid #378EDB;}
+
+p.version {color:#999;font-weight:bold;font-size:14px;}
+
+#logo {text-align:center; width:100%; padding:50px 0; }
+
+#logo h1 {
+    font-size:50px;
+    font-family: Frutiger, sans-serif;
+    letter-spacing:-2px;
+    text-shadow: 2px 2px 2px #f5f5f5;
+    color:#007b7b;
+    margin:0 0 5px 0; 
+    display:block;
+    padding:10px;
+    line-height:35px;
+}
+
+h1 {
+    font-size: 2.8em;
+    margin: 0 0 20px;
+    color: #0068A6;
+}
+h2 {
+    font-size: 2.0em;
+    clear: both;
+    margin: 0 0 20px;
+    color: #666;
+    *width:500px;
+}
+h3 {
+    font-size: 1.6em;
+    background-color: #ddd;
+    padding: 5px 5px 5px 10px;
+    margin: 0 0 20px;
+    color: #666;
+    clear: both;
+}
+h4 {
+    font-size: 1.1em;
+    border-bottom: 1px solid #CCC;
+    margin: 0 0 10px;
+    
+}
+p {
+    font-size: 1.2em;
+    margin: 0 0 20px;
+}
+p.description {
+    font-size: 1.4em;
+    margin: -10px 0 20px;
+    font-style: italic;
+    color: #999;
+}
+p.date {
+    font-size: 1.1em;
+    margin: 0 0 5px;
+}
+.etapa {
+    background-color: #f5f5f5;
+    padding: 20px 0 20px 20px;
+    margin-bottom: 20px;
+}
+.modulo {
+    margin-bottom: 10px;
+    margin-right: 20px;
+    width: 720px;
+}
+.float {
+    width: 350px;
+    float: left;
+}
+br {
+    clear: both;
+}
+dl {
+    margin: 0 0 20px;
+}
+dl dt {
+    font-size: 1.2em;
+}
+dl dd {
+    margin: 0 0 5px 24px;
+}
+dl dt a {
+    color: #0068A6;
+    font-weight: bold;
+}
+.thumb {
+    float: left;
+    margin-right: 20px;
+}
+.thumb p {
+    font-size: 1.0em;
+}
+.thumb p a {
+    color: #666;
+}
+
+
+.versoes dl {
+    color: #999;
+}
+.versoes dl a {
+    color: #999;
+    font-weight: normal;
+}
+p.destaque {
+    font-size: 2.4em;   
+}
+p.destaque a {
+    color: #666;
+    padding: 20px 0;
+    display: block;
+}
+ul.acesso textarea {
+    padding: 0 10px;
+    font-size: 1.6em;
+    line-height: 26px;
+    vertical-align: center;
+    height: 28px;
+    width: 120px;
+    background: #f5f5f5;
+    border: 1px solid #CCC;
+}
+ul.acesso li em {
+    display: block;
+    width: 40px;
+    float: left;
+    text-align: right;
+    margin-right: 10px;
+}
+table {
+    border-collapse: collapse;
+    font: normal 11px verdana, arial, helvetica, sans-serif;
+    color: #363636;
+    background: #eee;
+    margin: 0 0 20px 0;
+    width: 100%;
+}
+thead th.col01 { background: #eee; }
+thead th.col02 { width: 50px; }
+thead th.col03 { width: 50px; }
+thead th.col04 { width: 50px; }
+thead th.col05 { width: 50px; }
+thead th.col06 { width: 50px; }
+
+td, th {
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    color: #eee;
+    text-align: center;
+}
+th {
+    color: #444;
+}
+thead th, tfoot th {
+    font: bold 11px verdana, arial, helvetica, sans-serif;
+    border: 1px solid #ccc;
+    background: #7FB3D2;
+    color: #444;    
+}
+tbody td a {
+    background: transparent;
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+}
+tbody td a.enable {
+    color: #579334;
+}
+tbody td a.disable {
+    color: #666;
+    font-weight: normal;
+}
+tbody th a {
+    font: normal 11px verdana, arial, helvetica, sans-serif;
+    background: transparent;
+    text-decoration: none;
+    font-weight:normal;
+    color: #00b5b4;
+}
+tbody th {
+    text-align: left;
+}
+tbody td {
+    text-align: center;
+}
+.odd {
+    background: #FFF;
+}
+tbody tr.section {
+    background: #CCC;
+}
+tbody tr:hover {
+    background: #f6f6f6;
+    cursor: pointer;
+}
+table em {
+    display: block;
+    float: left;
+    width: 65px;
+    font-weight: normal;
+}
+table strong {
+    display: inline;
+    float: left;
+    cursor:help;
+    background:url(../build/img/ico/cancel.png) no-repeat left center;
+    padding:3px 0 3px 23px;
+}
+table strong.complete {background-image:url(../build/img/ico/accept.png);}
+table strong.partial {background-image:url(../build/img/ico/error.png);}
+
+a.back {
+    display:block;
+    background:url(../build/img/ico/arrow_up.png) no-repeat left center;
+    width:120px;
+    padding:3px 0 3px 25px;
+    color:#666;
+    font-size:11px;
+    font-weight:bold;
+    text-decoration:none;
+    margin-bottom:20px;
+}
+
+a.back:hover {text-decoration:underline;}
+
+.qtip-content {font-size:12px !important;}
+
+.sub {background:#ccc;}
+        .sub-2 {background:#e9e9e9;}
+        .sub-2 th{padding:5px 30px;}
+        .sub-3 th{padding:5px 60px;}
+        .sub-4 th{padding:5px 90px;}
+        tr{background:#f5f5f5}
