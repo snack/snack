@@ -4,7 +4,7 @@
 <!--[if IE 9]>    <html class="no-js ie9" lang="pt-br">     <![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>Desenvolve SP - Agência de Desenvolvimento Paulista</title>
+    <title>Título da Página | Projeto</title>
     <?php include __DIR__ . '/build/in/meta.php'; ?>
     <?php include __DIR__ . '/build/in/estilos.php'; ?>
 </head>
