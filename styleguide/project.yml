@@ -28,3 +28,7 @@ menu:
         label: "Layouts"
         link: "/layouts/"
         class: "layouts"
+    item6:
+        label: "Tipografias"
+        link: "/tipografias/"
+        class: "tipografias"
