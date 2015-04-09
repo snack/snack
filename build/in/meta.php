@@ -1,5 +1,5 @@
-<meta name="description" content="A Desenvolve SP é uma instituição financeira que promove o desenvolvimento sustentável para as pequenas e médias empresas paulistas.">
-<meta name="keywords" content="desenvolve, sao paulo, empresas, pequenas, médias, empreendedor, municípios, crédito, financiamentos, investimento, crescimento, ">
+<meta name="description" content="Resumo da página ou chamada em até 160 caracteres">
+<meta name="keywords" content="keyword 1, keyword 2, keyword 3, keyword 4, keyword 5">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="icon" href="favicon.ico">
