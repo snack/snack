@@ -1,4 +1,4 @@
-<meta name="description" content="">
+<meta name="description" content="Pequena descricão da página em até 160 caracteres">
 <meta name="keywords" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
