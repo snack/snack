@@ -1,7 +1,5 @@
 # A2boilerplate
 
-[:house:](../../../) » Documentação
-
 ## Documentação
 
 Novo por aqui? Recomendamos dar uma lida seguindo os passos abaixos.
