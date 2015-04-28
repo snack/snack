@@ -2,69 +2,81 @@
 
 // Gulp Plugins
 var gulp 		= require('gulp'),
-	jshint 		= require('gulp-jshint'),
-	uglify 		= require('gulp-uglify'),
-	concat 		= require('gulp-concat'),
-	rename 		= require('gulp-rename'),
-	sass 		= require('gulp-ruby-sass'),
-	imagemin 	= require('gulp-imagemin'),
-    raster      = require('gulp-raster'),
-    spritesmith = require('gulp.spritesmith'),
-	pngcrush 	= require('imagemin-pngcrush'),
-    connect     = require('gulp-connect'),
-	browserSync = require('browser-sync'),
-	livereload  = require('gulp-livereload'),
-	reload      = browserSync.reload,
+    plugins     = require('gulp-load-plugins')({    // Load all gulp plugins automatically
+        rename: {
+            'gulp-ruby-sass': 'sass'
+        }
+    }),
+    pngquant    = require('imagemin-pngquant'),     // Png compress
+    browserSync = require('browser-sync').create(), // BrowserSync
+    reload      = browserSync.reload,               // Reload
+    pkg         = require('./package.json'),        // Package.json include directories
+    dirs        = pkg['configs'].directories,
 
-    // VARIABLES PATH ----------------------------------------------------
+    // General files
+	_files		= ['*.php', '*.html', 'build/**/*', 'build/in/*.php', 'styleguide/**', 'styleguide/**/**', 'styleguide/**/**/'];
 
-        // Assets paths
-        _assets     = "assets/",
+    // COPY --------------------------------------------------------------
 
-    	// Build paths
-    	_build_js 	= "build/js",
-    	_build_css	= "build/css",
-    	_build_img	= "build/img",
+        gulp.task('copy:jquery', function () {
+            return gulp.src(dirs._components+"/jquery/jquery.js")
+                        .pipe(plugins.rename({suffix: ".min"}))
+                        .pipe(plugins.uglify())
+                        .pipe(gulp.dest(dirs._build+'/js/libs/'));
+        });
 
-        // Styleguide paths
-        _sg_assets  = "styleguide/lib/assets/",
-        _sg_build   = "styleguide/lib/build/",
+        gulp.task('copy:modernizr', function () {
+            return gulp.src(dirs._components+"/modernizr/modernizr.js")
+                        .pipe(plugins.rename({suffix: ".min"}))
+                        .pipe(plugins.uglify())
+                        .pipe(gulp.dest(dirs._build+'/js/libs/'));
+        });
 
-        // General files
-    	_files		= ['*.php', '*.html', 'build/**/*', 'build/in/*.php', 'styleguide/**', 'styleguide/**/**', 'styleguide/**/**/'];
+        gulp.task('copy:respond', function () {
+            return gulp.src(dirs._components+"/respond/src/respond.js")
+                        .pipe(plugins.rename({suffix: ".min"}))
+                        .pipe(plugins.uglify())
+                        .pipe(gulp.dest(dirs._build+'/js/libs/'));
+        });
 
-	// IMAGES ------------------------------------------------------------
+        gulp.task('copy:normalize', function () {
+            return gulp.src(dirs._components+'/normalize.css/normalize.css')
+                        .pipe(plugins.rename('normalize.scss'))
+                        .pipe(gulp.dest(dirs._assets+'/scss/base'));
+        });
+
+    // IMAGES ------------------------------------------------------------
 
 		//Imagemin
 		gulp.task('imagemin', function () {
-		    return gulp.src(_assets+'img/*')
-		        .pipe(imagemin({
+		    return gulp.src(dirs._assets+'/img/*')
+		        .pipe(plugins.imagemin({
 		            progressive: true,
 		            interlaced:  true,
-		            use:         [pngcrush()]
+		            use:         [pngquant()]
 		        }))
-		        .pipe(gulp.dest(_build_img));
+		        .pipe(gulp.dest(dirs._build+'/img'));
 		});
 
 		//Svg2png
 		gulp.task('svg2png', function () {
-		    return gulp.src(_assets+'img/*.svg')
-		        .pipe(raster())
-		        .pipe(rename({extname: '.png'}))
-		        .pipe(gulp.dest(_build_img));
+		    return gulp.src(dirs._assets+'/img/*.svg')
+		        .pipe(plugins.raster())
+		        .pipe(plugins.rename({extname: '.png'}))
+		        .pipe(gulp.dest(dirs._build+'/img'));
 		});
 
 		//Sprite
 		gulp.task('sprite', function () {
-			var spriteData = gulp.src(_assets+'img/sprite/*.png').pipe(spritesmith({
+			var spriteData = gulp.src(dirs._assets+'/img/sprite/*.png').pipe(plugins.spritesmith({
 				imgName: 'sprite.png',
 				cssName: 'icons.scss',
 				cssFormat: 'scss',
 				algorithm: 'binary-tree',
-				cssTemplate: _assets+'scss/molecules/icons.mustache'
+				cssTemplate: dirs._assets+'/scss/molecules/icons.mustache'
 			}));
-			spriteData.img.pipe(gulp.dest('build/img/sprite/'));
-			spriteData.css.pipe(gulp.dest(_assets+'scss/molecules/'));
+			spriteData.img.pipe(gulp.dest(dirs._build+'/img/sprite/'));
+			spriteData.css.pipe(gulp.dest(dirs._assets+'/scss/molecules/'));
 		});
 
 	// STYLES ------------------------------------------------------------
@@ -72,41 +84,42 @@ var gulp 		= require('gulp'),
         //main.min.css
         gulp.task('sass', function () {
 
-    	    return gulp.src(_assets+'scss/main.scss')
-                .pipe(rename({suffix: ".min"}))
-                .pipe(sass({
+    	    return gulp.src(dirs._assets+'/scss/main.scss')
+                .pipe(plugins.rename({suffix: ".min"}))
+                .pipe(plugins.sass({
                     trace: true,
                     noCache: true,
                     style: "compressed"
                 }))
                 .on('error', function (err) { console.log(err.message); })
-                .pipe(gulp.dest(_build_css))
+                .pipe(gulp.dest(dirs._build+"/css"))
+                .pipe(plugins.livereload())
                 .pipe(reload({stream:true}));
     	});
 
         //Style Guide
         gulp.task('sass_styleguide', function () {
 
-            return gulp.src(_sg_assets+'scss/main.scss')
-                .pipe(sass({
+            return gulp.src(dirs._sg_assets+'/scss/main.scss')
+                .pipe(plugins.rename({suffix: ".min"}))
+                .pipe(plugins.sass({
                     trace: true,
                     noCache: true,
                     style: "compressed"
                 }))
                 .on('error', function (err) { console.log(err.message); })
-                .pipe(rename({suffix: ".min"}))
-                .pipe(gulp.dest(_sg_build+'css/'))
+                .pipe(gulp.dest(dirs._sg_build+'/css/'))
+                .pipe(plugins.livereload())
                 .pipe(reload({stream:true}));
-
         });
 
 	// SCRIPTS  ----------------------------------------------------------
 
 		// JShint
 		gulp.task('lint', function() {
-			return gulp.src(_assets+'js/*.js')
-                .pipe(jshint())
-                .pipe(jshint.reporter('default'));
+			return gulp.src(dirs._assets+'js/*.js')
+                .pipe(plugins.jshint())
+                .pipe(plugins.jshint.reporter('default'));
 		});
 
 		// Concat
@@ -114,57 +127,56 @@ var gulp 		= require('gulp'),
 
 			// scripts.min.js
 			return gulp.src([
-				'components/jquery/jquery.js', // jQuery Lib
-				_assets+'js/scripts.js'
+				dirs._build+'/js/libs/jquery.min.js', // jQuery Lib
+				dirs._assets+'/js/scripts.js'
 				])
-		    .pipe(concat('scripts.js'))
-		    .pipe(gulp.dest(_build_js))
-		    .pipe(rename({suffix: ".min"}))
-		    .pipe(uglify())
-		    .pipe(gulp.dest(_build_js))
+		    .pipe(plugins.concat('scripts.js'))
+		    .pipe(gulp.dest(dirs._build+"/js"))
+		    .pipe(plugins.rename({suffix: ".min"}))
+		    .pipe(plugins.uglify())
+		    .pipe(gulp.dest(dirs._build+"/js"))
+            .pipe(plugins.livereload())
 		    .pipe(reload({stream:true}));
 		});
 
 	// BROWSER SYNC ------------------------------------------------------
     	gulp.task('browser-sync', function() {
-    	    browserSync({
-    	        proxy: "local.gulp"
-    	    });
+            browserSync.init({
+                proxy: "local.a2boilerplate"
+            });
     	});
-
-	// LIVERELOAD --------------------------------------------------------
-        gulp.task('liverelaod', function() {
-            connect.server({ livereload: true });
-        });
 
 	// WATCH -------------------------------------------------------------
     	gulp.task('watch', function() {
 
+            // Livereload
+            plugins.livereload.listen();
+
             // watch Files
-    		gulp.watch(_files, function(){
-    			gulp.src(_files).pipe(connect.reload());
-    		});
+            gulp.watch(_files).on('change', reload);
 
     		// watch JS
-    		gulp.watch(_assets+'js/*.js', ['lint','concat']);
+    		gulp.watch([dirs._assets+'/js/*.js'], ['lint','concat']);
 
     		// watch CSS
-            gulp.watch(_assets+'scss/**/*.scss', ['sass']);
-    		gulp.watch(_sg_assets+'scss/*.scss', ['sass_styleguide']);
+            gulp.watch(dirs._assets+'/scss/**/*.scss', ['sass']);
+    		gulp.watch(dirs._sg_assets+'/scss/*.scss', ['sass_styleguide']);
 
     		// watch IMAGES
-    		gulp.watch([_assets+'img/*'], ['imagemin', 'svg2png']);
-    		gulp.watch([_assets+'img/sprite/*.png'], ['sprite']);
+    		gulp.watch([dirs._assets+'/img/*'], ['imagemin', 'svg2png']);
+    		gulp.watch([dirs._assets+'/img/sprite/*.png'], ['sprite']);
 
     	});
 
 	// RUN TASKS ---------------------------------------------------------
-    	gulp.task('default', 	['watch', 'liverelaod']);
+    	gulp.task('default', 	['watch', 'copy']);
     	gulp.task('images',		['sprite', 'imagemin', 'svg2png']);
     	gulp.task('sync', 		['watch', 'browser-sync']);
     	gulp.task('css', 		['sass']);
     	gulp.task('js', 		['lint', 'concat']);
-
-
-
-
+        gulp.task('copy',       [
+                                    'copy:jquery',
+                                    'copy:modernizr',
+                                    'copy:respond',
+                                    'copy:normalize'
+                                ]);
