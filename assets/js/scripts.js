@@ -1,2 +1,4 @@
-jQuery(document).ready(function($) {
-});
+(function(){
+    // Default scripts
+
+})();
