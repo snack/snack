@@ -41,8 +41,20 @@ var gulp 		= require('gulp'),
 
         gulp.task('copy:normalize', function () {
             return gulp.src(dirs._components+'/normalize.css/normalize.css')
+                        .pipe(plugins.replace('/*!', '/*'))
                         .pipe(plugins.rename('normalize.scss'))
                         .pipe(gulp.dest(dirs._assets+'/scss/base'));
+        });
+
+        gulp.task('copy:font-awesome', function () {
+            gulp.src(dirs._components+'/font-awesome/fonts/*')
+                        .pipe(gulp.dest(dirs._build+'/fonts/font-awesome/'));
+
+            gulp.src(dirs._components+'/font-awesome/css/font-awesome.css')
+                        .pipe(plugins.replace('/*!', '/*'))
+                        .pipe(plugins.replace('../fonts/', '../../build/fonts/font-awesome/'))
+                        .pipe(plugins.rename('font-awesome.scss'))
+                        .pipe(gulp.dest(dirs._assets+'/scss/atoms/'));
         });
 
     // IMAGES ------------------------------------------------------------
@@ -94,7 +106,8 @@ var gulp 		= require('gulp'),
                 .on('error', function (err) { console.log(err.message); })
                 .pipe(gulp.dest(dirs._build+"/css"))
                 .pipe(plugins.livereload())
-                .pipe(reload({stream:true}));
+                .pipe(reload({stream:true}))
+                .pipe(plugins.notify("CSS atualizado: <%= file.relative %>!"));
     	});
 
         //Style Guide
@@ -110,7 +123,8 @@ var gulp 		= require('gulp'),
                 .on('error', function (err) { console.log(err.message); })
                 .pipe(gulp.dest(dirs._sg_build+'/css/'))
                 .pipe(plugins.livereload())
-                .pipe(reload({stream:true}));
+                .pipe(reload({stream:true}))
+                .pipe(plugins.notify("CSS styleguide atualizado: <%= file.relative %>!"));
         });
 
 	// SCRIPTS  ----------------------------------------------------------
@@ -153,7 +167,9 @@ var gulp 		= require('gulp'),
             plugins.livereload.listen();
 
             // watch Files
-            gulp.watch(_files).on('change', reload);
+            gulp.watch('*.php').on('change', function(){
+                plugins.livereload.changed('/*.php');
+            });
 
     		// watch JS
     		gulp.watch([dirs._assets+'/js/*.js'], ['lint','concat']);
@@ -178,5 +194,6 @@ var gulp 		= require('gulp'),
                                     'copy:jquery',
                                     'copy:modernizr',
                                     'copy:respond',
-                                    'copy:normalize'
+                                    'copy:normalize',
+                                    'copy:font-awesome'
                                 ]);
