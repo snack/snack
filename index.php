@@ -7,28 +7,12 @@
     <title>Título da Página | Projeto</title>
     <?php include __DIR__ . '/build/in/meta.php'; ?>
     <?php include __DIR__ . '/build/in/estilos.php'; ?>
-
-    <style>
-        .fa{
-            font-size: 45px;
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
     <?php include __DIR__ . '/build/in/header.php'; ?>
 
     <main role="main">
-        <!--[if IE 7]> IE7 <![endif]-->
-        <!--[if IE 8]> IE8 <![endif]-->
-        <!--[if IE 9]> IE9 <![endif]-->
-
-        <div class="row">
-            <i class="fa fa-facebook-square"></i>
-            <i class="fa fa-twitter-square"></i>
-            <i class="fa fa-linkedin-square"></i>
-            <i class="fa fa-google-plus-square"></i>
-        </div>
     </main>
 
     <!-- Footer -->

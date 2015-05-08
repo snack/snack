@@ -40,7 +40,7 @@
                     font-size: 72px;
                     line-height: 72px;
                     display: block;
-                    color: $color2;
+                    color: $color-madson;
                     margin-bottom: 20px;
                 }
 
@@ -54,12 +54,10 @@
         }
 
         .styleguide-info {
-            color: $color3;
+            color: $color-steel-blue;
             font-family: 'Source Sans Pro';
             font-weight: 300;
             font-size: 20px;
-
-            border:1px solid red;
             float: left;
             width: 78%;
         }
@@ -67,7 +65,7 @@
         .styleguide-info dt {
             font-weight: 400;
             font-size: 22px;
-            color: $color1;
+            color: $color-ebony;
         }
 
         .styleguide-info dt i {
@@ -106,7 +104,7 @@
 
             .styleguide-color-preview {
                 width: 100%;
-                border: solid 1px $color3;
+                border: solid 1px $color-steel-blue;
                 height: 180px;
                 margin-bottom: 5px;
                 @include border-radius(50%);
@@ -114,7 +112,7 @@
 
             .styleguide-color-hex {
                 text-align: center;
-                color: $color4;
+                color: #fff;
                 font-size: 22px;
                 line-height: 22px;
                 font-family: 'Source Sans Pro';

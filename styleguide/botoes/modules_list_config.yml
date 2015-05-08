@@ -1,26 +1,38 @@
 "button 1":
-  title: Default
+  title: Padrão
+  link: "/botoes/#padrao"
+  id: "padrao"
   subtitle: Botão padrão básico do projeto. Aplicado nas tags <code>a</code> <code>button</code> e <code>input</code>.
   sourceCode: button-default.html.twig
 
 "button 2":
   title: Cores
+  link: "/botoes/#cores"
+  id: "cores"
   subtitle: Variações de cores do botão.
   sourceCode: button-colors.html.twig
 
 "button 3":
   title: Redes sociais
+  link: "/botoes/#redes-sociais"
+  id: "redes-sociais"
   subtitle: Botões de compartilhamento que usam apenas o link sem scripts externos
   sourceCode: button-social.html.twig
 
 "button 4":
   title: Redes sociais sem texto
+  link: "/botoes/#redes-sociais-sem-texto"
+  id: "redes-sociais-sem-texto"
   sourceCode: button-social-simple.html.twig
 
 "button 5":
   title: Redes sociais menor
+  link: "/botoes/#redes-sociais-menor"
+  id: "redes-sociais-menor"
   sourceCode: button-social-small.html.twig
 
 "button 6":
   title: Redes sociais sem texto menor
+  link: "/botoes/#redes-sociais-sem-texto-menor"
+  id: "redes-sociais-sem-texto-menor"
   sourceCode: button-social-simple-small.html.twig
