@@ -140,7 +140,7 @@ var gulp 		= require('gulp'),
 		gulp.task('concat', function() {
 
 			// scripts.min.js
-			return gulp.src([
+			gulp.src([
 				dirs._build+'/js/libs/jquery.min.js', // jQuery Lib
 				dirs._assets+'/js/scripts.js'
 				])
@@ -151,6 +151,20 @@ var gulp 		= require('gulp'),
 		    .pipe(gulp.dest(dirs._build+"/js"))
             .pipe(plugins.livereload())
 		    .pipe(reload({stream:true}));
+
+            // Styleguide js
+            gulp.src([
+                dirs._build+'/js/libs/jquery.min.js', // jQuery Lib
+                dirs._sg_assets+'/js/scripts.js', // Scripts
+                dirs._sg_assets+'/js/libs/rainbow-custom.min.js', // Rainbow custom
+                ])
+            .pipe(plugins.concat('scripts.js'))
+            .pipe(gulp.dest(dirs._sg_build+"/js"))
+            .pipe(plugins.rename({suffix: ".min"}))
+            .pipe(plugins.uglify())
+            .pipe(gulp.dest(dirs._sg_build+"/js"))
+            .pipe(plugins.livereload())
+            .pipe(reload({stream:true}));
 		});
 
 	// BROWSER SYNC ------------------------------------------------------
@@ -172,7 +186,7 @@ var gulp 		= require('gulp'),
             });
 
     		// watch JS
-    		gulp.watch([dirs._assets+'/js/*.js'], ['lint','concat']);
+    		gulp.watch([dirs._assets+'/js/*.js', dirs._sg_assets+'/js/*.js'], ['lint','concat']);
 
     		// watch CSS
             gulp.watch(dirs._assets+'/scss/**/*.scss', ['sass']);
