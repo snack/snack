@@ -13,13 +13,61 @@
         /*  Menu
             ========================================================================== */
 
-    }
+        /*  Tabs
+            ========================================================================== */
+            .tablist-menu {
+                padding: 20px;
+            }
+
+            [role="tablist"] {
+                padding-left: 0;
+                margin: 6px 0 0;
+                list-style-type: none;
+                min-width: 221px;
+                @include clearfix;
+                > [role="presentation"] {
+                    float: left;
+                }
+            }
+
+            [role="tablist"] [role="tab"] {
+                display: block;
+                padding: 12px;
+                background-color: #551A8B;
+                color: #fff;
+                text-decoration: none;
+                &[aria-selected="false"]:hover {
+                    background-color: #602594;
+                }
+                &[aria-selected="true"] {
+                    background-color: #fff;
+                    padding: 13px 12px;
+                    color: #551A8B;
+                    border-top: 4px solid;
+                    margin-top: -6px;
+                }
+            }
+
+            [role="tabpanel"] {
+                background: #fff;
+                width: 100%;
+                display: inline-block;
+                padding: 0 16px 8px;
+                &[aria-hidden="true"] {
+                    display:none;
+                    visibility:hidden;
+                }
+            }
+
+            .tabscroll-responsive { overflow-x: auto; }
+
+        }
 
     /*
      * CSS for devices with resolution bigger than breakpoint
      */
 
-    @media only screen and (min-width: $breakpoint) {
+     @media only screen and (min-width: $breakpoint) {
 
         /*  Header
             ========================================================================== */
@@ -30,4 +78,4 @@
         /*  Menu
             ========================================================================== */
 
-   }
+        }
