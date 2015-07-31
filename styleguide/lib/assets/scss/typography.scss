@@ -1,32 +1,33 @@
 /*  Tipografia
     ========================================================================== */
     @font-face {
-        font-family: 'Source Sans Pro';
-        font-style: normal;
-        font-weight: 200;
-        src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v6/toadOcfmlt9b38dHJxOBGMa9awK0IKUjIWABZIchFI8.woff) format('woff');
-    }
-
-    @font-face {
-        font-family: 'Source Sans Pro';
-        font-style: normal;
-        font-weight: 300;
-        src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v6/toadOcfmlt9b38dHJxOBGNbE_oMaV8t2eFeISPpzbdE.woff) format('woff');
-    }
-
-    @font-face {
-        font-family: 'Source Sans Pro';
+        font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
-        src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v6/ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff) format('woff');
+        src: local('Roboto'), local('Roboto-Regular'), url(http://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2'), url(http://fonts.gstatic.com/s/roboto/v15/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff');
     }
 
     @font-face {
-        font-family: 'Source Sans Pro';
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        src: local('Roboto Medium'), local('Roboto-Medium'), url(http://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
-        src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v6/toadOcfmlt9b38dHJxOBGFkQc6VGVFSmCnC_l7QZG60.woff) format('woff');
+        src: local('Roboto Bold'), local('Roboto-Bold'), url(http://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
     }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 900;
+        src: local('Roboto Black'), local('Roboto-Black'), url(http://fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIltXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIj8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+    }
+
 
 /*  Titles
     ========================================================================== */
@@ -35,7 +36,7 @@
         font-size: 40px;
         line-height: 40px;
         letter-spacing: -2px;
-        font-family: 'Source Sans Pro';
+        font-family: 'Roboto';
         font-weight: 700;
         margin: 0 0 10px 0;
         color: $color-madson;
@@ -43,7 +44,7 @@
     }
 
     .styleguide-project {
-        font-family: 'Source Sans Pro';
+        font-family: 'Roboto';
         display: block;
         font-size: 28px;
         line-height: 28px;
@@ -55,7 +56,7 @@
     .styleguide-title-module {
         margin: 0 0 15px;
         color: $color-steel-blue;
-        font-family: 'Source Sans Pro';
+        font-family: 'Roboto';
         font-weight: 300;
         font-size: 24px;
 
@@ -89,7 +90,7 @@
     .styleguide-footer p,
     .styleguide-module > p,
     .styleguide-main > p {
-        font-family: 'Source Sans Pro';
+        font-family: 'Roboto';
         font-weight: 300;
         font-size: 16px;
         color: $color-gray-dark;

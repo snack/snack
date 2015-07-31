@@ -128,6 +128,15 @@
 
     /*  Gradients
         ========================================================================== */
+        @mixin gradient($value...){
+            background: transparent;
+            background:    -moz-linear-gradient($value);
+            background:        -webkit-gradient($value);
+            background: -webkit-linear-gradient($value);
+            background:      -o-linear-gradient($value);
+            background:     -ms-linear-gradient($value);
+            background:         linear-gradient($value);
+        }
 
         /*  Vertical gradient
             ========================================================================== */

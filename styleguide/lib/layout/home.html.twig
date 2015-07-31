@@ -28,31 +28,27 @@
     <script src="../../build/js/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="styleguide-body styleguide-{{ container.body_class }}">
+<body class="styleguide-body styleguide-home">
 
     <!-- Header -->
     {% include 'header.html.twig' %}
 
     <!-- Main -->
-    <main role="main" class="styleguide-main">
-        <div class="row">
+    <main role="main" class="styleguide-main styleguide-featured">
+        
+        <div class="sg-featured">
+            <div class="row">
 
-            <!-- Content -->
-            <div class="styleguide-content">
-            {% block content %}
-            {% endblock %}
+                <!-- Content -->
+                {% block content %}
+                {% endblock %}
             </div>
-
         </div>
+
     </main>
 
     <!-- Footer -->
     {% include 'footer.html.twig' %}
 
-    {% block js %}
-        <!-- Scripts -->
-        <script src="../../build/js/libs/jquery.min.js"></script>
-        <script src="../lib/build/js/scripts.min.js"></script>
-    {% endblock %}
 </body>
 </html>

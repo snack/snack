@@ -15,4 +15,4 @@ $container['module'] = "Formulários";
 $container['body_class'] = "forms";
 $modules_list = $yaml->parse(file_get_contents(__DIR__.'/modules_list_config.yml'));
 
-echo $twig->render('/modules_template.html.twig', array('modules_list' => $modules_list, 'container' => $container));
+echo $twig->render('/modulestemplate.html.twig', array('modules_list' => $modules_list, 'container' => $container));

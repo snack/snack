@@ -11,8 +11,8 @@ $loader->addPath(__DIR__.'/template');
 $yaml = new YamlParser();
 
 //Put module name in the container initialized on bootstrap.php
-$container['module'] = "Tipografias";
-$container['body_class'] = "tipografias";
+$container['module'] = "Tipografia";
+$container['body_class'] = "tipografia";
 $modules_list = $yaml->parse(file_get_contents(__DIR__.'/modules_list_config.yml'));
 
 echo $twig->render('/modulestemplate.html.twig', array('modules_list' => $modules_list, 'container' => $container));
