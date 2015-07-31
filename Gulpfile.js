@@ -25,8 +25,8 @@ var gulp 		= require('gulp'),
                         .pipe(gulp.dest(dirs._build+'/js/libs/'));
         });
 
-        gulp.task('copy:modernizr', function () {
-            return gulp.src(dirs._components+"/modernizr/modernizr.js")
+        gulp.task('copy:html5shiv', function () {
+            return gulp.src(dirs._components+"/html5shiv/dist/html5shiv.js")
                         .pipe(plugins.rename({suffix: ".min"}))
                         .pipe(plugins.uglify())
                         .pipe(gulp.dest(dirs._build+'/js/libs/'));
@@ -106,8 +106,7 @@ var gulp 		= require('gulp'),
                 .on('error', function (err) { console.log(err.message); })
                 .pipe(gulp.dest(dirs._build+"/css"))
                 .pipe(plugins.livereload())
-                .pipe(reload({stream:true}))
-                .pipe(plugins.notify("CSS atualizado: <%= file.relative %>!"));
+                .pipe(reload({stream:true}));
     	});
 
         //Style Guide
@@ -123,8 +122,7 @@ var gulp 		= require('gulp'),
                 .on('error', function (err) { console.log(err.message); })
                 .pipe(gulp.dest(dirs._sg_build+'/css/'))
                 .pipe(plugins.livereload())
-                .pipe(reload({stream:true}))
-                .pipe(plugins.notify("CSS styleguide atualizado: <%= file.relative %>!"));
+                .pipe(reload({stream:true}));
         });
 
 	// SCRIPTS  ----------------------------------------------------------
@@ -141,31 +139,43 @@ var gulp 		= require('gulp'),
 
 			// scripts.min.js
 			gulp.src([
-				dirs._build+'/js/libs/jquery.min.js', // jQuery Lib
-				dirs._assets+'/js/scripts.js'
+    				dirs._build+'/js/libs/jquery.min.js', // jQuery Lib
+    				dirs._assets+'/js/scripts.js'
 				])
-		    .pipe(plugins.concat('scripts.js'))
-		    .pipe(gulp.dest(dirs._build+"/js"))
-		    .pipe(plugins.rename({suffix: ".min"}))
-		    .pipe(plugins.uglify())
-		    .pipe(gulp.dest(dirs._build+"/js"))
-            .pipe(plugins.livereload())
-		    .pipe(reload({stream:true}));
+    		    .pipe(plugins.concat('scripts.js'))
+    		    .pipe(gulp.dest(dirs._build+"/js"))
+    		    .pipe(plugins.rename({suffix: ".min"}))
+    		    .pipe(plugins.uglify())
+    		    .pipe(gulp.dest(dirs._build+"/js"))
+                .pipe(plugins.livereload())
+    		    .pipe(reload({stream:true}));
 
             // Styleguide js
             gulp.src([
-                dirs._build+'/js/libs/jquery.min.js', // jQuery Lib
-                dirs._sg_assets+'/js/scripts.js', // Scripts
-                dirs._sg_assets+'/js/libs/rainbow-custom.min.js', // Rainbow custom
+                    dirs._build+'/js/libs/jquery.min.js', // jQuery Lib
+                    dirs._sg_assets+'/js/scripts.js', // Scripts
+                    dirs._sg_assets+'/js/libs/rainbow-custom.min.js', // Rainbow custom
                 ])
-            .pipe(plugins.concat('scripts.js'))
-            .pipe(gulp.dest(dirs._sg_build+"/js"))
-            .pipe(plugins.rename({suffix: ".min"}))
-            .pipe(plugins.uglify())
-            .pipe(gulp.dest(dirs._sg_build+"/js"))
-            .pipe(plugins.livereload())
-            .pipe(reload({stream:true}));
+                .pipe(plugins.concat('scripts.js'))
+                .pipe(gulp.dest(dirs._sg_build+"/js"))
+                .pipe(plugins.rename({suffix: ".min"}))
+                .pipe(plugins.uglify())
+                .pipe(gulp.dest(dirs._sg_build+"/js"))
+                .pipe(plugins.livereload())
+                .pipe(reload({stream:true}));
 		});
+
+        // Rename IE8 / IE7 support js
+        gulp.task('rename:html5shiv-respond', function () {
+            return gulp.src([
+                    dirs._components+"/html5shiv/dist/html5shiv.js", // html5shiv
+                    dirs._components+"/respond/src/respond.js"       // Respond
+                ])
+                .pipe(plugins.concat('html5shiv-respond.js'))
+                .pipe(plugins.rename({suffix: ".min"}))
+                .pipe(plugins.uglify())
+                .pipe(gulp.dest(dirs._build+"/js/libs/"));
+        });
 
 	// BROWSER SYNC ------------------------------------------------------
     	gulp.task('browser-sync', function() {
@@ -206,8 +216,9 @@ var gulp 		= require('gulp'),
     	gulp.task('js', 		['lint', 'concat']);
         gulp.task('copy',       [
                                     'copy:jquery',
-                                    'copy:modernizr',
+                                    'copy:html5shiv',
                                     'copy:respond',
                                     'copy:normalize',
-                                    'copy:font-awesome'
+                                    'copy:font-awesome',
+                                    'rename:html5shiv-respond'
                                 ]);

@@ -1,12 +1,9 @@
 <!-- CSS -->
 <link rel="stylesheet" href="build/css/main.min.css">
 
-<!-- Modernizr -->
-<script src="build/js/libs/modernizr.min.js"></script>
-
-<!-- Respond -->
+<!-- Html5shiv / Respond -->
 <!--[if lt IE 9]>
-	<script src="build/js/libs/respond.min.js"></script>
+	<script src="build/js/libs/html5shiv-respond.min.js"></script>
 <![endif]-->
 
 <script>

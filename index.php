@@ -13,10 +13,11 @@
     <?php include __DIR__ . '/build/in/header.php'; ?>
 
     <main role="main">
+
     </main>
 
     <!-- Footer -->
-    <?php include __DIR__ . '/build/in/footer.php' ;?>
+    <?php include __DIR__ . '/build/in/footer.php'; ?>
 
     <!-- Scripts -->
     <script src="build/js/scripts.min.js"></script>
