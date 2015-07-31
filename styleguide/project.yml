@@ -32,4 +32,8 @@ menu:
         label: "Tipografias"
         link: "/tipografias/"
         class: "tipografias"
+    item7:
+        label: "Navegação"
+        link: "/navegacao/"
+        class: "navegacao"
 

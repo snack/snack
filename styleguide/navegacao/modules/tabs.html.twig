@@ -1,0 +1,43 @@
+<section class="tablist-menu">
+ <!-- Tab navigation -->
+  <div class="tabscroll-responsive">
+  <ul role="tablist">
+    <li role="presentation">
+      <a href="#tabs-link-1" role="tab" aria-selected="true">Concept</a>
+    </li>
+    <li role="presentation">
+      <a href="#tabs-link-2" role="tab" aria-selected="false">Developer</a>
+    </li>
+    <li role="presentation">
+      <a href="#tabs-link-3" role="tab" aria-selected="false">Web</a>
+    </li>
+  </ul>
+  </div>
+ <!-- Tab panel content -->
+  <div class="tab-content">
+    <section id="tabs-link-1" role="tabpanel" aria-hidden="false">
+      <h2>First Panel Header</h2>
+      <p>First panel content goes here...</p>
+    </section>
+    <section id="tabs-link-2" role="tabpanel" aria-hidden="true">
+      <h2>Second Panel Header</h2>
+      <p> Second panel content goes here...</p>
+    </section>
+    <section id="tabs-link-3" role="tabpanel" aria-hidden="true">
+      <h2>Third Panel Header</h2>
+      <p> Third panel content goes here...</p>
+    </section>
+  </div>
+</section>
+<script src="../../build/js/libs/jquery.min.js"></script>
+<script>
+//Prevent tab break on resize
+$("[role='tab']").click(function(e) {
+  e.preventDefault();
+  $(this).attr("aria-selected", "true");
+  $(this).parent().siblings().children().attr("aria-selected", "false");
+  var tabpanelShow = $(this).attr("href");
+  $(tabpanelShow).attr("aria-hidden", "false");
+  $(tabpanelShow).siblings().attr("aria-hidden", "true");
+});
+</script>
