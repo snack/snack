@@ -81,6 +81,25 @@
         $(this).toggleClass('nav-menu-open');
     });
 
+    //JS Tabs Menu
+    var allWidth = 0;
+    var tabList = $(".styleguide-demo [role='tablist']");
+    tabList.children().each(function(){
+      allWidth += $(this)[0].getBoundingClientRect().width
+    });
+    tabList.css('min-width', allWidth);
+
+
+    $("[role='tab']").click(function(e) {
+      e.preventDefault();
+      $(this).attr("aria-selected", "true");
+      $(this).parent().siblings().children().attr("aria-selected", "false");
+      var tabpanelShow = $(this).attr("href");
+      $(tabpanelShow).attr("aria-hidden", "false");
+      $(tabpanelShow).siblings().attr("aria-hidden", "true");
+    });
+
+
     // Styleguide Code show/hide
     $('.btn-show').click(function(e){
         e.preventDefault();
