@@ -1,29 +1,41 @@
 "form inputs":
   title: Inputs
+  link: "/formularios/#inputs"
+  id: "inputs"
   subtitle: "Padrão para exibição de elementos <strong>input</strong> (<i>text, password, search, tel, url, date, datetime, datetime-local, month</i> e <i>week</i>."
-  sourceCode: 01-inputs.html.twig 
+  sourceCode: 01-inputs.html.twig
 
 "form selects":
   title: Select
-  subtitle: Padrão para exibição de elementos <strong> select</strong>. 
-  sourceCode: 02-selects.html.twig 
+  link: "/formularios/#selects"
+  id: "selects"
+  subtitle: Padrão para exibição de elementos <strong> select</strong>.
+  sourceCode: 02-selects.html.twig
 
 "form textarea":
   title: Textarea
+  link: "/formularios/#textarea"
+  id: "textarea"
   subtitle: Padrão para exibição de elementos <strong>textarea</strong>.
   sourceCode: 03-textarea.html.twig
 
 "form radio":
   title: Input radio
+  link: "/formularios/#radio"
+  id: "radio"
   subtitle: Padrão para exibição de elementos input do tipo <strong>radio</strong>.
-  sourceCode: 04-radio.html.twig 
+  sourceCode: 04-radio.html.twig
 
 "form checkbox":
   title: Input checkbox
+  link: "/formularios/#checkbox"
+  id: "checkbox"
   subtitle: Padrão para exibição de elementos input do tipo <strong>checkbox</strong>.
   sourceCode: 05-checkbox.html.twig
 
 "form basico":
   title: Formulário básico
+  link: "/formularios/#form-basico"
+  id: "form-basico"
   subtitle: Padrão para formulários.
-  sourceCode: 06-formulario.html.twig    
+  sourceCode: 06-formulario.html.twig
