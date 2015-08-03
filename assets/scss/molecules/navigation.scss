@@ -19,11 +19,12 @@
                 padding: 20px;
             }
 
+            .tabscroll-responsive { overflow-x: auto; }
+
             [role="tablist"] {
                 padding-left: 0;
                 margin: 6px 0 0;
                 list-style-type: none;
-                min-width: 221px;
                 @include clearfix;
                 > [role="presentation"] {
                     float: left;
@@ -33,16 +34,16 @@
             [role="tablist"] [role="tab"] {
                 display: block;
                 padding: 12px;
-                background-color: #551A8B;
+                background-color: $color-primary;
                 color: #fff;
                 text-decoration: none;
                 &[aria-selected="false"]:hover {
-                    background-color: #602594;
+                    background-color: lighten($color-primary, 5%);;
                 }
                 &[aria-selected="true"] {
                     background-color: #fff;
                     padding: 13px 12px;
-                    color: #551A8B;
+                    color: $color-primary;
                     border-top: 4px solid;
                     margin-top: -6px;
                 }
@@ -52,15 +53,12 @@
                 background: #fff;
                 width: 100%;
                 display: inline-block;
-                padding: 0 16px 8px;
+                padding: 20px 16px 8px;
                 &[aria-hidden="true"] {
                     display:none;
                     visibility:hidden;
                 }
             }
-
-            .tabscroll-responsive { overflow-x: auto; }
-
         }
 
     /*
