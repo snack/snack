@@ -29,15 +29,3 @@
     </section>
   </div>
 </section>
-<script src="../../build/js/libs/jquery.min.js"></script>
-<script>
-//Prevent tab break on resize
-$("[role='tab']").click(function(e) {
-  e.preventDefault();
-  $(this).attr("aria-selected", "true");
-  $(this).parent().siblings().children().attr("aria-selected", "false");
-  var tabpanelShow = $(this).attr("href");
-  $(tabpanelShow).attr("aria-hidden", "false");
-  $(tabpanelShow).siblings().attr("aria-hidden", "true");
-});
-</script>
