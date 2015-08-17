@@ -27,7 +27,7 @@ O **Boilerplate** está relacionado à sua aplicação em si. É aonde você vai
 │   ├── SCSS
 │   ├── JS
 │   └── IMG
-│       └──SPRITE (imagens para gerar o sprite automaticamente)
+│       └── SPRITE (imagens para gerar o sprite automaticamente)
 │
 ├── BUILD (arquivos gerados pelas tarefas do Gulp)
 │   ├── CSS
@@ -70,7 +70,7 @@ Essa pasta contém todos os arquivos originados das taks do _Gulp_.
 * _`js`_ ==> Contém arquivo(s) _javascript_ concatenados e minificados.
     - _`libs`_ ==> Contém as bibliotecas minificadas utilizadas por padrão no projeto (_html5shiv, jQuery_ e _Respond_).
 * _`img`_ ==> Contém as imagens otimizadas através do _Grunt_.
-    - _`sprite`_ ==> Contém as imagens que geram o sprit na pasta _BUILD_.
+    - _`sprite`_ ==> Contém as imagens que geram o sprite na pasta _build_.
 * _`fonts`_ ==> Fontes utilizadas no projeto.
 * _`in`_ ==> Pasta com os arquivos _include_ do projeto.
 
@@ -88,7 +88,7 @@ Através do comando _bower install_, o _Bower_ faz o download de todas essas dep
 
 ##### Instalando uma dependência nova
 
-Caso você queira colocar uma nova dependência no seu projeto é possível fazer isso com o _Bower_. Para procurar uma _LIB_ nova, é só passar o seguinte comando: `bower search nomedalib`. 
+Caso você queira colocar uma nova dependência no seu projeto é possível fazer isso com o _Bower_. Para procurar uma _LIB_ nova, é só passar o seguinte comando: `bower search nomecomponente`. 
 
 Com a _lib_ encontrada digite: `bower install nomecomponente --save-dev`.
 
@@ -96,7 +96,7 @@ Com a _lib_ encontrada digite: `bower install nomecomponente --save-dev`.
 
 ###### E se eu não achar?
 
-Pode ser que você não encontre a _lib_ que queria através do _Bower_ ou pode ser que você não queira utilizá-lo. Nesse caso, faça o download dessa _lib_, crie uma pasta com o nome da _lib_ dentro de: `assets/js/libs` e jogue os arquivos lá dentro. Aí com o _Grunt_ você pode criar uma tarefa para minificar e concatenar ela com outros arquivos.
+Pode ser que você não encontre a _lib_ que queria através do _Bower_ ou pode ser que você não queira utilizá-lo. Nesse caso, faça o download dessa _lib_, crie uma pasta com o nome da _lib_ dentro de: `assets/js/libs` e jogue os arquivos lá dentro. Aí com o _Gulp_ você pode criar uma tarefa para minificar e concatenar ela com outros arquivos.
 
 #### Gulp
 
