@@ -264,4 +264,10 @@ Com isso, uma marcação que antes era assim:
 
 Por padrão utilizamos o [Font Awesome](http://fortawesome.github.io/Font-Awesome/) no projeto. Ainda fizemos do jeito antigo e inserimos manualmente as fontes e o arquivo de estilo responsáveis mas para as próximas versões a idéia é isso ser gerenciado via *Bower*.
 
+
+Por padrão utilizamos o [Font Awesome](http://fortawesome.github.io/Font-Awesome/) no projeto. Ele esta dentro dos componente do bower, então quando roda a tarefa `gulp` ele copia automáticamente os arquivos para pasta _BUILD_.
+
+Se for necessario atualizar, rodar o comando do _Bower_ primeiro `bower install font-awesome --save-dev`, após isso rodar a tarefa `gulp` e ele copia a nova versão para o _BUILD_
+
+
 :point_right: Próximo: [HTML](html.md)
