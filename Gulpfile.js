@@ -7,6 +7,7 @@ var gulp 		= require('gulp'),
             'gulp-ruby-sass': 'sass'
         }
     }),
+    stylish     = require('jshint-stylish'),        // jshint
     pngquant    = require('imagemin-pngquant'),     // Png compress
     browserSync = require('browser-sync').create(), // BrowserSync
     reload      = browserSync.reload,               // Reload
@@ -20,6 +21,7 @@ var gulp 		= require('gulp'),
 
         gulp.task('copy:jquery', function () {
             return gulp.src(dirs._components+"/jquery/jquery.js")
+                        .pipe(plugins.replace('/*!', '/*'))
                         .pipe(plugins.rename({suffix: ".min"}))
                         .pipe(plugins.uglify())
                         .pipe(gulp.dest(dirs._build+'/js/libs/'));
@@ -27,6 +29,7 @@ var gulp 		= require('gulp'),
 
         gulp.task('copy:html5shiv', function () {
             return gulp.src(dirs._components+"/html5shiv/dist/html5shiv.js")
+                        .pipe(plugins.replace('/*!', '/*'))
                         .pipe(plugins.rename({suffix: ".min"}))
                         .pipe(plugins.uglify())
                         .pipe(gulp.dest(dirs._build+'/js/libs/'));
@@ -34,6 +37,7 @@ var gulp 		= require('gulp'),
 
         gulp.task('copy:respond', function () {
             return gulp.src(dirs._components+"/respond/src/respond.js")
+                        .pipe(plugins.replace('/*!', '/*'))
                         .pipe(plugins.rename({suffix: ".min"}))
                         .pipe(plugins.uglify())
                         .pipe(gulp.dest(dirs._build+'/js/libs/'));
@@ -128,9 +132,10 @@ var gulp 		= require('gulp'),
 	// SCRIPTS  ----------------------------------------------------------
 
 		// JShint
-		gulp.task('lint', function() {
-			return gulp.src(dirs._assets+'js/*.js')
+		gulp.task('lint', ['concat'], function() {
+			return gulp.src(dirs._assets+'/js/*.js')
                 .pipe(plugins.jshint())
+                .pipe(plugins.jshint.reporter(stylish))
                 .pipe(plugins.jshint.reporter('default'));
 		});
 
@@ -180,7 +185,7 @@ var gulp 		= require('gulp'),
 	// BROWSER SYNC ------------------------------------------------------
     	gulp.task('browser-sync', function() {
             browserSync.init({
-                proxy: "local.a2boilerplate"
+                proxy: "local.snack"
             });
     	});
 
@@ -196,7 +201,7 @@ var gulp 		= require('gulp'),
             });
 
     		// watch JS
-    		gulp.watch([dirs._assets+'/js/*.js', dirs._sg_assets+'/js/*.js'], ['lint','concat']);
+            gulp.watch([dirs._assets+'/js/*.js', dirs._sg_assets+'/js/*.js'], ['lint']);
 
     		// watch CSS
             gulp.watch(dirs._assets+'/scss/**/*.scss', ['sass']);
@@ -213,7 +218,7 @@ var gulp 		= require('gulp'),
     	gulp.task('images',		['sprite', 'imagemin', 'svg2png']);
     	gulp.task('sync', 		['watch', 'browser-sync']);
     	gulp.task('css', 		['sass']);
-    	gulp.task('js', 		['lint', 'concat']);
+        gulp.task('js',         ['lint', 'concat']);
         gulp.task('copy',       [
                                     'copy:jquery',
                                     'copy:html5shiv',

@@ -1,4 +1,6 @@
 (function(){
-    // Default scripts
+    'use strict';
 
+    // Default scripts
 })();
+

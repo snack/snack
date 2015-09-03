@@ -1,3 +1,5 @@
+'use strict';
+
 (function(){
 
     // Menu add class active
@@ -10,7 +12,8 @@
 
     // Sidebar add class active
     function sidebarActive(){
-        $('[href$='+window.location.hash+']').addClass('active');
+        var hash = window.location.hash;
+        $('[href$='+hash+']').addClass('active');
     }
 
     sidebarActive();
@@ -28,7 +31,7 @@
 
     // Hash click
     $("a[href*='/#']").click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             if (target.length) {
@@ -80,7 +83,7 @@
     var allWidth = 0;
     var tabList = $(".styleguide-demo [role='tablist']");
     tabList.children().each(function(){
-      allWidth += $(this)[0].getBoundingClientRect().width
+        allWidth += $(this)[0].getBoundingClientRect().width;
     });
     tabList.css('min-width', allWidth);
 
@@ -90,8 +93,8 @@
       $(this).attr("aria-selected", "true");
       $(this).parent().siblings().children().attr("aria-selected", "false");
       var tabpanelShow = $(this).attr("href");
-      $(tabpanelShow).attr("aria-hidden", "false");
-      $(tabpanelShow).siblings().attr("aria-hidden", "true");
+      tabpanelShow.attr("aria-hidden", "false");
+      tabpanelShow.siblings().attr("aria-hidden", "true");
     });
 
 
