@@ -26,30 +26,50 @@
             textarea,
             .textarea {
                 width: 100%;
-                padding: 5px 10px;
-                border: solid 1px $color-border-input;
+                padding: 12px 10px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: transparent;
+                background-color: #fff;
                 color: $color-input;
+                font-size: 14px;
                 margin-bottom: 15px;
                 @include transition(all .25s ease);
+                @include border-radius(2px);
             }
 
-            input[type="text"]:focus,
-            input[type="password"]:focus,
-            input[type="search"]:focus,
-            input[type="tel"]:focus,
-            input[type="url"]:focus,
-            input[type="date"]:focus,
-            input[type="datetime"]:focus,
-            input[type="datetime-local"]:focus,
-            input[type="month"]:focus,
-            input[type="week"]:focus,
+            input:focus,
             .input:focus,
             select:focus,
             .select:focus,
             textarea:focus,
             .textarea:focus {
-                border-color: darken($color-border-input, 25%);
-                background-color: #f5f5f5;
+                background-color: #F2F1EF;
+                outline-width: 0;
+            }
+
+        /*  Select
+            ========================================================================== */
+            .select{
+                /* -webkit-appearance: none;
+                   -moz-appearance: none;
+                        appearance: none; */
+
+                color: $color-placeholder;
+                font-style: italic;
+                opacity: 1;
+                font-size: $placeholder-font-size;
+
+                &[value=""]{
+                    color: #BFBFBF;
+                    font-style: italic;
+                }
+            }
+
+        /*  Search
+            ========================================================================== */
+            .input[type="search"] {
+                box-sizing: border-box;
             }
 
         /*  Textarea
@@ -60,16 +80,22 @@
             ========================================================================== */
             .radio,
             .checkbox {
-                padding-left: 15px;
+                margin-bottom: 6px;
                 display: block;
                 color: $color-input;
+
+                .form-label,
+                input[type="radio"],
+                input[type="checkbox"]{
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0 2px 0 0;
+                }
             }
 
             .radio input[type="radio"],
             .checkbox input[type="checkbox"] {
-                float: left;
-                position: relative;
-                left: -15px;
+                width: auto;
             }
 
             input[type="radio"],
@@ -121,6 +147,34 @@
 
     @media only screen and (max-width: $breakpoint) {
 
+        /*  Default inputs, selects and textareas
+            ========================================================================== */
+            input[type="text"],
+            input[type="password"],
+            input[type="search"],
+            input[type="tel"],
+            input[type="url"],
+            input[type="date"],
+            input[type="datetime"],
+            input[type="datetime-local"],
+            input[type="month"],
+            input[type="week"],
+            .input,
+            select,
+            .select,
+            textarea,
+            .textarea {
+                border-bottom-color: $color-border-input;
+            }
+
+            input:focus,
+            .input:focus,
+            select:focus,
+            .select:focus,
+            textarea:focus,
+            .textarea:focus {
+                border-bottom-color: darken($color-border-input, 25%);
+            }
     }
 
 
@@ -130,4 +184,32 @@
 
     @media only screen and (min-width: $breakpoint+1) {
 
+        /*  Default inputs, selects and textareas
+            ========================================================================== */
+            input[type="text"],
+            input[type="password"],
+            input[type="search"],
+            input[type="tel"],
+            input[type="url"],
+            input[type="date"],
+            input[type="datetime"],
+            input[type="datetime-local"],
+            input[type="month"],
+            input[type="week"],
+            .input,
+            select,
+            .select,
+            textarea,
+            .textarea {
+                border-color: $color-border-input;
+            }
+
+            input:focus,
+            .input:focus,
+            select:focus,
+            .select:focus,
+            textarea:focus,
+            .textarea:focus {
+                border-color: darken($color-border-input, 25%);
+            }
     }

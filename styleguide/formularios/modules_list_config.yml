@@ -2,7 +2,7 @@
   title: Inputs
   link: "/formularios/#inputs"
   id: "inputs"
-  subtitle: "Padrão para exibição de elementos <strong>input</strong> (<i>text, password, search, tel, url, date, datetime, datetime-local, month</i> e <i>week</i>."
+  subtitle: "Padrão para exibição de elementos <strong>input</strong> <code>text</code>, <code>password</code>, <code>search</code>, <code>tel</code>, <code>url</code>, <code>date</code>, <code>datetime</code>, <code>datetime-local</code>, <code>month</code> e <code>week</code>."
   sourceCode: 01-inputs.html.twig
 
 "form selects":
@@ -39,3 +39,10 @@
   id: "form-basico"
   subtitle: Padrão para formulários.
   sourceCode: 06-formulario.html.twig
+
+"form busca":
+  title: Formulário de busca
+  link: "/formularios/#form-busca"
+  id: "form-busca"
+  subtitle: Padrão para formulários de busca.
+  sourceCode: 07-busca.html.twig
