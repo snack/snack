@@ -2,6 +2,10 @@
     Inputs
     ========================================================================== */
 
+    /*
+     * CSS for all devices
+     */
+
     @media only screen {
 
         /*  Default inputs, selects and textareas
@@ -107,14 +111,23 @@
                 opacity: 1;
                 font-size: $placeholder-font-size;
             }
-        
+
     }
 
 
     /*
-     * CSS for devices with resolution bigger than breakpoint
+     * CSS for devices with resolution up to a maximum of breakpoint
      */
 
-    @media only screen and (min-width: $breakpoint) {
+    @media only screen and (max-width: $breakpoint) {
+
+    }
+
+
+    /*
+     * CSS for devices with resolution up to the minimum breakpoint
+     */
+
+    @media only screen and (min-width: $breakpoint+1) {
 
     }
