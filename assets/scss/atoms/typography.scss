@@ -2,6 +2,10 @@
     Typography
     ========================================================================== */
 
+    /*
+     * CSS for all devices
+     */
+
     @media only screen {
 
         body {
@@ -53,33 +57,45 @@
                 line-height: 16px;
             }
 
-
         /*  Texts
             ========================================================================== */
             p {
-                color: #666666;
-                font-size: 14px;
-                line-height: 20px;
-                margin: 0 0 15px;
+                color: #000000;
+                font-size: 16px;
+                line-height: 26px;
+                margin: 0 0 30px;
                 text-align: left;
             }
 
         /*  Links
             ========================================================================== */
             a {
-             color: blue;
-             text-decoration: none;
-           }
+                color: blue;
+                text-decoration: none;
+            }
 
-           a:hover { text-decoration: underline; }
+            a:hover { text-decoration: underline; }
+
+        /*  Figure
+            ========================================================================== */
+            figure{
+                margin: 0;
+            }
+    }
+
+    /*
+     * CSS for devices with resolution up to a maximum of breakpoint
+     */
+
+    @media only screen and (max-width: $breakpoint) {
 
     }
 
 
     /*
-     * CSS for devices with resolution bigger than breakpoint
+     * CSS for devices with resolution up to the minimum breakpoint
      */
 
-    @media only screen and (min-width: $breakpoint) {
+    @media only screen and (min-width: $breakpoint+1) {
 
     }
