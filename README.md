@@ -19,7 +19,7 @@ Biblioteca para auxiliar no **pontapé inicial** em um projeto web. A idéia foi
 Existem algumas opções disponíveis:
 
 * Faça o [download do zip](https://github.com/snack/Snack/archive/master.zip) ou do [último release](https://github.com/snack/Snack/releases)
-* Clone o projeto `git clone https://github.com/snack/A2boilerplate.git`
+* Clone o projeto `git clone https://github.com/snack/snack.git`
 
 ### Boilerplate
 
@@ -41,7 +41,7 @@ Para sincronizar a página em diversos dispositivos usar
 
 *Lembrar de alterar no Gulpfile.js o proxy*
 
-`proxy: "local.a2boilerplate"`
+`proxy: "local.snack"`
 
 para a url do seu projeto.
 
