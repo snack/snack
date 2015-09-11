@@ -2,7 +2,7 @@
   title: Inputs
   link: "/formularios/#inputs"
   id: "inputs"
-  subtitle: "Padrão para exibição de elementos <strong>input</strong> <code>text</code>, <code>password</code>, <code>search</code>, <code>tel</code>, <code>url</code>, <code>date</code>, <code>datetime</code>, <code>datetime-local</code>, <code>month</code> e <code>week</code>."
+  subtitle: "Padrão para exibição de elementos <strong>input</strong> <code>text</code>, <code>email</code>, <code>password</code>, <code>search</code>, <code>tel</code>, <code>url</code>, <code>date</code>, <code>datetime</code>, <code>datetime-local</code>, <code>month</code> e <code>week</code>."
   sourceCode: 01-inputs.html.twig
 
 "form selects":
