@@ -2,11 +2,12 @@
   title: Tabs
   link: "/navegacao/#tabs"
   id: "tabs"
-  subtitle: Todos os Headings HTML.
+  subtitle: Navegação por tabs
   sourceCode: tabs.html.twig
+
 "Accordion":
   title: Accordion
   link: "/navegacao/#accordion"
   id: "accordion"
-  subtitle: Todos os Headings HTML.
+  subtitle: Navegação por accordion.
   sourceCode: accordion.html.twig

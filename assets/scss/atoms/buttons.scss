@@ -20,6 +20,7 @@
                 border: 1px solid transparent;
                 white-space: nowrap;
                 font-size: $btn-font-size;
+                color: $color-gray-dark;
                 padding: 6px 12px;
                 @include transition(background 0.25s ease);
             }
@@ -30,45 +31,54 @@
         /*  Colors
             ========================================================================== */
 
-            /*  Default
+            /*  Default($color-gray-light)
                 ========================================================================== */
                 .btn {
-                    background-color: $btn-bg;
-                    color: $btn-color;
+                    background-color: $color-gray-light;
                 }
 
                 .btn:hover,
-                .btn:focus { background-color: $btn-hover-bg; }
+                .btn:focus { background-color: $btn-bg-hover; }
 
-            /*  Primary
+            /*  Gray
                 ========================================================================== */
-                .btn-primary {
-                    background-color: $btn-primary-bg;
-                    color: $btn-primary-color;
+                .btn-gray { background-color: $color-gray; }
+                .btn-gray:hover,
+                .btn-gray:focus { background-color: $btn-gray-bg-hover; }
+
+            /*  Gray Dark
+                ========================================================================== */
+                .btn-gray-dark {
+                    background-color: $color-gray-dark;
+                    color: #fff;
                 }
 
-                .btn-primary:hover,
-                .btn-primary:focus { background-color: $btn-primary-hover-bg; }
+                .btn-gray-dark:hover,
+                .btn-gray-dark:focus { background-color: $btn-gray-dark-bg-hover; }
 
-            /*  Success
+            /*  Gray Middle
                 ========================================================================== */
-                .btn-success {
-                    background-color: $btn-success-bg;
-                    color: $btn-success-color;
-                }
+                .btn-gray-middle { background-color: $color-gray-middle; }
 
-                .btn-success:hover,
-                .btn-success:focus { background-color: $btn-success-hover-bg; }
+                .btn-gray-middle:hover,
+                .btn-gray-middle:focus { background-color: $btn-gray-middle-bg-hover; }
 
-            /*  Danger
-                ========================================================================== */
-                .btn-danger {
-                    background-color: $btn-danger-bg;
-                    color: $btn-danger-color;
-                }
+        /*  Size
+            ========================================================================== */
 
-                .btn-danger:hover,
-                .btn-danger:focus { background-color: $btn-danger-hover-bg; }
+            /* Large */
+            .btn-large{
+                padding: 15px 30px;
+                font-size: 16px;
+                line-height: 16px;
+            }
+
+            /* Small */
+            .btn-small{
+                padding: 4px 10px;
+                font-size: 10px;
+                line-height: 10px;
+            }
 
         /*  Social Share
             ========================================================================== */

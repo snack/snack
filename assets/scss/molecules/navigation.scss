@@ -38,16 +38,16 @@
             [role="tablist"] [role="tab"] {
                 display: block;
                 padding: 12px;
-                background-color: $color-primary;
+                background-color: $color-gray;
                 color: #fff;
                 text-decoration: none;
                 &[aria-selected="false"]:hover {
-                    background-color: lighten($color-primary, 5%);;
+                    background-color: lighten($color-gray, 5%);;
                 }
                 &[aria-selected="true"] {
                     background-color: #fff;
                     padding: 13px 12px;
-                    color: $color-primary;
+                    color: $color-gray-dark;
                     border-top: 4px solid;
                     margin-top: -6px;
                 }
