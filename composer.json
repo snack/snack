@@ -1,6 +1,6 @@
 {
-    "name": "a2comunicacao/a2boilerplate",
-    "description": "Boilerplate da A2 Comunicação",
+    "name": "snack/snack",
+    "description": "Biblioteca para auxiliar no pontapé inicial em um projeto web. A idéia foi juntar alguns dos projetos que mais utilizávamos como referência e adaptarmos para um modelo de desenvolvimento com um Guia de Estilo incluso.",
     "keywords": ["boilerplate", "styleguide"],
     "authors": [
         {
