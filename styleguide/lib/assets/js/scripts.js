@@ -93,8 +93,8 @@
       $(this).attr("aria-selected", "true");
       $(this).parent().siblings().children().attr("aria-selected", "false");
       var tabpanelShow = $(this).attr("href");
-      tabpanelShow.attr("aria-hidden", "false");
-      tabpanelShow.siblings().attr("aria-hidden", "true");
+      $(tabpanelShow).attr("aria-hidden", "false");
+      $(tabpanelShow).siblings().attr("aria-hidden", "true");
     });
 
 

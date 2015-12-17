@@ -16,6 +16,34 @@
 
         /*  Menu
             ========================================================================== */
+            
+
+            /*  Nav Menu
+                ========================================================================== */
+                .nav-menu,
+                .nav-more{
+
+                    /* Menu Item */
+                    [class*="menu-item"]{
+                        font-size: 12px;
+                        line-height: 12px;
+
+                        /* Current */
+                        &.current{
+                            > [class*="menu-link"],
+                              a{
+                                color: $color-gray;
+                            }
+                        }
+                    }                    
+
+                    /* Menu Item */
+                    [class*="menu-link"],
+                    a{
+                        display: block;
+                        color: $color-gray-dark;
+                    }                    
+                }
 
         /*  Tabs
             ========================================================================== */
@@ -38,16 +66,17 @@
             [role="tablist"] [role="tab"] {
                 display: block;
                 padding: 12px;
-                background-color: $color-gray;
-                color: #fff;
+                background-color: $color-gray-light;
+                color: $color-gray-dark;
                 text-decoration: none;
+
                 &[aria-selected="false"]:hover {
-                    background-color: lighten($color-gray, 5%);;
+                    background-color: lighten($color-gray-light, 5%);                    
                 }
+                
                 &[aria-selected="true"] {
                     background-color: #fff;
                     padding: 13px 12px;
-                    color: $color-gray-dark;
                     border-top: 4px solid;
                     margin-top: -6px;
                 }
@@ -63,7 +92,7 @@
                     visibility:hidden;
                 }
             }
-        }
+    }
 
     /*
      * CSS for devices with resolution up to a maximum of breakpoint
@@ -79,8 +108,73 @@
 
         /*  Menu
             ========================================================================== */
+            
+            /*  Navbar
+                ========================================================================== */
+                .navbar{
+                    position: relative;
+                    text-align: left;
+                }
 
-        }
+            /*  Nav Menu
+                ========================================================================== */
+                .nav-menu{
+                    @include transition(right .3s ease);
+                    background-color: $color-gray-light;
+                    padding: 0;
+                    margin: 0;
+                    position: fixed;
+                    top: 0;
+                    right: -80%;
+                    z-index: 2;
+                    width: 80%;
+                    height: 100%;
+
+                    /* Sandwich */
+                    &:before{
+                        @include box-sizing();
+                        content: "\f0c9";
+                        font-family: 'FontAwesome';
+                        position: absolute;
+                        left: -40px;
+                        width: 40px;
+                        height: 40px;
+                        font-size: 32px;
+                        line-height: 29px;
+                        padding: 5px;
+                        color: $color-gray-dark;
+                        text-align: center;
+                        cursor: pointer;
+
+                        .nav-menu-open &{
+                            content: "\f00d";
+                        }
+                    }
+
+                    /* Menu item */
+                    [class*="menu-item"]{
+                        display: block;
+                    }
+                    
+                    /* Menu Link */
+                    [class*="menu-link"],
+                    a{
+                        padding: 15px 20px;
+                    }                    
+                }
+            
+            /*  Nav Menu Open
+                ========================================================================== */
+                .nav-menu-open{
+                    @include transition(left .3s ease);
+                    left: -80%;
+
+                    .nav-menu{
+                        @include transition(right .3s ease);
+                        right: 0;
+                    }
+                }
+    }
 
     /*
      * CSS for devices with resolution up to the minimum breakpoint
@@ -96,5 +190,92 @@
 
         /*  Menu
             ========================================================================== */
+
+            /*  Navbar
+                ========================================================================== */
+                .navbar{
+                    text-align: center;
+                    background-color: $color-gray-light;
+                    @include border-radius(2px);
+
+                    /* Greedy */
+                    &.greedy-show{
+                        position: relative;
+                        padding-right: 30px;
+
+                        &:after{
+                            font-family: 'FontAwesome';
+                            font-weight: normal;
+                            font-style: normal;
+                            content: "\f141";
+                            position: absolute;
+                            right: 10px;
+                            top: 50%;
+                            padding: 15px 0;
+                            font-size: 22px;
+                            line-height: 10px;
+                            margin-top: -20px;
+                            color: $color-gray-dark;
+                            cursor: pointer;
+                        }
+                    }
+                    
+                    /* Nav more show */
+                    &.nav-more-show{
+                        .nav-more{
+                            @include transition(visibility .1s ease, opacity .2s ease);
+                            visibility: visible;
+                            opacity: 1;
+                        }
+
+                        &:after{
+                            content: "\f142";
+                        }
+                    }
+                }
+
+             /*  Nav Menu
+                ========================================================================== */
+                .nav-menu{
+                    padding: 0;
+                    margin: 0; 
+                    font-size: 0;                    
+                    display: table;
+                    margin: 0 auto;
+
+                    /* Menu Item */
+                    [class*="menu-item"]{
+                        display: table-cell;
+                        white-space: nowrap;
+                    }                    
+                }
+                
+                /* Nav more */
+                .nav-more{
+                    @include transition(visibility .1s ease, opacity .2s ease);
+                    background-color: $color-gray-light;
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    padding: 0;
+                    margin: 0;
+
+                    /* Menu Item */
+                    [class*="menu-item"]{
+                        display: block;
+                    }  
+                }
+
+                .nav-menu,
+                .nav-more{
+
+                    /* Menu Item */
+                    [class*="menu-link"],
+                    a{
+                        padding: 20px 30px;
+                    }
+                }
+            
 
     }
