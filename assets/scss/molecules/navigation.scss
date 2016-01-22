@@ -8,6 +8,7 @@
             ========================================================================== */
             .header{
                 background: $color-purple;
+                @include simple-horizontal-gradient($color-purple, $color-purple-medium);
                 border-bottom: 2px solid $color-purple-light;
                 margin-bottom: 40px;
             }
