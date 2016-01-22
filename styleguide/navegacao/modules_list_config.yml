@@ -1,3 +1,10 @@
+"Navigaiton":
+  title: Menu
+  link: "/navegacao/#menu"
+  id: "menu"
+  subtitle: Navegação principal
+  sourceCode: navigation.html.twig
+
 "Tabs":
   title: Tabs
   link: "/navegacao/#tabs"

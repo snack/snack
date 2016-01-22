@@ -96,8 +96,8 @@ return o&&o.value!==!1?n.toLowerCase():t},set:function(e,t,n){return t===!1?ue.r
       $(this).attr("aria-selected", "true");
       $(this).parent().siblings().children().attr("aria-selected", "false");
       var tabpanelShow = $(this).attr("href");
-      tabpanelShow.attr("aria-hidden", "false");
-      tabpanelShow.siblings().attr("aria-hidden", "true");
+      $(tabpanelShow).attr("aria-hidden", "false");
+      $(tabpanelShow).siblings().attr("aria-hidden", "true");
     });
 
 
