@@ -1,4 +1,6 @@
-[Início](../../../) » [Documentação](index.md) » Guia de Estilo
+![Snack](https://cloud.githubusercontent.com/assets/13695346/9314113/43eed556-44fd-11e5-844a-34f8e13b2863.png)
+
+[:house:](../../../) » [Documentação](index.md) » Guia de Estilo
 
 # Guia de Estilo
 

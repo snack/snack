@@ -1,4 +1,4 @@
-![Snack](https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png)
+![Snack](https://cloud.githubusercontent.com/assets/13695346/9314113/43eed556-44fd-11e5-844a-34f8e13b2863.png)
 
 [:house:](../../../) » [Documentação](index.md) » CSS
 
