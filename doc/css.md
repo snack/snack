@@ -109,7 +109,8 @@ Outro conceito aplicado foi o [Design Atômico](http://bradfrostweb.com/blog/pos
 * **Moléculas** (_molecules_)
     * `forms.scss`
     * `navigation.scss` ==> Declarações relacionadas a elementos de navegação (cabeçalho, rodapé, menus, ...)
-    * `icons.scss` ==> Declaração de _sprites_
+    * `icons.mustache` ==> Template que gera o _sprites_
+    * `icons.scss` ==> Arquivo gerado automáticamente a partir do _icons.mustache_
 * **Organismos** (_organisms_)
     * `layout.scss`
     * `print.scss`
