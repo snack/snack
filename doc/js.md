@@ -9,7 +9,7 @@
 
 ## Libs
 
-São as bibliotecas padrão utilizadas no projeto. São gerenciadas pelo **Bower**, por isso, recomendamos dar uma lida nas seções de [Bower](index.md#bower) e [Grunt](index.md#grunt).
+São as bibliotecas padrão utilizadas no projeto. São gerenciadas pelo **Bower**, por isso, recomendamos dar uma lida nas seções de [Bower](index.md#bower) e [Gulp](index.md#gulp).
 
 * jQuery
 * html5shiv
