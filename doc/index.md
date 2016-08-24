@@ -78,7 +78,7 @@ Essa pasta contém todos os arquivos originados das taks do _Gulp_.
 
 ### Gulp e Bower
 
-O A2boilerplate utiliza [Gulp](http://gulpjs.com/) para automatizar algumas tarefas e o [Bower](http://bower.io/) para gerenciar dependências. Para rodá-los você precisa ter o [NodeJS](http://nodejs.org/) instalado na máquina.
+O Snack utiliza [Gulp](http://gulpjs.com/) para automatizar algumas tarefas e o [Bower](http://bower.io/) para gerenciar dependências. Para rodá-los você precisa ter o [NodeJS](http://nodejs.org/) instalado na máquina.
 
 #### Bower
 
