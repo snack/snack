@@ -31,15 +31,46 @@ Todos os arquivos ficam localizados em _`assets/scss`_.
 Aplicamos o conceito de _mobile first_ nos arquivos de estilo.
 
 ```scss
+/*
+ * CSS for all devices
+ */
+
 @media only screen {
+
 }
 
 /*
- * CSS for devices with resolution bigger than breakpoint
-*/
+ * CSS for devices with resolution up to a maximum of breakpoint
+ */
 
-@media only screen and (min-width: $breakpoint) {
+@media (max-width: $breakpoint) {
+
 }
+
+/*
+ * Small devices (tablets, 768px and up)
+ */
+
+@media (min-width: $breakpoint) {
+
+}
+
+/*
+ * CSS for Medium devices (desktops, 992px and up)
+ */
+
+@media (min-width: $breakpoint-medium) {
+
+}
+
+/*
+ * CSS for Large devices (large desktops, 1200px and up)
+ */
+
+@media (min-width: $breakpoint-large) {
+
+}
+
 ```
 
 A variável breakpoint é definida no arquivo `variables.scss`. Claro que o conceito de _Mobile first_ **não se resume só a isso**; coisas essenciais como conteúdo por exemplo, são primordiais nessa questão.
