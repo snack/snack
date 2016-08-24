@@ -1,4 +1,4 @@
-# ![A2boilerplate](https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png)
+# ![Snack](https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png)
 
 [:house:](../../../) » Documentação
 
@@ -78,11 +78,11 @@ Essa pasta contém todos os arquivos originados das taks do _Gulp_.
 
 ### Gulp e Bower
 
-O A2boilerplate utiliza [Gulp](http://gulpjs.com/) para automatizar algumas tarefas e o [Bower](http://bower.io/) para gerenciar dependências. Para rodá-los você precisa ter o [NodeJS](http://nodejs.org/) instalado na máquina.
+O Snack utiliza [Gulp](http://gulpjs.com/) para automatizar algumas tarefas e o [Bower](http://bower.io/) para gerenciar dependências. Para rodá-los você precisa ter o [NodeJS](http://nodejs.org/) instalado na máquina.
 
 #### Bower
 
-O _Bower_ é um gerenciador de dependências. No A2boilerplate temos por padrão apenas 3 dependências: _html5shiv_, _jQuery_ e _Respond_.
+O _Bower_ é um gerenciador de dependências. No Snack temos por padrão apenas 3 dependências: _html5shiv_, _jQuery_ e _Respond_.
 
 Através do comando _bower install_, o _Bower_ faz o download de todas essas dependências e joga na pasta _COMPONENTS_.  
 
@@ -108,17 +108,17 @@ Por padrão temos algumas tarefas registradas:
 
 `gulp` ==> Minifica as bibliotecas padrão do projeto geradas pelo _Bower_ e joga na pasta _BUILD_.
 
-`grunt css` ==> Roda a tarefa de CSS, concatenando todos os arquivos `.scss` em um arquivo `.css` minificado.
+`gulp css` ==> Roda a tarefa de CSS, concatenando todos os arquivos `.scss` em um arquivo `.css` minificado.
 
-`grunt js` ==> Roda as tarefas de JS: validação pelo [_JSHint_](http://www.jshint.com/) e minificação/concatenação dos arquivos.
+`gulp js` ==> Roda as tarefas de JS: validação pelo [_JSHint_](http://www.jshint.com/) e minificação/concatenação dos arquivos.
 
-`grunt images` ==> Tarefas relacionadas a imagens: otimização de _JPEGs, GIFs_ e _PNGs_, minificação de _SVGs_ e transformação de _SVGs_ em _PNGs_ para utilização em navegadores que não dão suporte e gerar imagem de sprite.
+`gulp images` ==> Tarefas relacionadas a imagens: otimização de _JPEGs, GIFs_ e _PNGs_, minificação de _SVGs_ e transformação de _SVGs_ em _PNGs_ para utilização em navegadores que não dão suporte e gerar imagem de sprite.
 
-`grunt live` ==> É a tarefa de _watch_. Basicamente fica de olho nos arquivos que são passados na configuração, realiza as tarefas automaticamente de acordo com o arquivo que for alterado e atualiza o navegador. Funciona em conjunto com as [extensões do LiveReload](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions).
+`gulp` ==> É a tarefa de _watch_. Basicamente fica de olho nos arquivos que são passados na configuração, realiza as tarefas automaticamente de acordo com o arquivo que for alterado e atualiza o navegador. Funciona em conjunto com as [extensões do LiveReload](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions).
 
-`grunt sync` ==> Tarefa para poder sincronizar seu site local em diversos dispositivos, acessando pelo ip que ele gera, e também roda a tarefa de _watch_ que fica de olho nos arquivos que são passados na configuração, realiza as tarefas automaticamente de acordo com o arquivo que for alterado e atualiza o navegador.
+`gulp sync` ==> Tarefa para poder sincronizar seu site local em diversos dispositivos, acessando pelo ip que ele gera, e também roda a tarefa de _watch_ que fica de olho nos arquivos que são passados na configuração, realiza as tarefas automaticamente de acordo com o arquivo que for alterado e atualiza o navegador.
 
-`grunt copy` ==> Essa tarefa copia os arquivos da pasta _components_ e joga nos seus respequitivos lugares na pasta _BUILD_
+`gulp copy` ==> Essa tarefa copia os arquivos da pasta _components_ e joga nos seus respequitivos lugares na pasta _BUILD_
 
 Essas são apenas as tarefas básicas e padrões. Fique a vontade para criar as suas tarefas e customizar da melhor maneira que lhe atender.
 
