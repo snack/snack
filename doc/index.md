@@ -1,4 +1,4 @@
-# ![A2boilerplate](https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png)
+# ![Snack](https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png)
 
 [:house:](../../../) » Documentação
 
@@ -82,7 +82,7 @@ O Snack utiliza [Gulp](http://gulpjs.com/) para automatizar algumas tarefas e o 
 
 #### Bower
 
-O _Bower_ é um gerenciador de dependências. No A2boilerplate temos por padrão apenas 3 dependências: _html5shiv_, _jQuery_ e _Respond_.
+O _Bower_ é um gerenciador de dependências. No Snack temos por padrão apenas 3 dependências: _html5shiv_, _jQuery_ e _Respond_.
 
 Através do comando _bower install_, o _Bower_ faz o download de todas essas dependências e joga na pasta _COMPONENTS_.  
 
