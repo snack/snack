@@ -1,4 +1,4 @@
-![A2boilerplate](https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png)
+![Snack](https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png)
 
 [:house:](../../../) » [Documentação](index.md) » CSS
 
@@ -74,7 +74,7 @@ Outro conceito aplicado foi o [Design Atômico](http://bradfrostweb.com/blog/pos
 
 ## Mixins e variáveis
 
-Se você já ouviu falar de pré-processadores, provavelmente conhece sobre variáveis e mixins. Utilizamos alguns padrões no A2boilerplate.
+Se você já ouviu falar de pré-processadores, provavelmente conhece sobre variáveis e mixins. Utilizamos alguns padrões no Snack.
 
 ### Mixins
 
