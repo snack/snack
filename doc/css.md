@@ -40,7 +40,7 @@ Aplicamos o conceito de _mobile first_ nos arquivos de estilo.
 }
 
 /*
- * CSS for devices with resolution up to a maximum of breakpoint
+ * CSS for Extra small devices (phones, less than 768px)
  */
 
 @media (max-width: $breakpoint) {
@@ -48,7 +48,7 @@ Aplicamos o conceito de _mobile first_ nos arquivos de estilo.
 }
 
 /*
- * Small devices (tablets, 768px and up)
+ * CSS for Small devices (tablets, 768px and up)
  */
 
 @media (min-width: $breakpoint) {
