@@ -12,9 +12,7 @@ Novo por aqui? Recomendamos dar uma lida seguindo os passos abaixos.
 * [CSS](css.md)
 * [HTML](html.md)
 * [JS](js.md)
-* [Includes](includes.md)
 * [Guia de Estilo](styleguide.md)
-* [Considerações](outros.md)
 
 ## Estrutura básica
 
