@@ -1,4 +1,4 @@
-![Snack](https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png)
+![Snack](https://cloud.githubusercontent.com/assets/13695346/9314113/43eed556-44fd-11e5-844a-34f8e13b2863.png)
 
 [:house:](../../../) » [Documentação](index.md) » CSS
 
@@ -304,9 +304,6 @@ Com isso, uma marcação que antes era assim:
 > A diferença entre o exemplo anterior e esse é que em um adicionamos uma classe `.column` aos elementos que desejamos que se comportem como uma coluna e, nesse último, adicionamos o `@extend %column;` diretamente na classe do elemento.
 
 ## Font icons
-
-Por padrão utilizamos o [Font Awesome](http://fortawesome.github.io/Font-Awesome/) no projeto. Ainda fizemos do jeito antigo e inserimos manualmente as fontes e o arquivo de estilo responsáveis mas para as próximas versões a idéia é isso ser gerenciado via *Bower*.
-
 
 Por padrão utilizamos o [Font Awesome](http://fortawesome.github.io/Font-Awesome/) no projeto. Ele esta dentro dos componente do bower, então quando roda a tarefa `gulp` ele copia automáticamente os arquivos para pasta _BUILD_.
 
