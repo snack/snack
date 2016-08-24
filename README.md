@@ -1,6 +1,6 @@
 # ![snack-logo](https://cloud.githubusercontent.com/assets/13695346/9314113/43eed556-44fd-11e5-844a-34f8e13b2863.png)
 
-Biblioteca para auxiliar no **pontapé inicial** em um projeto web. A idéia foi juntar [alguns dos projetos](https://github.com/snack/Grid-A2/wiki/Refer%C3%AAncias) que mais utilizávamos como referência e adaptarmos para um modelo de desenvolvimento com um Guia de Estilo incluso. Entenda a idéia [aqui](https://github.com/snack/Grid-A2/wiki).
+Biblioteca para auxiliar no **pontapé inicial** em um projeto web. A idéia foi juntar [alguns dos projetos](https://github.com/snack/snack/wiki/Refer%C3%AAncias) que mais utilizávamos como referência e adaptarmos para um modelo de desenvolvimento com um Guia de Estilo incluso. Entenda a idéia [aqui](https://github.com/snack/snack/wiki).
 
 ## Requisitos
 
