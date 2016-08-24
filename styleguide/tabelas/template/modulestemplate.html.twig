@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    <h1 class="styleguide-title styleguide-title-page">{{ container.module }}</h1>
+    <!-- Module -->
+    {% for module in modules_list %}
+        <h2 id="{{ module.id }}" class="styleguide-title-module"><a href="#{{ module.id }}"><i class="fa fa-link"></i> {{ module.title }}</a></h2>
+        <p>{{ module.subtitle|raw }}</p>
+        <!-- code -->
+        <div class="styleguide-demo">{% include module.sourceCode %}<span class="show-code"><a href="" class="btn btn-small btn-show">Ver Código</a></span></div>
+        <pre class="styleguide-code"><code data-language="html"></code></pre>
+    {% endfor %}
+
+{% endblock %}

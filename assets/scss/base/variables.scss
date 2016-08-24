@@ -2,15 +2,19 @@
     Variables
     ========================================================================== */
 
-    /*  ==========================================================================
-        Grid
+    /*  Grid
         ========================================================================== */
         $total-columns : 12; // Total of columns
         $column-width  : 60px; // Columns width
         $gutter-width  : 20px; // Space between the columns
         $breath        : 20px; // Option of lateral space for grid
-        $breakpoint    : 768px; // Breakpoint for small devices
         $space         : 25px; // Vertical space
+
+    /*  Breakpoints
+        ========================================================================== */
+        $breakpoint         : 768px;  // Breakpoint for small devices (Phones and Tablets)
+        $breakpoint-medium  : 992px;  // Breakpoint for medium devices (Desktops)
+        $breakpoint-large   : 1200px; // Breakpoint for large devices (Desktops)
 
     /*  Colors
         ========================================================================== */

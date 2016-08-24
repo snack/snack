@@ -8,25 +8,43 @@
 
     @media only screen {
         ul,
+        ol,
         dl {
-            color: #666;
-            font-size: 14px;
+            color: $color-gray;
+            font-size: 18px;
+            line-height: 36px;
+            padding-left: 25px;
         }
     }
 
     /*
-     * CSS for devices with resolution up to a maximum of breakpoint
+     * CSS for Extra small devices (phones, less than 768px)
      */
 
-    @media only screen and (max-width: $breakpoint) {
+    @media (max-width: $breakpoint) {
 
     }
 
-
     /*
-     * CSS for devices with resolution up to the minimum breakpoint
+     * CSS for Small devices (tablets, 768px and up)
      */
 
-    @media only screen and (min-width: $breakpoint+1) {
+    @media (min-width: $breakpoint) {
+
+    }
+
+    /*
+     * CSS for Medium devices (desktops, 992px and up)
+     */
+
+    @media (min-width: $breakpoint-medium) {
+
+    }
+
+    /*
+     * CSS for Large devices (large desktops, 1200px and up)
+     */
+
+    @media (min-width: $breakpoint-large) {
 
     }

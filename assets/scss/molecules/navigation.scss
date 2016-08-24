@@ -34,14 +34,14 @@
                                 color: $color-gray;
                             }
                         }
-                    }                    
+                    }
 
                     /* Menu Item */
                     [class*="menu-link"],
                     a{
                         display: block;
                         color: $color-gray-dark;
-                    }                    
+                    }
                 }
 
         /*  Tabs
@@ -70,9 +70,9 @@
                 text-decoration: none;
 
                 &[aria-selected="false"]:hover {
-                    background-color: lighten($color-gray-light, 5%);                    
+                    background-color: lighten($color-gray-light, 5%);
                 }
-                
+
                 &[aria-selected="true"] {
                     background-color: #fff;
                     padding: 13px 12px;
@@ -94,10 +94,10 @@
     }
 
     /*
-     * CSS for devices with resolution up to a maximum of breakpoint
+     * CSS for Extra small devices (phones, less than 768px)
      */
 
-    @media only screen and (max-width: $breakpoint) {
+    @media (max-width: $breakpoint) {
 
         /*  Header
             ========================================================================== */
@@ -107,7 +107,7 @@
 
         /*  Menu
             ========================================================================== */
-            
+
             /*  Navbar
                 ========================================================================== */
                 .navbar{
@@ -154,14 +154,14 @@
                     [class*="menu-item"]{
                         display: block;
                     }
-                    
+
                     /* Menu Link */
                     [class*="menu-link"],
                     a{
                         padding: 15px 20px;
-                    }                    
+                    }
                 }
-            
+
             /*  Nav Menu Open
                 ========================================================================== */
                 .nav-menu-open{
@@ -176,10 +176,10 @@
     }
 
     /*
-     * CSS for devices with resolution up to the minimum breakpoint
+     * CSS for Small devices (tablets, 768px and up)
      */
 
-    @media only screen and (min-width: $breakpoint+1) {
+    @media (min-width: $breakpoint) {
 
         /*  Header
             ========================================================================== */
@@ -218,7 +218,7 @@
                             cursor: pointer;
                         }
                     }
-                    
+
                     /* Nav more show */
                     &.nav-more-show{
                         .nav-more{
@@ -237,8 +237,8 @@
                 ========================================================================== */
                 .nav-menu{
                     padding: 0;
-                    margin: 0; 
-                    font-size: 0;                    
+                    margin: 0;
+                    font-size: 0;
                     display: table;
                     margin: 0 auto;
 
@@ -246,9 +246,9 @@
                     [class*="menu-item"]{
                         display: table-cell;
                         white-space: nowrap;
-                    }                    
+                    }
                 }
-                
+
                 /* Nav more */
                 .nav-more{
                     @include transition(visibility .1s ease, opacity .2s ease);
@@ -263,7 +263,7 @@
                     /* Menu Item */
                     [class*="menu-item"]{
                         display: block;
-                    }  
+                    }
                 }
 
                 .nav-menu,
@@ -275,6 +275,20 @@
                         padding: 20px 30px;
                     }
                 }
-            
+    }
+
+    /*
+     * CSS for Medium devices (desktops, 992px and up)
+     */
+
+    @media (min-width: $breakpoint-medium) {
+
+    }
+
+    /*
+     * CSS for Large devices (large desktops, 1200px and up)
+     */
+
+    @media (min-width: $breakpoint-large) {
 
     }
