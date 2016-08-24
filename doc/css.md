@@ -1,4 +1,4 @@
-![A2boilerplate](https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png)
+![Snack](https://cloud.githubusercontent.com/assets/1345662/4002471/12af2f4c-296d-11e4-8c6d-ddee89d68c85.png)
 
 [:house:](../../../) » [Documentação](index.md) » CSS
 
@@ -31,18 +31,60 @@ Todos os arquivos ficam localizados em _`assets/scss`_.
 Aplicamos o conceito de _mobile first_ nos arquivos de estilo.
 
 ```scss
+/*
+ * CSS for all devices
+ */
+
 @media only screen {
+
 }
 
 /*
- * CSS for devices with resolution bigger than breakpoint
-*/
+ * CSS for Extra small devices (phones, less than 768px)
+ */
 
-@media only screen and (min-width: $breakpoint) {
+@media (max-width: $breakpoint) {
+
 }
+
+/*
+ * CSS for Small devices (tablets, 768px and up)
+ */
+
+@media (min-width: $breakpoint) {
+
+}
+
+/*
+ * CSS for Medium devices (desktops, 992px and up)
+ */
+
+@media (min-width: $breakpoint-medium) {
+
+}
+
+/*
+ * CSS for Large devices (large desktops, 1200px and up)
+ */
+
+@media (min-width: $breakpoint-large) {
+
+}
+
+```
+## Breakpoints
+
+As variáveis do breakpoint são definidas no arquivo `variables.scss`. Claro que o conceito de _Mobile first_ **não se resume só a isso**; coisas essenciais como conteúdo por exemplo, são primordiais nessa questão.
+
+```scss
+/*  Breakpoints
+    ========================================================================== */
+    $breakpoint         : 768px;  // Breakpoint for small devices (Phones and Tablets)
+    $breakpoint-medium  : 992px;  // Breakpoint for medium devices (Desktops)
+    $breakpoint-large   : 1200px; // Breakpoint for large devices (Desktops)
+
 ```
 
-A variável breakpoint é definida no arquivo `variables.scss`. Claro que o conceito de _Mobile first_ **não se resume só a isso**; coisas essenciais como conteúdo por exemplo, são primordiais nessa questão.
 
 ## Design Atômico
 
@@ -67,14 +109,15 @@ Outro conceito aplicado foi o [Design Atômico](http://bradfrostweb.com/blog/pos
 * **Moléculas** (_molecules_)
     * `forms.scss`
     * `navigation.scss` ==> Declarações relacionadas a elementos de navegação (cabeçalho, rodapé, menus, ...)
-    * `icons.scss` ==> Declaração de _sprites_
+    * `icons.mustache` ==> Template que gera o _sprites_
+    * `icons.scss` ==> Arquivo gerado automáticamente a partir do _icons.mustache_
 * **Organismos** (_organisms_)
     * `layout.scss`
     * `print.scss`
 
 ## Mixins e variáveis
 
-Se você já ouviu falar de pré-processadores, provavelmente conhece sobre variáveis e mixins. Utilizamos alguns padrões no A2boilerplate.
+Se você já ouviu falar de pré-processadores, provavelmente conhece sobre variáveis e mixins. Utilizamos alguns padrões no Snack.
 
 ### Mixins
 

@@ -32,6 +32,10 @@ menu:
         label: "Navegação"
         link: "/navegacao/"
         class: "navegacao"
+    'Tabelas':
+        label: "Tabelas"
+        link: "/tabelas/"
+        class: "tables"
     'Cores':
         label: "Cores"
         link: "/cores/"
