@@ -72,8 +72,19 @@ Aplicamos o conceito de _mobile first_ nos arquivos de estilo.
 }
 
 ```
+## Breakpoints
 
 A variável breakpoint é definida no arquivo `variables.scss`. Claro que o conceito de _Mobile first_ **não se resume só a isso**; coisas essenciais como conteúdo por exemplo, são primordiais nessa questão.
+
+```scss
+/*  Breakpoints
+    ========================================================================== */
+    $breakpoint         : 768px;  // Breakpoint for small devices (Phones and Tablets)
+    $breakpoint-medium  : 992px;  // Breakpoint for medium devices (Desktops)
+    $breakpoint-large   : 1200px; // Breakpoint for large devices (Desktops)
+
+```
+
 
 ## Design Atômico
 
