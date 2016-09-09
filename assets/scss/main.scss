@@ -1,12 +1,9 @@
-/* Start
+/*  Atoms
     ========================================================================== */
-    @import "base/normalize";
-    @import "base/mixins";
-    @import "base/variables";
-    @import "base/base";
-
-/* Atoms
-    ========================================================================== */
+    @import "atoms/normalize";
+    @import "atoms/mixins";
+    @import "atoms/variables";
+    @import "atoms/base";
     @import "atoms/grid";
     @import "atoms/font-awesome";
     @import "atoms/typography";
@@ -15,13 +12,13 @@
     @import "atoms/lists";
     @import "atoms/tables";
 
-/* Molecules
+/*  Molecules
     ========================================================================== */
     @import "molecules/forms";
     @import "molecules/navigation";
     @import "molecules/icons";
 
-/* Organisms
+/*  Organisms
     ========================================================================== */
     @import "organisms/layout";
     @import "organisms/print";

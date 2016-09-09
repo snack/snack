@@ -5,7 +5,7 @@
     /*  Grid
         ========================================================================== */
         $total-columns : 12; // Total of columns
-        $column-width  : 60px; // Columns width
+        $column-width  : 85px; // Columns width
         $gutter-width  : 20px; // Space between the columns
         $breath        : 20px; // Option of lateral space for grid
         $space         : 25px; // Vertical space
@@ -20,60 +20,45 @@
         ========================================================================== */
 
         /* Default */
-        $color-gray: #BDC3C7;
-        $color-gray-light: #F2F1EF;
-        $color-gray-middle: #DADFE1;
-        $color-gray-dark: #6C7A89;
+        $color-gray: #666;
+        $color-gray-light: #CCC;
+        $color-gray-lightest: #f9f9f9;
+        $color-gray-dark: #333;
+
+        $color-primary: #2ca8ff;
+        $color-primary-light: #d9edf7;
+        $color-warning: #ffa92c;
+        $color-warning-light: #f7ecbe;
+        $color-success: #1abc9c;
+        $color-success-light: #c6eed7;
+        $color-danger: #e74c3c;
+        $color-danger-light: #f4ceca;
 
     /*  Forms
         ========================================================================== */
 
         /*  Inputs
             ========================================================================== */
-            $color-border-input: $color-gray-middle;
-            $color-input: $color-gray-dark;
+            $color-border-input: $color-gray-light;
+            $color-input: $color-gray;
 
             /*  Placeholder
                 ========================================================================== */
                 $placeholder-font-size: 14px;
-                $color-placeholder: $color-gray;
+                $color-placeholder: $color-gray-light;
 
             /*  Required tip
                 ========================================================================== */
                 $color-required-tip: $color-gray-dark;
-                $required-tip-font-size: 12px;
+                $required-tip-font-size: 14px;
 
             /*  Required field
                 ========================================================================== */
                 $color-required: $color-gray-dark;
-                $required-font-size: 12px;
+                $required-font-size: 14px;
 
     /*  Buttons
         ========================================================================== */
-        $btn-font-size: 14px;
-
-        /*  Colors
-            ========================================================================== */
-
-            /*  Default
-                ========================================================================== */
-                $btn-bg: $color-gray-light;
-                $btn-bg-hover: darken($btn-bg, 5%);
-
-            /*  Gray
-                ========================================================================== */
-                $btn-gray-bg: $color-gray;
-                $btn-gray-bg-hover: darken($color-gray, 5%);
-
-            /*  Gray Dark
-                ========================================================================== */
-                $btn-gray-dark-bg: $color-gray-dark;
-                $btn-gray-dark-bg-hover: darken($color-gray-dark, 5%);
-
-            /*  Gray Middle
-                ========================================================================== */
-                $btn-gray-middle-bg: $color-gray-middle;
-                $btn-gray-middle-bg-hover: darken($color-gray-middle, 5%);
 
         /*  Social share
             ========================================================================== */

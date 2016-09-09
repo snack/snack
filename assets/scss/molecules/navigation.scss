@@ -8,42 +8,6 @@
 
     @media only screen {
 
-        /*  Header
-            ========================================================================== */
-
-        /*  Footer
-            ========================================================================== */
-
-        /*  Menu
-            ========================================================================== */
-
-            /*  Nav Menu
-                ========================================================================== */
-                .nav-menu,
-                .nav-more{
-
-                    /* Menu Item */
-                    [class*="menu-item"]{
-                        font-size: 12px;
-                        line-height: 12px;
-
-                        /* Current */
-                        &.current{
-                            > [class*="menu-link"],
-                              a{
-                                color: $color-gray;
-                            }
-                        }
-                    }
-
-                    /* Menu Item */
-                    [class*="menu-link"],
-                    a{
-                        display: block;
-                        color: $color-gray-dark;
-                    }
-                }
-
         /*  Tabs
             ========================================================================== */
             .tablist-menu {
@@ -99,78 +63,223 @@
 
     @media (max-width: $breakpoint) {
 
-        /*  Header
-            ========================================================================== */
+    }
 
-        /*  Footer
-            ========================================================================== */
+    /* Custom form menu mobile */
+    @media (max-width: $breakpoint-medium) {
 
-        /*  Menu
+        /*  Navbar
             ========================================================================== */
+            .navbar{
+                @include transition( left .2s ease );
+                background-color: $color-gray-dark;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                width: 100%;
 
-            /*  Navbar
+                /* Navbar menu open */
+                .navbar-menu-open & {
+                    @include transition( left .2s ease );
+                    left: 70%;
+                }
+            }
+
+            /*  Navbar hold
                 ========================================================================== */
-                .navbar{
-                    position: relative;
-                    text-align: left;
+                .navbar-hold{
+                    padding: 5px 10px 5px 40px;
+                    font-size: 0;
+                    height: 56px;
+                    @include transition( padding-left .2s ease );
+
+                    /* Navbar menu open */
+                    .navbar-menu-open & {
+                        @include transition( padding-left .2s ease );
+                        padding-left: 10px;
+                    }
+
+                    /* Navbar form open */
+                    .navbar-form-open &{
+                        padding-bottom: 130px;
+                    }
+
+                    > *{
+                        display: inline-block;
+                        vertical-align: middle;
+
+                        &.navbar-buttons,
+                        &.navbar-user,
+                        &.navbar-back{
+                            text-align: right;
+                        }
+                    }
+
+                    /* Navbar Full */
+                    .navbar-full &{
+
+                        .navbar-brand{
+                            width: 40%;
+
+                            + * + *{
+                                width: 18%;
+
+                                + *{
+                                    width: 42%;
+                                }
+                            }
+                        }
+                    }
+
+                    /* Navbar Logged */
+                    .navbar-logged &{
+
+                        .navbar-brand{
+                            width: 25%;
+
+                            + * + *{
+                                width: 35%;
+
+                                + *{
+                                    width: 40%;
+                                }
+                            }
+                        }
+                    }
+
+                    /* Navbar Single */
+                    .navbar-single &{
+
+                        .navbar-brand{
+                            width: 25%;
+
+                            + *{
+                                width: 75%;
+                            }
+                        }
+                    }
                 }
 
-            /*  Nav Menu
+            /*  Navbar brand
                 ========================================================================== */
-                .nav-menu{
-                    @include transition(right .3s ease);
-                    background-color: $color-gray-light;
-                    padding: 0;
-                    margin: 0;
+                .navbar-brand{
+
+                    a,img{
+                        width: 105px;
+                    }
+                }
+
+            /*  Navbar Menu
+                ========================================================================== */
+                .navbar-menu{
+                    @include transition( left .2s ease );
+                    background-color: #1f363f;
                     position: fixed;
                     top: 0;
-                    right: -80%;
-                    z-index: 2;
-                    width: 80%;
+                    left: -70%;
                     height: 100%;
+                    padding: 0;
+                    margin: 0;
+                    width: 70%;
+                    padding: 50px 10px 10px;
+                    z-index: 2;
 
-                    /* Sandwich */
+                    /* Navbar menu open */
+                    .navbar-menu-open & {
+                        @include transition( left .2s ease );
+                        left: 0;
+                    }
+
                     &:before{
-                        @include box-sizing();
+                        @include transition( right .2s ease, content .3s ease, font-size .3s ease );
                         content: "\f0c9";
                         font-family: 'FontAwesome';
+                        font-size: 22px;
+                        line-height: 20px;
                         position: absolute;
-                        left: -40px;
-                        width: 40px;
-                        height: 40px;
-                        font-size: 32px;
-                        line-height: 29px;
-                        padding: 5px;
-                        color: $color-gray-dark;
-                        text-align: center;
-                        cursor: pointer;
+                        color: #fff;
+                        right: -40px;
+                        top: 5px;
+                        padding: 10px;
 
-                        .nav-menu-open &{
+                        /* Navbar menu open */
+                        .navbar-menu-open &{
+                            @include transition( right .2s ease, content .3s ease, font-size .3s ease );
                             content: "\f00d";
+                            right: 10px;
                         }
                     }
 
                     /* Menu item */
-                    [class*="menu-item"]{
-                        display: block;
+                    [class*="item"]{
+                        font-size: 18px;
+                        line-height: 18px;
+                        font-weight: 700;
+                        position: relative;
                     }
 
-                    /* Menu Link */
-                    [class*="menu-link"],
+                    /* Menu link */
                     a{
-                        padding: 15px 20px;
+                        display: block;
+                        color: #fff;
+                        padding: 10px 8px;
                     }
                 }
 
-            /*  Nav Menu Open
+            /*  Navbar Menu Open
                 ========================================================================== */
-                .nav-menu-open{
-                    @include transition(left .3s ease);
-                    left: -80%;
+                .navbar-menu-open{
+                    overflow: hidden;
+                }
 
-                    .nav-menu{
-                        @include transition(right .3s ease);
-                        right: 0;
+            /*  Navbar form
+                ========================================================================== */
+                .navbar-form{
+                    margin: 0;
+                    text-align: right;
+                    padding-right: 10px;
+
+                    .input{
+                        position: absolute;
+                        left: 0;
+                        top: 60px;
+                        margin: 2%;
+                        width: 96%;
+                        opacity: 0;
+                        visibility: hidden;
+
+                        /* Navbar form open */
+                        .navbar-form-open & {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+
+                    .btn{
+                        width: 24px;
+                        padding: 8px 0;
+                        border: 1px solid transparent;
+
+                        .fa{ margin: 0 5px; }
+                    }
+                }
+
+            /*  Navbar button
+                ========================================================================== */
+                .navbar-buttons{
+
+                    > *{
+                        padding: 8px 5px;
+                        width: 100%;
+                        font-size: 14px;
+
+                        + *{
+                            display: none;
+                        }
+                    }
+
+                    .btn-single{
+                        display: none;
                     }
                 }
     }
@@ -180,12 +289,6 @@
      */
 
     @media (min-width: $breakpoint) {
-
-        /*  Header
-            ========================================================================== */
-
-        /*  Footer
-            ========================================================================== */
 
         /*  Menu
             ========================================================================== */
@@ -283,6 +386,210 @@
 
     @media (min-width: $breakpoint-medium) {
 
+        /*  Navbar
+            ========================================================================== */
+            .navbar{
+                background-color: $color-gray-dark;
+                min-height: 104px;
+            }
+
+            /*  Navbar hold
+                ========================================================================== */
+                .navbar-hold{
+                    padding: 0 15px;
+                    font-size: 0;
+
+                    > *{
+                        display: inline-block;
+                        vertical-align: middle;
+                        height: 104px;
+
+                        &.navbar-buttons,
+                        &.navbar-user,
+                        &.navbar-back{
+                            text-align: right;
+                        }
+                    }
+
+                    /* Navbar Full */
+                    /* Navbar Logged */
+                    .navbar-full &,
+                    .navbar-logged &{
+
+                        .navbar-brand{
+                            width: 16%;
+
+                            + *  {
+                                width: 46%;
+
+                                + *,
+                                + * + *{
+                                    width: 19%;
+                                }
+                            }
+                        }
+                    }
+
+                    /* Navbar Single */
+                    .navbar-single &{
+
+                        .navbar-brand{
+                            width: 25%;
+
+                            + *{
+                                width: 75%;
+                            }
+                        }
+                    }
+                }
+
+            /*  Navbar fixed
+                ========================================================================== */
+                .navbar-fixed{
+                    position: fixed;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                }
+
+            /*  Navbar brand
+                ========================================================================== */
+                .navbar-brand{
+                    padding: 15px 0;
+
+                    a,img{
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+
+            /*  Navbar menu
+                ========================================================================== */
+                .navbar-menu{
+                    padding: 32px 0;
+                    margin-bottom: 0;
+                    margin-top: 0;
+                    display: inline-block;
+
+                    > *{
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+                    /* Menu item */
+                    [class*="item"]{
+                        font-size: 18px;
+                        line-height: 18px;
+                        font-weight: 700;
+                        position: relative;
+
+                        &:hover,
+                        &:focus{
+
+                            /* Dropdown Toggle */
+                            .dropdown-toggle{
+                                @include transition( opacity .2s ease, visibility .2s ease );
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+
+                    /* Menu link */
+                    a{
+                        display: block;
+                        color: #fff;
+                        padding: 10px 8px;
+
+                        .fa{
+                            margin-right: 5px;
+                        }
+
+                        &:hover,
+                        &:focus{
+                            text-decoration: none;
+                            color: $color-primary;
+                        }
+                    }
+
+                    /* Current */
+                    [class*="current"]{
+                        a{
+                            text-decoration: none;
+                            color: $color-primary;
+                        }
+                    }
+
+                }
+
+            /*  Navbar form
+                ========================================================================== */
+                .navbar-form{
+                    margin-bottom: 0;
+                    margin-top: 0;
+                    padding: 32px 0;
+                    position: relative;
+                    //min-width: 200px;
+                    height: 104px;
+                    overflow: hidden;
+
+                    .input{
+                        border: none;
+                        background-color: rgba(0,0,0,0.2);
+                        background-color: #fff;
+                        color: $color-gray-dark;
+                        width: 100%;
+                        padding: 8px 45px 8px 10px;
+                        font-size: 16px;
+                        line-height: 24px;
+                        right: -100%;
+                        position: absolute;
+                        @include transition( right .3s ease );
+                    }
+
+                    .btn{
+                        @include transition( right .3s ease );
+                        width: auto;
+                        position: absolute;
+                        line-height: 22px;
+                        right: 0;
+                    }
+
+                    /* Nav Form Active */
+                    &.nav-form-active{
+                        .input{
+                            right: 0;
+                            @include transition( right .3s ease );
+                        }
+
+                        .btn{
+                            right: -70px;
+                            color: $color-gray-dark;
+                            @include transition( right .3s ease );
+
+                            .fa{
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                }
+
+            /*  Navbar button
+                ========================================================================== */
+                .navbar-buttons{
+                    padding: 32px 0;
+
+                    > * + *{
+                        margin-left: 5px;
+                    }
+                }
+
+            /*  Navbar logged / back
+                ========================================================================== */
+                .navbar-user,
+                .navbar-back{
+                    padding: 32px 0;
+                }
     }
 
     /*

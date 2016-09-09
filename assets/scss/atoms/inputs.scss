@@ -28,7 +28,7 @@
             .textarea {
                 width: 100%;
                 padding: 12px 10px;
-                border-width: 1px;
+                border-width: 2px;
                 border-style: solid;
                 border-color: transparent;
                 background-color: #fff;
@@ -36,7 +36,7 @@
                 font-size: 14px;
                 margin-bottom: 15px;
                 @include transition(all .25s ease);
-                @include border-radius(2px);
+                @include border-radius(4px);
             }
 
             input:focus,
@@ -45,7 +45,7 @@
             .select:focus,
             textarea:focus,
             .textarea:focus {
-                background-color: #F2F1EF;
+                background-color: $color-gray-lightest;
                 outline-width: 0;
             }
 
@@ -57,13 +57,13 @@
                         appearance: none; */
 
                 color: $color-placeholder;
-                font-style: italic;
+                /* font-style: italic; */
                 opacity: 1;
                 font-size: $placeholder-font-size;
 
                 &[value=""]{
                     color: #BFBFBF;
-                    font-style: italic;
+                    /* font-style: italic; */
                 }
             }
 
@@ -110,7 +110,7 @@
             input::-webkit-input-placeholder,
             textarea::-webkit-input-placeholder {
                 color: $color-placeholder;
-                font-style: italic;
+                /* font-style: italic; */
                 opacity: 1;
                 font-size: $placeholder-font-size;
             }
@@ -118,7 +118,7 @@
             input:-moz-placeholder,
             textarea:-moz-placeholder {
                 color: $color-placeholder;
-                font-style: italic;
+                /* font-style: italic; */
                 opacity: 1;
                 font-size: $placeholder-font-size;
             }
@@ -126,7 +126,7 @@
             input::-moz-placeholder,
             textarea::-moz-placeholder {
                 color: $color-placeholder;
-                font-style: italic;
+                /* font-style: italic; */
                 opacity: 1;
                 font-size: $placeholder-font-size;
             }
@@ -134,7 +134,7 @@
             input:-ms-input-placeholder,
             textarea:-ms-input-placeholder {
                 color: $color-placeholder;
-                font-style: italic;
+                /* font-style: italic; */
                 opacity: 1;
                 font-size: $placeholder-font-size;
             }

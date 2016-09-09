@@ -47,7 +47,7 @@ var gulp 		= require('gulp'),
             return gulp.src(dirs._components+'/normalize.css/normalize.css')
                         .pipe(plugins.replace('/*!', '/*'))
                         .pipe(plugins.rename('normalize.scss'))
-                        .pipe(gulp.dest(dirs._assets+'/scss/base'));
+                        .pipe(gulp.dest(dirs._assets+'/scss/atoms'));
         });
 
         gulp.task('copy:font-awesome', function () {
@@ -113,10 +113,10 @@ var gulp 		= require('gulp'),
                 .pipe(reload({stream:true}));
     	});
 
-        //Style Guide
+        //Style Guide New
         gulp.task('sass_styleguide', function () {
 
-            return gulp.src(dirs._sg_assets+'/scss/main.scss')
+            return gulp.src('styleguide-new/assets/css/main.scss')
                 .pipe(plugins.rename({suffix: ".min"}))
                 .pipe(plugins.sass({
                     trace: true,
@@ -124,7 +124,7 @@ var gulp 		= require('gulp'),
                     style: "compressed"
                 }))
                 .on('error', function (err) { console.log(err.message); })
-                .pipe(gulp.dest(dirs._sg_build+'/css/'))
+                .pipe(gulp.dest('styleguide-new/build/css/'))
                 .pipe(plugins.livereload())
                 .pipe(reload({stream:true}));
         });
@@ -205,7 +205,8 @@ var gulp 		= require('gulp'),
 
     		// watch CSS
             gulp.watch(dirs._assets+'/scss/**/*.scss', ['sass']);
-    		gulp.watch(dirs._sg_assets+'/scss/*.scss', ['sass_styleguide']);
+            gulp.watch(dirs._sg_assets+'/scss/*.scss', ['sass_styleguide']);
+    		gulp.watch('styleguide-new/assets/css/*.scss', ['sass_styleguide']);
 
     		// watch IMAGES
     		gulp.watch([dirs._assets+'/img/*'], ['imagemin', 'svg2png']);

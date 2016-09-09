@@ -46,6 +46,39 @@
                 font-size: $required-font-size;
             }
 
+        /*  Alerts
+            ========================================================================== */
+            span[class*="alert-"]{
+                display: block;
+                font-size: 16px;
+                line-height: 20px;
+                padding: 15px 20px;
+
+                + [class*="alert-"]{
+                    margin-top: 10px;
+                }
+            }
+
+            .alert-danger{
+                background-color: $color-danger-light;
+                color: $color-danger;
+            }
+
+            .alert-warning{
+                background-color: $color-warning-light;
+                color: $color-warning;
+            }
+
+            .alert-success{
+                background-color: $color-success-light;
+                color: $color-success;
+            }
+
+            .alert-info{
+                background-color: $color-primary-light;
+                color: $color-primary;
+            }
+
     }
 
     /*
