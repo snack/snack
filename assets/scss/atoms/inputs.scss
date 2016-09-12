@@ -105,6 +105,57 @@
                 margin: 4px 0 0;
             }
 
+        /*  Inputs actions
+            ========================================================================== */
+            .form-item-wrap{
+                display: block;
+                position: relative;
+
+                .fa{
+                    position: absolute;
+                    top: 15px;
+                    right: 20px;
+                    color: $color-gray;
+                }
+            }
+
+            .input,
+            select,
+            .select,
+            textarea,
+            .textarea{
+
+                /* Success */
+                &.success{
+                    border-color: $color-success;
+                    color: $color-success;
+
+                    + .fa{
+                        color: $color-success;
+                    }
+                }
+
+                /* Error */
+                &.danger{
+                    border-color: $color-danger;
+                    color: $color-danger;
+
+                    + .fa{
+                        color: $color-danger;
+                    }
+                }
+
+                /* Success */
+                &.warning{
+                    border-color: $color-warning;
+                    color: $color-warning;
+
+                    + .fa{
+                        color: $color-warning;
+                    }
+                }
+            }
+
         /*  Placeholder
             ========================================================================== */
             input::-webkit-input-placeholder,
