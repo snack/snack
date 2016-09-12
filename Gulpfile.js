@@ -112,7 +112,7 @@ var gulp 		= require('gulp'),
 	// BROWSER SYNC ------------------------------------------------------
     	gulp.task('browser-sync', function() {
     	    browserSync({
-    	        proxy: "local.gulp"
+    	        proxy: "local.snack"
     	    });
     	});
 
