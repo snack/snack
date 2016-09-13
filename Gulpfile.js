@@ -113,7 +113,7 @@ var gulp 		= require('gulp'),
                 .pipe(reload({stream:true}));
     	});
 
-        //Style Guide New
+        //Style Guide
         gulp.task('sass_styleguide', function () {
 
             return gulp.src(dirs._sg_assets+'/css/main.scss')
@@ -157,11 +157,14 @@ var gulp 		= require('gulp'),
 
             // Styleguide js
             gulp.src([
+
                     dirs._components+"/angular/angular.min.js", // AngularJS
+                    dirs._build+'/js/libs/jquery.min.js', // jQuery Lib
+                    dirs._components+'/rainbow/dist/rainbow.min.js', // Rainbow custom
                     dirs._sg_assets+'/js/app.js',  // App
-                    dirs._sg_assets+'/js/scripts.js' // Scripts
-                    //dirs._build+'/js/libs/jquery.min.js', // jQuery Lib
-                    //dirs._sg_assets+'/js/libs/rainbow-custom.min.js', // Rainbow custom
+                    dirs._sg_assets+'/js/scripts.js', // Scripts
+
+
                 ])
                 .pipe(plugins.concat('scripts.js'))
                 .pipe(gulp.dest(dirs._sg_build+"/js"))

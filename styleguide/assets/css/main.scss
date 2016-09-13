@@ -7,7 +7,7 @@
         /*  Styleguide page
             ========================================================================== */
             .styleguide-page{
-                background-color: #fff;
+                background-color: #f9f9f9;
             }
 
         /*  Styleguide item
@@ -21,6 +21,44 @@
             .styleguide-example{
                 padding: 20px 0;
                 margin-bottom: 20px;
+                position: relative;
+
+                &:after{
+                    content: "...";
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    border: 1px solid #eee;
+                    background-color: #fff;
+                    border-radius: 2px;
+                    width: 15px;
+                    height: 15px;
+                    cursor: pointer;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 12px;
+                    color: #666;
+                    font-weight: bold;
+                    padding: 6px;
+                    display: block;
+                    visibility: hidden;
+                    color: #444;
+                }
+
+                &:hover,
+                &:focus,
+                &.current{
+                    box-shadow: 0 0 1px 0 rgba(0,0,0,0.2);
+                    background: #fff;
+                    padding: 20px 1.5%;
+                    margin-left: -1.5%;
+                    margin-right: -1.5%;
+                    width: 103%;
+
+                    &:after{
+                        visibility: visible;
+                    }
+                }
             }
 
         /*  Styleguide item title
@@ -30,6 +68,28 @@
                 margin-bottom: 15px;
                 padding-bottom: 5px;
                 border-bottom: 1px solid #f9f9f9;
+            }
+
+        /*  Back top
+            ========================================================================== */
+            .back-top{
+                position: fixed;
+                right: 20px;
+                bottom: 20px;
+                background-color: #444;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                padding: 10px;
+                font-size: 22px;
+                line-height: 18px;
+                color: #fff;
+                display: block;
+
+                &:hover,
+                &:focus{
+                    text-decoration: none;
+                }
             }
 
     }
