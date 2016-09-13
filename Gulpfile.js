@@ -116,7 +116,7 @@ var gulp 		= require('gulp'),
         //Style Guide New
         gulp.task('sass_styleguide', function () {
 
-            return gulp.src('styleguide-new/assets/css/main.scss')
+            return gulp.src(dirs._sg_assets+'/css/main.scss')
                 .pipe(plugins.rename({suffix: ".min"}))
                 .pipe(plugins.sass({
                     trace: true,
@@ -124,7 +124,7 @@ var gulp 		= require('gulp'),
                     style: "compressed"
                 }))
                 .on('error', function (err) { console.log(err.message); })
-                .pipe(gulp.dest('styleguide-new/build/css/'))
+                .pipe(gulp.dest(dirs._sg_build+'/css/'))
                 .pipe(plugins.livereload())
                 .pipe(reload({stream:true}));
         });
@@ -157,9 +157,11 @@ var gulp 		= require('gulp'),
 
             // Styleguide js
             gulp.src([
-                    dirs._build+'/js/libs/jquery.min.js', // jQuery Lib
-                    dirs._sg_assets+'/js/scripts.js', // Scripts
-                    dirs._sg_assets+'/js/libs/rainbow-custom.min.js', // Rainbow custom
+                    dirs._components+"/angular/angular.min.js", // AngularJS
+                    dirs._sg_assets+'/js/app.js',  // App
+                    dirs._sg_assets+'/js/scripts.js' // Scripts
+                    //dirs._build+'/js/libs/jquery.min.js', // jQuery Lib
+                    //dirs._sg_assets+'/js/libs/rainbow-custom.min.js', // Rainbow custom
                 ])
                 .pipe(plugins.concat('scripts.js'))
                 .pipe(gulp.dest(dirs._sg_build+"/js"))
@@ -205,8 +207,7 @@ var gulp 		= require('gulp'),
 
     		// watch CSS
             gulp.watch(dirs._assets+'/scss/**/*.scss', ['sass']);
-            gulp.watch(dirs._sg_assets+'/scss/*.scss', ['sass_styleguide']);
-    		gulp.watch('styleguide-new/assets/css/*.scss', ['sass_styleguide']);
+            gulp.watch(dirs._sg_assets+'/css/*.scss', ['sass_styleguide']);
 
     		// watch IMAGES
     		gulp.watch([dirs._assets+'/img/*'], ['imagemin', 'svg2png']);
