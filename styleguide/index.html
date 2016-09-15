@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="pt-br" ng-app="" >
+<html class="no-js" lang="pt-br" ng-app="snackApp" ng-controller="snackController as snack">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -20,7 +20,7 @@
 
 </head>
 <body class="styleguide-page">
-
+{{snack.contact}}
 <pre class="code">
     <code data-language="html">
         <span style="display:inline-block; width: 46px; height: 46px; border-radius: 4px; background-color: #333;"></span>
@@ -32,9 +32,6 @@
         <span style="display:inline-block; width: 46px; height: 46px; border-radius: 4px; background-color: #e74c3c;"></span>
     </code>
 </pre>
-
-    <!-- Styleguide Item -->
-    <div class="styleguide-item" ng-include="'views/template.html'"></div>
 
     <!-- Styleguide Item -->
     <div class="styleguide-item" ng-include="'views/colors.html'"></div>
@@ -58,7 +55,7 @@
     <div class="styleguide-item" ng-include="'views/forms.html'"></div>
 
     <!-- Styleguide Item -->
-    <!-- <div class="styleguide-item" ng-include="'views/XXXXXX.html'"></div> -->
+    <!-- <div class="styleguide-item" ng-include="'views/template.html'"></div> -->
 
 
     <!-- Back top -->

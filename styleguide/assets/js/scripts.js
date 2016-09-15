@@ -17,7 +17,7 @@
             var self = this;
             self.externalLinks();
             self.backTop();
-            self.showCode();
+            //self.showCode();
         },
 
         // External links

@@ -1,7 +1,7 @@
-<div class="row">
+<div class="row full">
 
     <!-- SG Example -->
-    <div class="styleguide-example">
+    <div class="styleguide-example" ng-class="snack.class" ng-click="snack.changeClass()">
 
         <!-- SG Title Item -->
         <h4 class="styleguide-title">Navbar</h4>
@@ -14,7 +14,7 @@
 
                 <!-- Navbar Brand -->
                 <div class="navbar-brand">
-                    <a href="#"><img src="/build/img/brand.png" alt=""></a>
+                    <a href="#"><img src="/styleguide/build/img/logo-snack.png" alt=""></a>
                 </div>
 
                 <!-- Navbar menu -->
@@ -30,7 +30,7 @@
                     <fieldset>
                         <legend class="sr-only">Formulário de Busca</legend>
                         <input class="input" id="busca" name="busca" aria-required="true" placeholder="Digite sua pesquisa" type="text">
-                        <button type="submit" class="btn btn-white"><i class="fa fa-search"></i>Buscar</button>
+                        <button type="submit" class="btn"><i class="fa fa-search"></i>Buscar</button>
                     </fieldset>
                 </form>
 
@@ -41,5 +41,112 @@
 
             </div>
         </nav>
+    </div>
+
+    <div class="col-6">
+
+        <!-- SG Example -->
+        <div class="styleguide-example" ng-class="snack.class" ng-click="snack.changeClass()">
+
+            <!-- SG Title Item -->
+            <h4 class="styleguide-title">Paginação
+            <span>classes para alinhar <code>.text-center</code> / <code>.text-right</code></span>
+            </h4>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="" class="next"><i class="fa fa-angle-left"></i></a>
+                <a href="">1</a>
+                <a href="" class="current">2</a>
+                <span class="dots">...</span>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="" class="next"><i class="fa fa-angle-right"></i></a>
+            </div>
+            <!-- Pagination -->
+            <div class="pagination text-center">
+                <a href="" class="next"><i class="fa fa-angle-left"></i></a>
+                <a href="">1</a>
+                <a href="" class="current">2</a>
+                <span class="dots">...</span>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="" class="next"><i class="fa fa-angle-right"></i></a>
+            </div>
+            <!-- Pagination -->
+            <div class="pagination text-right">
+                <a href="" class="next"><i class="fa fa-angle-left"></i></a>
+                <a href="">1</a>
+                <a href="" class="current">2</a>
+                <span class="dots">...</span>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="" class="next"><i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-6 last">
+
+        <!-- SG Example -->
+        <div class="styleguide-example" ng-class="snack.class" ng-click="snack.changeClass()">
+
+            <!-- SG Title Item -->
+            <h4 class="styleguide-title">Breadcrumbs</h4>
+
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs">
+                <a href="">Home</a>
+                /
+                <a href="">Page</a>
+                /
+                <a href="">Intern</a>
+                /
+                <span class="breadcrumb_last">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+            </div>
+        </div>
+
+        <!-- SG Example -->
+        <div class="styleguide-example" ng-class="snack.class" ng-click="snack.changeClass()">
+
+            <!-- SG Title Item -->
+            <h4 class="styleguide-title">Dropdown menu
+            <span>classes para alinhar <code>.dropdown-right</code></span>
+            </h4>
+
+            <!-- Menu Dropdown -->
+            <div class="dropdown">
+                <a href="" class="btn btn-primary"><i class="fa fa-angle-down"></i> Dropdown</a>
+                    <div class="dropdown-menu">
+
+                    <span class="dropdown-item label"><i class="fa fa-shield"></i> Label</span>
+
+                    <a class="dropdown-item" href="/minha-conta/">Painel</a>
+                    <a class="dropdown-item active" href="/minha-conta/pedidos/">Pedidos</a>
+                    <a class="dropdown-item" href="/minha-conta/downloads/">Downloads</a>
+                    <a class="dropdown-item" href="/minha-conta/editar-endereco/">Endereços</a>
+                    <a class="dropdown-item" href="/minha-conta/editar-conta/">Detalhes da conta</a>
+                    <a class="dropdown-item split" href="#">Sair <i class="fa fa-sign-out"></i></a>
+
+                </div>
+            </div>
+
+            <!-- Menu Dropdown -->
+            <div class="dropdown">
+                <a href="" class="btn btn-primary">Dropdown <i class="fa fa-angle-down"></i></a>
+                    <div class="dropdown-menu dropdown-right">
+
+                    <span class="dropdown-item label">Label <i class="fa fa-shield"></i></span>
+
+                    <a class="dropdown-item" href="/minha-conta/">Painel</a>
+                    <a class="dropdown-item active" href="/minha-conta/pedidos/">Pedidos</a>
+                    <a class="dropdown-item" href="/minha-conta/downloads/">Downloads</a>
+                    <a class="dropdown-item" href="/minha-conta/editar-endereco/">Endereços</a>
+                    <a class="dropdown-item" href="/minha-conta/editar-conta/">Detalhes da conta</a>
+                    <a class="dropdown-item split" href="#">Sair <i class="fa fa-sign-out"></i></a>
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
