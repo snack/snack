@@ -23,14 +23,17 @@
             float: left;
             margin-right: percentage( $gutter-width / $grid-width );
 
-            /* border:1px solid #eee;
-            &:before{
-                content: "col";
-                font-size: 12px;
-                color: #666;
-                display: block;
-                widows: 100%;
-            } */
+            .sg-show-grid &{
+                border:1px solid $color-primary;
+                background-color: #fff;
+                &:before{
+                    content: "col";
+                    font-size: 12px;
+                    color: $color-primary;
+                    display: block;
+                    widows: 100%;
+                }
+            }
         }
 
    /*   Push columns (offset)
@@ -45,9 +48,11 @@
             margin-right: 0;
             float: right;
 
-            /* &:before{
-                content: "col last";
-            } */
+            .sg-show-grid &{
+                &:before{
+                    content: "col last";
+                }
+            }
         }
 
 
@@ -60,12 +65,14 @@
         .row {
             max-width: $grid-width;
 
-            /* border:1px solid #eee;
-            &:before{
-                content: "row";
-                font-size: 12px;
-                color: #666;
-            } */
+            .sg-show-grid &{
+                border:1px solid $color-primary;
+                &:before{
+                    content: "row";
+                    font-size: 12px;
+                    color: $color-primary;
+                }
+            }
         }
 
         .row.full {
@@ -73,9 +80,11 @@
             padding-left: $breath;
             padding-right: $breath;
 
-            /* &:before{
-                content: "row full";
-            } */
+            .sg-show-grid &{
+                &:before{
+                    content: "row full";
+                }
+            }
         }
 
         .column { @extend %column; }

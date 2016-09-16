@@ -21,7 +21,29 @@
     <link href="/components/prism/themes/prism.css" rel="stylesheet" type="text/css"> -->
 
 </head>
-<body class="styleguide-page">
+<body class="styleguide-page" ng-class="{ mobile: snack.isCurrent('/mobile'), tablet: snack.isCurrent('/tablet'), desktop: snack.isCurrent('/desktop'), 'sg-show-grid': snack.isCurrent('/grid') }">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-styleguide" aria-label="main navigation" role="navigation">
+
+        <!-- Navbar hold -->
+        <div class="navbar-hold">
+
+            <!-- Navbar Brand -->
+            <div class="navbar-brand">
+                <a href="/styleguide/"><img src="/styleguide/build/img/logo-snack.png" alt=""></a>
+            </div>
+
+            <!-- Navbar menu -->
+            <ul class="navbar-menu" role="menubar">
+                <li class="menu-item" ng-class="{ current: snack.isCurrent('/grid') }"><a href="#/grid"><i class="fa fa-table" aria-hidden="true"></i></a></li>
+                <li class="menu-item" ng-class="{ current: snack.isCurrent('/mobile') }"><a href="#/mobile"><i class="fa fa-mobile" aria-hidden="true"></i></a></li>
+                <li class="menu-item" ng-class="{ current: snack.isCurrent('/tablet') }"><a href="#/tablet"><i class="fa fa-tablet" aria-hidden="true"></i></a></li>
+                <li class="menu-item" ng-class="{ current: snack.isCurrent('/desktop') }"><a href="#/desktop"><i class="fa fa-desktop" aria-hidden="true"></i></a></li>
+                <li class="menu-item"><a href="#" class="btn btn-primary">Doc</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Styleguide Item -->
     <div class="styleguide-item" ng-include="'views/colors.html'"></div>

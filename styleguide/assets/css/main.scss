@@ -10,6 +10,10 @@
                 transition: $parameters;
     }
 
+    /*
+     * CSS for all devices
+     */
+
     @media only screen {
 
         /*  Styleguide page
@@ -131,5 +135,49 @@
                 }
             }
 
+        /*  Styleguide navbar
+            ========================================================================== */
+            .mobile{
+                .row{
+                    max-width: 438px;
+                }
+            }
+
+            .tablet{
+                .row{
+                    max-width: 768px;
+                }
+            }
     }
 
+    /*
+     * CSS for Medium devices (desktops, 992px and up)
+     */
+
+    @media (min-width: 768px) {
+
+        /*  Boby
+            ========================================================================== */
+
+    }
+
+    /*
+     * CSS for Medium devices (desktops, 992px and up)
+     */
+
+    @media (min-width: 992px) {
+
+        /*  Navbar
+            ========================================================================== */
+            .navbar-styleguide{
+                .navbar-hold{
+                    > *{
+                        width: 30%;
+                        + *{
+                            width: 70%;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+    }

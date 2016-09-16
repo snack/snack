@@ -336,6 +336,12 @@ Rainbow.extend("generic",[{matches:{1:[{name:"keyword.operator",pattern:/\=|\+/g
     snackApp.controller('snackController', ['$location', function($location) {
         var self = this;
 
+        self.isCurrent = function (viewLocation) {
+            console.log(viewLocation);
+            var active = (viewLocation === $location.path());
+            return active;
+        };
+
     }]);
 
     // Directives
