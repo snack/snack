@@ -1,20 +1,17 @@
     //Sed App
     var snackApp = angular.module('snackApp', []);
 
+    // Config
+
+    snackApp.config(['$compileProvider', function ($compileProvider) {
+        $compileProvider.debugInfoEnabled(false);
+    }]);
+
     // Controllers
 
-    snackApp.controller('snackController', ['$location', function($location){
+    snackApp.controller('snackController', ['$location', function($location) {
         var self = this;
 
-        self.contact = "Airton";
-
-        self.class = "";
-        self.changeClass = function(el){
-            if (self.class === "current")
-                self.class = "";
-            else
-                self.class = "current";
-        };
     }]);
 
     // Directives
@@ -27,9 +24,16 @@
                 desc: "@",
                 lang: "@"
             },
+            replace: true,
             transclude: true,
-            link: function(){
+            link: function(scope, element, attrs){
                 Rainbow.color();
+
+                element.bind("click", function() {
+
+                    // Toggle Class
+                    this.classList.toggle('current');
+                });
             }
         };
     });

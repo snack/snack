@@ -161,6 +161,8 @@ var gulp 		= require('gulp'),
                     dirs._components+"/angular/angular.min.js", // AngularJS
                     dirs._build+'/js/libs/jquery.min.js', // jQuery Lib
                     dirs._components+'/rainbow/dist/rainbow.min.js', // Rainbow custom
+                    //dirs._components+'/highlightjs/highlight.pack.min.js', // highlightjs
+                    //dirs._components+'/prism/prism.js', // prism.js
                     dirs._sg_assets+'/js/app.js',  // App
                     dirs._sg_assets+'/js/scripts.js', // Scripts
 

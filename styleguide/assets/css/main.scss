@@ -2,6 +2,14 @@
     Styleguide
     ========================================================================== */
 
+    @mixin transition($parameters...) {
+        -webkit-transition: $parameters;
+           -moz-transition: $parameters;
+             -o-transition: $parameters;
+            -ms-transition: $parameters;
+                transition: $parameters;
+    }
+
     @media only screen {
 
         /*  Styleguide page
@@ -19,30 +27,33 @@
         /*  Styleguide example
             ========================================================================== */
             .styleguide-example{
-                padding: 20px 0;
+                padding: 20px 10px;
                 margin-bottom: 20px;
                 position: relative;
 
-                &:after{
-                    content: "...";
+                .toggle-code{
                     position: absolute;
                     right: 10px;
                     top: 10px;
                     border: 1px solid #eee;
                     background-color: #fff;
                     border-radius: 2px;
-                    width: 15px;
-                    height: 15px;
+                    width: 25px;
+                    height: 25px;
                     cursor: pointer;
                     text-align: center;
-                    font-size: 14px;
-                    line-height: 12px;
-                    color: #666;
-                    font-weight: bold;
-                    padding: 6px;
+                    padding: 6px 0;
                     display: block;
                     visibility: hidden;
-                    color: #444;
+                    line-height: 0;
+
+                    &:before{
+                        content: "...";
+                        color: #666;
+                        font-size: 14px;
+                        line-height: 8px;
+                        font-weight: bold;
+                    }
                 }
 
                 &:hover,
@@ -50,14 +61,35 @@
                 &.current{
                     box-shadow: 0 0 1px 0 rgba(0,0,0,0.2);
                     background: #fff;
-                    padding: 20px 1.5%;
-                    margin-left: -1.5%;
-                    margin-right: -1.5%;
-                    width: 103%;
 
-                    &:after{
+                    .toggle-code{
                         visibility: visible;
                     }
+                }
+
+                &.current{
+                    .toggle-code:before{
+                        font-family: 'FontAwesome';
+                        content: "\f00d";
+                    }
+
+                    .code{
+                        opacity: 1;
+                        height: 150px;
+                        margin: 10px 0 0 0;
+                        padding: 10px 0;
+                        @include transition(opacity .3s ease);
+                        @include transition(height .3s ease);
+                    }
+                }
+
+                .code{
+                    opacity: 0;
+                    height: 0;
+                    margin: 0;
+                    padding: 0;
+                    @include transition(opacity .3s ease);
+                    @include transition(height .3s ease);
                 }
             }
 

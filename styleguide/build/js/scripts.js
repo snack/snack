@@ -325,20 +325,17 @@ Rainbow.extend("generic",[{matches:{1:[{name:"keyword.operator",pattern:/\=|\+/g
     //Sed App
     var snackApp = angular.module('snackApp', []);
 
+    // Config
+
+    snackApp.config(['$compileProvider', function ($compileProvider) {
+        $compileProvider.debugInfoEnabled(false);
+    }]);
+
     // Controllers
 
-    snackApp.controller('snackController', ['$location', function($location){
+    snackApp.controller('snackController', ['$location', function($location) {
         var self = this;
 
-        self.contact = "Airton";
-
-        self.class = "";
-        self.changeClass = function(el){
-            if (self.class === "current")
-                self.class = "";
-            else
-                self.class = "current";
-        };
     }]);
 
     // Directives
@@ -351,9 +348,16 @@ Rainbow.extend("generic",[{matches:{1:[{name:"keyword.operator",pattern:/\=|\+/g
                 desc: "@",
                 lang: "@"
             },
+            replace: true,
             transclude: true,
-            link: function(){
+            link: function(scope, element, attrs){
                 Rainbow.color();
+
+                element.bind("click", function() {
+
+                    // Toggle Class
+                    this.classList.toggle('current');
+                });
             }
         };
     });
@@ -377,7 +381,6 @@ Rainbow.extend("generic",[{matches:{1:[{name:"keyword.operator",pattern:/\=|\+/g
             var self = this;
             self.externalLinks();
             self.backTop();
-            //self.showCode();
         },
 
         // External links
@@ -407,55 +410,6 @@ Rainbow.extend("generic",[{matches:{1:[{name:"keyword.operator",pattern:/\=|\+/g
                 event.preventDefault();
                 scrollToTop(500, 0);
             });
-        },
-
-        // Click show code
-        showCode: function(){
-
-            setTimeout(function(){
-
-                [].forEach.call(document.querySelectorAll(".styleguide-example"), function(el) {
-                    el.addEventListener('click', function(e){
-
-                        // Toggle Class
-                        this.classList.toggle('current');
-
-
-
-
-                        /**********************************************/
-
-
-                        // Clone
-                        var clonedElement = this.cloneNode(true);
-
-                        // Tag Code
-                        var tagCode = document.createElement('code');
-
-                        // Tag Pre
-                        var tagPre = document.createElement('pre');
-                        tagPre.classList.toggle('code');
-                        tagPre.appendChild(tagCode);
-                        tagCode.appendChild(clonedElement);
-                        tagCode.setAttribute("data-language", "html");
-
-                        // Append
-                        this.appendChild(tagPre);
-
-                        // select element to unwrap
-                        var el = document.querySelector('.code .styleguide-example');
-
-                        // get the element's parent node
-                        var parent = el.parentNode;
-
-                        // move all children out of the element
-                        while (el.firstChild) parent.insertBefore(el.firstChild, el);
-
-                        // remove the empty element
-                        parent.removeChild(el);
-                    });
-                });
-            }, 1500);
         },
 
         // New function ...
