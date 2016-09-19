@@ -10,9 +10,7 @@ Com a ajuda do time de *back-end* desenvolvemos uma primeira versão utilizando 
 
 ## Como funciona?
 
-O Guia de Estilos fica dentro da pasta `styleguide` na raiz do projeto. Caso você não tenha interesse em utilizá-lo é só apagar a pasta e os arquivos do *composer* na raiz do projeto (`.lock`, `.phar` e `.json`).
-
-Com exceção da pasta _`lib`_, as demais são relacionadas às *categorias* de módulos do Guia de Estilos. Trata-se de uma categorização inicial padrão mas você pode ficar a vontade para customizar a sua.
+O Guia de Estilos fica dentro da pasta `styleguide` na raiz do projeto. Caso você não tenha interesse em utilizá-lo é só apagar a pasta *styleguide* na raiz do projeto.
 
 ## Criando um novo módulo
 
