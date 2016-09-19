@@ -6,7 +6,7 @@ Biblioteca para auxiliar no **pontapé inicial** em um projeto web. A idéia foi
 
 * **NodeJS** - _(para poder instalar as bibliotecas usando o npm)_
 * **Gulp** - _(para rodar as tarefas de pré-processador: CSS/JS/IMAGENS entre outras)_
-* **Ruby/SASS** - _(para poder usar a biblioteca 'gulp-ruby-sass')_
+* **Ruby/SASS** - _(para poder usar a biblioteca `gulp-ruby-sass`)_
 * **Bower** - _(para poder instalar os componente: font-awesome/jquery/respond/normalize.css entre outros)_
 
 ## Instalação
