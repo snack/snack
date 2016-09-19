@@ -12,7 +12,7 @@ O Guia de Estilos fica dentro da pasta `styleguide` na raiz do projeto. Caso voc
 
 ## Criando um novo módulo
 
-Por enquanto a adição de uma nova categoria é manual, já temos a intenção de [automatizar esse processo](https://github.com/a2comunicacao/A2boilerplate/issues/24).
+Por enquanto a adição de um novo módulo ainda é manual mas agora nessa nova versão usando AngularJS se torna muito mais fácil que na versão antiga usando PHP(Twig) [#24](https://github.com/a2comunicacao/A2boilerplate/issues/24).
 
 Para criar um novo módulo você pode seguir os passos abaixo, nesse exemplo iremos criar o módulo **tipografia**:
 
