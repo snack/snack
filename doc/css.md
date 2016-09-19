@@ -138,26 +138,26 @@ Declaramos alguns mixins padrões para utilização. Ficam declarados em: _`asse
 
 ### Variáveis
 
-Ficam declaradas em _`assets/scss/base/variables.scss`_. Basicamente definimos duas categorias de variáveis: uma relacionada ao **grid** e outra relacionada às **cores**.
+Ficam declaradas em _`assets/scss/atoms/variables.scss`_. Basicamente definimos duas categorias de variáveis: uma relacionada ao **grid** e outra relacionada às **cores**.
 
 ```scss
-    /*  Colors
-        ========================================================================== */
+/*  Colors
+    ========================================================================== */
 
-        /* Default */
-        $color-gray: #666;
-        $color-gray-light: #CCC;
-        $color-gray-lightest: #f9f9f9;
-        $color-gray-dark: #333;
+    /* Default */
+    $color-gray: #666;
+    $color-gray-light: #CCC;
+    $color-gray-lightest: #f9f9f9;
+    $color-gray-dark: #333;
 
-        $color-primary: #2ca8ff;
-        $color-primary-light: #d9edf7;
-        $color-warning: #ffa92c;
-        $color-warning-light: #f7ecbe;
-        $color-success: #1abc9c;
-        $color-success-light: #c6eed7;
-        $color-danger: #e74c3c;
-        $color-danger-light: #f4ceca;
+    $color-primary: #2ca8ff;
+    $color-primary-light: #d9edf7;
+    $color-warning: #ffa92c;
+    $color-warning-light: #f7ecbe;
+    $color-success: #1abc9c;
+    $color-success-light: #c6eed7;
+    $color-danger: #e74c3c;
+    $color-danger-light: #f4ceca;
 ```
 
 #### Definindo o grid
@@ -170,15 +170,13 @@ A idéia básica do grid é que:
 As variáveis abaixo definem o grid do projeto. Por padrão, ele tem **940 pixels** de largura, com **12** colunas de **60 pixels** cada e **20 pixels** de espaço entre elas.
 
 ```scss
-/*  ==========================================================================
-    Grid
+/*  Grid
     ========================================================================== */
-    $total-columns : 12;    // Total of columns
-    $column-width  : 60px;  // Columns width
-    $gutter-width  : 20px;  // Space between the columns
-    $breath        : 20px;  // Option of lateral space for grid
-    $breakpoint    : 768px; // Breakpoint for small devices
-    $space         : 25px;  // Vertical space
+    $total-columns : 12; // Total of columns
+    $column-width  : 85px; // Columns width
+    $gutter-width  : 20px; // Space between the columns
+    $breath        : 20px; // Option of lateral space for grid
+    $space         : 25px; // Vertical space
 ```
 
 * **`$total-columns`** ==> número total de colunas que seu grid vai ter.
