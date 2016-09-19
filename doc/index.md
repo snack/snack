@@ -35,9 +35,10 @@ O **Boilerplate** está relacionado à sua aplicação em si. É aonde você vai
 │   └── IN
 │
 ├── STYLEGUIDE (tudo relacionado ao Guia de Estilo da aplicação)
-│   ├── project.yml
-│   ├── LIB
-│   └── MODULOS (botoes, cores, formularios, layouts...)
+│   ├── ASSETS
+│   ├── BUILD
+│   ├── TEMPLATES
+│   └── VIEWS (botoes, cores, formularios, layouts...)
 │
 ├── DOC (arquivos da documentação)
 │
@@ -90,7 +91,7 @@ Caso você queira colocar uma nova dependência no seu projeto é possível faze
 
 Com a _lib_ encontrada digite: `bower install nomecomponente --save-dev`.
 
-:exclamation: **IMPORTANTE** ==> Lembre-se de passar o parâmetro `--save-dev` para deixar aquela _lib_ como dependência do projeto. Assim, quando outra pessoa for utilizá-lo, ela será instalada automaticamente no comando `bower install`.
+> :exclamation: **IMPORTANTE** ==> Lembre-se de passar o parâmetro `--save-dev` para deixar aquela _lib_ como dependência do projeto. Assim, quando outra pessoa for utilizá-lo, ela será instalada automaticamente no comando `bower install`.
 
 ###### E se eu não achar?
 
