@@ -13,8 +13,6 @@
     "normalize.css": "~3.0.3",
     "html5shiv": "~3.7.3",
     "angular": "^1.5.8",
-    "rainbow": "^2.1.2",
-    "highlightjs": "^9.6.0",
-    "prism": "prismjs#^1.5.1"
+    "rainbow": "^2.1.2"
   }
 }
