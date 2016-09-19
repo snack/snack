@@ -20,21 +20,13 @@ Existem algumas opções disponíveis:
 
 ### Boilerplate
 
-Para instalar as bibliotecas do Gulp:
+Para instalar as bibliotecas do Gulp: `npm install`
 
-`npm install`
+Para instalar todas as dependências: `bower install`
 
-Para instalar todas as dependências: 
+Para rodas as tarefas de inicialização do projeto usando _Gulp_: `gulp`
 
-`bower install`
-
-Para rodas as tarefas de inicialização do projeto usando _Gulp_:
-
-`gulp`
-
-Para sincronizar a página em diversos dispositivos usar
-
-`gulp sync`
+Para sincronizar a página em diversos dispositivos usar: `gulp sync`
 
 *Lembrar de alterar no Gulpfile.js o proxy*
 
