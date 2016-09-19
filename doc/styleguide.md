@@ -16,9 +16,10 @@ Por enquanto a adição de um novo módulo ainda é manual mas agora nessa nova 
 
 Para criar um novo módulo você pode seguir os passos abaixo, nesse exemplo iremos criar o módulo **tipografia**:
 
-* Duplique o arquivo `template.html` na pasta __(/styleguide/views/)__;
+* Duplique o arquivo `template.html` na pasta _(/styleguide/views/)_;
 * Renomeie o arquivo para o nome do novo módulo/componente/seção que você pretende criar, no nosso exemplo ficara `tipografia.html`;
-* Abra o arquivo `index.html` na raiz da pasta __(/styleguide/)__, e faça o include desse novo móidulo;
+* Abra o arquivo `index.html` na raiz da pasta _(/styleguide/)_, e faça o include desse novo móidulo;
+
 ```html
 <!-- Styleguide Item -->
 <div class="styleguide-item" ng-include="'views/tipografia.html'"></div>`
