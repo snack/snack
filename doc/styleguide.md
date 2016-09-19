@@ -67,6 +67,8 @@ Para criar um novo módulo você pode seguir os passos abaixo, nesse exemplo ire
     </div>
 </div>
 ```
+![typography](https://cloud.githubusercontent.com/assets/397832/18639073/df9f8d2e-7e68-11e6-927e-5c0e640168d0.png)
+
 
 ## Entendendo as diretivas do html
 
