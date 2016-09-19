@@ -141,13 +141,23 @@ Declaramos alguns mixins padrões para utilização. Ficam declarados em: _`asse
 Ficam declaradas em _`assets/scss/base/variables.scss`_. Basicamente definimos duas categorias de variáveis: uma relacionada ao **grid** e outra relacionada às **cores**.
 
 ```scss
-/*  ==========================================================================
-    Colors
-    ========================================================================== */
-    $color-default:     #eee;
-    $color-primary:     #1972D1;
-    $color-secondary:   #5CB85C;
-    $color-terciary:    #D9534F;
+    /*  Colors
+        ========================================================================== */
+
+        /* Default */
+        $color-gray: #666;
+        $color-gray-light: #CCC;
+        $color-gray-lightest: #f9f9f9;
+        $color-gray-dark: #333;
+
+        $color-primary: #2ca8ff;
+        $color-primary-light: #d9edf7;
+        $color-warning: #ffa92c;
+        $color-warning-light: #f7ecbe;
+        $color-success: #1abc9c;
+        $color-success-light: #c6eed7;
+        $color-danger: #e74c3c;
+        $color-danger-light: #f4ceca;
 ```
 
 #### Definindo o grid
