@@ -23,7 +23,7 @@ São as bibliotecas padrão utilizadas no projeto. São gerenciadas pelo **Bower
 
 Dentro da pasta _`assets`_ fica o arquivo `scripts.js` que é por padrão o arquivo onde colocamos nossos scripts. Geralmente, colocamos ali as coisas que serão utilizadas no projeto inteiro. 
 
-```
+```js
 (function(){
     'use strict';
 
