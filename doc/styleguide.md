@@ -50,12 +50,12 @@ Para criar um novo módulo você pode seguir os passos abaixo, nesse exemplo ire
 
         <!-- SG Example -->
         <snack-example title="Subtítulos" desc="" lang="html">
-            <h1>h1. Um header show de bola</h1>
-            <h2>h2. Um header show de bola</h2>
-            <h3>h3. Um header show de bola</h3>
-            <h4>h4. Um header show de bola</h4>
-            <h5>h5. Um header show de bola</h5>
-            <h6>h6. Um header show de bola</h6>
+            <h1 class="sub">h1. Um header show de bola</h1>
+            <h2 class="sub">h2. Um header show de bola</h2>
+            <h3 class="sub">h3. Um header show de bola</h3>
+            <h4 class="sub">h4. Um header show de bola</h4>
+            <h5 class="sub">h5. Um header show de bola</h5>
+            <h6 class="sub">h6. Um header show de bola</h6>
         </snack-example>
 
         <!-- SG Example -->
