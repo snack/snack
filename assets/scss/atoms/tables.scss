@@ -1,16 +1,66 @@
 /*  ==========================================================================
     Tables
     ========================================================================== */
-    
+
+    /*
+     * CSS for all devices
+     */
+
     @media only screen {
+
+        /*  Default
+            ========================================================================== */
+            table{
+                border-collapse: collapse;
+                color: $color-gray-dark;
+                margin-bottom: 20px;
+                text-align: left;
+                width: 100%;
+
+                th{
+                    font-weight: 700;
+                }
+
+                th,
+                td{
+                    border-bottom: 1px solid $color-gray-light;
+                    padding: 15px 0;
+                    text-align: left;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
 
     }
 
-
     /*
-     * CSS for devices with resolution bigger than breakpoint
+     * CSS for Extra small devices (phones, less than 768px)
      */
 
-    @media only screen and (min-width: $breakpoint) {
+    @media (max-width: $breakpoint) {
+
+    }
+
+    /*
+     * CSS for Small devices (tablets, 768px and up)
+     */
+
+    @media (min-width: $breakpoint) {
+
+    }
+
+    /*
+     * CSS for Medium devices (desktops, 992px and up)
+     */
+
+    @media (min-width: $breakpoint-medium) {
+
+    }
+
+    /*
+     * CSS for Large devices (large desktops, 1200px and up)
+     */
+
+    @media (min-width: $breakpoint-large) {
 
     }

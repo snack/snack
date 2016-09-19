@@ -68,7 +68,8 @@
 				<h1 class="title"><img src="build/img/snack-logo.png" alt="Logo Snack"></h1>
 				<h2 class="desc">Biblioteca para auxiliar no pontapé inicial em um projeto web. A idéia foi juntar alguns dos projetos que mais utilizávamos como referência e adaptarmos para um modelo de desenvolvimento com um Guia de Estilo incluso.</h2>
 				<a href="https://github.com/snack/snack#instalação" class="btn">Use o Snack</a>
-				<span class="version"><a href="https://github.com/snack/snack/releases">versão atual 3.4.1</a></span>
+                <a href="/styleguide/" class="btn">Guia de Estilos</a>
+				<span class="version"><a id="release" href="https://github.com/snack/snack/releases">versão atual</a></span>
 			</div>
 		</div>
 	</header>
@@ -82,9 +83,9 @@
 				<!-- Boxes -->
 				<div class="boxes">
 					<div class="box doc">
-						<a href="https://github.com/snack/Snack/blob/master/doc/index.md" target="_blank"><i class="fa fa-file-text-o"></i></a>
-						<h3 class="box-title"><a href="https://github.com/snack/Snack/blob/master/doc/index.md" target="_blank">Documentação completa</a></h3>
-						<p><a href="https://github.com/snack/Snack/blob/master/doc/index.md" target="_blank">Confira como funciona os elementos, estruturas de pastas e arquivos</a></p>
+						<a href="https://github.com/snack/snack/blob/master/doc/index.md" target="_blank"><i class="fa fa-file-text-o"></i></a>
+						<h3 class="box-title"><a href="https://github.com/snack/snack/blob/master/doc/index.md" target="_blank">Documentação completa</a></h3>
+						<p><a href="https://github.com/snack/snack/blob/master/doc/index.md" target="_blank">Confira como funciona os elementos, estruturas de pastas e arquivos</a></p>
 					</div>
 					<div class="box use">
 						<a href="https://github.com/snack/snack#instalação" target="_blank"><i class="fa fa-gears"></i></a>
@@ -92,9 +93,9 @@
 						<p><a href="https://github.com/snack/snack#instalação" target="_blank">Confira como funciona instalação e as configurações necessarias</a></p>
 					</div>
 					<div class="box releases last">
-						<a href="https://github.com/snack/Snack/releases" target="_blank"><i class="fa fa-coffee"></i></a>
-						<h3 class="box-title"><a href="https://github.com/snack/Snack/releases" target="_blank">Releases</a></h3>
-						<p><a href="https://github.com/snack/Snack/releases" target="_blank">Confira os últimos releases e as atualizações</a></p>
+						<a href="https://github.com/snack/snack/releases" target="_blank"><i class="fa fa-coffee"></i></a>
+						<h3 class="box-title"><a href="https://github.com/snack/snack/releases" target="_blank">Releases</a></h3>
+						<p><a href="https://github.com/snack/snack/releases" target="_blank">Confira os últimos releases e as atualizações</a></p>
 					</div>
 				</div>
 			</div>
@@ -130,6 +131,20 @@
 
 	<!-- Scripts -->
     <script src="build/js/scripts.min.js"></script>
+    <script type="text/javascript">
+    function foo(response) {
+        var meta = response.meta;
+        var data = response.data;
+        var tag = data[0].name;
+        var release = document.getElementById('release');
+        release.innerHTML = release.innerHTML +" "+ tag;
+    }
+
+    var script = document.createElement('script');
+    script.src = 'https://api.github.com/repos/snack/snack/tags?callback=foo';
+
+    document.getElementsByTagName('head')[0].appendChild(script);
+    </script>
 
 </body>
 </html>

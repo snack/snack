@@ -2,18 +2,49 @@
     Lists
     ========================================================================== */
 
-    @media only screen {
-        ul,
-        dl {
-            color: #666;
-            font-size: 14px;
-        }
-    }
-    
     /*
-     * CSS for devices with resolution bigger than breakpoint
+     * CSS for all devices
      */
 
-    @media only screen and (min-width: $breakpoint) {
+    @media only screen {
+        ul,
+        ol,
+        dl {
+            color: $color-gray-dark;
+            font-size: 16px;
+            line-height: 32px;
+            padding-left: 25px;
+        }
+    }
+
+    /*
+     * CSS for Extra small devices (phones, less than 768px)
+     */
+
+    @media (max-width: $breakpoint) {
+
+    }
+
+    /*
+     * CSS for Small devices (tablets, 768px and up)
+     */
+
+    @media (min-width: $breakpoint) {
+
+    }
+
+    /*
+     * CSS for Medium devices (desktops, 992px and up)
+     */
+
+    @media (min-width: $breakpoint-medium) {
+
+    }
+
+    /*
+     * CSS for Large devices (large desktops, 1200px and up)
+     */
+
+    @media (min-width: $breakpoint-large) {
 
     }

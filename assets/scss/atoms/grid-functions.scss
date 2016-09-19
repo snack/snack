@@ -1,7 +1,7 @@
 /* ==========================================================================
    Grid functions
    ========================================================================== */
-   // Width of the grid 
+   // Width of the grid
    $grid-width : ($total-columns * $column-width) + ( $gutter-width * ( $total-columns - 1) );
 
    // Grid width with lateral space
@@ -22,6 +22,18 @@
         %column {
             float: left;
             margin-right: percentage( $gutter-width / $grid-width );
+
+            .sg-show-grid &{
+                border:1px solid $color-primary;
+                background-color: #fff;
+                &:before{
+                    content: "col";
+                    font-size: 12px;
+                    color: $color-primary;
+                    display: block;
+                    widows: 100%;
+                }
+            }
         }
 
    /*   Push columns (offset)
@@ -35,6 +47,12 @@
         %last {
             margin-right: 0;
             float: right;
+
+            .sg-show-grid &{
+                &:before{
+                    content: "col last";
+                }
+            }
         }
 
 
@@ -44,12 +62,29 @@
 
     /*  Grid width
         ========================================================================== */
-        .row { max-width: $grid-width; }
+        .row {
+            max-width: $grid-width;
+
+            .sg-show-grid &{
+                border:1px solid $color-primary;
+                &:before{
+                    content: "row";
+                    font-size: 12px;
+                    color: $color-primary;
+                }
+            }
+        }
 
         .row.full {
             max-width: $grid-full;
             padding-left: $breath;
             padding-right: $breath;
+
+            .sg-show-grid &{
+                &:before{
+                    content: "row full";
+                }
+            }
         }
 
         .column { @extend %column; }
@@ -57,7 +92,7 @@
     /*  Columns width
         ========================================================================== */
         @for $i from 1 through $total-columns {
-            .col-#{$i} { 
+            .col-#{$i} {
                 @include width($i);
                 @extend %column;
             }
@@ -66,7 +101,7 @@
     /*  Offsets
         ========================================================================== */
         @for $i from 1 through $total-columns {
-            .offset-#{$i} { 
+            .offset-#{$i} {
                 @include push($i);
             }
         }

@@ -2,6 +2,10 @@
     Buttons
     ========================================================================== */
 
+    /*
+     * CSS for all devices
+     */
+
     @media only screen {
 
         /*  Default
@@ -15,9 +19,15 @@
                 background-image: none;
                 border: 1px solid transparent;
                 white-space: nowrap;
-                font-size: $btn-font-size;
-                padding: 6px 12px;
+                font-size: 14px;
+                color: #fff;
+                font-weight: 700;
+                padding: 8px 15px;
+                position: relative;
+                overflow: hidden;
+                outline: none;
                 @include transition(background 0.25s ease);
+                @include border-radius(4px);
             }
 
             .btn:hover,
@@ -29,45 +39,212 @@
             /*  Default
                 ========================================================================== */
                 .btn {
-                    background-color: $btn-bg;
-                    color: $btn-color;
+                    background-color: $color-gray;
+
+                    /* w/ Border */
+                    &.btn-border{
+                        border-color: $color-gray;
+                        color: $color-gray;
+                    }
+
+                    /* Single */
+                    &.btn-single{
+                        color: $color-gray;
+                    }
                 }
 
                 .btn:hover,
-                .btn:focus { background-color: $btn-hover-bg; }
+                .btn:focus { background-color: darken($color-gray, 5%); }
 
             /*  Primary
                 ========================================================================== */
                 .btn-primary {
-                    background-color: $btn-primary-bg;
-                    color: $btn-primary-color;
+                    background-color: $color-primary;
+
+                    /* w/ Border and Round */
+                    &.btn-border,
+                    &.btn-round{
+                        border-color: $color-primary;
+                        color: $color-primary;
+                    }
+
+                    /* Single */
+                    &.btn-single{
+                        color: $color-primary;
+                    }
                 }
 
                 .btn-primary:hover,
-                .btn-primary:focus { background-color: $btn-primary-hover-bg; }
+                .btn-primary:focus { background-color: darken($color-primary, 5%); }
+
+            /*  Secondary
+                ========================================================================== */
+                .btn-secondary {
+                    background-color: $color-gray-light;
+                    color: $color-gray;
+
+                    /* w/ Border and Round */
+                    &.btn-border,
+                    &.btn-round{
+                        border-color: $color-gray-light;
+                        color: $color-gray-light;
+                    }
+
+                    /* Single */
+                    &.btn-single{
+                        color: $color-gray-light;
+                    }
+                }
+
+                .btn-secondary:hover,
+                .btn-secondary:focus { background-color: darken($color-gray-light, 5%); }
+
+            /*  Warning
+                ========================================================================== */
+                .btn-warning {
+                    background-color: $color-warning;
+
+                    /* w/ Border and Round */
+                    &.btn-border,
+                    &.btn-round{
+                        border-color: $color-warning;
+                        color: $color-warning;
+                    }
+
+                    /* Single */
+                    &.btn-single{
+                        color: $color-warning;
+                    }
+                }
+                .btn-warning:hover,
+                .btn-warning:focus { background-color: darken($color-warning, 5%); }
+
+            /*  Alert
+                ========================================================================== */
+                .btn-danger {
+                    background-color: $color-danger;
+
+                    /* w/ Border and Round */
+                    &.btn-border,
+                    &.btn-round{
+                        border-color: $color-danger;
+                        color: $color-danger;
+                    }
+
+                    /* Single */
+                    &.btn-single{
+                        color: $color-danger;
+                    }
+                }
+
+                .btn-danger:hover,
+                .btn-danger:focus { background-color: darken($color-danger, 5%); }
 
             /*  Success
                 ========================================================================== */
                 .btn-success {
-                    background-color: $btn-success-bg;
-                    color: $btn-success-color;
+                    background-color: $color-success;
+
+                    /* w/ Border and Round */
+                    &.btn-border,
+                    &.btn-round{
+                        border-color: $color-success;
+                        color: $color-success;
+                    }
+
+                    /* Single */
+                    &.btn-single{
+                        color: $color-success;
+                    }
                 }
 
                 .btn-success:hover,
-                .btn-success:focus { background-color: $btn-success-hover-bg; }
+                .btn-success:focus { background-color: darken($color-success, 5%); }
 
-            /*  Danger
+        /*  Sizes
+            ========================================================================== */
+
+            /*  Large
                 ========================================================================== */
-                .btn-danger {
-                    background-color: $btn-danger-bg;
-                    color: $btn-danger-color;
+                .btn-large{
+                    font-size: 20px;
+                    padding: 15px 20px;
+
+                    &.btn-round{
+                        @include border-radius(30px);
+                    }
                 }
 
-                .btn-danger:hover,
-                .btn-danger:focus { background-color: $btn-danger-hover-bg; }
+            /*  Small
+                ========================================================================== */
+                .btn-small{
+                    font-size: 12px;
+                    padding: 8px 5px;
+                }
+
+            /*  Mini
+                ========================================================================== */
+                .btn-mini{
+                    font-size: 11px;
+                    padding: 5px 2px;
+                }
+
+        /*  Styles
+            ========================================================================== */
+
+            /*  Border
+                ========================================================================== */
+                .btn-border{
+                    border-width: 1px;
+                    border-style: solid;
+                    background-color: transparent;
+
+                    &:hover,
+                    &:focus { color: #fff; }
+                }
+
+            /*  Round
+                ========================================================================== */
+                .btn-round{
+                    @include border-radius(20px);
+                    border-width: 1px;
+                    border-style: solid;
+                    background-color: transparent;
+
+                    &:hover,
+                    &:focus { color: #fff; }
+                }
+
+            /*  Single
+                ========================================================================== */
+                .btn-single{
+                    background-color: transparent;
+
+                    &:hover,
+                    &:focus { color: #fff; }
+                }
+
+            /*  Inactive
+                ========================================================================== */
+                .btn.btn-inactive{
+                    border: 1px solid $color-gray-lightest;
+                    color: $color-gray-light;
+                    cursor: default;
+                    background: $color-gray-lightest;
+                }
+
+        /*  Block
+            ========================================================================== */
+            .btn-block{
+                display: block;
+            }
 
         /*  Social Share
             ========================================================================== */
+            .social-share{
+                font-size: 0;
+            }
+
             .social-button{
                 @include border-radius(2px);
                 @include transition(all .3s ease);
@@ -88,13 +265,16 @@
                     vertical-align: middle;
                 }
 
+                + .social-button{
+                    margin-left: 4px;
+                }
+
                 /* icon font-awesome */
                 > i{
                     letter-spacing: 5px;
                     font-size: 20px;
                     line-height: 20px;
                     margin: 0 0 0 4px;
-                    width: 24px;
                 }
 
                 /* hover / focus */
@@ -105,7 +285,6 @@
                     background-color: #999;
                     text-decoration: none;
                     border-bottom: 1px solid transparent;
-
                 }
 
                 /* active */
@@ -194,11 +373,34 @@
 
     }
 
-
     /*
-     * CSS for devices with resolution bigger than breakpoint
+     * CSS for Extra small devices (phones, less than 768px)
      */
 
-    @media only screen and (min-width: $breakpoint) {
+    @media (max-width: $breakpoint) {
+
+    }
+
+    /*
+     * CSS for Small devices (tablets, 768px and up)
+     */
+
+    @media (min-width: $breakpoint) {
+
+    }
+
+    /*
+     * CSS for Medium devices (desktops, 992px and up)
+     */
+
+    @media (min-width: $breakpoint-medium) {
+
+    }
+
+    /*
+     * CSS for Large devices (large desktops, 1200px and up)
+     */
+
+    @media (min-width: $breakpoint-large) {
 
     }

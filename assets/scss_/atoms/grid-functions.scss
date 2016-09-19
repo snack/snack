@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Grid functions
+   ========================================================================== */
+   // Width of the grid 
+   $grid-width : ($total-columns * $column-width) + ( $gutter-width * ( $total-columns - 1) );
+
+   // Grid width with lateral space
+   $grid-full : $grid-width + $breath + $breath;
+
+   /*   Width columns
+        ========================================================================== */
+        @function col($n) {
+            @return percentage( (( $n * ($column-width + $gutter-width) - $gutter-width) ) / $grid-width );
+        }
+
+        @mixin width($n) {
+            width: col($n);
+        }
+
+    /*  Column
+        ========================================================================== */
+        %column {
+            float: left;
+            margin-right: percentage( $gutter-width / $grid-width );
+        }
+
+   /*   Push columns (offset)
+        ========================================================================== */
+        @mixin push($n) {
+            margin-left: percentage( (($n * $column-width) + ($n * $gutter-width))  / $grid-width );
+        }
+
+    /*  Last item row (no-margin)
+        ========================================================================== */
+        %last {
+            margin-right: 0;
+            float: right;
+        }
+
+
+/*  ==========================================================================
+    Grid calc
+    ========================================================================== */
+
+    /*  Grid width
+        ========================================================================== */
+        .row { max-width: $grid-width; }
+
+        .row.full {
+            max-width: $grid-full;
+            padding-left: $breath;
+            padding-right: $breath;
+        }
+
+        .column { @extend %column; }
+
+    /*  Columns width
+        ========================================================================== */
+        @for $i from 1 through $total-columns {
+            .col-#{$i} { 
+                @include width($i);
+                @extend %column;
+            }
+        }
+
+    /*  Offsets
+        ========================================================================== */
+        @for $i from 1 through $total-columns {
+            .offset-#{$i} { 
+                @include push($i);
+            }
+        }
+
+    /*  Center
+        ========================================================================== */
+        .centered {
+            display: block;
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    /*  Last item
+        ========================================================================== */
+        .last { @extend %last; }

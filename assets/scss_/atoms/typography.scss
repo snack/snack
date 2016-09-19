@@ -1,0 +1,86 @@
+/*  ==========================================================================
+    Typography
+    ========================================================================== */
+
+    @media only screen {
+
+        body {
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust:none;
+            font-family: 'Open Sans';
+            font-weight: 400;
+        }
+
+        /*  Titles
+            ========================================================================== */
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: inherit;
+                margin: 0 0 20px 0;
+                font-weight: 600;
+                color: inherit;
+            }
+
+            h1{
+                font-size: 36px;
+                line-height: 36px;
+            }
+
+            h2{
+                font-size: 30px;
+                line-height: 30px;
+            }
+
+            h3{
+                font-size: 24px;
+                line-height: 24px;
+            }
+
+            h4{
+                font-size: 18px;
+                line-height: 18px;
+            }
+
+            h5{
+                font-size: 14px;
+                line-height: 14px;
+            }
+
+            h6{
+                font-size: 12px;
+                line-height: 12px;
+            }
+
+        /*  Texts
+            ========================================================================== */
+            p {
+                color: #222;
+                font-size: 16px;
+                line-height: 22px;
+                margin: 0 0 15px;
+                text-align: left;
+            }
+
+        /*  Links
+            ========================================================================== */
+            a {
+                color: #222;
+                text-decoration: none;
+            }
+
+           a:hover { text-decoration: underline; }
+
+    }
+
+
+    /*
+     * CSS for devices with resolution bigger than breakpoint
+     */
+
+    @media only screen and (min-width: $breakpoint) {
+
+    }
