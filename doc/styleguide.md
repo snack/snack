@@ -68,11 +68,36 @@ Para criar um novo módulo você pode seguir os passos abaixo, nesse exemplo ire
 </div>
 ```
 
-Entendendo as diretivas do html
+## Entendendo as diretivas do html
+
+Utilizando o AngularJS criamos a diretiva:
+`<snack-example title="Título da seção" desc="Descrição da seção" lang="html"></snack-example>`
 
 * Título
 * Descrição
 * Linguagem
+
+Essa diretiva nada mais é do que o template `snack-example.html` que se encontra na pasta _(/styleguide/templates/)_
+
+```html
+<div class="styleguide-example">
+
+    <!-- Toggle Button -->
+    <span class="toggle-code"></span>
+
+    <!-- SG Title Item -->
+    <h4 class="styleguide-title">{{title}}<span>{{desc}}</span></h4>
+
+    <!-- Exemple -->
+    <ng-transclude></ng-transclude>
+
+    <!-- Code -->
+    <pre class="code"><code data-language="html" class="html" ng-transclude></code></pre>
+
+</div>
+```
+Então toda vez que você chamar a diretiva `snack-example` ele vai gerar esse html, assim facilitando a criação dos módulos.
+
 
 ```html
 <div class="row">
