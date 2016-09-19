@@ -6,8 +6,6 @@
 
 Durante o desenvolvimento de alguns projetos, surgiu a necessidade da criação de um Guia de Estilo. A idéia era mantê-lo dentro do projeto, podendo ele ser utilizado ou não, sem interferir em nada.
 
-Com a ajuda do time de *back-end* desenvolvemos uma primeira versão utilizando [Twig](http://twig.sensiolabs.org/). O Guia, ainda está em sua primeira versão e já temos um *roadmap* de pontos a serem melhorados.
-
 ## Como funciona?
 
 O Guia de Estilos fica dentro da pasta `styleguide` na raiz do projeto. Caso você não tenha interesse em utilizá-lo é só apagar a pasta *styleguide* na raiz do projeto.
