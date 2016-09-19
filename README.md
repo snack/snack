@@ -34,9 +34,7 @@ para a url do seu projeto.
 
 ## Styleguide
 
-O styleguide utiliza algumas bibliotecas PHP que são gerenciadas utilizando o [Composer](https://getcomposer.org/). Para instalar as dependências rode o seguinte comando na raiz do projeto:
-
-`php composer.phar install`
+O styleguide utiliza o AngularJs para montar os templates de cada componente.
 
 ## Documentação
 
@@ -44,7 +42,7 @@ Muita coisa? :confounded: Dá uma olhada na [documentação](doc/index.md) compl
 
 ## Atualização
 
-**Esse é um projeto em constante atualização.** Pode ser que algo apresentado aqui não se adeque ao seu _workflow_. Fique a vontade para abrir uma [_issue_](https://github.com/snack/Snack/issues) e vamos discuti-la. :metal:
+**Esse é um projeto em constante atualização.** Pode ser que algo apresentado aqui não se adeque ao seu _workflow_. Fique a vontade para abrir uma [_issue_](https://github.com/snack/snack/issues) e vamos discuti-la. :metal:
 
 ## Suporte
 
