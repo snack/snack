@@ -11,6 +11,8 @@
         body {
             -webkit-text-size-adjust: none;
             -ms-text-size-adjust:none;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 400;
         }
 
         /*  Titles
@@ -22,9 +24,13 @@
             h5,
             h6 {
                 font-family: inherit;
-                margin: 0 0 20px 0;
-                font-weight: 400;
-                color: inherit;
+                margin: 0 0 30px 0;
+                font-weight: 700;
+                color: $color-gray-dark;
+
+                &.sub{
+                    font-weight: 400;
+                }
             }
 
             h1{
@@ -60,17 +66,16 @@
         /*  Texts
             ========================================================================== */
             p {
-                color: #000000;
+                color: $color-gray-dark;
                 font-size: 16px;
                 line-height: 26px;
                 margin: 0 0 30px;
-                text-align: left;
             }
 
         /*  Links
             ========================================================================== */
             a {
-                color: blue;
+                color: $color-primary;
                 text-decoration: none;
             }
 
@@ -80,6 +85,14 @@
             ========================================================================== */
             figure{
                 margin: 0;
+            }
+
+        /*  Blockquote
+            ========================================================================== */
+            blockquote{
+                border-left: 6px solid #ccc;
+                padding: 0 0 0 22px;
+                margin: 15px 20px;
             }
     }
 

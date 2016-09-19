@@ -12,7 +12,7 @@
             ========================================================================== */
             table{
                 border-collapse: collapse;
-                color: $color-gray;
+                color: $color-gray-dark;
                 margin-bottom: 20px;
                 text-align: left;
                 width: 100%;
@@ -23,10 +23,10 @@
 
                 th,
                 td{
-                    border-bottom: 1px solid #ccc;
+                    border-bottom: 1px solid $color-gray-light;
                     padding: 15px 0;
                     text-align: left;
-                    font-size: 18px;
+                    font-size: 16px;
                     line-height: 24px;
                 }
             }

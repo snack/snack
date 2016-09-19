@@ -30,8 +30,8 @@
       "_assets": "assets",
       "_build": "build",
       "_components": "components",
-      "_sg_assets": "styleguide/lib/assets",
-      "_sg_build": "styleguide/lib/build"
+      "_sg_assets": "styleguide/assets",
+      "_sg_build": "styleguide/build"
     }
   },
   "dependencies": {

@@ -1,0 +1,93 @@
+/*  ==========================================================================
+    Variables
+    ========================================================================== */
+
+    /*  Grid
+        ========================================================================== */
+        $total-columns : 12; // Total of columns
+        $column-width  : 85px; // Columns width
+        $gutter-width  : 20px; // Space between the columns
+        $breath        : 20px; // Option of lateral space for grid
+        $space         : 25px; // Vertical space
+
+    /*  Breakpoints
+        ========================================================================== */
+        $breakpoint         : 768px;  // Breakpoint for small devices (Phones and Tablets)
+        $breakpoint-medium  : 992px;  // Breakpoint for medium devices (Desktops)
+        $breakpoint-large   : 1200px; // Breakpoint for large devices (Desktops)
+
+    /*  Colors
+        ========================================================================== */
+
+        /* Default */
+        $color-gray: #666;
+        $color-gray-light: #CCC;
+        $color-gray-lightest: #f9f9f9;
+        $color-gray-dark: #333;
+
+        $color-primary: #2ca8ff;
+        $color-primary-light: #d9edf7;
+        $color-warning: #ffa92c;
+        $color-warning-light: #f7ecbe;
+        $color-success: #1abc9c;
+        $color-success-light: #c6eed7;
+        $color-danger: #e74c3c;
+        $color-danger-light: #f4ceca;
+
+    /*  Forms
+        ========================================================================== */
+
+        /*  Inputs
+            ========================================================================== */
+            $color-border-input: $color-gray-light;
+            $color-input: $color-gray;
+
+            /*  Placeholder
+                ========================================================================== */
+                $placeholder-font-size: 14px;
+                $color-placeholder: $color-gray-light;
+
+            /*  Required tip
+                ========================================================================== */
+                $color-required-tip: $color-gray-dark;
+                $required-tip-font-size: 14px;
+
+            /*  Required field
+                ========================================================================== */
+                $color-required: $color-gray-dark;
+                $required-font-size: 14px;
+
+    /*  Buttons
+        ========================================================================== */
+
+        /*  Social share
+            ========================================================================== */
+            /* Facebook */
+            $color-social-facebook: #3B5997;
+            $border-social-facebook: #2B4663;
+            $hover-social-facebook: darken($color-social-facebook, 5%);
+
+            /* Twitter */
+            $color-social-twitter: #2CA9E1;
+            $border-social-twitter: #2995BC;
+            $hover-social-twitter: darken($color-social-twitter, 5%);
+
+            /* Google Plus */
+            $color-social-google-plus: #dd4b39;
+            $border-social-google-plus: #C0392B;
+            $hover-social-google-plus: darken($color-social-google-plus, 5%);
+
+            /* Linkedin */
+            $color-social-linkedin: #0073B4;
+            $border-social-linkedin: #055472;
+            $hover-social-linkedin: darken($color-social-linkedin, 5%);
+
+            /* Pinterest */
+            $color-social-pinterest: #CD1D1F;
+            $border-social-pinterest: #8C191E;
+            $hover-social-pinterest: darken($color-social-pinterest, 5%);
+
+            /* RSS */
+            $color-social-rss: #FF6501;
+            $border-social-rss: #C74803;
+            $hover-social-rss: darken($color-social-rss, 5%);

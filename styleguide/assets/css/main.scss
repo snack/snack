@@ -1,0 +1,183 @@
+/*  ==========================================================================
+    Styleguide
+    ========================================================================== */
+
+    @mixin transition($parameters...) {
+        -webkit-transition: $parameters;
+           -moz-transition: $parameters;
+             -o-transition: $parameters;
+            -ms-transition: $parameters;
+                transition: $parameters;
+    }
+
+    /*
+     * CSS for all devices
+     */
+
+    @media only screen {
+
+        /*  Styleguide page
+            ========================================================================== */
+            .styleguide-page{
+                background-color: #f9f9f9;
+            }
+
+        /*  Styleguide item
+            ========================================================================== */
+            .styleguide-item{
+                padding: 20px 0;
+            }
+
+        /*  Styleguide example
+            ========================================================================== */
+            .styleguide-example{
+                padding: 20px 10px;
+                margin-bottom: 20px;
+                position: relative;
+
+                .toggle-code{
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    border: 1px solid #eee;
+                    background-color: #fff;
+                    border-radius: 2px;
+                    width: 25px;
+                    height: 25px;
+                    cursor: pointer;
+                    text-align: center;
+                    padding: 6px 0;
+                    display: block;
+                    visibility: hidden;
+                    line-height: 0;
+
+                    &:before{
+                        content: "...";
+                        color: #666;
+                        font-size: 14px;
+                        line-height: 8px;
+                        font-weight: bold;
+                    }
+                }
+
+                &:hover,
+                &:focus,
+                &.current{
+                    box-shadow: 0 0 1px 0 rgba(0,0,0,0.2);
+                    background: #fff;
+
+                    .toggle-code{
+                        visibility: visible;
+                    }
+                }
+
+                &.current{
+                    .toggle-code:before{
+                        font-family: 'FontAwesome';
+                        content: "\f00d";
+                    }
+
+                    .code{
+                        opacity: 1;
+                        height: 150px;
+                        margin: 10px 0 0 0;
+                        padding: 10px 0;
+                        @include transition(opacity .3s ease);
+                        @include transition(height .3s ease);
+                    }
+                }
+
+                .code{
+                    opacity: 0;
+                    height: 0;
+                    margin: 0;
+                    padding: 0;
+                    @include transition(opacity .3s ease);
+                    @include transition(height .3s ease);
+                }
+            }
+
+        /*  Styleguide item title
+            ========================================================================== */
+            .styleguide-title{
+                color: #444;
+                margin-bottom: 15px;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #f1f1f1;
+
+                span{
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #666;
+                    display: block;
+                }
+            }
+
+        /*  Back top
+            ========================================================================== */
+            .back-top{
+                position: fixed;
+                right: 20px;
+                bottom: 20px;
+                background-color: #444;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                padding: 10px;
+                font-size: 22px;
+                line-height: 18px;
+                color: #fff;
+                display: block;
+
+                &:hover,
+                &:focus{
+                    text-decoration: none;
+                }
+            }
+
+        /*  Styleguide navbar
+            ========================================================================== */
+            .mobile{
+                .row{
+                    max-width: 438px;
+                }
+            }
+
+            .tablet{
+                .row{
+                    max-width: 768px;
+                }
+            }
+    }
+
+    /*
+     * CSS for Medium devices (desktops, 992px and up)
+     */
+
+    @media (min-width: 768px) {
+
+        /*  Boby
+            ========================================================================== */
+
+    }
+
+    /*
+     * CSS for Medium devices (desktops, 992px and up)
+     */
+
+    @media (min-width: 992px) {
+
+        /*  Navbar
+            ========================================================================== */
+            .navbar-styleguide{
+                .navbar-hold{
+                    > *{
+                        width: 30%;
+                        + *{
+                            width: 70%;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+    }

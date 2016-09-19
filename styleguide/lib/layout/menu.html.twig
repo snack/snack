@@ -1,9 +1,0 @@
-<nav class="styleguide-sidebar">
-    <ul id="styleguide-menu" class="styleguide-menu">
-        {% for module in modules_list %}
-        <li class="styleguide-menu-{{ item.class }}">
-            <a href="{{ container.project.styleguide_url ~ module.link }}">{{ module.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-</nav>

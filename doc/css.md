@@ -88,16 +88,15 @@ As variáveis do breakpoint são definidas no arquivo `variables.scss`. Claro qu
 
 ## Design Atômico
 
-Outro conceito aplicado foi o [Design Atômico](http://bradfrostweb.com/blog/post/atomic-web-design/) com alguns adaptações que achamos legais. Dividimos as camadas de estilo entre **Átomos**, **Moléculas** e **Organismos**; adicionamos a camada **Base** com as configurações que achamos ser a base de estilo do projeto.
+Outro conceito aplicado foi o [Design Atômico](http://bradfrostweb.com/blog/post/atomic-web-design/) com alguns adaptações que achamos legais. Dividimos as camadas de estilo entre **Átomos**, **Moléculas** e **Organismos**;
 
 ### Os arquivos
 
-* **Base**
+* **Átomos** (_atoms_)
     * `normalize.scss` ==> Normaliza diferenças de renderizações entre os navegadores ([Link](http://necolas.github.com/normalize.css/) do projeto)
     * `variables.scss` ==> Declaração das variáveis (grid, cores e demais que poderão ser utilizadas)
     * `mixins.scss` ==> Declaração de mixins padrões e, onde deverão ser colocados novos mixins
     * `base.scss` ==> Declaração de propriedades básicas de estilo e classes auxiliares
-* **Átomos** (_atoms_)
     * `grid.scss`
     * `grid-functions.scss` ==> Funções para cálculo do grid
     * `font-awesome.scss`
@@ -114,6 +113,8 @@ Outro conceito aplicado foi o [Design Atômico](http://bradfrostweb.com/blog/pos
 * **Organismos** (_organisms_)
     * `layout.scss`
     * `print.scss`
+
+> Isso não é uma regra, é uma forma que nós encontramos de dividir melhor os arquivos, tornando o trabalho mais fácil. O Design Atômico não se resume a só isso, e também você pode estender essa estrutura para (Templates, Pages, ...)
 
 ## Mixins e variáveis
 
@@ -137,16 +138,26 @@ Declaramos alguns mixins padrões para utilização. Ficam declarados em: _`asse
 
 ### Variáveis
 
-Ficam declaradas em _`assets/scss/base/variables.scss`_. Basicamente definimos duas categorias de variáveis: uma relacionada ao **grid** e outra relacionada às **cores**.
+Ficam declaradas em _`assets/scss/atoms/variables.scss`_. Basicamente definimos duas categorias de variáveis: uma relacionada ao **grid** e outra relacionada às **cores**.
 
 ```scss
-/*  ==========================================================================
-    Colors
+/*  Colors
     ========================================================================== */
-    $color-default:     #eee;
-    $color-primary:     #1972D1;
-    $color-secondary:   #5CB85C;
-    $color-terciary:    #D9534F;
+
+    /* Default */
+    $color-gray: #666;
+    $color-gray-light: #CCC;
+    $color-gray-lightest: #f9f9f9;
+    $color-gray-dark: #333;
+
+    $color-primary: #2ca8ff;
+    $color-primary-light: #d9edf7;
+    $color-warning: #ffa92c;
+    $color-warning-light: #f7ecbe;
+    $color-success: #1abc9c;
+    $color-success-light: #c6eed7;
+    $color-danger: #e74c3c;
+    $color-danger-light: #f4ceca;
 ```
 
 #### Definindo o grid
@@ -159,15 +170,13 @@ A idéia básica do grid é que:
 As variáveis abaixo definem o grid do projeto. Por padrão, ele tem **940 pixels** de largura, com **12** colunas de **60 pixels** cada e **20 pixels** de espaço entre elas.
 
 ```scss
-/*  ==========================================================================
-    Grid
+/*  Grid
     ========================================================================== */
-    $total-columns : 12;    // Total of columns
-    $column-width  : 60px;  // Columns width
-    $gutter-width  : 20px;  // Space between the columns
-    $breath        : 20px;  // Option of lateral space for grid
-    $breakpoint    : 768px; // Breakpoint for small devices
-    $space         : 25px;  // Vertical space
+    $total-columns : 12; // Total of columns
+    $column-width  : 85px; // Columns width
+    $gutter-width  : 20px; // Space between the columns
+    $breath        : 20px; // Option of lateral space for grid
+    $space         : 25px; // Vertical space
 ```
 
 * **`$total-columns`** ==> número total de colunas que seu grid vai ter.
