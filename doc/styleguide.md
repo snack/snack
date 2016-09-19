@@ -29,8 +29,6 @@ Para criar um novo módulo você pode seguir os passos abaixo, nesse exemplo ire
 
 ```html
 <div class="row full">
-
-    <!-- Headings -->
     <div class="col-6">
 
         <!-- SG Example -->
@@ -48,7 +46,7 @@ Para criar um novo módulo você pode seguir os passos abaixo, nesse exemplo ire
             <p>Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Delegadis gente finis, bibendum egestas augue arcu ut est. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose</p>
         </snack-example>
     </div>
-    <div class="sg-headings col-6 last">
+    <div class="col-6 last">
 
         <!-- SG Example -->
         <snack-example title="Subtítulos" desc="" lang="html">
@@ -68,7 +66,6 @@ Para criar um novo módulo você pode seguir os passos abaixo, nesse exemplo ire
         </snack-example>
     </div>
 </div>
-
 ```
 
 Entendendo as diretivas do html
