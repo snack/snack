@@ -25,7 +25,65 @@ Para criar um novo módulo você pode seguir os passos abaixo, nesse exemplo ire
 <div class="styleguide-item" ng-include="'views/tipografia.html'"></div>`
 ```
 
+* Agora vamos inserir os módulos nesse novo arquivo que acabamos de criar.
 
+```html
+<div class="row full">
 
+    <!-- Headings -->
+    <div class="col-6">
+
+        <!-- SG Example -->
+        <snack-example title="Títulos" desc="" lang="html">
+            <h1>h1. Um header show de bola</h1>
+            <h2>h2. Um header show de bola</h2>
+            <h3>h3. Um header show de bola</h3>
+            <h4>h4. Um header show de bola</h4>
+            <h5>h5. Um header show de bola</h5>
+            <h6>h6. Um header show de bola</h6>
+        </snack-example>
+
+        <!-- SG Example -->
+        <snack-example title="Paragrafo" desc="" lang="html">
+            <p>Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis, vehicula ac nisi. Delegadis gente finis, bibendum egestas augue arcu ut est. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose</p>
+        </snack-example>
+    </div>
+    <div class="sg-headings col-6 last">
+
+        <!-- SG Example -->
+        <snack-example title="Subtítulos" desc="" lang="html">
+            <h1>h1. Um header show de bola</h1>
+            <h2>h2. Um header show de bola</h2>
+            <h3>h3. Um header show de bola</h3>
+            <h4>h4. Um header show de bola</h4>
+            <h5>h5. Um header show de bola</h5>
+            <h6>h6. Um header show de bola</h6>
+        </snack-example>
+
+        <!-- SG Example -->
+        <snack-example title="Blockquote" desc="" lang="html">
+            <blockquote>
+                <p>"Existem muitas variações disponíveis de passagens de Lorem Ipsum, mas a maioria sofreu algum tipo de alteração, seja por inserção de passagens com humor, ou palavras aleatórias que não parecem nem um pouco convincentes"</p>
+            </blockquote>
+        </snack-example>
+    </div>
+</div>
+
+```
+
+Entendendo as diretivas do html
+
+* Título
+* Descrição
+* Linguagem
+
+```html
+<div class="row">
+    <snack-example title="Título da seção" desc="Descrição da seção" lang="html">
+
+    </snack-example>
+</div>
+
+```
 
 
