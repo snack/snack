@@ -28,7 +28,7 @@ Para rodas as tarefas de inicialização do projeto usando _Gulp_: `gulp`
 
 Para sincronizar a página em diversos dispositivos usar: `gulp sync`
 
-* *Lembrar de alterar no Gulpfile.js o proxy*: `proxy: "local.snack"`
+> *Lembrar de alterar no __Gulpfile.js__ o proxy*: `proxy: "local.snack"`
 
 para a url do seu projeto.
 
