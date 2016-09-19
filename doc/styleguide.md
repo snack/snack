@@ -72,7 +72,9 @@ Para criar um novo módulo você pode seguir os passos abaixo, nesse exemplo ire
 
 Utilizando o AngularJS criamos a diretiva:
 
-`<snack-example title="Título da seção" desc="Descrição da seção" lang="html"></snack-example>`
+```html
+<snack-example title="Título da seção" desc="Descrição da seção" lang="html"></snack-example>
+```
 
 Com os seguintes atributos:
 
