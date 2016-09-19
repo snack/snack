@@ -88,16 +88,15 @@ As variáveis do breakpoint são definidas no arquivo `variables.scss`. Claro qu
 
 ## Design Atômico
 
-Outro conceito aplicado foi o [Design Atômico](http://bradfrostweb.com/blog/post/atomic-web-design/) com alguns adaptações que achamos legais. Dividimos as camadas de estilo entre **Átomos**, **Moléculas** e **Organismos**; adicionamos a camada **Base** com as configurações que achamos ser a base de estilo do projeto.
+Outro conceito aplicado foi o [Design Atômico](http://bradfrostweb.com/blog/post/atomic-web-design/) com alguns adaptações que achamos legais. Dividimos as camadas de estilo entre **Átomos**, **Moléculas** e **Organismos**;
 
 ### Os arquivos
 
-* **Base**
+* **Átomos** (_atoms_)
     * `normalize.scss` ==> Normaliza diferenças de renderizações entre os navegadores ([Link](http://necolas.github.com/normalize.css/) do projeto)
     * `variables.scss` ==> Declaração das variáveis (grid, cores e demais que poderão ser utilizadas)
     * `mixins.scss` ==> Declaração de mixins padrões e, onde deverão ser colocados novos mixins
     * `base.scss` ==> Declaração de propriedades básicas de estilo e classes auxiliares
-* **Átomos** (_atoms_)
     * `grid.scss`
     * `grid-functions.scss` ==> Funções para cálculo do grid
     * `font-awesome.scss`
@@ -114,6 +113,8 @@ Outro conceito aplicado foi o [Design Atômico](http://bradfrostweb.com/blog/pos
 * **Organismos** (_organisms_)
     * `layout.scss`
     * `print.scss`
+
+> Isso não é uma regra, é uma forma que nós encontramos de dividir melhor os arquivos, tornando o trabalho mais fácil. O Design Atômico não se resume a só isso, e também você pode estender essa estrutura para (Templates, Pages, ...)
 
 ## Mixins e variáveis
 
