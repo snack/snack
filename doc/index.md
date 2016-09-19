@@ -35,9 +35,10 @@ O **Boilerplate** está relacionado à sua aplicação em si. É aonde você vai
 │   └── IN
 │
 ├── STYLEGUIDE (tudo relacionado ao Guia de Estilo da aplicação)
-│   ├── project.yml
-│   ├── LIB
-│   └── MODULOS (botoes, cores, formularios, layouts...)
+│   ├── ASSETS
+│   ├── BUILD
+│   ├── TEMPLATES
+│   └── VIEWS (botoes, cores, formularios, layouts...)
 │
 ├── DOC (arquivos da documentação)
 │
