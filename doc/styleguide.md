@@ -71,7 +71,10 @@ Para criar um novo módulo você pode seguir os passos abaixo, nesse exemplo ire
 ## Entendendo as diretivas do html
 
 Utilizando o AngularJS criamos a diretiva:
+
 `<snack-example title="Título da seção" desc="Descrição da seção" lang="html"></snack-example>`
+
+Com os seguintes atributos:
 
 * Título
 * Descrição
@@ -99,13 +102,5 @@ Essa diretiva nada mais é do que o template `snack-example.html` que se encontr
 Então toda vez que você chamar a diretiva `snack-example` ele vai gerar esse html, assim facilitando a criação dos módulos.
 
 
-```html
-<div class="row">
-    <snack-example title="Título da seção" desc="Descrição da seção" lang="html">
-
-    </snack-example>
-</div>
-
-```
 
 
