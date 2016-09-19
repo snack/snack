@@ -8,9 +8,6 @@ Biblioteca para auxiliar no **pontapé inicial** em um projeto web. A idéia foi
 * Gulp
 * Ruby/SASS
 * Bower
-* PHP 5.4+*
-
-*Para o Styleguide.
 
 ## Instalação
 
