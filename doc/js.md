@@ -11,8 +11,12 @@
 
 São as bibliotecas padrão utilizadas no projeto. São gerenciadas pelo **Bower**, por isso, recomendamos dar uma lida nas seções de [Bower](index.md#bower) e [Gulp](index.md#gulp).
 
-* jQuery
+* Angular
+* font-awesome
 * html5shiv
+* jQuery
+* normalize.css
+* rainbow
 * Respond
 
 ## Scripts
