@@ -13,7 +13,6 @@
         var self = this;
 
         self.isCurrent = function (viewLocation) {
-            console.log(viewLocation);
             var active = (viewLocation === $location.path());
             return active;
         };
