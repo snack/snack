@@ -18,7 +18,7 @@ Para criar um novo módulo você pode seguir os passos abaixo, nesse exemplo ire
 
 * Duplique o arquivo `template.html` na pasta _(/styleguide/views/)_;
 * Renomeie o arquivo para o nome do novo módulo/componente/seção que você pretende criar, no nosso exemplo ficara `tipografia.html`;
-* Abra o arquivo `index.html` na raiz da pasta _(/styleguide/)_, e faça o include desse novo móidulo;
+* Abra o arquivo `index.html` na raiz da pasta _(/styleguide/)_, e faça o include desse novo módulo;
 
 ```html
 <!-- Styleguide Item -->
