@@ -21,7 +21,7 @@ Alguns atributos **roles** já estão inseridos nos arquivos. São eles:
 
 ## Includes
 
-O A2boilerplate possui por padrão 4 **includes**. Todos eles ficam em: _`build/in`_. São eles: `meta.php`, `estilos.php`, `header.php` e `footer.php`.
+O Snack possui por padrão 4 **includes**. Todos eles ficam em: _`build/in`_. São eles: `meta.php`, `estilos.php`, `header.php` e `footer.php`.
 
 ### `meta.php`
 
