@@ -15,7 +15,7 @@ Biblioteca para auxiliar no **pontapé inicial** em um projeto web. A idéia foi
 
 Existem algumas opções disponíveis:
 
-* Faça o [download do zip](https://github.com/snack/snack/archive/master.zip) ou do [último release](https://github.com/snack/Snack/releases)
+* Faça o [download do zip](https://github.com/snack/snack/archive/master.zip) ou do [último release](https://github.com/snack/snack/releases)
 * Clone o projeto `git clone https://github.com/snack/snack.git`
 
 ### Boilerplate
