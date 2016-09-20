@@ -21,7 +21,7 @@ Alguns atributos **roles** já estão inseridos nos arquivos. São eles:
 
 ## Includes
 
-O A2boilerplate possui por padrão 4 **includes**. Todos eles ficam em: _`build/in`_. São eles: `meta.php`, `estilos.php`, `header.php` e `footer.php`.
+O Snack possui por padrão 4 **includes**. Todos eles ficam em: _`build/in`_. São eles: `meta.php`, `estilos.php`, `header.php` e `footer.php`.
 
 ### `meta.php`
 
@@ -41,9 +41,32 @@ O A2boilerplate possui por padrão 4 **includes**. Todos eles ficam em: _`build/
 
 Contém chamada para:
 
-* Estilo CSS 
-* Libs Modernizr e Respond (Necessária tarefa inicial do projeto `grunt init`. [Leia aqui](index.md#grunt))
+* Estilo CSS
+
+```html
+<!-- CSS -->
+<link rel="stylesheet" href="build/css/main.min.css">
+```
+* Libs Modernizr e Respond (Necessária tarefa inicial do projeto `gulp`. [Leia aqui](index.md#gulp))
+
+```html
+<!-- Html5shiv / Respond -->
+<!--[if lt IE 9]>
+	<script src="build/js/libs/html5shiv-respond.min.js"></script>
+<![endif]-->
+```
 * Snippet Google Analytics
+
+```html
+<script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='https://www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create', 'UA-XXXX-Y', 'auto'); ga('require', 'displayfeatures'); ga('send', 'pageview');
+</script>
+```
 
 ### `header.php`
 
