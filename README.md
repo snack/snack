@@ -28,10 +28,15 @@ Para rodas as tarefas de inicialização do projeto usando _Gulp_: `gulp`
 
 Para sincronizar a página em diversos dispositivos usar: `gulp sync`
 
-> *Lembrar de alterar no __Gulpfile.js__ o proxy*: `proxy: "local.snack"`
+> *Lembrar de alterar no __Gulpfile.js__ o proxy, para a url do seu projeto local, para poder funcionar o __gulp sync__.
 
-para a url do seu projeto.
-
+```js
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        proxy: "local.snack"
+    });
+});
+```
 ## Styleguide
 
 O styleguide utiliza o AngularJs para montar os templates de cada componente.
