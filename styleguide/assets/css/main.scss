@@ -79,11 +79,13 @@
 
                     .code{
                         opacity: 1;
-                        height: 150px;
+                        height: auto;
                         margin: 10px 0 0 0;
                         padding: 10px 0;
-                        @include transition(opacity .3s ease);
-                        @include transition(height .3s ease);
+                        @include transition(
+                            opacity .3s ease,
+                            height .3s ease
+                        );
                     }
                 }
 
@@ -92,8 +94,10 @@
                     height: 0;
                     margin: 0;
                     padding: 0;
-                    @include transition(opacity .3s ease);
-                    @include transition(height .3s ease);
+                    @include transition(
+                        opacity .3s ease,
+                        height .3s ease
+                    );
                 }
             }
 
