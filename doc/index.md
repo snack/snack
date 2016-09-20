@@ -81,7 +81,7 @@ O Snack utiliza [Gulp](http://gulpjs.com/) para automatizar algumas tarefas e o 
 
 #### Bower
 
-O _Bower_ é um gerenciador de dependências. No Snack temos por padrão apenas 3 dependências: _html5shiv_, _jQuery_ e _Respond_.
+O _Bower_ é um gerenciador de dependências. No Snack temos por padrão apenas as dependências: _jQuery_, _Respond_, _font-awesome_, _Normalize.css_,  _html5shiv_, _Angular_ e _Rainbow_.
 
 Através do comando _bower install_, o _Bower_ faz o download de todas essas dependências e joga na pasta _COMPONENTS_.  
 
