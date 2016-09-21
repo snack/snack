@@ -141,7 +141,7 @@
                 ========================================================================== */
                 .navbar-menu{
                     @include transition( left .2s ease );
-                    background-color: #1f363f;
+                    background-color: #fff;
                     position: fixed;
                     top: 0;
                     left: -70%;
@@ -156,6 +156,10 @@
                     .navbar-menu-open & {
                         @include transition( left .2s ease );
                         left: 0;
+
+                        &:before{
+                            color: $color-primary;
+                        }
                     }
 
                     &:before{
@@ -189,7 +193,7 @@
                     /* Menu link */
                     a{
                         display: block;
-                        color: #fff;
+                        color: $color-primary;
                         padding: 10px 8px;
                     }
                 }
