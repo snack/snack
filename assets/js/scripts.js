@@ -1,10 +1,10 @@
 (function(){
-    'use strict';
+    //'use strict';
 
     // Config
     var app = {
-        body:         $('body'),
-        linkBackTop:  $('.back-top a')
+        body:               document.querySelector('body'),
+        linkBackTop:        document.querySelector('.back-top a'),
     };
 
     // Default scripts
@@ -14,32 +14,36 @@
         init: function(){
             var self = this;
             self.externalLinks();
-            self.accessibleDropDown();
             self.backTop();
+            self.suaNovaFuncao();
         },
 
         // External links
         externalLinks: function() {
-            $("a[href*='http://']:not([href*='"+location.hostname+"']),[href*='https://']:not([href*='"+location.hostname+"'])").attr("target","_blank");
+            [].forEach.call(document.querySelectorAll("a[href*='http://']:not([href*='"+location.hostname+"']),[href*='https://']:not([href*='"+location.hostname+"'])"), function(el) {
+                el.setAttribute('target','_blank');
+            });
         },
 
-        // Accessible menu
-        accessibleDropDown: function() {
-            var el = $(this);
-
-            $('a', el).focus(function() {
-                $(this).parents('li').addClass('menu-open');
-            }).blur(function() {
-                $(this).parents('li').removeClass('menu-open');
-            });
+        // scrollToTop
+        scrollToTop: function(){
+            var scrollStep = -window.scrollY / (scrollDuration / 15),
+            scrollInterval = setInterval(function(){
+                if ( window.scrollY !== 0 ) {
+                    window.scrollBy( 0, scrollStep );
+                }
+                else clearInterval(scrollInterval);
+            },15);
         },
 
         // Back top
         backTop: function(){
 
-            app.linkBackTop.click(function(event) {
+            if(app.linkBackTop)
+
+            app.linkBackTop.addEventListener('click', function(event){
                 event.preventDefault();
-                $("html, body").animate({ scrollTop: 0 }, 500);
+                initialConfig.scrollToTop(500, 0);
             });
         },
 

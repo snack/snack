@@ -134,6 +134,9 @@ var gulp 		= require('gulp'),
 		// JShint
 		gulp.task('lint', ['concat'], function() {
 			return gulp.src(dirs._assets+'/js/*.js')
+                /*.pipe(plugins.babel({
+                    presets: ['es2015']
+                }))*/
                 .pipe(plugins.jshint())
                 .pipe(plugins.jshint.reporter(stylish))
                 .pipe(plugins.jshint.reporter('default'));
@@ -199,9 +202,7 @@ var gulp 		= require('gulp'),
             plugins.livereload.listen();
 
             // watch Files
-            gulp.watch('*.php').on('change', function(){
-                plugins.livereload.changed('/*.php');
-            });
+            gulp.watch(['*.*'], ['sass']);
 
     		// watch JS
             gulp.watch([dirs._assets+'/js/*.js', dirs._sg_assets+'/js/*.js'], ['lint']);
