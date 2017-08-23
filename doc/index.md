@@ -8,7 +8,7 @@ Novo por aqui? Recomendamos dar uma lida seguindo os passos abaixos.
 
 * [Estrutura básica](#estrutura-b%C3%A1sica)
 * [Entendendo a organização](#entendendo-a-organiza%C3%A7%C3%A3o)
-* [Grunt e Bower](#grunt-e-bower)
+* [Gulp e Bower](#gulp-e-bower)
 * [CSS](css.md)
 * [HTML](html.md)
 * [JS](js.md)
